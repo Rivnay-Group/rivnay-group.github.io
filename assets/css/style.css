@@ -23,6 +23,16 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
 :focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+/* a link or button that is only a glyph: one square hit target, used by the share row and the
+   contact links on a team card */
+.ico {
+  display: grid; place-items: center; width: 34px; height: 34px; padding: 0;
+  color: var(--muted); background: none; border: 0; border-radius: 8px; cursor: pointer;
+  font: inherit; transition: color 0.2s, background-color 0.2s;
+}
+.ico:hover { color: var(--purple); background: var(--purple-tint); }
+.ico svg { width: 17px; height: 17px; display: block; }
+.ico svg[fill="currentColor"] { width: 15px; height: 15px; }   /* the solid brand marks carry more ink than the outlined ones */
 ::selection { background: var(--purple-tint); color: var(--ink); }
 /* keyboard users reach this before the seven header stops; it stays off-screen until focused */
 .skip {
@@ -331,7 +341,10 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
 /* the paired columns are too narrow for a photo-beside-bio split, so an opened card stacks there */
 .group-pair .person[open] { grid-template-columns: 1fr; }
 .person .bio p + p { margin-top: 0.8rem; }
-.person .links { display: flex; flex-wrap: wrap; gap: 1rem; font-size: var(--fs-sm); margin-top: 0.9rem; }
+.person .links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; font-size: var(--fs-sm); margin-top: 0.9rem; }
+/* the glyphs sit inside a 34px square, so pull the row left when it starts with one and the
+   icon lines up with the text above it rather than sitting 8px inside */
+.person .links:has(> .ico:first-child) { margin-left: -0.5rem; }
 .person.no-bio .links { margin-top: 0.4rem; }
 @media (max-width: 600px) {
   .people-grid { grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
@@ -457,16 +470,8 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .post-foot .back { margin-top: 2rem; }
 .share { display: flex; align-items: center; gap: 0.35rem; margin-top: 2rem; }
 .share-label { font-size: var(--fs-sm); color: var(--muted); margin-right: 0.4rem; }
-.share a, .share button {
-  display: grid; place-items: center; width: 34px; height: 34px; padding: 0;
-  color: var(--muted); background: none; border: 0; border-radius: 8px; cursor: pointer;
-  font: inherit; transition: color 0.2s, background-color 0.2s;
-}
-.share a:hover, .share button:hover { color: var(--purple); background: var(--purple-tint); }
-.share svg { width: 17px; height: 17px; display: block; }
-.share svg[fill="currentColor"] { width: 15px; height: 15px; }   /* the solid brand marks carry more ink than the outlined ones */
 .share .copy-link.is-copied { color: var(--purple); }
-@media (prefers-reduced-motion: reduce) { .share a, .share button, .skip { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .ico, .skip { transition: none; } }
 
 /* ---------- footer ---------- */
 .site-footer { background: #E9E9E9; color: var(--ink); margin-top: 4rem; border-top: 1px solid #DCDCDC; }

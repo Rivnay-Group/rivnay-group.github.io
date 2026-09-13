@@ -46,7 +46,7 @@ snap: true
     <div class="people-grid">
       {% for m in members %}
       {% assign r = m.role | downcase %}
-      {% capture links %}{% if m.email %}<a href="mailto:{{ m.email }}">Email</a>{% endif %}{% if m.website %}<a href="{{ m.website }}">{% if m.website contains "linkedin." %}LinkedIn{% else %}Website{% endif %}</a>{% endif %}{% endcapture %}
+      {% capture links %}{% if m.email %}<a class="ico" href="mailto:{{ m.email }}" aria-label="Email {{ m.name }}" title="Email">{% include icon-mail.svg %}</a>{% endif %}{% if m.website %}{% if m.website contains "linkedin." %}<a class="ico" href="{{ m.website }}" rel="noopener" aria-label="{{ m.name }} on LinkedIn" title="LinkedIn">{% include icon-linkedin.svg %}</a>{% else %}<a href="{{ m.website }}" rel="noopener">Portfolio</a>{% endif %}{% endif %}{% endcapture %}
       {% if m.bio %}
       <details class="person reveal" id="{{ m.name | slugify }}">
         <summary>
