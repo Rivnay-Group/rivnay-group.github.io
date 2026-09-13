@@ -13,7 +13,7 @@ Welcome! A lot's happened in the group since our last news post. Here are some a
 
 Four more defended. Emily Schafer and Xinran Xie went on to postdocs at EPFL and Stanford, Dilara Meli to a postdoc at the National Institute of Standards and Technology, and Naedum Domnwachukwu returned to Feinberg to finish his MD. Rachel Daso graduated and is staying with us until December, which we're very happy about!
 
-Our master's students scattered too: Chloe Lenker to Philips, Rosie Huerta to Rockwell Automation, and Julie Kang to a PhD at Washington University in St. Louis. Lucia Galindo graduated recently and is on the job market (if you're looking for an excellent biomedical engineer, reach out to her, you can find her via the [alumni page]({{ '/alumni/' | relative_url }})).
+Our master's students scattered too: Chloe Lenker to Philips, Rosie Huerta to Rockwell Automation, and Julie Kang to a PhD at Washington University in St. Louis. Lucia Galindo graduated recently and is on the job market (if you're looking for an excellent biomedical engineer, reach out to her, you can find her via the [alumni page]({{ '/alumni/' | relative_url }}){:.go}).
 
 **Arriving.** Yebin Lee, Catherine Beaumont, Priscila Cavassin, and Jianzhe (James) Luo joined as postdocs. Anna Baur, Zaina Mosalam, Albert Lai, and Zander Schwartz started their PhDs, and Royall McMahon Ward joined us in 2026. Ziyi Liu, Julia Ostrander and Liangying Chen came in for master's work. Michelle Lotz stepped into a new role as our lab manager, and Rhea William, Zach Hoegberg, and Rachel Nolander joined as research technicians.
 

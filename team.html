@@ -20,7 +20,7 @@ snap: true
   <div class="wrap">
   {% assign pi = site.data.people | where: "group", "pi" | first %}
   {% if pi %}
-  <section class="group" style="margin-top:0">
+  <section class="group">
     <h2>Principal investigator</h2>
     <div class="pi reveal">
       <img src="{{ '/assets/img/people/' | append: pi.photo | relative_url }}" alt="{{ pi.name }}" width="200" height="200">
@@ -73,6 +73,6 @@ snap: true
     {% if parts[0] == "staff" %}</div>{% endif %}
   {% endfor %}
 
-    <p style="margin-top:2.5rem"><a href="{{ '/alumni/' | relative_url }}">Alumni</a></p>
+    <p class="more"><a class="go" href="{{ '/alumni/' | relative_url }}">Alumni</a></p>
   </div>
 </div>

@@ -13,7 +13,7 @@ permalink: /alumni/
     {% assign parts = g | split: "|" %}
     {% assign list = site.data.alumni | where: "group", parts[0] %}
     {% if list.size > 0 %}
-  <section class="group alumni reveal"{% if forloop.first %} style="margin-top:0"{% endif %}>
+  <section class="group alumni reveal">
     <h2>{{ parts[1] }}</h2>
     <table>
       <colgroup><col class="name"><col class="year"><col></colgroup>
@@ -27,5 +27,5 @@ permalink: /alumni/
     {% endif %}
   {% endfor %}
 
-  <p style="margin-top:2.5rem"><a href="{{ '/team/' | relative_url }}">Current members</a></p>
+  <p class="more"><a class="go" href="{{ '/team/' | relative_url }}">Current members</a></p>
 </div>

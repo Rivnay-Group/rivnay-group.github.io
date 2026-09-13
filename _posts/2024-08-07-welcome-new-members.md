@@ -8,7 +8,7 @@ image_height: 933
 ---
 The Rivnay Group welcomes our new first-year PhD students, Victoria Kindratenko, Beliz Utebay, Rosalba Huerta and Junyi Liu, working on sensor robustness, lipid bilayer sensing, fundamentals and oxygenation projects, respectively. We have no doubt that their excitement, hard work and thoughtfulness will lead to important contributions to the field of bioelectronics that improve human health.
 
-Their profiles are on the [Team]({{ "/team/" | relative_url }}) page.
+Their profiles are on the [Team]({{ "/team/" | relative_url }}){:.go} page.
 
 ![](/assets/img/news/2024-08-07-welcome-new-members-2.jpg)
 

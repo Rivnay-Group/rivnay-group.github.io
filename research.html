@@ -164,7 +164,7 @@ permalink: /research/
     <div class="logo-row">
       {% for f in site.data.support.funders %}<a href="{{ f.url }}" style="--h: {{ f.h | default: 56 }}px"><img src="{{ '/assets/img/logos/' | append: f.logo | relative_url }}" alt="{{ f.name }}" loading="lazy"></a>{% endfor %}
     </div>
-    <h3 style="margin-top:2.5rem">Facilities</h3>
+    <h3>Facilities</h3>
     <div class="logo-row">
       {% for f in site.data.support.facilities %}<a href="{{ f.url }}" style="--h: {{ f.h | default: 56 }}px"><img src="{{ '/assets/img/logos/' | append: f.logo | relative_url }}" alt="{{ f.name }}" loading="lazy"></a>{% endfor %}
     </div>

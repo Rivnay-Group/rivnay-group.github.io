@@ -36,6 +36,23 @@ body { font-family: var(--sans); font-size: 1.05rem; line-height: 1.6; color: va
 img, video { max-width: 100%; display: block; height: auto; }
 a { color: var(--purple); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 a:hover { color: var(--purple-dark); }
+/* Links that stay on this site carry a hairline chevron instead of an underline, so following the
+   site inward reads differently from leaving it. Same chevron the team cards use. */
+a.go { text-decoration: none; font-weight: 500; }
+a.go::after, .back::before {
+  content: ""; display: inline-block; width: 0.34em; height: 0.34em; vertical-align: 0.1em;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg); transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+a.go::after { margin-left: 0.15em; }
+/* only the standalone links slide; a chevron that moves mid-sentence is a distraction */
+.more a.go:hover::after { transform: translateX(2px) rotate(-45deg); }
+/* the back link is the same mark, mirrored */
+.back::before { margin-right: 0.3em; border: 0; border-left: 1.5px solid currentColor; border-top: 1.5px solid currentColor; }
+.back:hover::before { transform: translateX(-2px) rotate(-45deg); }
+@media (prefers-reduced-motion: reduce) { a.go::after, .back::before { transition: none; } }
+/* a link that closes a section: one distance and one size, wherever it appears */
+.more { margin-top: 2rem; font-size: var(--fs-sm); }
 h1, h2, h3, h4 { font-family: var(--sans); font-weight: 700; line-height: 1.15; color: var(--ink); letter-spacing: -0.015em; }
 h1 { font-size: clamp(2.2rem, 4.5vw, 3.3rem); }
 :root { --hero-h1: clamp(2.2rem, 4.5vw, 3.3rem); }
@@ -61,13 +78,15 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
    background (the white band) still gets the full break */
 .section:not(.band) + .section:not(.band) { padding-top: 1rem; }
 .section > .wrap > h2 { margin-bottom: 1.5rem; }
+/* a deck sits closer to its heading than a block of content does, on a section as on a page head */
+.section > .wrap > h2:has(+ .intro) { margin-bottom: 0.8rem; }
 .band { background: var(--paper); border-block: 1px solid var(--line); }
-.section-head { margin-bottom: 1.75rem; }
-.section-head p { color: var(--muted); margin-top: 0.5rem; }
+.section-head { margin-bottom: 1.5rem; }
+.section-head p { color: var(--muted); margin-top: 0.8rem; }
 .page-head { padding: 3rem 0 1.75rem; }
 .page-head h1 { max-width: 22ch; }
 .page-head .lead { margin-top: 0.8rem; color: var(--muted); }
-.intro { margin-top: 1.2rem; }          /* full-width lead text: no max-width, matching the Research intro */
+.intro { margin-top: 0.8rem; }          /* full-width lead text: no max-width, matching the Research intro */
 .intro p + p { margin-top: 1rem; }
 
 /* ---------- header ---------- */
@@ -156,6 +175,7 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 }
 
 /* ---------- cards ---------- */
+.intro + .card-grid { margin-top: 2rem; }
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; }
 /* four cards: never 3+1. auto-fit gives 2 columns from 528px (2x230+20+48) and 4 from 1028px (4x230+3x20+48); hold 2x2 in between, with room for a classic scrollbar */
 @media (min-width: 529px) and (max-width: 1043px) { .card-grid { grid-template-columns: 1fr 1fr; } }
@@ -221,7 +241,8 @@ html.snap { scroll-snap-type: y proximity; }
 .roster { scroll-snap-align: start; scroll-margin-top: var(--header-h, 61px); padding-top: 1rem; }
 @media (prefers-reduced-motion: reduce) { html.snap { scroll-snap-type: none; } }
 .group { margin-top: 3rem; }
-.group h2 { margin-bottom: 1.25rem; }
+.group:first-of-type { margin-top: 0; }
+.group h2 { margin-bottom: 1.5rem; }
 .pi {
   display: grid; grid-template-columns: 200px 1fr; gap: 2.25rem; align-items: start;
   background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem;
@@ -340,12 +361,12 @@ details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size
 details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line up with the year sections above */
 
 /* ---------- research ---------- */
-.theme { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 3rem; align-items: start; padding-block: 3.5rem; border-top: 1px solid var(--line); }
+.theme { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 3rem; align-items: start; padding-block: 3.75rem; border-top: 1px solid var(--line); }
 .theme:first-of-type { border-top: 0; padding-top: 0.5rem; }
 .theme + .section { border-top: 1px solid var(--line); }   /* Support gets the same rule the themes use */
-.theme .tagline { color: var(--muted); font-size: 1.08rem; margin: 0.4rem 0 1.2rem; }
+.theme .tagline { color: var(--muted); font-size: 1.08rem; margin: 0.8rem 0 1.2rem; }
 .theme .prose { margin-top: 1.2rem; }   /* collapses with the tagline, so the gap under the heading is the same either way */
-.theme .prose h3 { margin: 1.5rem 0 0.4rem; font-size: 1.15rem; }
+.theme .prose h3 { font-size: 1.15rem; }
 /* the paper list spans the whole theme, under both the prose and the figures, rather than being
    squeezed into the text column */
 .theme-pubs { grid-column: 1 / -1; margin-top: 1rem; }
@@ -374,6 +395,7 @@ details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line
 /* Equal cells, every mark flush to the same left edge, each in a fixed-height band so rows line up.
    Mark heights come from support.yml and equalise visual area, not height: a round seal must be
    taller than a wordmark to read as the same size. */
+h3:has(+ .logo-row) { margin-top: 2.5rem; }   /* Funding and Facilities sit the same distance from what precedes them */
 .logo-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.75rem 1.5rem; margin-top: 1.5rem; }
 .logo-row a { display: grid; align-items: center; justify-items: start; height: 108px; min-width: 0; }
 .logo-row img { max-height: var(--h, 68px); max-width: 100%; width: auto; height: auto; }
@@ -387,18 +409,18 @@ details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line
 /* an article is one centred reading column: the wrap itself is narrowed, so every part shares the
    measure without per-element caps, and the column sits centred rather than stranded on the left */
 article.wrap { max-width: calc(42rem + 3rem); }
-.post-head { padding: 3rem 0 1.25rem; }
+.post-head { padding: 3rem 0 1.75rem; }
 .post-head time { font-size: var(--fs-sm); color: var(--muted); }
 .post-head h1 { margin-top: 0.5rem; font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
 .post-figure { margin: 1rem 0 2rem; }
 .post-figure figcaption { margin-top: 0.6rem; }
 .post-figure img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; height: auto; }
-.post-body img { border-radius: var(--radius); margin: 1.5rem 0; border: 1px solid var(--line); width: 100%; height: auto; }
+.post-body img { border-radius: var(--radius); margin: 1.75rem 0; border: 1px solid var(--line); width: 100%; height: auto; }
 .post-body figure { margin: 1.75rem 0; }
 .post-body figure img, .post-body .pair img { margin: 0; }
 .post-body .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.75rem 0 0; }
 .post-body .figcap { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; line-height: 1.45; }
-.back { display: inline-block; margin-top: 2.5rem; font-size: var(--fs-sm); }
+.back { display: inline-block; margin-top: 2rem; font-size: var(--fs-sm); text-decoration: none; font-weight: 500; }
 
 /* ---------- footer ---------- */
 .site-footer { background: #E9E9E9; color: var(--ink); margin-top: 4rem; border-top: 1px solid #DCDCDC; }
