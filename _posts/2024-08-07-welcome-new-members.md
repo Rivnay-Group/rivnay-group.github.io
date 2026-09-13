@@ -10,8 +10,6 @@ The Rivnay Group welcomes our new first-year PhD students, Victoria Kindratenko,
 
 Their profiles are on the [Team]({{ "/team/" | relative_url }}){:.go} page.
 
-![](/assets/img/news/2024-08-07-welcome-new-members-2.jpg)
-
-![](/assets/img/news/2024-08-07-welcome-new-members-3.jpg)
-
-![](/assets/img/news/2024-08-07-welcome-new-members-4.jpg)
+![](/assets/img/news/2024-08-07-welcome-new-members-2.jpg){: width="1400" height="933" loading="lazy"}
+![](/assets/img/news/2024-08-07-welcome-new-members-3.jpg){: width="1400" height="933" loading="lazy"}
+![](/assets/img/news/2024-08-07-welcome-new-members-4.jpg){: width="1400" height="933" loading="lazy"}

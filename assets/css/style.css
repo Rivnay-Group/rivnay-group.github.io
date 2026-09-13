@@ -23,9 +23,35 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
 :focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+::selection { background: var(--purple-tint); color: var(--ink); }
+/* keyboard users reach this before the seven header stops; it stays off-screen until focused */
+.skip {
+  position: absolute; left: 1.5rem; top: 0.5rem; z-index: 100; transform: translateY(-250%);
+  background: var(--paper); color: var(--purple); font-size: var(--fs-sm); font-weight: 500;
+  text-decoration: none; padding: 0.6rem 1rem; border: 1px solid var(--line);
+  border-radius: var(--radius); transition: transform 0.15s;
+}
+.skip:focus { transform: none; }
+main:focus { outline: none; }   /* the skip target is focused programmatically, not by tabbing */
 [id] { scroll-margin-top: 5.5rem; }
 /* smooth anchor scrolling is switched on by site.js after load, so a #hash on arrival jumps instead of animating */
 @media (prefers-reduced-motion: no-preference) { html.smooth { scroll-behavior: smooth; } }
+/* A page turn between pages, where the browser supports it and nothing anywhere else. The default
+   is a cross-fade, which ghosts one page of body text over another; these two animations do not
+   overlap, so the old page is gone before the new one arrives. The header is named so it holds
+   still through the whole thing rather than fading with the rest. */
+@view-transition { navigation: auto; }
+.site-header { view-transition-name: site-header; }
+/* the header swaps outright: cross-fading it shows the old and new nav underlines at once */
+::view-transition-old(site-header) { animation: none; opacity: 0; }
+::view-transition-new(site-header) { animation: none; }
+::view-transition-old(root) { animation: vt-out 90ms cubic-bezier(0.4, 0, 1, 1) both; }
+::view-transition-new(root) { animation: vt-in 190ms cubic-bezier(0, 0, 0.2, 1) 90ms both; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(6px); } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
 
 /* scroll reveal: content eases in once, 16px rise; the hidden state exists only after site.js has marked what is already on screen, never in print or under reduced motion */
 .reveal-ready .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); transition-delay: var(--reveal-delay, 0ms); }
@@ -427,6 +453,20 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .post-body .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.75rem 0 0; }
 .post-body .figcap { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; line-height: 1.45; }
 .back { display: inline-block; margin-top: 2rem; font-size: var(--fs-sm); text-decoration: none; font-weight: 500; }
+.post-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem 1.5rem; flex-wrap: wrap; }
+.post-foot .back { margin-top: 2rem; }
+.share { display: flex; align-items: center; gap: 0.35rem; margin-top: 2rem; }
+.share-label { font-size: var(--fs-sm); color: var(--muted); margin-right: 0.4rem; }
+.share a, .share button {
+  display: grid; place-items: center; width: 34px; height: 34px; padding: 0;
+  color: var(--muted); background: none; border: 0; border-radius: 8px; cursor: pointer;
+  font: inherit; transition: color 0.2s, background-color 0.2s;
+}
+.share a:hover, .share button:hover { color: var(--purple); background: var(--purple-tint); }
+.share svg { width: 17px; height: 17px; display: block; }
+.share svg[fill="currentColor"] { width: 15px; height: 15px; }   /* the solid brand marks carry more ink than the outlined ones */
+.share .copy-link.is-copied { color: var(--purple); }
+@media (prefers-reduced-motion: reduce) { .share a, .share button, .skip { transition: none; } }
 
 /* ---------- footer ---------- */
 .site-footer { background: #E9E9E9; color: var(--ink); margin-top: 4rem; border-top: 1px solid #DCDCDC; }

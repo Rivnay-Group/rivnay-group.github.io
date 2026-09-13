@@ -16,6 +16,7 @@
   <script>document.documentElement.className += " js";</script>
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
 <header class="site-header">
   <div class="bar">
     <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo.svg' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" alt="Rivnay Group" width="124" height="30"></a>
@@ -39,7 +40,7 @@
   </div>
 </header>
 
-<main>
+<main id="content" tabindex="-1">
 {{ content }}
 </main>
 

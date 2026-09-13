@@ -11,8 +11,6 @@ The [Simpson Querrey Biomedical Research Center](https://www.feinberg.northweste
 
 We’re all settled on the 11th floor and loving the view. [We’re expecting many exciting neighbors](https://news.feinberg.northwestern.edu/2019/04/first-labs-move-into-simpson-querrey-biomedical-research-center/). Come visit us soon and we’ll show you around!
 
-![](/assets/img/news/2020-02-24-the-rivnay-group-is-excited-to-finally-move-into-2.jpg)
-
-![](/assets/img/news/2020-02-24-the-rivnay-group-is-excited-to-finally-move-into-3.jpg)
-
-![](/assets/img/news/2020-02-24-the-rivnay-group-is-excited-to-finally-move-into-4.jpg)
+![](/assets/img/news/2020-02-24-the-rivnay-group-is-excited-to-finally-move-into-2.jpg){: width="1400" height="1050" loading="lazy"}
+![](/assets/img/news/2020-02-24-the-rivnay-group-is-excited-to-finally-move-into-3.jpg){: width="1400" height="1867" loading="lazy"}
+![](/assets/img/news/2020-02-24-the-rivnay-group-is-excited-to-finally-move-into-4.jpg){: width="1400" height="1050" loading="lazy"}

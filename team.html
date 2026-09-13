@@ -48,7 +48,7 @@ snap: true
       {% assign r = m.role | downcase %}
       {% capture links %}{% if m.email %}<a href="mailto:{{ m.email }}">Email</a>{% endif %}{% if m.website %}<a href="{{ m.website }}">{% if m.website contains "linkedin." %}LinkedIn{% else %}Website{% endif %}</a>{% endif %}{% endcapture %}
       {% if m.bio %}
-      <details class="person reveal">
+      <details class="person reveal" id="{{ m.name | slugify }}">
         <summary>
           <img src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="" loading="lazy" width="150" height="150">
           {% assign nparts = m.name | split: " " %}{% assign nlast = nparts.size | minus: 1 %}<span class="who"><span class="name">{% if nlast > 0 %}{{ nparts | slice: 0, nlast | join: " " }} {% endif %}<span class="tail">{{ nparts[nlast] }}<span class="chev" aria-hidden="true"></span></span></span></span>

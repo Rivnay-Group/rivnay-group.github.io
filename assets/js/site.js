@@ -83,6 +83,67 @@
     }
   }
 
+  /* ---- team: one bio open at a time, and the open one owns the URL ---- */
+  var people = [].slice.call(d.querySelectorAll("details.person[id]"));
+  if (people.length) {
+    /* the toggle event does not bubble, so listen for it on the way down */
+    d.addEventListener("toggle", function (ev) {
+      var t = ev.target;
+      if (!t.matches || !t.matches("details.person[id]")) return;
+      if (t.open) {
+        people.forEach(function (p) { if (p !== t) p.open = false; });
+        history.replaceState(null, "", "#" + t.id);
+      } else if (location.hash === "#" + t.id) {
+        history.replaceState(null, "", location.pathname + location.search);
+      }
+    }, true);
+
+    var wanted = location.hash.length > 1 && d.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (wanted && wanted.matches("details.person")) {
+      wanted.open = true;
+      /* the browser scrolled to the card while it was still shut, so place it again once it is open */
+      addEventListener("load", function () { wanted.scrollIntoView({ block: "center" }); });
+    }
+  }
+
+  /* ---- copy a link to the clipboard ---- */
+  d.addEventListener("click", function (ev) {
+    var btn = ev.target.closest && ev.target.closest(".copy-link");
+    if (!btn) return;
+    var url = btn.dataset.url;
+
+    function confirmed() {
+      btn.classList.add("is-copied");
+      btn.querySelector(".i-link").hidden = true;
+      btn.querySelector(".i-ok").hidden = false;
+      btn.setAttribute("aria-label", "Link copied");
+      setTimeout(function () {
+        btn.classList.remove("is-copied");
+        btn.querySelector(".i-link").hidden = false;
+        btn.querySelector(".i-ok").hidden = true;
+        btn.setAttribute("aria-label", "Copy link");
+      }, 1800);
+    }
+
+    /* the async clipboard refuses when the document is not focused, so keep the old route in reserve */
+    function fallback() {
+      var ta = d.createElement("textarea");
+      ta.value = url;
+      ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0";
+      d.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = d.execCommand("copy"); } catch (e) {}
+      d.body.removeChild(ta);
+      btn.focus();
+      if (ok) confirmed();
+    }
+
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(confirmed, fallback);
+    else fallback();
+  });
+
   /* ---- publications: year timeline ---- */
   var years = d.querySelector(".years");
   var sections = [].slice.call(d.querySelectorAll(".pub-year[id]"));

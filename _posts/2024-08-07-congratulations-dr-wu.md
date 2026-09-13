@@ -14,4 +14,4 @@ Read Ruiheng’s work, including his most recent paper, “Quantitative composit
 
 Congratulations, Dr. Wu!
 
-![](/assets/img/news/2024-08-07-congratulations-dr-wu-2.jpg)
+![](/assets/img/news/2024-08-07-congratulations-dr-wu-2.jpg){: width="1400" height="933" loading="lazy"}

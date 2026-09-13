@@ -8,4 +8,4 @@ image_height: 933
 ---
 The Rivnay Group welcomes two new post-doctoral researchers, Yebin Lee and Priscila Cavassin, working on biochemical sensing and material characterization, respectively. We look forward to fantastic science and mentorship from Yebin and Priscila. To learn more about them, see the [Team]({{ "/team/" | relative_url }}){:.go} page.
 
-![](/assets/img/news/2024-08-07-welcome-new-members-1-2.jpg)
+![](/assets/img/news/2024-08-07-welcome-new-members-1-2.jpg){: width="1400" height="933" loading="lazy"}
