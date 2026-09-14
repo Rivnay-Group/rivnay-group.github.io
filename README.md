@@ -2,7 +2,7 @@
 
 Source for the Rivnay Group site (Laboratory for Organic & Hybrid Bioelectronics, Northwestern University). Built with Jekyll and hosted on GitHub Pages. No JavaScript framework, one CSS file, content in data files.
 
-Live: https://jtwillia01.github.io/rivnay-lab/
+Live: https://rivnay-group.github.io/rivnay-lab-website/
 
 ## Editing content
 
@@ -50,11 +50,11 @@ Requires Ruby 3+ and Jekyll (`brew install ruby`, then `gem install jekyll jekyl
 jekyll serve
 ```
 
-Then open http://127.0.0.1:4000/rivnay-lab/.
+Then open http://127.0.0.1:4000/rivnay-lab-website/.
 
 ## Custom domain (rivnay.northwestern.edu)
 
-1. Ask Northwestern IT to point `rivnay.northwestern.edu` at GitHub Pages with a CNAME record to `jtwillia01.github.io`.
+1. Ask Northwestern IT to point `rivnay.northwestern.edu` at GitHub Pages with a CNAME record to `rivnay-group.github.io`.
 2. In this repo: add a file named `CNAME` containing `rivnay.northwestern.edu`, and change `baseurl` in `_config.yml` to `""`.
 3. In GitHub → Settings → Pages, enter the custom domain and enable "Enforce HTTPS" once the certificate is issued.
 
