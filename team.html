@@ -39,7 +39,6 @@ snap: true
     {% assign parts = g | split: "|" %}
     {% assign members = site.data.people | where: "group", parts[0] %}
     {% assign generic = parts[1] | downcase | replace: "students", "student" | replace: "researchers", "researcher" %}
-    {% if parts[0] == "faculty" %}<div class="group-pair">{% endif %}
     {% if members.size > 0 %}
   <section class="group">
     <h2>{{ parts[1] }}</h2>
@@ -70,7 +69,6 @@ snap: true
     </div>
   </section>
     {% endif %}
-    {% if parts[0] == "staff" %}</div>{% endif %}
   {% endfor %}
 
     <p class="more"><a class="go" href="{{ '/alumni/' | relative_url }}">Alumni</a></p>
