@@ -2,7 +2,7 @@
 
 Source for the Rivnay Group site (Laboratory for Organic & Hybrid Bioelectronics, Northwestern University). Built with Jekyll and hosted on GitHub Pages. No JavaScript framework, one CSS file, content in data files.
 
-Live: https://rivnay-group.github.io/rivnay-lab-website/
+Live: https://rivnay-group.github.io/ (moves to https://rivnay.northwestern.edu/ once Northwestern IT points the domain at GitHub)
 
 ## Editing content
 
@@ -50,7 +50,7 @@ Requires Ruby 3+ and Jekyll (`brew install ruby`, then `gem install jekyll jekyl
 jekyll serve
 ```
 
-Then open http://127.0.0.1:4000/rivnay-lab-website/.
+Then open http://127.0.0.1:4000/.
 
 ## Custom domain (rivnay.northwestern.edu)
 

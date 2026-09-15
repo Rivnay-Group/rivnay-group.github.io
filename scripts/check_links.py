@@ -10,7 +10,7 @@ import os, re, sys, html
 from urllib.parse import urlsplit, unquote
 
 site = sys.argv[1] if len(sys.argv) > 1 else "_site"
-baseurl = sys.argv[2] if len(sys.argv) > 2 else "/rivnay-lab-website"
+baseurl = sys.argv[2] if len(sys.argv) > 2 else ""
 attr = re.compile(r'(?:href|src|poster)="([^"]+)"|srcset="([^"]+)"')
 problems, checked = [], 0
 

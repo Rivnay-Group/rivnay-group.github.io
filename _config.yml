@@ -2,7 +2,7 @@ title: Rivnay Group
 tagline: Laboratory for Organic & Hybrid Bioelectronics
 description: The Rivnay Group at Northwestern University engineers organic bioelectronic materials, devices and systems that connect biology with electronics, from mixed ionic–electronic conductors to biohybrid living therapeutics.
 url: https://rivnay-group.github.io
-baseurl: /rivnay-lab-website
+baseurl: ""   # the repo is the org site, so it serves from the root here and at the custom domain
 lang: en
 author: Rivnay Group
 logo: /assets/img/og-image.jpg
