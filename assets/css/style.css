@@ -294,18 +294,20 @@ html.snap { scroll-snap-type: y proximity; }
 /* Research faculty and research staff sit side by side, divided by a hairline. The pair runs on the
    same track grid as every other roster row and each column is a whole number of tracks, so a
    portrait in the staff column lines up with the portraits in the full-width groups above and below.
-   The columns are anchored to the right edge: staff always takes the last three tracks. */
+   The split is sized to the two groups: one research faculty member takes the first track and the
+   four research staff take the rest of the row. Revisit these two spans if either group changes
+   size; a fifth staff member would wrap to a second row and orphan itself. */
 .group-pair { display: grid; grid-template-columns: repeat(auto-fill, minmax(162px, 1fr)); gap: 0 2rem; margin-top: 3rem; }
 .group-pair > .group { margin-top: 0; }
-.group-pair > .group:first-child { grid-column: 1 / -4; }
-.group-pair > .group + .group { grid-column: -4 / -1; position: relative; }
+.group-pair > .group:first-child { grid-column: 1 / 2; }
+.group-pair > .group + .group { grid-column: 2 / -1; position: relative; }
 /* the divider sits in the gutter, not inside either column, so neither loses width to it */
 .group-pair > .group + .group::before { content: ""; position: absolute; left: -1rem; top: 0; bottom: 0; width: 1px; background: var(--line); }
 /* an open card in the left column borrows a track from the right, so the bio is never a narrow ribbon */
 .group-pair:has(> .group:first-child .person[open]) > .group:first-child { grid-column: 1 / -3; }
 .group-pair:has(> .group:first-child .person[open]) > .group + .group { grid-column: -3 / -1; }
-/* below this the grid is under four tracks wide and the two columns no longer fit side by side */
-@media (max-width: 799px) {
+/* below this the grid is under five tracks wide, so the one plus four split no longer fits */
+@media (max-width: 985px) {
   .group-pair { display: block; margin-top: 0; }
   .group-pair > .group { margin-top: 3rem; }
   .group-pair > .group + .group::before { display: none; }
