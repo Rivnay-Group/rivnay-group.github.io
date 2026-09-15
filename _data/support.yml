@@ -32,6 +32,10 @@ funders:
     logo: sloan-foundation.png
     h: 56
     url: https://sloan.org
+  - name: Gates Foundation
+    logo: gates-foundation.svg
+    h: 46
+    url: https://www.gatesfoundation.org
 facilities:
   - name: Center for Advanced Regenerative Engineering
     logo: care.png
