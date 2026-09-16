@@ -1,3 +1,7 @@
+# One entry per person. Fields: name, role, group (pi/faculty/staff/postdoc/phd/masters/undergrad),
+# photo (600x600 in assets/img/people), bio, and any of these optional links, each an icon on the
+# open card: email, website (a LinkedIn URL gets the LinkedIn mark, anything else reads "Portfolio"),
+# scholar (a Google Scholar profile). Ordered by surname within each group.
 - name: Jonathan Rivnay
   role: Professor of Biomedical Engineering and Materials Science & Engineering
   group: pi
@@ -68,7 +72,10 @@
 - name: Jianzhe (James) Luo
   role: Postdoctoral researcher
   group: postdoc
+  email: jianzhe.luo@northwestern.edu
   photo: jianzhe-luo.jpg
+  website: https://www.linkedin.com/in/jianzhe-luo
+  scholar: https://scholar.google.com/citations?user=Szj2bZIAAAAJ
   bio: >
     Jianzhe graduated from Central South University with a B.S. in Materials Science and Engineering. He then earned a master’s degree in Condensed Matter Physics under the supervision of Prof. Zhong Lin Wang. Jianzhe earned his Ph.D. in Engineering from the University of Pittsburgh, advised by Prof. Amir H. Alavi. His research background spans nanogenerators, mechanical metamaterials, medical implants, wireless sensing, and AI-guided design. His current research focuses on the design and fabrication of intelligent implantable oxygenation devices as well as the development of AI-enabled platforms for automated device testing. In his free time, he enjoys working out, jogging, and going to concerts.
 - name: Daeyeon Won
