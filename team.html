@@ -43,7 +43,10 @@ snap: true
   <section class="group">
     <h2>{{ parts[1] }}</h2>
     <div class="people-grid">
-      {% for m in members %}
+      {% include sorted.html list=members %}
+      {% for row in order %}
+      {% assign i = row | split: "~" | last | minus: 100 %}
+      {% assign m = members[i] %}
       {% assign r = m.role | downcase %}
       {% capture links %}{% if m.email %}<a class="ico" href="mailto:{{ m.email }}" aria-label="Email {{ m.name }}" title="Email">{% include icon-mail.svg %}</a>{% endif %}{% if m.website %}{% if m.website contains "linkedin." %}<a class="ico" href="{{ m.website | escape }}" rel="noopener" aria-label="{{ m.name }} on LinkedIn" title="LinkedIn">{% include icon-linkedin.svg %}</a>{% else %}<a href="{{ m.website | escape }}" rel="noopener">Portfolio</a>{% endif %}{% endif %}{% if m.scholar %}<a class="ico" href="{{ m.scholar | escape }}" rel="noopener" aria-label="{{ m.name }} on Google Scholar" title="Google Scholar">{% include icon-scholar.svg %}</a>{% endif %}{% endcapture %}
       {% if m.bio %}

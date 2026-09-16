@@ -1,7 +1,10 @@
 # One entry per person. Fields: name, role, group (pi/faculty/staff/postdoc/phd/masters/undergrad),
 # photo (600x600 in assets/img/people), bio, and any of these optional links, each an icon on the
 # open card: email, website (a LinkedIn URL gets the LinkedIn mark, anything else reads "Portfolio"),
-# scholar (a Google Scholar profile). Ordered by surname within each group.
+# scholar (a Google Scholar profile).
+# Order in this file does NOT matter: the Team page sorts each group by surname at build time.
+# Surname is taken as the last word of `name`; if it is more than one word, set `sort:` (see
+# Royall McMahon Ward). Add new people anywhere.
 - name: Jonathan Rivnay
   role: Professor of Biomedical Engineering and Materials Science & Engineering
   group: pi
@@ -147,6 +150,7 @@
   bio: >
     Junyi graduated from the University of Wisconsin–Madison in 2023 with a B.S. in Materials Science and Engineering and a double major in Chemistry. His undergraduate research focused on computational phase field modeling and designing piezoelectric materials under Dr. Jiamian Hu. Junyi joined the Rivnay Group as a PhD student in Materials Science and Engineering in 2023. His current work involves the materials design and fabrication of implantable oxygen sensors and oxygenation devices. In his free time, he enjoys cooking, playing board games, studying music, and exploring fun places in the city.
 - name: Royall McMahon Ward
+  sort: McMahon Ward
   role: PhD student
   group: phd
   email: royallmcmahonward2024@u.northwestern.edu

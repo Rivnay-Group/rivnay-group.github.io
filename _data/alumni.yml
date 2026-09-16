@@ -1,3 +1,8 @@
+# Former members. Order in this file does NOT matter: the Alumni page sorts each group by year,
+# newest first, then by surname within a year. Surname is the last word of `name`; if it is more
+# than one word, set `sort:` (see Malva De Boor).
+# `now` is the institution or company only, written out in full; `role` adds an academic position
+# in brackets (faculty, postdoc, PhD student, MD student, MD/PhD student, resident).
 - name: Gianmaria Matrone
   group: postdoc
   year: 2026
@@ -165,6 +170,7 @@
   now: Gelber Group
   linkedin: https://www.linkedin.com/in/bohan-xu/
 - name: Malva De Boor
+  sort: De Boor
   group: undergrad
   year: 2023
   now: Capital Group

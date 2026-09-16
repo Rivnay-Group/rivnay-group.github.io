@@ -1,0 +1,27 @@
+{%- comment -%}
+Orders a list of people or alumni and leaves the result in `order`, a list of
+"sortkey~index" strings. The caller iterates `order` and indexes back into its
+own list, because Liquid cannot sort an array of hashes by a computed value.
+
+  {% include sorted.html list=members %}
+  {% for row in order %}{% assign i = row | split: "~" | last | minus: 100 %}
+    {% assign m = members[i] %} ... {% endfor %}
+
+Key is surname, plus 9999-minus-year first when an entry has a year, so alumni
+come out newest first and alphabetical within a year. Surname is the last word
+of `name`; an entry whose surname is more than one word (McMahon Ward, De Boor)
+sets `sort:` to say so. The index is offset by 100 so it stays three digits and
+breaks ties numerically rather than lexically.
+{%- endcomment -%}
+{%- assign rows = "" -%}
+{%- for m in include.list -%}
+  {%- assign sn = m.sort -%}
+  {%- unless sn -%}{%- assign sn = m.name | split: " " | last -%}{%- endunless -%}
+  {%- assign sn = sn | downcase -%}
+  {%- assign yk = "" -%}
+  {%- if m.year -%}{%- assign yk = 9999 | minus: m.year -%}{%- endif -%}
+  {%- assign n = forloop.index0 | plus: 100 -%}
+  {%- capture row -%}{{ yk }}~{{ sn }}~{{ n }}{%- endcapture -%}
+  {%- assign rows = rows | append: row | append: "|" -%}
+{%- endfor -%}
+{%- assign order = rows | split: "|" | sort -%}

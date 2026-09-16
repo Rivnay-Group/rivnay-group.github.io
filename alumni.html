@@ -19,7 +19,8 @@ permalink: /alumni/
       <colgroup><col class="name"><col class="year"><col></colgroup>
       <thead><tr><th>Name</th><th>Year</th><th>Now</th></tr></thead>
       <tbody>
-        {% for a in list %}<tr><td>{% if a.linkedin %}<a href="{{ a.linkedin }}" rel="noopener">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</td><td class="year">{{ a.year }}</td><td>{{ a.now }}{% if a.role %} ({{ a.role }}){% endif %}</td></tr>
+        {% include sorted.html list=list %}
+        {% for row in order %}{% assign i = row | split: "~" | last | minus: 100 %}{% assign a = list[i] %}<tr><td>{% if a.linkedin %}<a href="{{ a.linkedin }}" rel="noopener">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</td><td class="year">{{ a.year }}</td><td>{{ a.now }}{% if a.role %} ({{ a.role }}){% endif %}</td></tr>
         {% endfor %}
       </tbody>
     </table>
