@@ -2,7 +2,7 @@
 # newest first, then by surname within a year. Surname is the last word of `name`; if it is more
 # than one word, set `sort:` (see Malva De Boor).
 # `now` is the institution or company only, written out in full; `role` adds an academic position
-# in brackets (faculty, postdoc, PhD student, MD student, MD/PhD student, resident).
+# in brackets (faculty, postdoc, PhD student, MD student, MD/PhD student, resident, undergraduate).
 - name: Gianmaria Matrone
   group: postdoc
   year: 2026
@@ -129,6 +129,17 @@
   group: masters
   year: 2019
   now: Abbott
+- name: Katherine Hegblom
+  group: undergrad
+  year: 2026
+  now: University of Rochester
+  role: undergraduate
+  linkedin: https://www.linkedin.com/in/katherine-hegblom/
+- name: Ruth Mellin
+  group: undergrad
+  year: 2025
+  now: John Deere
+  linkedin: https://www.linkedin.com/in/ruth-mellin/
 - name: Anita Bassey
   group: undergrad
   year: 2026
