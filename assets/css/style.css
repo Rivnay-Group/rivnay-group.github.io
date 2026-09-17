@@ -239,6 +239,9 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 .news-list .when { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; padding-top: 0.2rem; }
 .news-list time { font-size: var(--fs-sm); color: var(--muted); }
 .news-list .when .kind { margin-left: 0; }
+/* the title is the only link in these rows, so let the whole row carry its hit area */
+.news-list li, .recent-pubs li { position: relative; }
+.news-list .title a::after, .recent-pubs a.title::after { content: ""; position: absolute; inset: 0; }
 .news-list .title { display: inline; font-size: var(--fs-title); font-weight: 600; line-height: 1.4; }
 .news-list .title a { color: var(--ink); text-decoration: none; }
 .news-list .title a:hover { color: var(--purple); }
@@ -338,6 +341,12 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
    icon lines up with the text above it rather than sitting 8px inside */
 .person .links:has(> .ico:first-child) { margin-left: -0.5rem; }
 .person.no-bio .links { margin-top: 0.4rem; }
+@media (pointer: coarse) {
+  .ico { width: 44px; height: 44px; }                       /* the glyph stays 17px; only the hit box grows */
+  .person .links { gap: 0.6rem; }
+  .person .links:has(> .ico:first-child) { margin-left: -0.8rem; }
+  .alumni th, .alumni td { padding-block: 0.7rem; }
+}
 @media (max-width: 600px) {
   .people-grid { grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
   .person { border-bottom: 1px solid var(--line); padding: 0.85rem 0; }
@@ -394,6 +403,11 @@ details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line
   .pub-year[id] { scroll-margin-top: 5.5rem; }
 }
 @media (prefers-reduced-motion: reduce) { .years, .years a, .years-marker { transition: none !important; } }
+/* a finger needs a bigger target than a cursor; the chip looks the same, its hit box just fills the strip */
+@media (pointer: coarse) and (max-width: 1259px) {
+  .years { padding-block: 0; }
+  .years a { padding: 0.75rem 0.2rem 0.85rem; }
+}
 details.collapsed { margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
 details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size: 1.4rem; font-weight: 700; color: var(--purple); }
 
