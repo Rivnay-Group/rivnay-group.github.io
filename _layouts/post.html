@@ -25,4 +25,10 @@ layout: default
       <button type="button" class="ico copy-link" data-url="{{ share_url }}" aria-label="Copy link" title="Copy link"><span class="i-link">{% include icon-link.svg %}</span><span class="i-ok" hidden>{% include icon-check.svg %}</span></button>
     </p>
   </div>
+  {% if page.previous or page.next %}
+  <nav class="post-nav" aria-label="More news">
+    {% if page.previous %}<a class="back" rel="prev" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a class="go" rel="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>{% endif %}
+  </nav>
+  {% endif %}
 </article>

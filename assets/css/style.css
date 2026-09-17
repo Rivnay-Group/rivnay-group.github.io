@@ -475,6 +475,11 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .share { display: flex; align-items: center; gap: 0.35rem; margin-top: 2rem; }
 .share-label { font-size: var(--fs-sm); color: var(--muted); margin-right: 0.4rem; }
 .share .copy-link.is-copied { color: var(--purple); }
+/* older and newer post, reusing the chevrons the rest of the site uses */
+.post-nav { display: flex; justify-content: space-between; gap: 1rem 1.5rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: var(--fs-sm); }
+.post-nav .back { margin-top: 0; }
+.post-nav a[rel="next"] { text-align: right; margin-left: auto; }
+@media (max-width: 600px) { .post-nav { flex-direction: column; } .post-nav a[rel="next"] { text-align: left; margin-left: 0; } }
 @media (prefers-reduced-motion: reduce) { .ico, .skip { transition: none; } }
 
 /* ---------- footer ---------- */
