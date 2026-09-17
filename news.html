@@ -43,7 +43,7 @@ redirect_from:
         {% assign ex = post.excerpt | strip_html | strip | truncatewords: 32 %}
         {% if ex != "" %}<p class="excerpt">{{ ex }}</p>{% endif %}
       </div>
-      {% if post.image %}<a class="thumb" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
+      {% if post.image %}<a class="thumb" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.image | replace: '.jpg', '-thumb.jpg' | relative_url }}" alt="" loading="lazy" width="104" height="78"></a>{% endif %}
     </li>
     {% endfor %}
   </ul>

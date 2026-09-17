@@ -15,7 +15,7 @@ Everything routine is a data file or a markdown file. Edit on GitHub in the brow
 | Alumni | `_data/alumni.yml` (`now:` is the institution or company; add `role:` only for academic destinations, e.g. `faculty`, `postdoc`, `PhD student`; `linkedin:` links the name to a public profile) |
 | Publications | run `python3 scripts/publications.py` (see below), do not edit `_data/publications.json` by hand |
 | Fix or exclude a publication | `_data/publications_manual.json` (`exclude` a DOI, or `add` an entry) then rerun the script |
-| Add a news post | create `_posts/YYYY-MM-DD-short-title.md` with the front matter shown below |
+| Add a news post | create `_posts/YYYY-MM-DD-short-title.md` with the front matter shown below. If it has an image, run `python3 scripts/thumbs.py` afterwards and commit the `-thumb.jpg` it writes |
 | Research text, funding logos | `research.html`, `_data/support.yml`, `assets/img/logos/` |
 | Openings | `join.html` |
 | Nav, footer, addresses | `_layouts/default.html` |
