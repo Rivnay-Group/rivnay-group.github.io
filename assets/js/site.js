@@ -116,24 +116,38 @@
   /* ---- team: one bio open at a time, and the open one owns the URL ---- */
   var people = [].slice.call(d.querySelectorAll("details.person[id]"));
   if (people.length) {
+    /* Where the clicked card sat BEFORE it opened. The toggle event fires after the state has already
+       changed, so the card has expanded into a full-width row by then and its own movement is invisible
+       to us; we have to take the reading on the click that precedes it. */
+    var openedFrom = null;
+    d.addEventListener("click", function (ev) {
+      var s = ev.target.closest && ev.target.closest("details.person[id] > summary");
+      openedFrom = s && !s.parentNode.open ? s.parentNode.getBoundingClientRect().top : null;
+    }, true);
+
     /* the toggle event does not bubble, so listen for it on the way down */
     d.addEventListener("toggle", function (ev) {
       var t = ev.target;
       if (!t.matches || !t.matches("details.person[id]")) return;
       if (t.open) {
         people.forEach(function (p) { if (p !== t) p.open = false; });
+        /* Opening re-flows the grid twice over: this card becomes a full-width row, and any card that
+           was open above it collapses. Put the page back so the card stays under the pointer. */
+        if (openedFrom !== null) {
+          var moved = t.getBoundingClientRect().top - openedFrom;
+          if (moved) scrollBy({ top: moved, behavior: "instant" });
+        }
         history.replaceState(null, "", "#" + t.id);
       } else if (location.hash === "#" + t.id) {
         history.replaceState(null, "", location.pathname + location.search);
       }
+      openedFrom = null;
     }, true);
 
+    /* arriving with #slug: open that card. The browser's own fragment scroll then lands it at its
+       scroll-margin, so there is nothing more to do; re-centring on load moved it a second time. */
     var wanted = location.hash.length > 1 && d.getElementById(decodeURIComponent(location.hash.slice(1)));
-    if (wanted && wanted.matches("details.person")) {
-      wanted.open = true;
-      /* the browser scrolled to the card while it was still shut, so place it again once it is open */
-      addEventListener("load", function () { wanted.scrollIntoView({ block: "center" }); });
-    }
+    if (wanted && wanted.matches("details.person")) wanted.open = true;
   }
 
   /* ---- copy a link to the clipboard ---- */
