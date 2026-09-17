@@ -28,7 +28,7 @@ ALIASES = {
 def main():
     by_slug = {p.name[11:-3]: p.name for p in POSTS.glob("*.md")}   # strip "YYYY-MM-DD-" and ".md"
     urls = re.findall(r"<loc>https?://[^/<]+(/[^<]*)</loc>", SITEMAP.read_text(encoding="utf-8"))
-    post_urls, unmapped, changed = 0, [], 0
+    post_urls, unmapped, changed, taken = 0, [], 0, {}
     for url in urls:
         m = re.match(r"^/new-blog/\d{4}/\d{1,2}/\d{1,2}/([^/]+)$", url)
         if not m:
@@ -40,22 +40,36 @@ def main():
             # The migration truncated long slugs, so a post matches when its slug starts the old one.
             # Take the LONGEST match: "welcome-new-members" and "welcome-new-members-1" are both
             # prefixes of the second URL, and only the longer one is the post it belongs to.
-            cands = sorted((s for s in by_slug if slug.startswith(s)), key=len, reverse=True)
+            cands = sorted((s for s in by_slug if slug == s or slug.startswith(s + "-")), key=len, reverse=True)
             if len(cands) > 1:
                 print("ambiguous: %s -> %s (taking %s)" % (url, ", ".join(cands), cands[0]))
             name = by_slug[cands[0]] if cands else None
         if not name:
             unmapped.append(url)
             continue
+        if name in taken and taken[name] != url:
+            print("COLLISION: %s and %s both map to %s" % (taken[name], url, name))
+        taken.setdefault(name, url)
         path = POSTS / name
         text = path.read_text(encoding="utf-8")
-        if "  - %s\n" % url in text:   # the whole line, so a shorter URL is not "found" inside a longer one
-            continue
         head, body = text.split("\n---\n", 1)
-        if "\nredirect_from:" in head:
-            head = head.replace("\nredirect_from:\n", "\nredirect_from:\n  - %s\n" % url, 1)
-        else:
-            head += "\nredirect_from:\n  - %s" % url
+        wrote = False
+        # both forms: a stub written as foo.html does not answer a request for foo/, and old links
+        # circulate both ways. The plugin writes foo.html for "/foo" and foo/index.html for "/foo/".
+        for u in (url, url + "/"):
+            # match the whole line inside the FRONT MATTER only: a shorter URL must not be "found" inside
+            # a longer one, and an indented list line in the body must not look like an entry
+            if "  - %s\n" % u in head + "\n":
+                continue
+            if "\nredirect_from:\n" in head:
+                head = head.replace("\nredirect_from:\n", "\nredirect_from:\n  - %s\n" % u, 1)
+            elif "\nredirect_from:" in head:
+                raise SystemExit("%s has a redirect_from in a form this script cannot extend; fix it by hand" % name)
+            else:
+                head += "\nredirect_from:\n  - %s" % u
+            wrote = True
+        if not wrote:
+            continue
         path.write_text(head + "\n---\n" + body, encoding="utf-8")
         changed += 1
     print("old post urls: %d, mapped: %d, files changed: %d" % (post_urls, post_urls - len(unmapped), changed))

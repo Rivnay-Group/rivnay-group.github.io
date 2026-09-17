@@ -6,6 +6,7 @@ image: /assets/img/news/2019-02-04-mayra-wins-third-place-in-image-contest-at-sq
 image_width: 956
 image_height: 717
 redirect_from:
+  - /new-blog/2019/2/4/jphq5nl7tddu4nkc2b08srjz1huwem/
   - /new-blog/2019/2/4/jphq5nl7tddu4nkc2b08srjz1huwem
 ---
 Congrats to Mayra, who placed 3rd in the SQI image contest!

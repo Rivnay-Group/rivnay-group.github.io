@@ -27,10 +27,11 @@
       cur = cur + 1 >= slides.length ? -1 : cur + 1;
       slides.forEach(function (s, k) { s.classList.toggle("is-on", k === cur); });
       if (clip) {
-        /* the clip is fetched while the last still is up, so it is buffered when its turn comes;
-           under reduced motion or without script it is never fetched at all */
-        if (cur === slides.length - 1 && !clip.getAttribute("src")) { clip.src = clip.getAttribute("data-src"); clip.load(); }
-        if (cur === -1) { var p = clip.play(); if (p && p.catch) p.catch(function () {}); }
+        /* the clip is fetched two stills ahead, so it has ~13 s to buffer 1.8 MB and does not stutter on
+           a slow connection; it still costs nothing at page load, and under reduced motion or without
+           script it is never fetched at all. currentTime is reset so every cycle starts from the top. */
+        if (cur >= slides.length - 2 && !clip.getAttribute("src")) { clip.src = clip.getAttribute("data-src"); clip.load(); }
+        if (cur === -1) { clip.currentTime = 0; var p = clip.play(); if (p && p.catch) p.catch(function () {}); }
         else clip.pause();
       }
       timer = setTimeout(turn, cur === -1 ? 9000 : 6500);
@@ -42,6 +43,7 @@
         s.src = s.getAttribute("data-src") || s.src;
         return (s.decode ? s.decode() : Promise.resolve()).then(function () { return s; }, function () { s.remove(); return null; });
       })).then(function (ok) {
+        if (motionQuery.matches) return;   /* it was switched on while the stills were decoding */
         slides = ok.filter(Boolean);
         if (slides.length) timer = setTimeout(turn, cur === -1 ? 9000 : 6500);
       });

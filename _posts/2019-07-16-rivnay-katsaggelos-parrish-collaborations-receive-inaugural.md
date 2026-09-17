@@ -4,6 +4,7 @@ date: 2019-07-16
 kind: award
 link: https://www.mccormick.northwestern.edu/news/articles/2019/07/rivnay-katsaggelos-parrish-collaborations-receive-inaugural-catalyst-award.html
 redirect_from:
+  - /new-blog/2019/7/16/rivnay-katsaggelos-parrish-collaborations-receive-inaugural-catalyst-award/
   - /new-blog/2019/7/16/rivnay-katsaggelos-parrish-collaborations-receive-inaugural-catalyst-award
 ---
 > Northwestern Engineering faculty members Jonathan Rivnay, Aggelos K. Katsaggelos, and Todd Parrish are members of teams that were granted $55,000 in seed money through the Collaborative Research Catalyst Awards.

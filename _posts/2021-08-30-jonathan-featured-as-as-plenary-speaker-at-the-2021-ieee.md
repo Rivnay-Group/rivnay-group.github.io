@@ -3,6 +3,7 @@ title: "Jonathan was featured as a plenary speaker at the 2021 IEEE Internationa
 date: 2021-08-30
 kind: award
 redirect_from:
+  - /new-blog/2021/8/30/jonathan-featured-as-as-plenary-speaker-at-the-2021-ieee-international-flexible-electronics-conference-ifetc/
   - /new-blog/2021/8/30/jonathan-featured-as-as-plenary-speaker-at-the-2021-ieee-international-flexible-electronics-conference-ifetc
 ---
 Jonathan Rivnay gave a presentation entitled “Organic Electrochemical Transistors for Bioelectronics” at the 2021 conference.

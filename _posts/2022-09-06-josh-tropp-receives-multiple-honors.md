@@ -6,6 +6,7 @@ image: /assets/img/news/2022-09-06-josh-tropp-receives-multiple-honors.jpg
 image_width: 960
 image_height: 540
 redirect_from:
+  - /new-blog/2022/9/6/josh-tropp-receives-multiple-honors/
   - /new-blog/2022/9/6/josh-tropp-receives-multiple-honors
 ---
 Postdoc Josh Tropp was named an ACS PMSE Future Faculty Fellow: [Read more](https://pmsedivision.org/pmse-future-faculty/). He received this honor and gave a number of talks at the ACS Fall Meeting in Chicago.

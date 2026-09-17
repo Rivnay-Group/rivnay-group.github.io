@@ -4,6 +4,7 @@ date: 2021-08-30
 kind: award
 link: https://www.darpa.mil/news-events/2020-04-06
 redirect_from:
+  - /new-blog/2021/8/30/darpa-project-for-implantable-living-pharmacy-that-would-help-regulate-bodys-sleepwake-cycles-kicks-off/
   - /new-blog/2021/8/30/darpa-project-for-implantable-living-pharmacy-that-would-help-regulate-bodys-sleepwake-cycles-kicks-off
 ---
 Our lab has received a cooperative agreement with DARPA to develop a wireless, fully implantable ‘living pharmacy’ device that could help regulate human sleep patterns. The project is through the DARPA BTO (Biotechnology Office) [Advanced Acclimation and Protection Tool for Environmental Readiness (ADAPTER) program](https://www.darpa.mil/news-events/2020-04-06), meant to address physical challenges of travel, such as jet lag and fatigue.

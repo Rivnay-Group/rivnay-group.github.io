@@ -3,6 +3,7 @@ title: "IEEE hosted first inaugural IEEE Brain Virtual Conference with Professor
 date: 2019-11-26
 kind: award
 redirect_from:
+  - /new-blog/2019/11/26/ieee-hosted-their-first-inaugural-ieee-brain-virtual-conference-with-professor-rivnay-as-one-of-their-speakers/
   - /new-blog/2019/11/26/ieee-hosted-their-first-inaugural-ieee-brain-virtual-conference-with-professor-rivnay-as-one-of-their-speakers
 ---
 IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity.

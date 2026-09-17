@@ -7,6 +7,7 @@ link: https://www.nature.com/articles/s41467-023-42697-2
 image_width: 1400
 image_height: 903
 redirect_from:
+  - /new-blog/2024/8/19/electrocatalytic-on-site-oxygenation-for-transplanted-cell-based-therapies/
   - /new-blog/2024/8/19/electrocatalytic-on-site-oxygenation-for-transplanted-cell-based-therapies
 ---
 Implantable cell therapies and tissue transplants require a reliable oxygen supply to function effectively. However, achieving sufficient oxygenation within the transplant host remains challenging due to limited vascularization. Previous methods for exogenous oxygenation were bulky and had limited oxygen production or regulation.

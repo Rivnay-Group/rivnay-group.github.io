@@ -7,6 +7,7 @@ link: https://www.nature.com/articles/s41467-021-22680-5
 image_width: 1312
 image_height: 1440
 redirect_from:
+  - /new-blog/2021/5/12/xudongs-nature-communications-paper-featured-in-northwestern-now/
   - /new-blog/2021/5/12/xudongs-nature-communications-paper-featured-in-northwestern-now
 ---
 > Researchers have developed a brain-like computing device that is capable of learning by association.

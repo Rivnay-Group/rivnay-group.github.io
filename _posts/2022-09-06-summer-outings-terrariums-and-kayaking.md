@@ -6,6 +6,7 @@ image: /assets/img/news/2022-09-06-summer-outings-terrariums-and-kayaking.jpg
 image_width: 1400
 image_height: 934
 redirect_from:
+  - /new-blog/2022/9/6/summer-outings-terrariums-and-kayaking/
   - /new-blog/2022/9/6/summer-outings-terrariums-and-kayaking
 ---
 Great group outings this summer:

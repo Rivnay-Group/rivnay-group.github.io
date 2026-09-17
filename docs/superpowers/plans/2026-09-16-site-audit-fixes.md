@@ -52,21 +52,34 @@ The server serves whatever is in `_site/`, so re-run `$JEKYLL build` after every
 #!/usr/bin/env node
 // Headless-Chrome harness for measuring the local build of the Rivnay Group site.
 //   node scripts/shot.mjs <url> [--width 1440] [--height 900] [--mobile] [--touch] [--dark] [--reduce]
-//                         [--scroll N] [--click "css"] [--wait ms] [--eval "js"] [--full] [--shot out.png]
+//                         [--settle] [--scroll N] [--click "css"] [--wait ms] [--eval "js"]
+//                         [--full] [--shot out.png] [--allow-error] [--timeout 15000]
 // --eval runs the body of an async function after load + fonts.ready and prints the return value as JSON.
 // --full scrolls the whole page first (the scroll reveal is one-shot and would otherwise capture blank),
 // then captures everything; without it the capture is the viewport as a visitor sees it.
-// Chrome's plain --screenshot ignores widths under ~500px, which is why this exists.
+// --settle does that reveal pass BEFORE --click/--eval: below-the-fold .reveal elements otherwise sit at
+// opacity 0 and 16px low, so measure them with --settle or your geometry is off by the reveal transform.
+// A failed navigation, an HTTP status >= 400 or a load that never fires is an error, not a silent
+// measurement of an error page (--allow-error measures it anyway). Chrome and its profile dir are always
+// cleaned up, including on failure. Chrome's plain --screenshot ignores widths under ~500px, hence this.
 import { spawn } from "node:child_process";
-import { mkdtempSync, readFileSync, writeFileSync, existsSync } from "node:fs";
+import { mkdtempSync, readFileSync, writeFileSync, existsSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
 const argv = process.argv.slice(2);
 const url = argv[0];
-const opt = (k, d) => { const i = argv.indexOf(k); return i < 0 ? d : argv[i + 1]; };
+if (!url || url.startsWith("--")) { console.error("usage: shot.mjs <url> [flags]"); process.exit(2); }
 const has = (k) => argv.includes(k);
-const width = +opt("--width", 1440), height = +opt("--height", 900);
+const opt = (k, d) => {
+  const i = argv.indexOf(k);
+  if (i < 0) return d;
+  const v = argv[i + 1];
+  if (v === undefined || v.startsWith("--")) { console.error(`${k} needs a value`); process.exit(2); }
+  return v;
+};
+const num = (k, d) => { const v = +opt(k, d); if (Number.isNaN(v)) { console.error(`${k} needs a number`); process.exit(2); } return v; };
+const width = num("--width", 1440), height = num("--height", 900), timeout = num("--timeout", 15000);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const dir = mkdtempSync(join(tmpdir(), "shot-"));
@@ -74,76 +87,100 @@ const chrome = spawn("/Applications/Google Chrome.app/Contents/MacOS/Google Chro
   "--headless=new", "--disable-gpu", "--hide-scrollbars", "--no-first-run", "--no-default-browser-check",
   `--user-data-dir=${dir}`, "--remote-debugging-port=0", `--window-size=${width},${height}`, "about:blank",
 ], { stdio: ["ignore", "ignore", "pipe"] });
-let ws;
-for (let i = 0; i < 100 && !ws; i++) {
-  await sleep(100);
-  const f = join(dir, "DevToolsActivePort");
-  if (existsSync(f)) {
-    const [port] = readFileSync(f, "utf8").split("\n");
-    const list = await fetch(`http://127.0.0.1:${port}/json/list`).then((r) => r.json()).catch(() => null);
-    const page = list && list.find((t) => t.type === "page");
-    if (page) ws = page.webSocketDebuggerUrl;
+let sock;
+try {
+  let ws;
+  for (let i = 0; i < 100 && !ws; i++) {
+    await sleep(100);
+    const f = join(dir, "DevToolsActivePort");
+    if (existsSync(f)) {
+      const [port] = readFileSync(f, "utf8").split("\n");
+      const list = await fetch(`http://127.0.0.1:${port}/json/list`).then((r) => r.json()).catch(() => null);
+      const page = list && list.find((t) => t.type === "page");
+      if (page) ws = page.webSocketDebuggerUrl;
+    }
   }
-}
-if (!ws) { chrome.kill(); throw new Error("Chrome did not start"); }
+  if (!ws) throw new Error("Chrome did not start");
 
-const sock = new WebSocket(ws);
-await new Promise((r) => (sock.onopen = r));
-let id = 0; const waiting = new Map(); const events = [];
-sock.onmessage = (m) => {
-  const msg = JSON.parse(m.data);
-  if (msg.id && waiting.has(msg.id)) { waiting.get(msg.id)(msg); waiting.delete(msg.id); }
-  else if (msg.method) events.push(msg);
-};
-const send = (method, params = {}) => new Promise((res, rej) => {
-  const n = ++id; waiting.set(n, (m) => (m.error ? rej(new Error(m.error.message)) : res(m.result)));
-  sock.send(JSON.stringify({ id: n, method, params }));
-});
-const evaluate = async (expression) => {
-  const r = await send("Runtime.evaluate", { expression, awaitPromise: true, returnByValue: true });
-  if (r.exceptionDetails) throw new Error(r.exceptionDetails.text + " " + (r.exceptionDetails.exception?.description || ""));
-  return r.result.value;
-};
-const scrollTo = (y) => evaluate(`window.scrollTo({ top: ${y}, behavior: "instant" }); true`);   // site.js turns smooth scrolling on after load
+  sock = new WebSocket(ws);
+  await new Promise((r) => (sock.onopen = r));
+  let id = 0; const waiting = new Map(); const events = [];
+  sock.onmessage = (m) => {
+    const msg = JSON.parse(m.data);
+    if (msg.id && waiting.has(msg.id)) { waiting.get(msg.id)(msg); waiting.delete(msg.id); }
+    else if (msg.method) events.push(msg);
+  };
+  const send = (method, params = {}) => new Promise((res, rej) => {
+    const n = ++id; waiting.set(n, (m) => (m.error ? rej(new Error(m.error.message)) : res(m.result)));
+    sock.send(JSON.stringify({ id: n, method, params }));
+  });
+  const evaluate = async (expression) => {
+    const r = await send("Runtime.evaluate", { expression, awaitPromise: true, returnByValue: true });
+    if (r.exceptionDetails) throw new Error(r.exceptionDetails.text + " " + (r.exceptionDetails.exception?.description || ""));
+    return r.result.value;
+  };
+  const scrollTo = (y) => evaluate(`window.scrollTo({ top: ${y}, behavior: "instant" }); true`);   // site.js turns smooth scrolling on after load
+  const settle = () => evaluate("document.querySelectorAll('.reveal').forEach((e) => e.classList.add('is-visible', 'no-anim')); true");
 
-await send("Page.enable"); await send("Runtime.enable");
-await send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: 1, mobile: has("--mobile") });
-if (has("--touch")) await send("Emulation.setTouchEmulationEnabled", { enabled: true, maxTouchPoints: 5 });
-const features = [];
-if (has("--dark")) features.push({ name: "prefers-color-scheme", value: "dark" });
-if (has("--reduce")) features.push({ name: "prefers-reduced-motion", value: "reduce" });
-if (features.length) await send("Emulation.setEmulatedMedia", { features });
-await send("Page.navigate", { url });
-await new Promise((r) => { const t = setInterval(() => { if (events.some((e) => e.method === "Page.loadEventFired")) { clearInterval(t); r(); } }, 50); });
-await evaluate("document.fonts ? document.fonts.ready.then(() => true) : true");
-await sleep(400);
+  await send("Page.enable"); await send("Runtime.enable"); await send("Network.enable");
+  await send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: 1, mobile: has("--mobile") });
+  if (has("--touch")) await send("Emulation.setTouchEmulationEnabled", { enabled: true, maxTouchPoints: 5 });
+  const features = [];
+  if (has("--dark")) features.push({ name: "prefers-color-scheme", value: "dark" });
+  if (has("--reduce")) features.push({ name: "prefers-reduced-motion", value: "reduce" });
+  if (features.length) await send("Emulation.setEmulatedMedia", { features });
 
-const scroll = opt("--scroll", null);
-if (scroll !== null) { await scrollTo(+scroll); await sleep(500); }
-const click = opt("--click", null);
-if (click) { await evaluate(`(() => { const e = document.querySelector(${JSON.stringify(click)}); if (!e) throw new Error("no match for " + ${JSON.stringify(click)}); e.click(); return true; })()`); await sleep(500); }
-const wait = +opt("--wait", 0); if (wait) await sleep(wait);
-
-const code = opt("--eval", null);
-if (code) { const v = await evaluate(`(async () => { ${code} })()`); console.log(JSON.stringify(v, null, 1)); }
-
-const shot = opt("--shot", null);
-if (shot) {
-  let params = { format: "png" };
-  if (has("--full")) {
-    const total = await evaluate("document.documentElement.scrollHeight");
-    for (let y = 0; y < total; y += Math.floor(height * 0.5)) { await scrollTo(y); await sleep(200); }
-    await evaluate("document.querySelectorAll('.reveal').forEach((e) => e.classList.add('is-visible', 'no-anim')); true");
-    await scrollTo(scroll !== null ? +scroll : 0);
-    await sleep(700);
-    const h = await evaluate("Math.ceil(Math.max(document.documentElement.scrollHeight, document.body.scrollHeight))");
-    params = { format: "png", captureBeyondViewport: true, clip: { x: 0, y: 0, width, height: h, scale: 1 } };
+  const nav = await send("Page.navigate", { url });
+  if (nav.errorText) throw new Error(`navigation failed: ${nav.errorText} (${url})`);
+  const deadline = Date.now() + timeout;
+  while (!events.some((e) => e.method === "Page.loadEventFired")) {
+    if (Date.now() > deadline) throw new Error(`load event never fired within ${timeout} ms (${url})`);
+    await sleep(50);
   }
-  const { data } = await send("Page.captureScreenshot", params);
-  writeFileSync(shot, Buffer.from(data, "base64"));
-  console.error("wrote", shot);
+  if (!has("--allow-error")) {
+    const doc = events.filter((e) => e.method === "Network.responseReceived" && e.params.type === "Document").pop();
+    const status = doc && doc.params.response.status;
+    if (status >= 400) throw new Error(`HTTP ${status} (${url}) — did you forget to rebuild, or mistype the path?`);
+    const href = await evaluate("location.href");
+    if (!href || href.startsWith("chrome-error://")) throw new Error(`page did not load (${url})`);
+  }
+  await evaluate("document.fonts ? document.fonts.ready.then(() => true) : true");
+  await sleep(400);
+
+  const scroll = has("--scroll") ? num("--scroll", 0) : null;
+  if (has("--settle")) { await settle(); await sleep(100); }
+  if (scroll !== null) { await scrollTo(scroll); await sleep(500); }
+  const click = has("--click") ? opt("--click") : null;
+  if (click) { await evaluate(`(() => { const e = document.querySelector(${JSON.stringify(click)}); if (!e) throw new Error("no match for " + ${JSON.stringify(click)}); e.click(); return true; })()`); await sleep(500); }
+  const wait = num("--wait", 0); if (wait) await sleep(wait);
+
+  const code = has("--eval") ? opt("--eval") : null;
+  if (code) { const v = await evaluate(`(async () => { ${code} })()`); console.log(JSON.stringify(v === undefined ? null : v, null, 1)); }
+
+  const shot = has("--shot") ? opt("--shot") : null;
+  if (shot) {
+    let params = { format: "png" };
+    if (has("--full")) {
+      const total = await evaluate("document.documentElement.scrollHeight");
+      for (let y = 0; y < total; y += Math.floor(height * 0.5)) { await scrollTo(y); await sleep(200); }
+      await settle();
+      await scrollTo(scroll !== null ? scroll : 0);
+      await sleep(700);
+      const h = await evaluate("Math.ceil(Math.max(document.documentElement.scrollHeight, document.body.scrollHeight))");
+      params = { format: "png", captureBeyondViewport: true, clip: { x: 0, y: 0, width, height: h, scale: 1 } };
+    }
+    const { data } = await send("Page.captureScreenshot", params);
+    writeFileSync(shot, Buffer.from(data, "base64"));
+    console.error("wrote", shot);
+  }
+} finally {
+  try { if (sock) sock.close(); } catch {}
+  chrome.kill();
+  /* wait for it to actually exit: kill() only sends the signal, and a Chrome still shutting down
+     writes its profile back over a directory we have already deleted */
+  await new Promise((r) => { chrome.once("exit", r); setTimeout(r, 3000); });
+  try { rmSync(dir, { recursive: true, force: true }); } catch {}
 }
-sock.close(); chrome.kill();
 ```
 
 - [ ] **Step 2: Prove it emulates a phone and touch**
@@ -153,6 +190,16 @@ Run (after the shell setup above, with the server running):
 node --check scripts/shot.mjs && node scripts/shot.mjs http://127.0.0.1:4002/ --width 390 --height 844 --mobile --touch --eval "return { w: innerWidth, coarse: matchMedia('(pointer: coarse)').matches, fonts: document.fonts.check('700 1em Figtree') }"
 ```
 Expected: `{"w": 390, "coarse": true, "fonts": true}`. If `coarse` is false, keep the flag anyway (Task 16 then verifies its CSS by reading the rules rather than by emulation) and note it in the commit message.
+
+Then prove it fails loudly rather than measuring an error page, because every later task's "Expected:" gates on this tool:
+```bash
+node scripts/shot.mjs http://127.0.0.1:4002/does-not-exist/ --eval "return document.title"; echo "exit=$?"
+node scripts/shot.mjs http://127.0.0.1:9999/ --eval "return 1"; echo "exit=$?"
+node scripts/shot.mjs http://127.0.0.1:4002/ --full --shot; echo "exit=$?"
+```
+Expected: `HTTP 404`, then `navigation failed: net::ERR_CONNECTION_REFUSED`, then `--shot needs a value`, each with a non-zero exit. And prove it does not litter: record `ls -d "$TMPDIR"shot-* | wc -l`, run a failing and a passing invocation, and confirm the count is unchanged (the predecessor harness left 1203 profile directories and 219 stray Chrome processes, 10 GB, before this was fixed).
+
+One behaviour to know before writing any measurement: below-the-fold elements carrying `.reveal` sit at `opacity: 0` and 16px low until the scroll reveal fires, so `getBoundingClientRect()` on them is 16px off. Pass `--settle` whenever you measure a `.reveal` element (the team cards are `details.person reveal`); `--full` screenshots settle on their own.
 
 - [ ] **Step 3: Remove the scratch files and stop them coming back**
 
@@ -290,7 +337,7 @@ Expected: first run `old post urls: 61, mapped: 61, files changed: 61`, second r
 
 - [ ] **Step 5: Page redirects**
 
-Add to the front matter (between the `---` lines) of each page:
+List each old path in BOTH forms, with and without a trailing slash: the plugin writes `foo.html` for `/foo` and `foo/index.html` for `/foo/`, a static host does not serve one for the other, and old links circulate both ways. (`scripts/redirects.py` does this for the posts by itself.) So `research.html` gets `/funding`, `/funding/`, `/resources`, `/resources/`, and so on for each list below:
 
 `index.html`:
 ```yaml
@@ -347,7 +394,7 @@ grep -o 'url=[^"]*' _site/new-blog/2022/9/6/jonathan-promoted*.html _site/new-bl
 grep -o '<link rel="canonical"[^>]*' _site/new-blog/2022/9/6/jonathan-promoted*.html _site/new-blog/2022/9/6/jonathan-promoted/index.html 2>/dev/null
 python3 scripts/check_links.py
 ```
-Expected: a `jonathan-promoted.html` (or `jonathan-promoted/index.html`) exists; its refresh `url=` and canonical both point at `https://rivnay.northwestern.edu/news/2022/09/06/jonathan-promoted/`; `home.html`, `opportunities.html` and `new-blog.html` exist; the link checker prints no `broken:` lines. GitHub Pages serves `/foo` from `foo.html`, and 301s a bare `/foo` to `/foo/` when only a directory exists, so either output form works live. The local Python server does not do extensionless lookups, so test locally with the `.html` name.
+Expected: both `jonathan-promoted.html` and `jonathan-promoted/index.html` exist; each one's refresh `url=` and canonical point at `https://rivnay.northwestern.edu/news/2022/09/06/jonathan-promoted/`; `home.html`, `opportunities.html` and `new-blog.html` exist; the link checker prints no `broken:` lines. Count the stubs with `grep -rl "Click here if you are not redirected" _site | wc -l`: on macOS expect **162**, not the 164 the arithmetic suggests, because `/new-blog/tag/awards` and `/new-blog/tag/Awards` differ only in case and collide on a case-insensitive filesystem. Both redirect to `/news/`, so the survivor serves the right content and GitHub Pages (case-sensitive) writes all 164. Do not "fix" this locally; verify it live in Step 9. GitHub Pages serves `/foo` from `foo.html`, and 301s a bare `/foo` to `/foo/` when only a directory exists, so either output form works live. The local Python server does not do extensionless lookups, so test locally with the `.html` name.
 
 - [ ] **Step 7: Note it in the README**
 
@@ -372,8 +419,10 @@ git commit -m "Redirect every old Squarespace URL to its new page"
 Ten minutes after the push:
 ```bash
 for u in /home /people-1 /our-publications-1 /new-blog /opportunities /funding /new-blog/2022/9/6/jonathan-promoted /new-blog/2019/2/4/jphq5nl7tddu4nkc2b08srjz1huwem; do printf '%-60s ' "$u"; curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' "https://rivnay.northwestern.edu$u"; done
+echo "--- the trailing-slash form, and the two case-colliding tag paths:"
+for u in /new-blog/ /funding/ /new-blog/2022/9/6/jonathan-promoted/ /new-blog/tag/awards /new-blog/tag/Awards; do printf '%-60s ' "$u"; curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' "https://rivnay.northwestern.edu$u"; done
 ```
-Expected: every line `200` (the redirect page itself) or `301` to the same path with a trailing slash; none `404`.
+Expected: every line `200` (the redirect page itself) or `301` to the same path with a trailing slash; none `404`. The second group is the one the local build cannot prove: the slashed forms come from the doubled entries, and the two tag paths collide on macOS but are distinct files on GitHub Pages, so this is the only place they are both checked.
 
 ---
 
@@ -414,10 +463,11 @@ In `assets/js/site.js` replace the hero block (from `/* ---- home hero` to the e
       cur = cur + 1 >= slides.length ? -1 : cur + 1;
       slides.forEach(function (s, k) { s.classList.toggle("is-on", k === cur); });
       if (clip) {
-        /* the clip is fetched while the last still is up, so it is buffered when its turn comes;
-           under reduced motion or without script it is never fetched at all */
-        if (cur === slides.length - 1 && !clip.getAttribute("src")) { clip.src = clip.getAttribute("data-src"); clip.load(); }
-        if (cur === -1) { var p = clip.play(); if (p && p.catch) p.catch(function () {}); }
+        /* the clip is fetched two stills ahead, so it has ~13 s to buffer 1.8 MB and does not stutter on
+           a slow connection; it still costs nothing at page load, and under reduced motion or without
+           script it is never fetched at all. currentTime is reset so every cycle starts from the top. */
+        if (cur >= slides.length - 2 && !clip.getAttribute("src")) { clip.src = clip.getAttribute("data-src"); clip.load(); }
+        if (cur === -1) { clip.currentTime = 0; var p = clip.play(); if (p && p.catch) p.catch(function () {}); }
         else clip.pause();
       }
       timer = setTimeout(turn, cur === -1 ? 9000 : 6500);
@@ -429,6 +479,7 @@ In `assets/js/site.js` replace the hero block (from `/* ---- home hero` to the e
         s.src = s.getAttribute("data-src") || s.src;
         return (s.decode ? s.decode() : Promise.resolve()).then(function () { return s; }, function () { s.remove(); return null; });
       })).then(function (ok) {
+        if (motionQuery.matches) return;   /* it was switched on while the stills were decoding */
         slides = ok.filter(Boolean);
         if (slides.length) timer = setTimeout(turn, cur === -1 ? 9000 : 6500);
       });
@@ -451,7 +502,7 @@ node scripts/shot.mjs http://127.0.0.1:4002/ --eval "const v = document.querySel
 node scripts/shot.mjs http://127.0.0.1:4002/ --reduce --wait 15000 --eval "const v = document.querySelector('.hero-bg'); return { src: !!v.currentSrc }"
 node scripts/shot.mjs http://127.0.0.1:4002/ --wait 21000 --eval "const v = document.querySelector('.hero-bg'); return { src: !!v.currentSrc, paused: v.paused, time: v.currentTime, stillOn: !!document.querySelector('.hero-slide.is-on') }"
 ```
-Expected: first `src: false, ready: 0, preload: "none"`; second (reduced motion, 15 s in) `src: false`; third (21 s in) `src: true, paused: false, time > 0, stillOn: false` (the clip is playing and visible). Add a fourth at `--wait 14000`: `src: true, ready: 4` with `d7-die.jpg` on top, which is the point of the change — the clip is buffered before its turn rather than at page load. The Research page's own clip is untouched, but do not check it with `.paused`: it is below the fold and headless Chrome reports `paused: true` for it both before and after this change, so the only meaningful check there is that the value is the same as on the previous commit.
+Expected: first `src: false, ready: 0, preload: "none"`; second (reduced motion, 15 s in) `src: false`; third (21 s in) `src: true, paused: false, time > 0, stillOn: false` (the clip is playing and visible). Add a fourth at `--wait 8000`: `src: true` with `fibers.jpg` on top, which is the point of the change — the clip is buffered two stills ahead rather than at page load. Two stills of lead, not one: throttled to 500 kbps a single still's 6.5 s leaves the clip stalling at `readyState` 2-3 and advancing 1.5 s of content over its whole 9 s window, while ~13 s buffers it. The Research page's own clip is untouched, but do not check it with `.paused`: it is below the fold and headless Chrome reports `paused: true` for it both before and after this change, so the only meaningful check there is that the value is the same as on the previous commit.
 
 - [ ] **Step 5: Commit**
 
@@ -788,7 +839,7 @@ git commit -m "Research: keep the natural figures' aspect ratio so the page does
 - [ ] **Step 1: Measure the defect**
 
 ```bash
-node scripts/shot.mjs http://127.0.0.1:4002/team/ --scroll 600 --eval "const a = document.getElementById('michelle-lotz'), b = document.getElementById('yebin-lee'); a.open = true; await new Promise(r => setTimeout(r, 100)); const before = b.getBoundingClientRect().top; b.querySelector('summary').click(); await new Promise(r => setTimeout(r, 150)); return { before, after: b.getBoundingClientRect().top }"
+node scripts/shot.mjs http://127.0.0.1:4002/team/ --settle --scroll 600 --eval "const a = document.getElementById('michelle-lotz'), b = document.getElementById('yebin-lee'); a.open = true; await new Promise(r => setTimeout(r, 100)); const before = b.getBoundingClientRect().top; b.querySelector('summary').click(); await new Promise(r => setTimeout(r, 150)); return { before, after: b.getBoundingClientRect().top }"
 node scripts/shot.mjs "http://127.0.0.1:4002/team/#royall-mcmahon-ward" --wait 800 --eval "const c = document.getElementById('royall-mcmahon-ward'); return { open: c.open, top: c.getBoundingClientRect().top }"
 ```
 Expected before: the first returns `after` about 290px above `before` (the card jumps); the second returns `top` about 361 (the load-time re-centre moved it away from its scroll margin).
@@ -1315,7 +1366,7 @@ git commit -m "Join: a rule and a muted dateline set the postdoc posting apart"
 - [ ] **Step 1: Measure**
 
 ```bash
-node scripts/shot.mjs http://127.0.0.1:4002/news/ --width 390 --height 844 --mobile --touch --eval "const li = document.querySelector('.news-list li'); const ex = li.querySelector('.excerpt').getBoundingClientRect(); const hit = document.elementFromPoint(ex.left + 40, ex.top + ex.height / 2).closest('a'); return { rowHeight: li.getBoundingClientRect().height, excerptHitsLink: !!hit, coarse: matchMedia('(pointer: coarse)').matches }"
+node scripts/shot.mjs http://127.0.0.1:4002/news/ --width 390 --height 844 --mobile --touch --settle --eval "const li = document.querySelector('.news-list li'); const ex = li.querySelector('.excerpt').getBoundingClientRect(); const hit = document.elementFromPoint(ex.left + 40, ex.top + ex.height / 2).closest('a'); return { rowHeight: li.getBoundingClientRect().height, excerptHitsLink: !!hit, coarse: matchMedia('(pointer: coarse)').matches }"
 node scripts/shot.mjs http://127.0.0.1:4002/publications/ --width 390 --height 844 --mobile --touch --eval "return document.querySelector('.years a').getBoundingClientRect().height"
 ```
 Expected before: `excerptHitsLink: false`, chip height `24`.

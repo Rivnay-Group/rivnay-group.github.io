@@ -3,6 +3,7 @@ title: "Congratulations, Dr. Keate!"
 date: 2024-08-07
 kind: people
 redirect_from:
+  - /new-blog/2024/8/7/congratulations-dr-keate/
   - /new-blog/2024/8/7/congratulations-dr-keate
 ---
 Dr. Rebecca Keate successfully defended her PhD thesis, titled “Designing conductive polymer biomaterials for regenerative engineering applications.”

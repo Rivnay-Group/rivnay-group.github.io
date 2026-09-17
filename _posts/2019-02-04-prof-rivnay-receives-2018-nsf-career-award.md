@@ -4,6 +4,7 @@ date: 2019-02-04
 kind: award
 link: https://news.northwestern.edu/stories/2018/may/jonathan-rivnay-receives-prestigious-honor-for-young-faculty/
 redirect_from:
+  - /new-blog/2019/2/4/prof-rivnay-receives-2018-nsf-career-award/
   - /new-blog/2019/2/4/prof-rivnay-receives-2018-nsf-career-award
 ---
 Prof. Jonathan Rivnay was awarded an NSF CAREER award for *“Understanding the Role of Structure on Ionic/Electronic Properties in Polymeric Mixed Conductors.”*
