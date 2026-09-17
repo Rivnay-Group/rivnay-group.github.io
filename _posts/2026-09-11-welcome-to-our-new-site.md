@@ -10,7 +10,7 @@ excerpt: "Our first post on the new site rounds up everything that has happened 
 ---
 Welcome! A lot's happened in the group since our last news post. Here are some abbreviated updates:
 
-**Moving on.** Two postdocs finished with us in that stretch. Xudong Ji is now a professor in the School of Microelectronics at the University of Science and Technology of China, and Gianmaria Matrone traded the bench for the desk as an editor at *Nature Sensors*.
+**Moving on.** Two postdocs finished with us in that stretch. Xudong Ji is now a professor in the School of Microelectronics at the University of Science and Technology of China, and Giovanni Maria Matrone traded the bench for the desk as an editor at *Nature Sensors*.
 
 Four more defended. Emily Schafer and Xinran Xie went on to postdocs at EPFL and Stanford, Dilara Meli to a postdoc at the National Institute of Standards and Technology, and Naedum Domnwachukwu returned to Feinberg to finish his MD. Rachel Daso graduated and is staying with us until December, which we're very happy about!
 

@@ -3,7 +3,8 @@
 # than one word, set `sort:` (see Malva De Boor).
 # `now` is the institution or company only, written out in full; `role` adds an academic position
 # in brackets (faculty, postdoc, PhD student, MD student, MD/PhD student, resident, undergraduate).
-- name: Gianmaria Matrone
+- name: Giovanni Maria Matrone
+  sort: Matrone
   group: postdoc
   year: 2026
   now: Nature Sensors
