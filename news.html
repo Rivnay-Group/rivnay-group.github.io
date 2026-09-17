@@ -34,17 +34,30 @@ redirect_from:
   <header class="page-head">
     <h1>News</h1>
   </header>
-  <ul class="news-list">
-    {% for post in site.posts %}
-    <li class="reveal">
-      <p class="when"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.kind %}<span class="kind">{{ post.kind }}</span>{% endif %}</p>
-      <div>
-        <p class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
-        {% assign ex = post.excerpt | strip_html | strip | truncatewords: 32 %}
-        {% if ex != "" %}<p class="excerpt">{{ ex }}</p>{% endif %}
-      </div>
-      {% if post.image %}<a class="thumb" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.image | replace: '.jpg', '-thumb.jpg' | relative_url }}" alt="" loading="lazy" width="104" height="78"></a>{% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+  {% assign groups = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  <div><!-- bounds the sticky year strip so it lets go at the end of the list -->
+  <nav class="years" aria-label="Jump to year">
+    <span class="years-marker" aria-hidden="true"></span>
+    {% for g in groups %}<a href="#{{ g.name }}">{{ g.name }}</a>{% endfor %}
+  </nav>
+
+  {% for g in groups %}
+  <section class="pub-year" id="{{ g.name }}">
+    <h2>{{ g.name }}</h2>
+    <ul class="news-list">
+      {% for post in g.items %}
+      <li class="reveal">
+        <p class="when"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>{% if post.kind %}<span class="kind">{{ post.kind }}</span>{% endif %}</p>
+        <div>
+          <p class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
+          {% assign ex = post.excerpt | strip_html | strip | truncatewords: 32 %}
+          {% if ex != "" %}<p class="excerpt">{{ ex }}</p>{% endif %}
+        </div>
+        {% if post.image %}<a class="thumb" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.image | replace: '.jpg', '-thumb.jpg' | relative_url }}" alt="" loading="lazy" width="104" height="78"></a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  </div>
 </div>
