@@ -12,6 +12,22 @@
   setHeaderH();
   addEventListener("resize", setHeaderH);
 
+  /* ---- mobile menu ---- */
+  var toggle = d.querySelector(".nav-toggle");
+  if (toggle && header) {
+    var setMenu = function (open) {
+      header.classList.toggle("nav-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    toggle.addEventListener("click", function () { setMenu(!header.classList.contains("nav-open")); });
+    d.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && header.classList.contains("nav-open")) { setMenu(false); toggle.focus(); }
+    });
+    d.addEventListener("click", function (e) { if (!header.contains(e.target)) setMenu(false); });
+    /* coming back through the back-forward cache restores the page with the menu still open */
+    addEventListener("pageshow", function (e) { if (e.persisted) setMenu(false); });
+  }
+
   /* smooth anchor scrolling only after the page has settled, so a #hash on arrival jumps instead of animating */
   addEventListener("load", function () {
     (d.fonts ? d.fonts.ready : Promise.resolve()).then(function () { root.classList.add("smooth"); });

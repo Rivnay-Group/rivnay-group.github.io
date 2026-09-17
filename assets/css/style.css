@@ -137,13 +137,12 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 }
 .brand { display: block; line-height: 0; }
 .brand img { height: 30px; width: auto; }
-.nav-toggle { display: none; }
-.nav-toggle-label { display: none; cursor: pointer; padding: 0.5rem; }
-.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
-  display: block; width: 22px; height: 2px; background: var(--ink); position: relative; content: "";
+.nav-toggle { display: none; cursor: pointer; background: none; border: 0; padding: 0; color: var(--ink); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+  display: block; width: 22px; height: 2px; background: currentColor; position: relative; content: "";
 }
-.nav-toggle-label span::before { position: absolute; top: -7px; }
-.nav-toggle-label span::after { position: absolute; top: 7px; }
+.nav-toggle span::before { position: absolute; top: -7px; }
+.nav-toggle span::after { position: absolute; top: 7px; }
 .site-nav ul { list-style: none; display: flex; gap: 1.6rem; align-items: center; }
 .site-nav a {
   text-decoration: none; color: var(--ink); font-weight: 500; font-size: var(--fs-md);
@@ -152,14 +151,14 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 .site-nav a:hover { color: var(--purple); }
 .site-nav a[aria-current="page"] { color: var(--purple); border-bottom-color: var(--rule); }
 @media (max-width: 860px) {
-  .nav-toggle { display: block; position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
-  .nav-toggle:focus-visible + .nav-toggle-label { outline: 2px solid var(--purple); outline-offset: 2px; }
-  .nav-toggle-label { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 0; margin: -0.4rem -0.7rem -0.4rem 0; }
+  .nav-toggle { display: grid; place-items: center; min-width: 44px; min-height: 44px; margin: -0.4rem -0.7rem -0.4rem 0; }
   .site-nav {
     position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--paper); border-bottom: 1px solid var(--line); display: none;
+    background: var(--paper); border-bottom: 1px solid var(--line);
   }
-  .nav-toggle:checked ~ .site-nav { display: block; }
+  /* without script the menu simply stays open under the bar; with it the button opens and closes it */
+  .js .site-nav { display: none; }
+  .js .site-header.nav-open .site-nav { display: block; }
   .site-nav ul { flex-direction: column; align-items: stretch; gap: 0; padding: 0.4rem 0; }
   .site-nav a { display: block; padding: 0.75rem 1.5rem; border-bottom: none; }
   .site-nav a[aria-current="page"] { background: var(--purple-tint); }

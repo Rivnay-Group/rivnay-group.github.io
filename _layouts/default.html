@@ -20,9 +20,8 @@
 <header class="site-header">
   <div class="bar">
     <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo.svg' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" alt="Rivnay Group" width="124" height="30"></a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu"><span></span></label>
-    <nav class="site-nav" aria-label="Main">
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul>
         {%- assign items = "Research|/research/,Team|/team/,Publications|/publications/,News|/news/,Join|/join/" | split: "," -%}
         {%- for item in items -%}
