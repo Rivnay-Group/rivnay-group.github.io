@@ -367,7 +367,10 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
 
 /* ---------- publications ---------- */
 .pub-year { display: grid; grid-template-columns: 6rem 1fr; gap: 1.5rem; padding-top: 2.5rem; }
-.pub-year:first-of-type { padding-top: 0; }
+/* an author `display` beats the browser's own [hidden] rule, so the filter's hidden attribute needs this
+   to mean anything; without it a filtered page keeps every year heading painted over an empty list */
+.pub-year[hidden] { display: none; }
+.pub-year:not([hidden]):first-of-type { padding-top: 0; }
 .pub-year h2 { font-size: 1.5rem; align-self: start; }
 .pub-list { list-style: none; }
 .pub { padding: 1rem 0; border-bottom: 1px solid var(--line); font-size: var(--fs-md); }
@@ -386,6 +389,7 @@ details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line
 
 .pub-key { margin-top: 0.6rem; font-size: var(--fs-sm); color: var(--muted); }
 .pub-filter { margin-top: 1.2rem; }
+html:not(.js) .pub-filter { display: none; }   /* nothing drives it without script, so do not offer it */
 .pub-filter input { width: 100%; max-width: 28rem; font: inherit; font-size: var(--fs-md); color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 0.55rem 0.8rem; }
 .pub-filter input:focus { border-color: var(--purple); }
 .pub-none { margin-top: 1rem; color: var(--muted); font-size: var(--fs-md); }

@@ -197,15 +197,27 @@
     var pubYears = [].slice.call(d.querySelectorAll(".pub-year"));
     var older = d.querySelector("details.collapsed");
     var none = d.querySelector(".pub-none");
+    var rail = d.querySelector(".years");
     var haystack = pubs.map(function (p) { return p.textContent.toLowerCase(); });
     filter.addEventListener("input", function () {
       var q = filter.value.trim().toLowerCase();
       var shown = 0;
       pubs.forEach(function (p, i) { p.hidden = !!q && haystack[i].indexOf(q) < 0; if (!p.hidden) shown++; });
-      pubYears.forEach(function (s) { s.hidden = !!q && !s.querySelector(".pub:not([hidden])"); });
+      pubYears.forEach(function (s) {
+        var empty = !!q && !s.querySelector(".pub:not([hidden])");
+        s.hidden = empty;
+        /* a chip pointing at a hidden year is a dead link, so it goes with it */
+        var chip = rail && rail.querySelector('a[href="#' + s.id + '"]');
+        if (chip) chip.hidden = empty;
+      });
       /* while a query is running, open the pre-Northwestern list if it has matches, so nothing hides */
       if (older) older.open = !!q && !!older.querySelector(".pub:not([hidden])");
-      if (none) none.hidden = !q || shown > 0;
+      if (none) {
+        none.textContent = !q ? "" : (shown ? shown + (shown === 1 ? " paper" : " papers") : "No papers match.");
+        none.hidden = !q;
+      }
+      /* the rail's active year is computed from what is on screen, which just changed */
+      dispatchEvent(new Event("scroll"));
     });
   }
 
@@ -238,14 +250,15 @@
       var hh = header ? header.offsetHeight : 0;
       /* a section counts as current once its top reaches where an anchor jump lands it (its scroll margin) */
       var line = (parseFloat(getComputedStyle(sections[0]).scrollMarginTop) || hh + 28) + 4;
-      var current = sections[0];
-      for (var i = 0; i < sections.length; i++) {
-        if (sections[i].hidden) continue;   /* the filter can hide a whole year */
-        if (sections[i].getBoundingClientRect().top <= line) current = sections[i]; else break;
+      var visible = sections.filter(function (s) { return !s.hidden; });
+      if (!visible.length) { years.classList.remove("is-shown"); return; }
+      var current = visible[0];
+      for (var i = 0; i < visible.length; i++) {
+        if (visible[i].getBoundingClientRect().top <= line) current = visible[i]; else break;
       }
-      if (scrollY + innerHeight >= root.scrollHeight - 2) current = sections[sections.length - 1];
+      if (scrollY + innerHeight >= root.scrollHeight - 2) current = visible[visible.length - 1];
       setActive(current);
-      var last = sections[sections.length - 1].getBoundingClientRect();
+      var last = visible[visible.length - 1].getBoundingClientRect();
       var headBottom = head ? head.getBoundingClientRect().bottom : 0;
       years.classList.toggle("is-shown", headBottom < hh && last.bottom > innerHeight * 0.45);
     }
