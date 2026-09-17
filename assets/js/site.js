@@ -190,6 +190,25 @@
     else fallback();
   });
 
+  /* ---- publications: filter ---- */
+  var filter = d.getElementById("pub-filter");
+  if (filter) {
+    var pubs = [].slice.call(d.querySelectorAll(".pub"));
+    var pubYears = [].slice.call(d.querySelectorAll(".pub-year"));
+    var older = d.querySelector("details.collapsed");
+    var none = d.querySelector(".pub-none");
+    var haystack = pubs.map(function (p) { return p.textContent.toLowerCase(); });
+    filter.addEventListener("input", function () {
+      var q = filter.value.trim().toLowerCase();
+      var shown = 0;
+      pubs.forEach(function (p, i) { p.hidden = !!q && haystack[i].indexOf(q) < 0; if (!p.hidden) shown++; });
+      pubYears.forEach(function (s) { s.hidden = !!q && !s.querySelector(".pub:not([hidden])"); });
+      /* while a query is running, open the pre-Northwestern list if it has matches, so nothing hides */
+      if (older) older.open = !!q && !!older.querySelector(".pub:not([hidden])");
+      if (none) none.hidden = !q || shown > 0;
+    });
+  }
+
   /* ---- publications: year timeline ---- */
   var years = d.querySelector(".years");
   var sections = [].slice.call(d.querySelectorAll(".pub-year[id]"));
@@ -221,6 +240,7 @@
       var line = (parseFloat(getComputedStyle(sections[0]).scrollMarginTop) || hh + 28) + 4;
       var current = sections[0];
       for (var i = 0; i < sections.length; i++) {
+        if (sections[i].hidden) continue;   /* the filter can hide a whole year */
         if (sections[i].getBoundingClientRect().top <= line) current = sections[i]; else break;
       }
       if (scrollY + innerHeight >= root.scrollHeight - 2) current = sections[sections.length - 1];
