@@ -2,7 +2,7 @@
 
 Source for the Rivnay Group site (Laboratory for Organic & Hybrid Bioelectronics, Northwestern University). Built with Jekyll and hosted on GitHub Pages. No JavaScript framework, one CSS file, content in data files.
 
-Live: https://rivnay-group.github.io/ (moves to https://rivnay.northwestern.edu/ once Northwestern IT points the domain at GitHub)
+Live: https://rivnay.northwestern.edu/
 
 ## Editing content
 
@@ -28,7 +28,11 @@ Post front matter:
 title: Congratulations Dr. Example!
 date: 2026-09-01
 kind: people        # paper | award | people | group
-image: /assets/img/news/2026-09-01-example.jpg   # optional, 1400px wide max
+image: /assets/img/news/2026-09-01-example.jpg   # optional; 1600px wide max, about 300 KB
+image_width: 1400   # pixel size of the file, so the page does not jump while it loads
+image_height: 561
+image_caption: Optional caption under the lead photo
+excerpt: Optional one-sentence teaser for the news list; otherwise the first paragraph is cut at 32 words
 link: https://doi.org/...                         # optional, shown as "Read more"
 ---
 Body text in markdown.
@@ -52,12 +56,10 @@ jekyll serve
 
 Then open http://127.0.0.1:4000/.
 
+After `jekyll build`, `python3 scripts/check_links.py` reports any internal link or asset that does not resolve.
+
 Old Squarespace URLs redirect via `redirect_from:` in each post and page; `python3 scripts/redirects.py` regenerates the post entries from `scripts/old-site-sitemap.xml`.
 
-## Custom domain (rivnay.northwestern.edu)
+## Domain
 
-1. Ask Northwestern IT to point `rivnay.northwestern.edu` at GitHub Pages with a CNAME record to `rivnay-group.github.io`.
-2. In this repo: add a file named `CNAME` containing `rivnay.northwestern.edu`, and change `baseurl` in `_config.yml` to `""`.
-3. In GitHub → Settings → Pages, enter the custom domain and enable "Enforce HTTPS" once the certificate is issued.
-
-GitHub's guide: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+rivnay.northwestern.edu is a CNAME to rivnay-group.github.io (set by Northwestern IT), the `CNAME` file in this repo names it, and "Enforce HTTPS" is on under Settings -> Pages. Nothing to do unless the repo moves; then change `url:` in `_config.yml`, the `CNAME` file and the DNS record together.

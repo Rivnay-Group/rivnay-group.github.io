@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{%- capture assetprefix %}src="{{ site.baseurl }}/assets/{% endcapture -%}
 <article class="wrap">
   <header class="post-head">
     <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.kind %} <span class="kind">{{ page.kind }}</span>{% endif %}</p>
@@ -9,7 +8,7 @@ layout: default
   </header>
   {% if page.image %}<figure class="post-figure"><img src="{{ page.image | relative_url }}" alt=""{% if page.image_width %} width="{{ page.image_width }}" height="{{ page.image_height }}"{% endif %}>{% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}</figure>{% endif %}
   <div class="prose post-body">
-    {{ content | replace: 'src="/assets/', assetprefix }}
+    {{ content }}
     {%- if page.link %}{% unless content contains page.link %}
     <p><a href="{{ page.link }}">{% if page.kind == "paper" %}Read the paper{% else %}Read more{% endif %}</a></p>
     {%- endunless %}{% endif %}

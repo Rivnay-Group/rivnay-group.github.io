@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
 """Check internal links and asset references in the built site.
 
-Usage: jekyll build && python3 scripts/check_links.py [_site] [/baseurl]
-Reports hrefs/srcs that point inside the site but do not resolve to a file,
-plus root-relative asset paths that skip the baseurl (they break on GitHub Pages
-until the custom domain is live).
+Usage: jekyll build && python3 scripts/check_links.py [_site]
+Reports every href/src/poster/srcset that points inside the site but does not resolve to a
+file, an index.html, or a .html page (GitHub Pages serves /foo from foo.html).
 """
 import os, re, sys, html
 from urllib.parse import urlsplit, unquote
 
 site = sys.argv[1] if len(sys.argv) > 1 else "_site"
-baseurl = sys.argv[2] if len(sys.argv) > 2 else ""
 attr = re.compile(r'(?:href|src|poster)="([^"]+)"|srcset="([^"]+)"')
 problems, checked = [], 0
 
 def exists(path):
     p = os.path.join(site, unquote(path).lstrip("/"))
-    return os.path.isfile(p) or os.path.isfile(os.path.join(p, "index.html"))
+    return os.path.isfile(p) or os.path.isfile(os.path.join(p, "index.html")) or os.path.isfile(p + ".html")
 
 for root, _, files in os.walk(site):
     for f in files:
@@ -34,10 +32,7 @@ for root, _, files in os.walk(site):
                 if not path:
                     continue
                 checked += 1
-                if path.startswith("/") and not path.startswith(baseurl + "/") and path != baseurl:
-                    problems.append(f"{page}: missing baseurl: {url}")
-                    continue
-                rel = path[len(baseurl):] if path.startswith(baseurl) else os.path.join(os.path.relpath(root, site), path)
+                rel = path if path.startswith("/") else os.path.join(os.path.relpath(root, site), path)
                 if not exists(rel):
                     problems.append(f"{page}: broken: {url}")
 
