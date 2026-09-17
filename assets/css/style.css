@@ -408,7 +408,7 @@ details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size
 .theme-pubs .venue { display: block; color: var(--muted); font-size: var(--fs-sm); margin-top: 0.25rem; }
 .theme figure img, .theme figure video { border-radius: var(--radius); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); background: var(--paper); }
 .theme figure.square img, .theme figure.square video { aspect-ratio: 1; }
-.theme figure.natural img, .theme figure.natural video { aspect-ratio: auto; height: auto; }
+.theme figure.natural img, .theme figure.natural video { height: auto; }   /* full frame; the ratio is inline on the element, beside its width/height */
 .media-stack { display: grid; gap: 1.25rem; }
 /* two figures side by side, so a pair of small images costs a fraction of the column height */
 .figure-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
