@@ -29,6 +29,7 @@
   bio: >
     Zach completed his undergraduate education in 2020 at the University of Illinois at Urbana-Champaign with a dual degree in Mechanical and Electrical Engineering. After working on large agricultural and construction equipment for several years at John Deere, he attended Northwestern University and received a Master's degree in Materials Science and Engineering in 2024. While completing his studies there he performed research on prosthetics and wearable sensors under Dr. Matty Major. He is currently part of the Oxygenation Team in the Rivnay Group, supporting device builds and improvements.
 - name: Michelle Lotz
+  email: michelle.lotz@northwestern.edu
   role: Lab manager
   group: staff
   photo: michelle-lotz.jpg
@@ -182,6 +183,7 @@
   bio: >
     John earned his MS and BS from Northwestern in the departments of Electrical Engineering and Manufacturing and Design Engineering, respectively. His passion for cutting-edge health technology led him to the Rivnay Group, in which he develops biomolecular sensors for lab-grown tissues, which are robust tools to study inflammation. Beyond the lab, he spends his time at the gym, producing music, and reading.
 - name: Liangying Chen
+  email: liang-yingchen2026@u.northwestern.edu
   role: Master's student
   group: masters
   photo: liangying-chen.jpg
@@ -195,6 +197,7 @@
   bio: >
     Ziyi earned his B.S. in Polymer Materials and Engineering from Beijing University of Chemical Technology in 2025. During his undergraduate studies, he worked with Dr. Qingsheng Liu on anti-foreign-body PDMS for reusable medical catheter applications. Ziyi joined the Rivnay Group as an MS student in Materials Science and Engineering in 2025. His current research focuses on the fabrication of transparent, photo-responsive OECTs. Outside the lab, Ziyi enjoys hiking, sports, and video games.
 - name: Julia Ostrander
+  email: juliaostrander2027@u.northwestern.edu
   role: Master's student
   group: masters
   photo: julia-ostrander.jpg
@@ -208,12 +211,14 @@
   bio: >
     Beliz earned her B.S. in Chemical and Biomolecular Engineering with a minor in Biomedical Engineering from Georgia Institute of Technology in 2023. During the first two years of her undergrad, she worked in Coskun Lab at Georgia Tech on spatial organizations of cells. Later, she joined Stingelin Lab at Georgia Tech, where she worked with hybrid hydrogels to study their structure–property relationship and mechanical properties until she graduated. She joined Northwestern as a master's student in Materials Science and Engineering in 2023. Her research in the lab focuses on lipid-bilayer sensing. In her free time, she enjoys playing instruments, singing, and photography.
 - name: Ella Spena
+  email: ellaspena2028.1@u.northwestern.edu
   role: Undergraduate student
   group: undergrad
   photo: ella-spena.jpg
   bio: >
     Ella Spena is an undergraduate who started at Northwestern in Fall 2024, pursuing a B.S. in Biomedical Engineering. She joined the Rivnay Group in 2025 and is now working on how conductive materials can be used as biohybrid actuators as well as how the macroscopic orientation of the conductive materials can impact tissue maturation. Ella rows for the Northwestern club crew team and enjoys hiking, running, and reading in her free time.
 - name: Shwe Yee Phu
+  email: ShwePhu2028@u.northwestern.edu
   role: Undergraduate student
   group: undergrad
   photo: shwe-yee-phu.jpg
