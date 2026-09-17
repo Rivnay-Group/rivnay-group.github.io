@@ -362,6 +362,7 @@ a.title:hover { color: var(--purple); }
 .pub .authors strong { color: var(--ink); }
 .pub .venue { margin-top: 0.15rem; }
 .pub .doi { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.2rem; }
+details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line up with the year sections above */
 @media (max-width: 640px) {
   .pub-year { grid-template-columns: 1fr; gap: 0.5rem; }
   details.collapsed .pub-list { margin-left: 0; }
@@ -388,7 +389,6 @@ a.title:hover { color: var(--purple); }
 @media (prefers-reduced-motion: reduce) { .years, .years a, .years-marker { transition: none !important; } }
 details.collapsed { margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
 details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size: 1.4rem; font-weight: 700; color: var(--purple); }
-details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line up with the year sections above */
 
 /* ---------- research ---------- */
 .theme { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 3rem; align-items: start; padding-block: 3.75rem; border-top: 1px solid var(--line); }
