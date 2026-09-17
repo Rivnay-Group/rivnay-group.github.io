@@ -102,6 +102,8 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 .prose { max-width: none; }   /* body copy fills its column; only a layout narrows it */
 .prose p + p, .prose p + ul, .prose p + ol, .prose ul + p, .prose ol + p { margin-top: 1rem; }
 .prose h2 { margin: 2.5rem 0 0.8rem; }
+/* the postdoc posting is a separate document, not another section: same hairline the research themes use */
+.prose h2#postdoc { margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
 .prose h3 { margin: 1.8rem 0 0.5rem; }
 .prose > :first-child { margin-top: 0; }
 .prose ul, .prose ol { padding-left: 1.3rem; }

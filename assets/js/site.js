@@ -155,19 +155,21 @@
     var btn = ev.target.closest && ev.target.closest(".copy-link");
     if (!btn) return;
     var url = btn.dataset.url;
+    var label = btn.parentNode.querySelector(".share-label");
 
-    function confirmed() {
-      btn.classList.add("is-copied");
-      btn.querySelector(".i-link").hidden = true;
-      btn.querySelector(".i-ok").hidden = false;
-      btn.setAttribute("aria-label", "Link copied");
-      setTimeout(function () {
-        btn.classList.remove("is-copied");
-        btn.querySelector(".i-link").hidden = false;
-        btn.querySelector(".i-ok").hidden = true;
-        btn.setAttribute("aria-label", "Copy link");
-      }, 1800);
+    /* the share label doubles as the live region: it says what happened, then goes back to "Share" */
+    function say(text, done) {
+      btn.classList.toggle("is-copied", done);
+      btn.querySelector(".i-link").hidden = done;
+      btn.querySelector(".i-ok").hidden = !done;
+      btn.setAttribute("aria-label", done ? "Link copied" : "Copy link");
+      btn.title = done ? "Link copied" : "Copy link";
+      if (label) label.textContent = text;
+      clearTimeout(btn._t);
+      if (text !== "Share") btn._t = setTimeout(function () { say("Share", false); }, 1800);
     }
+    function confirmed() { say("Link copied", true); }
+    function failed() { say("Copy failed", false); }
 
     /* the async clipboard refuses when the document is not focused, so keep the old route in reserve */
     function fallback() {
@@ -181,7 +183,7 @@
       try { ok = d.execCommand("copy"); } catch (e) {}
       d.body.removeChild(ta);
       btn.focus();
-      if (ok) confirmed();
+      if (ok) confirmed(); else failed();
     }
 
     if (navigator.clipboard) navigator.clipboard.writeText(url).then(confirmed, fallback);
