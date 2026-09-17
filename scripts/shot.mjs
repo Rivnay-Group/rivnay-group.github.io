@@ -2,7 +2,9 @@
 // Headless-Chrome harness for measuring the local build of the Rivnay Group site.
 //   node scripts/shot.mjs <url> [--width 1440] [--height 900] [--mobile] [--touch] [--dark] [--reduce]
 //                         [--settle] [--scroll N] [--click "css"] [--wait ms] [--eval "js"]
-//                         [--full] [--shot out.png] [--allow-error] [--timeout 15000]
+//                         [--full] [--shot out.png] [--allow-error] [--nojs] [--timeout 15000]
+// --nojs loads the page with JavaScript disabled, to check what a scripts-off visitor really gets.
+// Removing the "js" class by hand is NOT equivalent: it runs after the scripts have already run.
 // --eval runs the body of an async function after load + fonts.ready and prints the return value as JSON.
 // --full scrolls the whole page first (the scroll reveal is one-shot and would otherwise capture blank),
 // then captures everything; without it the capture is the viewport as a visitor sees it.
@@ -34,7 +36,9 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const dir = mkdtempSync(join(tmpdir(), "shot-"));
 const chrome = spawn("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", [
   "--headless=new", "--disable-gpu", "--hide-scrollbars", "--no-first-run", "--no-default-browser-check",
-  `--user-data-dir=${dir}`, "--remote-debugging-port=0", `--window-size=${width},${height}`, "about:blank",
+  `--user-data-dir=${dir}`, "--remote-debugging-port=0", `--window-size=${width},${height}`,
+  ...(has("--nojs") ? ["--blink-settings=scriptEnabled=false"] : []),
+  "about:blank",
 ], { stdio: ["ignore", "ignore", "pipe"] });
 let sock;
 try {

@@ -152,13 +152,17 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 .site-nav a[aria-current="page"] { color: var(--purple); border-bottom-color: var(--rule); }
 @media (max-width: 860px) {
   .nav-toggle { display: grid; place-items: center; min-width: 44px; min-height: 44px; margin: -0.4rem -0.7rem -0.4rem 0; }
-  .site-nav {
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--paper); border-bottom: 1px solid var(--line);
-  }
-  /* without script the menu simply stays open under the bar; with it the button opens and closes it */
-  .js .site-nav { display: none; }
+  .site-nav { background: var(--paper); border-bottom: 1px solid var(--line); }
+  /* The drop-down panel belongs to the scripted path ONLY: it is positioned over the page, so if the
+     button that dismisses it cannot run, it would sit on top of the page heading for ever (the header is
+     sticky, so scrolling does not escape it). */
+  .js .site-nav { position: absolute; top: 100%; left: 0; right: 0; display: none; }
   .js .site-header.nav-open .site-nav { display: block; }
+  /* No script: the nav wraps onto its own full-width line inside the bar, in the document flow, covering
+     nothing, and the button that would have driven it is hidden rather than left as a dead control. */
+  html:not(.js) .site-header .bar { flex-wrap: wrap; }
+  html:not(.js) .site-nav { flex-basis: 100%; }
+  html:not(.js) .nav-toggle { display: none; }
   .site-nav ul { flex-direction: column; align-items: stretch; gap: 0; padding: 0.4rem 0; }
   .site-nav a { display: block; padding: 0.75rem 1.5rem; border-bottom: none; }
   .site-nav a[aria-current="page"] { background: var(--purple-tint); }

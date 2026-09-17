@@ -10,6 +10,15 @@
 
 **Spec:** `docs/superpowers/specs/2026-09-16-site-audit.md` (the findings, evidence and verifier corrections; each task names the finding it closes as C*n* or I*n*).
 
+## Status
+
+| Done and live | Task 0 (harness), Task 1 (Squarespace redirects), Task 2 (hero clip), Task 11 (hygiene) |
+|---|---|
+| **Done, awaiting merge** | Tasks 3, 4, 5, 6, 7 on branch `tasks-3-to-7` |
+| **Next** | Task 8 |
+
+Task 11 was pulled forward out of order because the file it removes was exposed on the live site. Update this table as tasks land.
+
 ## Global Constraints
 
 - Owner decisions stand. Never reintroduce anything the spec's "Refuted" section or the memory notes record as rejected: no eyebrow labels, no label that repeats a heading, no `max-width` on body copy, no hero buttons/tagline/pause control, no purple or lavender footer, no circles for headshots, no role on a closed team card, no Alumni item in the nav, no sticky-pinned team photo, the `doi:` line stays. The group is the "Rivnay Group", never "Rivnay Lab" (the wordmark image is the one exception).
@@ -24,8 +33,8 @@
 ### Shell setup used by every task
 
 ```bash
-cd /Users/Owner/School/rivnay-lab
-export PATH="$HOME/.nvm/versions/node/v24.13.1/bin:$PATH"
+cd the repo root
+export PATH=""$(dirname "$(which node)")":$PATH"
 JEKYLL=/opt/homebrew/lib/ruby/gems/4.0.0/bin/jekyll
 $JEKYLL build
 # serve the build once, in the background, for the whole session
@@ -1023,7 +1032,7 @@ git commit -m "Support: MRSEC mark rendered at its tuned size"
 
 ```bash
 git mv assets/img/README.md docs/image-manifest.md
-sed -i '' 's#/Users/Owner/School/website/#website/#g' docs/image-manifest.md
+sed -i '' 's#the lab photo folder/#website/#g' docs/image-manifest.md
 $JEKYLL build && ls _site/assets/img/README.md 2>&1
 ```
 Expected: `No such file or directory`.
