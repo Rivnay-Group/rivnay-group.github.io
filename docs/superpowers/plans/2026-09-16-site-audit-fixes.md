@@ -12,12 +12,22 @@
 
 ## Status
 
-| Done and live | Task 0 (harness), Task 1 (Squarespace redirects), Task 2 (hero clip), Task 11 (hygiene) |
-|---|---|
-| **Done, awaiting merge** | Tasks 3, 4, 5, 6, 7 on branch `tasks-3-to-7` |
-| **Next** | Task 8 |
+All 22 tasks are implemented. Tasks 0, 1, 2 and 11 are merged and live; the rest are on
+`tasks-8-onward` awaiting review and merge.
 
-Task 11 was pulled forward out of order because the file it removes was exposed on the live site. Update this table as tasks land.
+Task 11 was pulled forward out of order because the file it removes was exposed on the live site.
+
+Still needing a decision from John, none of them blocking:
+
+- Alumni `now:` for Lucia Galindo (2026) and Boyuan Sun (2022), which render as blank cells.
+- Whether Gianmaria Matrone should read "Giovanni Maria" (his LinkedIn handle and the publication
+  record say "G. M.").
+- Email addresses for eight current members, whose opened cards show no contact.
+- The MRSEC cell: the file is an unlabelled icon and the MRSEC site publishes no lockup, so it needs
+  a file from their office or a decision to drop the cell.
+- DARPA and AFOSR logos, both outside their agencies' published usage policies.
+- An Elsevier reader token was scrubbed from `docs/superpowers/specs/copy-fixes.md` but remains in
+  git history on a public repo, so treat it as exposed.
 
 ## Global Constraints
 
