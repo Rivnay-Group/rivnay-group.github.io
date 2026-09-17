@@ -451,7 +451,7 @@ node scripts/shot.mjs http://127.0.0.1:4002/ --eval "const v = document.querySel
 node scripts/shot.mjs http://127.0.0.1:4002/ --reduce --wait 15000 --eval "const v = document.querySelector('.hero-bg'); return { src: !!v.currentSrc }"
 node scripts/shot.mjs http://127.0.0.1:4002/ --wait 21000 --eval "const v = document.querySelector('.hero-bg'); return { src: !!v.currentSrc, paused: v.paused, time: v.currentTime, stillOn: !!document.querySelector('.hero-slide.is-on') }"
 ```
-Expected: first `src: false, ready: 0, preload: "none"`; second (reduced motion, 15 s in) `src: false`; third (21 s in) `src: true, paused: false, time > 0, stillOn: false` (the clip is playing and visible). Also confirm the Research page clip still autoplays: `node scripts/shot.mjs http://127.0.0.1:4002/research/ --eval "return document.querySelector('.theme video').paused"` → `false`.
+Expected: first `src: false, ready: 0, preload: "none"`; second (reduced motion, 15 s in) `src: false`; third (21 s in) `src: true, paused: false, time > 0, stillOn: false` (the clip is playing and visible). Add a fourth at `--wait 14000`: `src: true, ready: 4` with `d7-die.jpg` on top, which is the point of the change — the clip is buffered before its turn rather than at page load. The Research page's own clip is untouched, but do not check it with `.paused`: it is below the fold and headless Chrome reports `paused: true` for it both before and after this change, so the only meaningful check there is that the value is the same as on the previous commit.
 
 - [ ] **Step 5: Commit**
 

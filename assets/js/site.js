@@ -20,11 +20,19 @@
   /* ---- home hero: the stills in order, then the clip, then back ---- */
   var hero = d.querySelector(".hero");
   var slides = hero ? [].slice.call(hero.querySelectorAll(".hero-slide")) : [];
+  var clip = hero ? hero.querySelector("video[data-src]") : null;
   if (slides.length && !reduce) {
     var cur = 0, timer = 0;
     function turn() {
       cur = cur + 1 >= slides.length ? -1 : cur + 1;
       slides.forEach(function (s, k) { s.classList.toggle("is-on", k === cur); });
+      if (clip) {
+        /* the clip is fetched while the last still is up, so it is buffered when its turn comes;
+           under reduced motion or without script it is never fetched at all */
+        if (cur === slides.length - 1 && !clip.getAttribute("src")) { clip.src = clip.getAttribute("data-src"); clip.load(); }
+        if (cur === -1) { var p = clip.play(); if (p && p.catch) p.catch(function () {}); }
+        else clip.pause();
+      }
       timer = setTimeout(turn, cur === -1 ? 9000 : 6500);
     }
     function start() {
@@ -43,7 +51,7 @@
       if (!e.matches) return;
       clearTimeout(timer); timer = 0; cur = 0;
       slides.forEach(function (s, k) { s.classList.toggle("is-on", k === 0); });
-      var clip = hero.querySelector("video"); if (clip) { clip.removeAttribute("autoplay"); clip.pause(); }
+      if (clip) clip.pause();
     });
   }
 
