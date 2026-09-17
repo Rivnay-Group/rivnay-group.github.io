@@ -6,6 +6,7 @@ image: /assets/img/news/2026-09-11-jonathan-device.jpg
 image_width: 1328
 image_height: 747
 image_caption: "Jonathan with one of the group's implantable devices."
+excerpt: "Our first post on the new site rounds up everything that has happened in the group since our last update."
 ---
 Welcome! A lot's happened in the group since our last news post. Here are some abbreviated updates:
 

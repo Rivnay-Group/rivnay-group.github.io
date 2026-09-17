@@ -26,7 +26,7 @@
   group: staff
   photo: zach-hoegberg.jpg
   bio: >
-    Zach completed his undergraduate education in 2020 at the University of Illinois at Urbana-Champaign with a dual degree in Mechanical and Electrical Engineering. After working on large agricultural and construction equipment for several years at John Deere, he attended Northwestern University and received a Master's degree in Materials Science and Engineering in 2024. While completing his studies there he performed research on prosthetics and wearable sensors under Dr. Matty Major. He is currently part of the Oxygenation Team in the Rivnay group, supporting device builds and improvements.
+    Zach completed his undergraduate education in 2020 at the University of Illinois at Urbana-Champaign with a dual degree in Mechanical and Electrical Engineering. After working on large agricultural and construction equipment for several years at John Deere, he attended Northwestern University and received a Master's degree in Materials Science and Engineering in 2024. While completing his studies there he performed research on prosthetics and wearable sensors under Dr. Matty Major. He is currently part of the Oxygenation Team in the Rivnay Group, supporting device builds and improvements.
 - name: Michelle Lotz
   role: Lab manager
   group: staff
@@ -39,7 +39,7 @@
   group: staff
   email: rachel.nolander@northwestern.edu
   photo: rachel-nolander.jpg
-  website: https://linkedin.com/in/rachel-nolander
+  website: https://www.linkedin.com/in/rachel-nolander
   bio: >
     Rachel graduated from Northwestern University in 2026 with a B.S. in Biomedical Engineering with Departmental Honors. During her time at Northwestern, Rachel conducted research at the Northwestern Querrey Simpson Institute for Bioelectronics under Professor John A. Rogers. Her undergraduate honors thesis focused on strategies to extend the lifetime of bioresorbable millimeter-scale pacemakers. She is now interested in developing implantable biosensors for detecting inflammatory biomarkers. Outside of research, Rachel enjoys playing guitar, hiking, baking, and painting.
 - name: Rhea William
@@ -53,7 +53,7 @@
   group: postdoc
   email: catherine.beaumont@northwestern.edu
   photo: catherine-beaumont.jpg
-  website: http://www.linkedin.com/in/catherine-beaumont2
+  website: https://www.linkedin.com/in/catherine-beaumont2
   bio: >
     Catherine earned her B.S. in Chemistry from Laval University, Canada, where she conducted undergraduate research in peptide synthesis under Professor Éric Biron and polymer chemistry with Professor Mario Leclerc. She continued her academic journey at Laval University, obtaining her M.Sc. in 2020 and her Ph.D. in 2024. During her Ph.D., under the guidance of Professor Leclerc, she developed innovative water-soluble polymers for printed organic electronics. In recognition of her work, she was awarded an NSERC postdoctoral fellowship and joined the Rivnay Group in 2024 as a postdoctoral scholar. Catherine develops functional polymers for bioelectronic devices and biological interfaces, combining synthetic polymer chemistry with electrochemical characterization and device integration. Outside the lab, Catherine enjoys figure skating, snowboarding and reading.
 - name: Priscila Cavassin
@@ -69,7 +69,7 @@
   group: postdoc
   email: yebin.lee@northwestern.edu
   photo: yebin-lee.jpg
-  website: http://www.linkedin.com/in/yebin-lee-4647418b
+  website: https://www.linkedin.com/in/yebin-lee-4647418b
   bio: >
     Yebin Lee obtained her B.Eng. in Chemical Engineering and MASc in Chemical Engineering and Materials Science from Chung-Ang University, Korea. From 2013 to 2017, she worked as an engineer for Samsung Display Co., Ltd., Korea, and developed flexible display modules. She then moved to Canada and received a Ph.D. in Chemical Engineering (Nanotechnology) from the University of Waterloo in 2022 under the supervision of Prof. Michael Tam. During her Ph.D. study, Yebin focused on the surface engineering of sustainable nanomaterials and applied them to various advanced applications. After receiving her Ph.D. degree, she held a postdoctoral position at the same research group, during which she applied her specialties to various templates for practical applications. Yebin joined the Rivnay Group as a postdoctoral fellow at Northwestern University in 2024. Currently, her work is focused on developing resilient electrochemical aptamer-based biosensors. Her current research interests include a fundamental understanding of surface chemistry and materials science to overcome fouling and degradation issues of biosensors in biological environments. In her free time, she likes running, reading, writing, and playing board games.
 - name: Jianzhe (James) Luo
@@ -86,7 +86,7 @@
   group: postdoc
   email: daeyeon.won@northwestern.edu
   photo: daeyeon-won.jpg
-  website: http://www.linkedin.com/in/daeyeon-won-2a362523b
+  website: https://www.linkedin.com/in/daeyeon-won-2a362523b
   bio: >
     Daeyeon earned dual B.S. degrees in Civil Engineering and Mechanical Engineering from Korea University, South Korea. He began his research career in Prof. Seung Hwan Ko’s group at Seoul National University, where he developed fabrication processes to enhance the properties of conducting polymers through laser–material interactions. He then worked as a Staff Engineer at the Semiconductor R&D Center of Samsung Electronics, developing fabrication processes for EUV photomasks. In 2025, he was awarded a postdoctoral fellowship from the National Research Foundation (NRF) of Korea and joined the Rivnay Group. His current research focuses on developing fabrication strategies to improve the performance of organic semiconductors and biohybrid electronic devices.
 - name: Rachel Daso
@@ -123,7 +123,7 @@
   group: phd
   email: victoriakindratenko2028@u.northwestern.edu
   photo: victoria-kindratenko.jpg
-  website: https://www.linkedin.com/in/victoria-kindratenko/
+  website: https://www.linkedin.com/in/victoria-kindratenko
   bio: >
     Victoria graduated from the University of Illinois at Urbana-Champaign in 2023 with a B.S. in Bioengineering. During her undergraduate career, Victoria worked in Dr. Rashid Bashir's Laboratory of Integrated Biomedical Micro/Nanotechnology and Applications. She worked with microfluidics-based point-of-care diagnostic devices for the detection of various conditions including sepsis, COVID-19, Zika, and breast cancer. Victoria's primary interests are using electrochemical aptamer-based biosensors for diagnostic purposes in implantable devices. She is currently exploring the chemistry involved in creating anti-fouling surfaces to improve the longevity of the sensors in biological environments. In her free time, she likes to paint, knit, and bake.
 - name: Albert Lai
@@ -131,7 +131,7 @@
   group: phd
   email: polai2030@u.northwestern.edu
   photo: albert-lai.jpg
-  website: http://www.linkedin.com/in/albert-lai-
+  website: https://www.linkedin.com/in/albert-lai-
   bio: >
     Albert earned his B.S. and M.S. degrees in Chemical Engineering from National Cheng Kung University, Taiwan, where he conducted research on nanocomposite hydrogels and ionogels for 3D printing and wearable sensors in Prof. Sheng-Sheng Yu’s lab. He then worked as an R&D engineer at TSMC for two years, developing epitaxy processes for the 1.4 nm node. His current research focuses on the fundamental studies of mixed ionic–electronic conductors, using advanced characterization techniques to investigate the structure–property relationships of conjugated polymers and 2D materials. Outside of the lab, Albert enjoys the simple pleasures of life—finding a quiet corner in a local cafe, catching a movie, or experimenting with new recipes in the kitchen. He also stays active through traveling, working out, and following sports.
 - name: Zachary Laswick
@@ -146,7 +146,7 @@
   group: phd
   email: junyiliu2028@u.northwestern.edu
   photo: junyi-liu.jpg
-  website: https://www.linkedin.com/in/bobbyliu123/
+  website: https://www.linkedin.com/in/bobbyliu123
   bio: >
     Junyi graduated from the University of Wisconsin–Madison in 2023 with a B.S. in Materials Science and Engineering and a double major in Chemistry. His undergraduate research focused on computational phase field modeling and designing piezoelectric materials under Dr. Jiamian Hu. Junyi joined the Rivnay Group as a PhD student in Materials Science and Engineering in 2023. His current work involves the materials design and fabrication of implantable oxygen sensors and oxygenation devices. In his free time, he enjoys cooking, playing board games, studying music, and exploring fun places in the city.
 - name: Royall McMahon Ward
@@ -169,7 +169,7 @@
   group: phd
   email: zanderschwartz2030@u.northwestern.edu
   photo: zander-schwartz.jpg
-  website: http://linkedin.com/in/zander-schwartz
+  website: https://www.linkedin.com/in/zander-schwartz
   bio: >
     Zander earned his B.E. in Biomedical Engineering from Vanderbilt University in 2025, with a double major in Medicine, Health, and Society. As an undergraduate, he conducted research under Dr. Ethan Lippmann, using in vitro models to study the progression of Alzheimer’s disease in stem cell cultures. Zander joined the Rivnay Group in 2025, where his current research focuses on electrochemical aptamer-based sensors for diagnostic applications in implantable devices. Outside of lab, Zander enjoys playing music, going to concerts, hiking, traveling, and trying new food.
 - name: John Williams
@@ -177,7 +177,7 @@
   group: phd
   email: johnwilliams2019@u.northwestern.edu
   photo: john-williams.jpg
-  website: https://www.linkedin.com/in/john-williams-work/
+  website: https://www.linkedin.com/in/john-williams-work
   bio: >
     John earned his MS and BS from Northwestern in the departments of Electrical Engineering and Manufacturing and Design Engineering, respectively. His passion for cutting-edge health technology led him to the Rivnay Group, in which he develops biomolecular sensors for lab-grown tissues, which are robust tools to study inflammation. Beyond the lab, he spends his time at the gym, producing music, and reading.
 - name: Liangying Chen
