@@ -48,7 +48,7 @@ Fetches every work for Jonathan Rivnay from OpenAlex, keeps journal articles and
 
 ## Preview locally
 
-Requires Ruby 3+ and Jekyll (`brew install ruby`, then `gem install jekyll jekyll-seo-tag jekyll-redirect-from webrick`).
+Requires Ruby 3+ and Jekyll (`brew install ruby`, then `gem install jekyll jekyll-seo-tag jekyll-redirect-from jekyll-sitemap jekyll-feed webrick`).
 
 ```
 jekyll serve

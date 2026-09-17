@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}
+  {% seo %}{% feed_meta %}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" sizes="16x16 32x32 48x48">
   <link rel="icon" href="{{ '/assets/icon-r.svg' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" type="image/svg+xml">
   <link rel="icon" href="{{ '/assets/icon-r-32.png' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" type="image/png" sizes="32x32">
@@ -24,12 +24,15 @@
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul>
         {%- assign items = "Research|/research/,Team|/team/,Publications|/publications/,News|/news/,Join|/join/" | split: "," -%}
+        {%- comment -%}Alumni is reached from Team and is not its own nav item, so it keeps Team lit.{%- endcomment -%}
+        {%- assign here = page.url -%}
+        {%- if page.url == "/alumni/" -%}{%- assign here = "/team/" -%}{%- endif -%}
         {%- for item in items -%}
           {%- assign p = item | split: "|" -%}
           {%- assign cur = false -%}
           {%- if p[1] == "/" -%}
             {%- if page.url == "/" or page.url == "/index.html" -%}{%- assign cur = true -%}{%- endif -%}
-          {%- elsif page.url contains p[1] -%}
+          {%- elsif here contains p[1] -%}
             {%- assign cur = true -%}
           {%- endif -%}
         <li><a href="{{ p[1] | relative_url }}"{% if cur %} aria-current="page"{% endif %}>{{ p[0] }}</a></li>

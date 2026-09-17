@@ -16,6 +16,8 @@ kramdown:
 plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from   # old Squarespace URLs: redirect_from lists in the posts and pages
+  - jekyll-sitemap         # /sitemap.xml and /robots.txt
+  - jekyll-feed            # /feed.xml from _posts
 
 exclude:
   - docs
@@ -37,3 +39,9 @@ defaults:
       path: ""
     values:
       layout: default
+  # section pages get a share image; posts are their own type and keep their own
+  - scope:
+      path: ""
+      type: pages
+    values:
+      image: /assets/img/og-image.jpg
