@@ -262,18 +262,25 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 /* The group photo gets a screen to itself. Two proximity snap points, the photo and the roster, mean a small
    scroll settles back onto the photo and a firmer one carries past it. Native snapping: the scroll itself is
    never intercepted, so the wheel, trackpad, scrollbar and keyboard all behave normally. */
-html.snap { scroll-snap-type: y proximity; }
-.team-stage {
-  min-height: calc(100vh - var(--header-h, 61px));
-  min-height: calc(100svh - var(--header-h, 61px));   /* phones: exclude the collapsible browser chrome */
-  display: flex; flex-direction: column; justify-content: center;
-  scroll-snap-align: start; scroll-margin-top: var(--header-h, 61px);
-  padding-bottom: 2rem;
-}
-.team-stage .page-head { padding-top: 0; }
+.team-stage { display: flex; flex-direction: column; justify-content: center; padding-bottom: 2rem; }
 .team { margin: 0; }
-.team img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
-.roster { scroll-snap-align: start; scroll-margin-top: var(--header-h, 61px); padding-top: 1rem; }
+.team img { display: block; width: auto; max-width: 100%; height: auto; margin-inline: auto; border-radius: var(--radius); }
+.roster { padding-top: 1rem; }
+/* From 700px the photo can fill a screen of its own: the stage takes the viewport, the photo is capped so
+   the heading and caption always fit beside it (11rem covers the heading, its paddings, the caption and the
+   stage padding), and the snap points apply. Below that a phone gets a plain page: heading, photo, caption,
+   roster, because a 2:1 photo can only be 171px tall there and the stage was two-thirds empty. */
+@media (min-width: 700px) {
+  html.snap { scroll-snap-type: y proximity; }
+  .team-stage {
+    min-height: calc(100vh - var(--header-h, 61px));
+    min-height: calc(100svh - var(--header-h, 61px));   /* exclude the collapsible browser chrome */
+    scroll-snap-align: start; scroll-margin-top: var(--header-h, 61px);
+  }
+  .team-stage .page-head { padding-top: 1.5rem; }
+  .team img { max-height: calc(100svh - var(--header-h, 61px) - 11rem); }
+  .roster { scroll-snap-align: start; scroll-margin-top: var(--header-h, 61px); }
+}
 @media (prefers-reduced-motion: reduce) { html.snap { scroll-snap-type: none; } }
 .group { margin-top: 3rem; }
 .group:first-of-type { margin-top: 0; }
