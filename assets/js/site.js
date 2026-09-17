@@ -29,8 +29,12 @@
       if (clip) {
         /* the clip is fetched two stills ahead, so it has ~13 s to buffer 1.8 MB and does not stutter on
            a slow connection; it still costs nothing at page load, and under reduced motion or without
-           script it is never fetched at all. currentTime is reset so every cycle starts from the top. */
-        if (cur >= slides.length - 2 && !clip.getAttribute("src")) { clip.src = clip.getAttribute("data-src"); clip.load(); }
+           script it is never fetched at all. currentTime is reset so every cycle starts from the top.
+           preload goes to "auto" first: leaving it at "none" while asking the element to load makes
+           Chrome fetch metadata, suspend, then resume with a range request, and that resumed transfer
+           fails against jekyll serve about two times in three (MEDIA_ERR_NETWORK, a dead hero). The
+           attribute stays "none" in the HTML, so a visitor who never reaches this line fetches nothing. */
+        if (cur >= slides.length - 2 && !clip.getAttribute("src")) { clip.preload = "auto"; clip.src = clip.getAttribute("data-src"); clip.load(); }
         if (cur === -1) { clip.currentTime = 0; var p = clip.play(); if (p && p.catch) p.catch(function () {}); }
         else clip.pause();
       }

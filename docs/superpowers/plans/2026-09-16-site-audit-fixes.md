@@ -465,8 +465,12 @@ In `assets/js/site.js` replace the hero block (from `/* ---- home hero` to the e
       if (clip) {
         /* the clip is fetched two stills ahead, so it has ~13 s to buffer 1.8 MB and does not stutter on
            a slow connection; it still costs nothing at page load, and under reduced motion or without
-           script it is never fetched at all. currentTime is reset so every cycle starts from the top. */
-        if (cur >= slides.length - 2 && !clip.getAttribute("src")) { clip.src = clip.getAttribute("data-src"); clip.load(); }
+           script it is never fetched at all. currentTime is reset so every cycle starts from the top.
+           preload goes to "auto" first: leaving it at "none" while asking the element to load makes
+           Chrome fetch metadata, suspend, then resume with a range request, and that resumed transfer
+           fails against jekyll serve about two times in three (MEDIA_ERR_NETWORK, a dead hero). The
+           attribute stays "none" in the HTML, so a visitor who never reaches this line fetches nothing. */
+        if (cur >= slides.length - 2 && !clip.getAttribute("src")) { clip.preload = "auto"; clip.src = clip.getAttribute("data-src"); clip.load(); }
         if (cur === -1) { clip.currentTime = 0; var p = clip.play(); if (p && p.catch) p.catch(function () {}); }
         else clip.pause();
       }
@@ -502,7 +506,7 @@ node scripts/shot.mjs http://127.0.0.1:4002/ --eval "const v = document.querySel
 node scripts/shot.mjs http://127.0.0.1:4002/ --reduce --wait 15000 --eval "const v = document.querySelector('.hero-bg'); return { src: !!v.currentSrc }"
 node scripts/shot.mjs http://127.0.0.1:4002/ --wait 21000 --eval "const v = document.querySelector('.hero-bg'); return { src: !!v.currentSrc, paused: v.paused, time: v.currentTime, stillOn: !!document.querySelector('.hero-slide.is-on') }"
 ```
-Expected: first `src: false, ready: 0, preload: "none"`; second (reduced motion, 15 s in) `src: false`; third (21 s in) `src: true, paused: false, time > 0, stillOn: false` (the clip is playing and visible). Add a fourth at `--wait 8000`: `src: true` with `fibers.jpg` on top, which is the point of the change — the clip is buffered two stills ahead rather than at page load. Two stills of lead, not one: throttled to 500 kbps a single still's 6.5 s leaves the clip stalling at `readyState` 2-3 and advancing 1.5 s of content over its whole 9 s window, while ~13 s buffers it. The Research page's own clip is untouched, but do not check it with `.paused`: it is below the fold and headless Chrome reports `paused: true` for it both before and after this change, so the only meaningful check there is that the value is the same as on the previous commit.
+Run the whole set at least FIVE times, not once: the failure this catches is intermittent, and a single clean pass once hid a two-in-three failure rate. Expected: first `src: false, ready: 0, preload: "none"`; second (reduced motion, 15 s in) `src: false`; third (21 s in) `src: true, paused: false, time > 0, stillOn: false` (the clip is playing and visible). Add a fourth at `--wait 8000`: `src: true` with `fibers.jpg` on top, which is the point of the change — the clip is buffered two stills ahead rather than at page load. Two stills of lead, not one: throttled to 500 kbps a single still's 6.5 s leaves the clip stalling at `readyState` 2-3 and advancing 1.5 s of content over its whole 9 s window, while ~13 s buffers it. Check against `jekyll serve` (port 4000), not only a static file server: WEBrick exposes media-fetch bugs that `python3 -m http.server` does not, and it is what the preview uses. The Research page's own clip is untouched, but do not check it with `.paused`: it is below the fold and headless Chrome reports `paused: true` for it both before and after this change, so the only meaningful check there is that the value is the same as on the previous commit.
 
 - [ ] **Step 5: Commit**
 
