@@ -1,4 +1,6 @@
-wrote _data/publications.json (182 entries from 262 works)
+fetched 200 works
+fetched 263 works
+wrote _data/publications.json (184 entries from 263 works)
 
 == Old-site entries (scripts/old-site-publications.txt) ==
 [2017-2024] MATCHED    Tunable anti-ambipolar vertical bilayer organic electrochemical transistor enable neuromorphic retinal pathway
@@ -301,24 +303,25 @@ wrote _data/publications.json (182 entries from 262 works)
 Old entries: 148, unmatched: 0
 
 == Kept 2025-2026 entries (eyeball these) ==
-2026 | D. Gunturkun, D. Meli, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen | Backbone Engineering of Benzodifurandione-Based n-Type OMIECs With Antiambipolar Behavior | Advanced Electronic Materials | 10.1002/aelm.70567
-2026 | S. T. Fleury, X. Lin, P. D. Rios, C. Olker, E. J. Song, A. C. Perez, C. Fell, D. Lopez, I. Joshi, H. Nasir, C. Curtis, D. Muringi, K. Wang, J. Oberholzer, F. W. Turek, I. B. Hilton, J. Rivnay, M. H. Vitaterna, O. Veiseh | Encapsulated Leptin-Producing Cells Facilitate Entrainment of Circadian Rhythms in Rodents and Nonhuman Primates | Advanced Science | 10.1002/advs.77191
-2026 | D. Altamura, M. Pugliese, G. M. Matrone, Z. Laswick, C. Simari, I. Farella, A. Mezzi, D. Caschera, D. Caprini, G. Parisi, M. Esposito, C. Giannini, G. Gigli, V. Maiorano, I. Nicotera, A. Cola, J. Rivnay, P. Cossari | Tuning ionic and electronic conduction of PEDOT:PSS:Nafion complexes towards artificial synapses with tailored memory retention | Communications Materials | 10.1038/s43246-026-01250-6
-2026 | S. Jo, H. Jia, X. Wang, R. E. Wu, L. Wang, S. A. Gershanok, J. Rivnay, M. K. Y. Chan, R. Kurchin, T. Cohen-Karni | 4-Electron Oxygen Reduction Reaction (ORR) with Iron Phthalocyanine (FePc) Functionalized Nanowire Templated-3D Fuzzy Graphene (NT-3DFG) | ACS Catalysis | 10.1021/acscatal.6c01943
+2026 | D. Gunturkun, D. Meli, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen* | Backbone Engineering of Benzodifurandione-Based n-Type OMIECs With Antiambipolar Behavior | Advanced Electronic Materials | 10.1002/aelm.70567
+2026 | S. T. Fleury, X. Lin, P. D. Rios, C. Olker, E. J. Song, A. C. Perez, C. Fell, D. Lopez, I. Joshi, H. Nasir, C. Curtis, D. Muringi, K. Wang, J. Oberholzer, F. W. Turek, I. B. Hilton, J. Rivnay*, M. H. Vitaterna*, O. Veiseh* | Encapsulated Leptin-Producing Cells Facilitate Entrainment of Circadian Rhythms in Rodents and Nonhuman Primates | Advanced Science | 10.1002/advs.77191
+2026 | D. Altamura, M. Pugliese, G. M. Matrone*, Z. Laswick, C. Simari*, I. Farella, A. Mezzi, D. Caschera, D. Caprini, G. Parisi, M. Esposito, C. Giannini, G. Gigli, V. Maiorano, I. Nicotera, A. Cola, J. Rivnay, P. Cossari* | Tuning ionic and electronic conduction of PEDOT:PSS:Nafion complexes towards artificial synapses with tailored memory retention | Communications Materials | 10.1038/s43246-026-01250-6
+2026 | S. Jo, H. Jia, X. Wang, R. E. Wu, L. Wang, S. A. Gershanok, J. Rivnay, M. K. Y. Chan*, R. Kurchin*, T. Cohen-Karni* | 4-Electron Oxygen Reduction Reaction (ORR) with Iron Phthalocyanine (FePc) Functionalized Nanowire Templated-3D Fuzzy Graphene (NT-3DFG) | ACS Catalysis | 10.1021/acscatal.6c01943
 2026 | D. Shamalia, Z. Laswick, J. Rivnay, N. Tessler | Coupled Ionic–Electronic Transport in Vertical OECTs: A Combined Experimental and Simulation Study | Advanced Electronic Materials | 10.1002/aelm.202500689
-2026 | C. Wright, A. Surendran, I. Lee, J. E. Villacres, A. Ezerins, A. Curtiss, N. Brown, J. Liu, B. Rothrock, P. Rios, D. Lopez, I. Joshi, H. Nasir, H. Wang, C. Fell, A. Davis, J. Oberholzer, J. Hester, T. Cohen-Karni, J. Rivnay, O. Veiseh | Design of a wireless, fully implantable platform for in-situ oxygenation of encapsulated cell therapies | Device | 10.1016/j.device.2026.101106
-2026 | L. Gao, Y. Cho, R. Wang, Y. Yao, D. Zhang, Y. Wang, Y. Cheng, Y. Wang, Q. Ma, I. Duplessis, S. Chung, E. Wilson, K. Cho, B. Wang, L. Li, J. Rivnay, H. Wang, J. Yu, T. J. Marks, A. Facchetti | Broadly applicable hydrophilic additive enhances electrochemical transistor function | Proceedings of the National Academy of Sciences | 10.1073/pnas.2523877123
-2026 | J. D. George, W. Brenneis, V. K. Sangwan, D. Meli, H. Kurtz, J. Richards, L. J. Lauhon, J. Rivnay, M. C. Hersam, J. Lopez, M. K. Y. Chan, V. Taylor | Robust Interpretation of Electrochemical Impedance Spectra Using Numerical Complex Analysis | ACS Measurement Science Au | 10.1021/acsmeasuresciau.5c00151
-2025 | V. S. Damani, X. Xie, R. E. Daso, K. Suman, M. Ghasemi, W. Xie, R. Wu, Y. Wu, C. L. Chao, J. E. Alberto, C. M. Lorch, A.-N. Yang, D. M. Nguyen, T. Shrestha, K. Otero, C.-Y. Lo, D. J. Pochan, E. D. Gomez, J. Rivnay, L. V. Kayser | Thermo-reversible gelation of self-assembled conducting polymer colloids | Nature Communications | 10.1038/s41467-025-66034-x
-2025 | T. K. Brown, R. Daso, C. Petersen, C. Beaumont, J. Tropp, A. del Carmen, C. L. Chao, C. Dang, J. Rivnay, B. Jiang | Sulfonated PEDOT-Modified Decellularized Arteries as Electroactive Scaffolds for Vascular Tissue Engineering | Journal of Biomedical Materials Research Part A | 10.1002/jbma.70002
+2026 | C. Wright, A. Surendran, I. Lee, J. E. Villacres, A. Ezerins, A. Curtiss, N. Brown, J. Liu, B. Rothrock, P. Rios, D. Lopez, I. Joshi, H. Nasir, H. Wang, C. Fell, A. Davis, J. Oberholzer, J. Hester, T. Cohen-Karni*, J. Rivnay*, O. Veiseh* | Design of a wireless, fully implantable platform for in-situ oxygenation of encapsulated cell therapies | Device | 10.1016/j.device.2026.101106
+2026 | L. Gao*, Y. Cho*, R. Wang*, Y. Yao, D. Zhang, Y. Wang, Y. Cheng, Y. Wang, Q. Ma, I. Duplessis, S. Chung, E. Wilson, K. Cho, B. Wang, L. Li, J. Rivnay*, H. Wang*, J. Yu*, T. J. Marks*, A. Facchetti* | Broadly applicable hydrophilic additive enhances electrochemical transistor function | Proceedings of the National Academy of Sciences | 10.1073/pnas.2523877123
+2026 | J. D. George*, W. Brenneis, V. K. Sangwan, D. Meli, H. Kurtz, J. Richards, L. J. Lauhon, J. Rivnay, M. C. Hersam, J. Lopez, M. K. Y. Chan*, V. Taylor* | Robust Interpretation of Electrochemical Impedance Spectra Using Numerical Complex Analysis | ACS Measurement Science Au | 10.1021/acsmeasuresciau.5c00151
+2026 | E. A. Hussein, B. Utebay, E. A. Schafer, N. Kamat, J. Rivnay, N. V. Lavrik, S. A. Sarles | Microbarrier-confined droplet bilayers on PEDOT:PSS enable high-resistance, dynamically addressable bioelectronic interfaces | The Analyst | 10.1039/d6an00737f
+2025 | V. S. Damani, X. Xie, R. E. Daso, K. Suman, M. Ghasemi, W. Xie, R. Wu, Y. Wu, C. L. Chao, J. E. Alberto, C. M. Lorch, A.-N. Yang, D. M. Nguyen, T. Shrestha, K. Otero, C.-Y. Lo, D. J. Pochan, E. D. Gomez, J. Rivnay, L. V. Kayser* | Thermo-reversible gelation of self-assembled conducting polymer colloids | Nature Communications | 10.1038/s41467-025-66034-x
+2025 | T. K. Brown, R. Daso, C. Petersen, C. Beaumont, J. Tropp, A. del Carmen, C. L. Chao, C. Dang, J. Rivnay*, B. Jiang* | Sulfonated PEDOT-Modified Decellularized Arteries as Electroactive Scaffolds for Vascular Tissue Engineering | Journal of Biomedical Materials Research Part A | 10.1002/jbma.70002
 2025 | D. Meli, Q. Thomas, N. Rolland, G. Freychet, C. J. Kousseff, P. Cavassin, L. Q. Flagg, V. Lemaur, A. Surendran, Z. Hamid, S. Griggs, R. Wu, R. A. Huerta, I. D. Duplessis, B. D. Paulsen, T. J. Marks, L. J. Lauhon, I. McCulloch, L. J. Richter, D. Beljonne, J. Rivnay | Charge state-dependent ion condensation near conjugated polymer backbones | Materials Horizons | 10.1039/d5mh01939g
-2025 | J. P. I. Tarrés, D. Zhu, C. Musumeci, Y. Kim, D. Meli, H. Yu, M. Jha, B. D. Paulsen, R. Wu, J. Kimpel, Z. Laswick, S. H. K. Paleti, Y. Zhang, S. Barlow, S. R. Marder, J. Nelson, J. Rivnay, C. Müller | Anomalous Stiffening of a Conjugated Polymer During Electrochemical Oxidation | Advanced Functional Materials | 10.1002/adfm.202519980
-2025 | C. D. Flynn, D. Chang, Y. Lee, S. E. Isaacson, Z. Wu, J. Rivnay, S. O. Kelley | Programming Aptamer–Protein Complexation Kinetics via Modulation of G-Quadruplex Secondary Structure | Journal of the American Chemical Society | 10.1021/jacs.5c10067
-2025 | R. E. Daso, R. Posey, H. Garza, A. Perry, C. Petersen, A. C. Fritz, J. Rivnay, J. Tropp | Standardized Electrochemical Characterization of Conductive Hydrogels | Advanced Functional Materials | 10.1002/adfm.202508859
-2025 | A. R. Brotherton, N. DomNwachukwu, M. D. Bailey, J. Rivnay, T. J. Meade | Disulfide Incorporated Pyridine and Pyridinium Push–Pull Dyes for Optical Sensing and Antifouling Electrodes | Langmuir | 10.1021/acs.langmuir.4c04953
+2025 | J. P. I. Tarrés, D. Zhu, C. Musumeci, Y. Kim, D. Meli, H. Yu, M. Jha, B. D. Paulsen, R. Wu, J. Kimpel, Z. Laswick, S. H. K. Paleti, Y. Zhang, S. Barlow, S. R. Marder, J. Nelson, J. Rivnay, C. Müller* | Anomalous Stiffening of a Conjugated Polymer During Electrochemical Oxidation | Advanced Functional Materials | 10.1002/adfm.202519980
+2025 | C. D. Flynn, D. Chang, Y. Lee, S. E. Isaacson, Z. Wu, J. Rivnay, S. O. Kelley* | Programming Aptamer–Protein Complexation Kinetics via Modulation of G-Quadruplex Secondary Structure | Journal of the American Chemical Society | 10.1021/jacs.5c10067
+2025 | R. E. Daso, R. Posey, H. Garza, A. Perry, C. Petersen, A. C. Fritz, J. Rivnay*, J. Tropp* | Standardized Electrochemical Characterization of Conductive Hydrogels | Advanced Functional Materials | 10.1002/adfm.202508859
+2025 | A. R. Brotherton, N. DomNwachukwu, M. D. Bailey, J. Rivnay, T. J. Meade* | Disulfide Incorporated Pyridine and Pyridinium Push–Pull Dyes for Optical Sensing and Antifouling Electrodes | Langmuir | 10.1021/acs.langmuir.4c04953
 2025 | Y. Gao, Y. Zhou, X. Ji, A. J. Graham, C. M. Dundas, I. E. M. Mahfoud, B. M. Tibbett, B. Tan, G. Partipilo, A. Dodabalapur, J. Rivnay, B. K. Keitz | Translating Extracellular Electron Transfer Activities with Organic Electrochemical Transistors | Journal of Visualized Experiments | 10.3791/67928
-2025 | J. Rivnay, R. Raman, J. T. Robinson, C. Schreib, T. Cohen-Karni, K. E. Galloway, O. Veiseh | Integrating bioelectronics with cell-based synthetic biology | Nature Reviews Bioengineering | 10.1038/s44222-024-00262-6
-2025 | R. L. Keate, M. I. Bury, M. Mendez-Santos, A. Gerena, M. Goedegebuure, J. Rivnay, A. K. Sharma, G. A. Ameer | Cell-free biodegradable electroactive scaffold for urinary bladder tissue regeneration | Nature Communications | 10.1038/s41467-024-55401-9
+2025 | J. Rivnay*, R. Raman, J. T. Robinson, C. Schreib, T. Cohen-Karni, K. E. Galloway, O. Veiseh | Integrating bioelectronics with cell-based synthetic biology | Nature Reviews Bioengineering | 10.1038/s44222-024-00262-6
+2025 | R. L. Keate, M. I. Bury, M. Mendez-Santos, A. Gerena, M. Goedegebuure, J. Rivnay, A. K. Sharma, G. A. Ameer* | Cell-free biodegradable electroactive scaffold for urinary bladder tissue regeneration | Nature Communications | 10.1038/s41467-024-55401-9
 2025 | D. Gunturkun, D. Meli, K. J. Thorley, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen | Impact of donor modification on azaisoindigo-based polymers for n- and p-type organic electrochemical transistors | Journal of Materials Chemistry C | 10.1039/d5tc02636a
 
 == REVIEW (article with no source, or magazine-looking journal) ==
@@ -335,8 +338,8 @@ EXCLUDED W7170069999 | 2026 | article | src=journal | Open Access Government | S
 W3117644723 | 2020 | article | src=journal | Angewandte Chemie | n-Type Rigid Semiconducting Polymers Bearing Oligo(Ethylene Glycol) Side Chains for High-P
 W4206156514 | 2020 | article | src=journal | Angewandte Chemie | Polaron Delocalization in Donor–Acceptor Polymers and its Impact on Organic Electrochemica
 W4200053649 | 2021 | article | src=journal | Angewandte Chemie | Lactone Backbone Density in Rigid Electron-Deficient Semiconducting Polymers Enabling High
-W4402747760 | 2024 | article | src=journal | Angewandte Chemie | Small-Molecule Mixed Ionic-Electronic Conductors for Efficient N-Type Electrochemical Tran
 W1886046708 | 2015 | article | src=journal | Advanced Materials | Epilepsy Treatment: Controlling Epileptiform Activity with Organic Electronic Ion Pumps (A
+W4402747760 | 2024 | article | src=journal | Angewandte Chemie | Small-Molecule Mixed Ionic-Electronic Conductors for Efficient N-Type Electrochemical Tran
 W4405701478 | 2024 | article | src=journal | Angewandte Chemie | The Influence of Alkyl Spacers and Molecular Weight on the Charge Transport and Storage Pr
 W4300026948 | 2020 | article | src=journal | Journal of Visualized Experiments | Sample Preparation in Quartz Crystal Microbalance Measurements of Protein Adsorption and P
 W4386454850 | 2020 | article | src=journal | Advanced Materials | Balancing Charge Storage and Mobility in an Oligo(Ether) Functionalized Dioxythiophene Cop
@@ -358,7 +361,6 @@ W2092094128 | 2012 | conference-paper | src=journal | Proceedings of SPIE, the I
 W4220709637 | 2022 | conference-paper | src=conference | Proceedings of the nanoGe Spring Meeting 2022 | Influence of side chains on the n-type organic electrochemical transistor performance
 W2027568362 | 2014 | conference-paper | src=None | None | Organic electrochemical transistors for BioMEMS applications
 W2564703636 | 2016 | erratum | src=journal | Nature Communications | Erratum: N-type organic electrochemical transistors with stability in water
-W4403510344 | 2024 | editorial | src=journal | Science | Are implantable, living pharmacies within reach?
 W2566724639 | 2015 | erratum | src=journal | Physical Review B | Erratum: Optical measurement of doping efficiency in poly(3-hexylthiophene) solutions and 
 W1588796922 | 2013 | other | src=journal | Organic Electronics | Conducting Polymers to Control and Monitor Cells
 W4383535289 | 2023 | preprint | src=repository | ChemRxiv | Conducting polymer nanoparticles with intrinsic aqueous dispersibility for conductive hydr
@@ -417,5 +419,5 @@ W7204765110 | 2026 | preprint | src=repository | ChemRxiv | Capacitance-based me
 W7204823553 | 2026 | preprint | src=repository | ChemRxiv | Ion-Selective Transistor Coupled Droplet Interface Bilayer with Short term Memory and Syna
 
 == Counts ==
-kept 182 (pre-Northwestern 65, manual adds 1, excluded 19, dropped 62, unmatched old entries 0)
-per year: 2026: 8, 2025: 11, 2024: 18, 2023: 16, 2022: 14, 2021: 15, 2020: 12, 2019: 5, 2018: 14, 2017: 4, 2016: 12, 2015: 13, 2014: 7, 2013: 13, 2012: 3, 2011: 6, 2010: 3, 2009: 3, 2008: 2, 2007: 2, 2006: 1
+kept 184 (pre-Northwestern 65, manual adds 1, excluded 19, dropped 61, unmatched old entries 0)
+per year: 2026: 9, 2025: 11, 2024: 19, 2023: 16, 2022: 14, 2021: 15, 2020: 12, 2019: 5, 2018: 14, 2017: 4, 2016: 12, 2015: 13, 2014: 7, 2013: 13, 2012: 3, 2011: 6, 2010: 3, 2009: 3, 2008: 2, 2007: 2, 2006: 1

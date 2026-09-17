@@ -24,7 +24,9 @@ Filter rules (spec: docs/superpowers/specs/2026-09-06-rivnay-lab-site-design.md,
   7. pre_northwestern = year < 2017, or the manual entry says so
   8. sort by year desc, then publication_date desc
 Authors are "initials + surname" (J. Rivnay, J.-P. Dupont, E. van Doremaele), all
-authors listed. Titles lose trailing periods and HTML entities.
+authors listed; a corresponding author carries a trailing "*". Titles lose
+trailing periods and HTML entities. "oa" is a link to a free copy when OpenAlex
+knows of one.
 """
 import argparse
 import difflib
@@ -135,6 +137,7 @@ def to_entry(w):
     return {
         "year": w.get("publication_year"),
         "authors": ", ".join(fmt_author(a.get("raw_author_name") or (a.get("author") or {}).get("display_name"))
+                             + ("*" if a.get("is_corresponding") else "")
                              for a in w.get("authorships") or []),
         "title": clean_title(w.get("title") or w.get("display_name")),
         "journal": src.get("display_name") or loc.get("raw_source_name") or None,
@@ -142,6 +145,7 @@ def to_entry(w):
         "issue": b.get("issue") or None,
         "pages": pages(b),
         "doi": norm_doi(w.get("doi")),
+        "oa": (w.get("open_access") or {}).get("oa_url") or None,   # a free copy, where OpenAlex knows one
         "openalex": short_id(w.get("id")),
         "pre_northwestern": (w.get("publication_year") or 0) < 2017,
         "_date": w.get("publication_date") or "",
@@ -174,7 +178,7 @@ def build(works, manual):
 
     for m in manual.get("add", []):
         e = {"year": None, "authors": "", "title": "", "journal": None, "volume": None, "issue": None,
-             "pages": None, "doi": None, "openalex": None, "pre_northwestern": False}
+             "pages": None, "doi": None, "oa": None, "openalex": None, "pre_northwestern": False}
         e.update(m)
         e["doi"] = norm_doi(e["doi"])
         e["pre_northwestern"] = bool(e["pre_northwestern"]) or (e["year"] or 0) < 2017

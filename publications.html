@@ -10,6 +10,7 @@ redirect_from:
   <header class="page-head">
     <h1>Publications</h1>
     <p class="lead">For citation metrics see <a href="https://scholar.google.com/citations?user=sngchgsAAAAJ&amp;hl=en">Google Scholar</a> or <a href="https://orcid.org/0000-0002-0602-6485">ORCID</a>.</p>
+    <p class="pub-key">* corresponding author</p>
     <p class="pub-filter"><input type="search" id="pub-filter" placeholder="Filter by title, author or journal" aria-label="Filter publications" autocomplete="off"></p>
     <p class="pub-none" hidden>No papers match.</p>
   </header>
@@ -33,7 +34,9 @@ redirect_from:
         {% if p.doi %}<a class="title" href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}<span class="title">{{ p.title }}</span>{% endif %}
         <p class="authors">{{ p.authors | replace: "J. Rivnay", rivnay }}</p>
         <p class="venue"><em>{{ p.journal }}</em>{% if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %}</p>
-        {% if p.doi %}<p class="doi">doi:{{ p.doi }}</p>{% endif %}
+        {%- capture doiurl %}https://doi.org/{{ p.doi | downcase }}{% endcapture -%}
+        {%- assign oaurl = p.oa | downcase -%}
+        <p class="doi">{% if p.doi %}doi:{{ p.doi }}{% endif %}{% if p.oa %}{% if p.doi %} · {% endif %}{% if oaurl == doiurl %}<span class="oa">Open access</span>{% else %}<a class="oa" href="{{ p.oa }}">Open access</a>{% endif %}{% endif %}</p>
       </li>
       {% endfor %}
     </ol>
@@ -51,7 +54,9 @@ redirect_from:
         {% if p.doi %}<a class="title" href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}<span class="title">{{ p.title }}</span>{% endif %}
         <p class="authors">{{ p.authors | replace: "J. Rivnay", rivnay }}</p>
         <p class="venue"><em>{{ p.journal }}</em>{% if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %} ({{ p.year }})</p>
-        {% if p.doi %}<p class="doi">doi:{{ p.doi }}</p>{% endif %}
+        {%- capture doiurl %}https://doi.org/{{ p.doi | downcase }}{% endcapture -%}
+        {%- assign oaurl = p.oa | downcase -%}
+        <p class="doi">{% if p.doi %}doi:{{ p.doi }}{% endif %}{% if p.oa %}{% if p.doi %} · {% endif %}{% if oaurl == doiurl %}<span class="oa">Open access</span>{% else %}<a class="oa" href="{{ p.oa }}">Open access</a>{% endif %}{% endif %}</p>
       </li>
       {% endfor %}
     </ol>
