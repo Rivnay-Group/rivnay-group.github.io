@@ -6,6 +6,8 @@ image: /assets/img/news/2024-08-19-droplet-polymer-bilayers-for-bioelectronic-me
 link: https://pubs.acs.org/doi/10.1021/jacs.4c01591
 image_width: 525
 image_height: 248
+redirect_from:
+  - /new-blog/2024/8/19/droplet-polymer-bilayers-for-bioelectronic-membrane-interfacing
 ---
 New collaborations have created new opportunities for our synthetic biology sensors. The lab's efforts to build cell membrane-derived bioelectronic devices are led by Dr. Emily Schafer, with the aim of creating platforms with the same sensing mechanisms as living cells.
 

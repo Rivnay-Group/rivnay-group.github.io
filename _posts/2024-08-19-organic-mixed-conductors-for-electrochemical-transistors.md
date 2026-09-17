@@ -6,6 +6,8 @@ image: /assets/img/news/2024-08-19-organic-mixed-conductors-for-electrochemical-
 link: https://www.sciencedirect.com/science/article/pii/S2590238523002199
 image_width: 996
 image_height: 996
+redirect_from:
+  - /new-blog/2024/8/19/organic-mixed-conductors-for-electrochemical-transistors
 ---
 Our review, “Organic mixed conductors for electrochemical transistors,” was published in Matter.
 

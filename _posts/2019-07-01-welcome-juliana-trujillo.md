@@ -2,6 +2,8 @@
 title: "Welcome, Juliana Trujillo!"
 date: 2019-07-01
 kind: people
+redirect_from:
+  - /new-blog/2019/7/16/welcome-juliana-trujillo
 ---
 Our lab is excited to welcome Juliana Trujillo! She comes from Santa Clara University as a Bioengineering major. She’ll be spending her summer in the lab as an International Institute for Nanotechnology (IIN) REU student! We asked Juliana what she’s currently working on:
 

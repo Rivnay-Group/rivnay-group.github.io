@@ -3,6 +3,8 @@ title: "Bridging length scales in organic mixed ionic–electronic conductors th
 date: 2024-08-19
 kind: paper
 link: https://www.nature.com/articles/s41563-024-01813-3
+redirect_from:
+  - /new-blog/2024/8/19/bridging-length-scales-in-organic-mixed-ionicelectronic-conductors-through-internal-strain-and-mesoscale-dynamics
 ---
 Disordered systems, especially polymers, play an important role in shaping our modern society and are expected to be an even bigger part of the future. However, the complexities of these systems pose a challenge for scientists to characterize, given our current limited understanding. Elucidating how disordered systems respond to external stimuli thus becomes important.
 

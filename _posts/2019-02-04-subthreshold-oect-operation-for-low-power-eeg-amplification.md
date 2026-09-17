@@ -6,6 +6,8 @@ image: /assets/img/news/2019-02-04-subthreshold-oect-operation-for-low-power-eeg
 link: https://onlinelibrary.wiley.com/doi/full/10.1002/advs.201800453
 image_width: 595
 image_height: 782
+redirect_from:
+  - /new-blog/2019/2/4/subthreshold-oect-operation-for-low-power-eeg-amplification
 ---
 Vishak’s paper “*Subthreshold Operation of Organic Electrochemical Transistors for Biosignal Amplification*” is now online at ***Advanced Science***. Congratulations, Vishak! This work details the use of OECTs with sharp subthreshold slopes (60 mV/dec) for EEG amplification circuits. We show low power consumption and stability in subthreshold operation. *Transconductance efficiency* is the key! [Read it online — open access](https://onlinelibrary.wiley.com/doi/full/10.1002/advs.201800453).
 

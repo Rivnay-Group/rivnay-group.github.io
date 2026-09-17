@@ -246,13 +246,21 @@ def main():
             continue
         post_urls += 1
         slug = m.group(1)
-        name = ALIASES.get(slug) or next((f for s, f in by_slug.items() if slug.startswith(s)), None)
+        name = ALIASES.get(slug)
+        if not name:
+            # The migration truncated long slugs, so a post matches when its slug starts the old one.
+            # Take the LONGEST match: "welcome-new-members" and "welcome-new-members-1" are both
+            # prefixes of the second URL, and only the longer one is the post it belongs to.
+            cands = sorted((s for s in by_slug if slug.startswith(s)), key=len, reverse=True)
+            if len(cands) > 1:
+                print("ambiguous: %s -> %s (taking %s)" % (url, ", ".join(cands), cands[0]))
+            name = by_slug[cands[0]] if cands else None
         if not name:
             unmapped.append(url)
             continue
         path = POSTS / name
         text = path.read_text(encoding="utf-8")
-        if url in text:
+        if "  - %s\n" % url in text:   # the whole line, so a shorter URL is not "found" inside a longer one
             continue
         head, body = text.split("\n---\n", 1)
         if "\nredirect_from:" in head:
@@ -278,7 +286,7 @@ python3 scripts/redirects.py && python3 scripts/redirects.py
 grep -l '^redirect_from:' _posts/*.md | wc -l
 grep -A1 '^redirect_from:' _posts/2019-02-04-mayra-wins-third-place-in-image-contest-at-sqi.md
 ```
-Expected: first run `old post urls: 61, mapped: 61, files changed: 61`, second run `files changed: 0`; the count is `61`; the Mayra post shows `  - /new-blog/2019/2/4/jphq5nl7tddu4nkc2b08srjz1huwem`. Two posts have no old URL (the two 2026 posts) and that is correct.
+Expected: first run `old post urls: 61, mapped: 61, files changed: 61`, second run `files changed: 0`; the count is `61`; the Mayra post shows `  - /new-blog/2019/2/4/jphq5nl7tddu4nkc2b08srjz1huwem`. Two posts have no old URL (the two 2026 posts) and that is correct. One `ambiguous:` line is expected and correct: `/new-blog/2024/8/7/welcome-new-members-1` matches both `welcome-new-members` and `welcome-new-members-1`, and the archived bodies confirm the longer one (Yebin and Priscila) is right. If "files changed" is less than "mapped", two URLs have landed on one post: find it with `grep -c '^  - /new-blog' _posts/*.md | grep -v ':1$'` and check both against the Wayback copy before accepting it.
 
 - [ ] **Step 5: Page redirects**
 

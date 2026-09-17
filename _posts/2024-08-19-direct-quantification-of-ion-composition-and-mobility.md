@@ -6,6 +6,8 @@ image: /assets/img/news/2024-08-19-direct-quantification-of-ion-composition-and-
 link: https://www.science.org/doi/full/10.1126/sciadv.adn8628
 image_width: 1400
 image_height: 706
+redirect_from:
+  - /new-blog/2024/8/19/direct-quantification-of-ion-composition-and-mobility-in-organic-mixed-ionic-electronic-conductors
 ---
 Our paper “Direct quantification of ion composition and mobility in organic mixed ionic-electronic conductors” [was published in Science Advances.](https://www.science.org/doi/full/10.1126/sciadv.adn8628)
 

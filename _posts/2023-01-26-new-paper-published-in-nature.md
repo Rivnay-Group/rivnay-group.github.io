@@ -3,6 +3,8 @@ title: "New Paper Published in Nature"
 date: 2023-01-26
 kind: paper
 link: https://www.nature.com/articles/s41586-022-05592-2
+redirect_from:
+  - /new-blog/2023/1/26/new-paper-published-in-nature
 ---
 Members of the Rivnay Group, Jonathan Rivnay, Xudong Ji and Abhijith Surendran, have contributed to a new paper, “Vertical organic electrochemical transistors for complementary circuits.”
 

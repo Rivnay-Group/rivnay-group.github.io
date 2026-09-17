@@ -44,13 +44,15 @@ Fetches every work for Jonathan Rivnay from OpenAlex, keeps journal articles and
 
 ## Preview locally
 
-Requires Ruby 3+ and Jekyll (`brew install ruby`, then `gem install jekyll jekyll-seo-tag webrick`).
+Requires Ruby 3+ and Jekyll (`brew install ruby`, then `gem install jekyll jekyll-seo-tag jekyll-redirect-from webrick`).
 
 ```
 jekyll serve
 ```
 
 Then open http://127.0.0.1:4000/.
+
+Old Squarespace URLs redirect via `redirect_from:` in each post and page; `python3 scripts/redirects.py` regenerates the post entries from `scripts/old-site-sitemap.xml`.
 
 ## Custom domain (rivnay.northwestern.edu)
 

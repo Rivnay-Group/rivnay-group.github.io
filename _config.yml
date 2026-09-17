@@ -15,6 +15,7 @@ kramdown:
   hard_wrap: false
 plugins:
   - jekyll-seo-tag
+  - jekyll-redirect-from   # old Squarespace URLs: redirect_from lists in the posts and pages
 
 exclude:
   - docs

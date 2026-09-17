@@ -6,6 +6,8 @@ image: /assets/img/news/2022-09-06-sources-and-mechanism-of-degradation-in-p-typ
 link: https://pubs.acs.org/doi/full/10.1021/acsaelm.1c01171
 image_width: 1200
 image_height: 628
+redirect_from:
+  - /new-blog/2022/9/6/sources-and-mechanism-of-degradation-in-p-type-thiophene-based-organic-electrochemical-transistors
 ---
 Our paper “Sources and Mechanism of Degradation in p-Type Thiophene-Based Organic Electrochemical Transistors” was published in ACS Applied Electronic Materials.
 
