@@ -12,12 +12,12 @@
   --paper: #FFFFFF;
   --line: #E3DFEA;
   --sans: "Figtree", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-  --serif: var(--sans);   /* headings share the body family; swap back to a serif here if wanted */
   --wrap: 1120px;
   --radius: 12px;
   --fs-xs: 0.8rem;      /* captions, tags, fine print */
   --fs-sm: 0.875rem;    /* dates, roles, table heads, small links */
   --fs-md: 0.95rem;     /* secondary body text */
+  --fs-title: 1.02rem;  /* the title of a list item: news, publications, a team member's name */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,7 +64,7 @@ main:focus { outline: none; }   /* the skip target is focused programmatically, 
 }
 
 /* scroll reveal: content eases in once, 16px rise; the hidden state exists only after site.js has marked what is already on screen, never in print or under reduced motion */
-.reveal-ready .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); transition-delay: var(--reveal-delay, 0ms); }
+.reveal-ready .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s; transition-delay: var(--reveal-delay, 0ms), var(--reveal-delay, 0ms), 0ms; }
 .reveal-ready .reveal.is-visible { opacity: 1; transform: none; }
 .reveal-ready .reveal.no-anim { transition: none; }
 @media print, (prefers-reduced-motion: reduce) { .reveal-ready .reveal { opacity: 1; transform: none; transition: none; } }
@@ -120,6 +120,7 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 .section-head { margin-bottom: 1.5rem; }
 .section-head p { color: var(--muted); margin-top: 0.8rem; }
 .page-head { padding: 3rem 0 1.75rem; }
+.page-head:has(> h1:only-child) { padding-bottom: 2.5rem; }   /* a bare title needs the same air an h2 gets */
 .page-head h1 { max-width: 22ch; }
 .page-head .lead { margin-top: 0.8rem; color: var(--muted); }
 .intro { margin-top: 0.8rem; }          /* full-width lead text: no max-width, matching the Research intro */
@@ -236,7 +237,7 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 .news-list .when { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; padding-top: 0.2rem; }
 .news-list time { font-size: var(--fs-sm); color: var(--muted); }
 .news-list .when .kind { margin-left: 0; }
-.news-list .title { display: inline; font-size: 1.02rem; font-weight: 600; line-height: 1.4; }
+.news-list .title { display: inline; font-size: var(--fs-title); font-weight: 600; line-height: 1.4; }
 .news-list .title a { color: var(--ink); text-decoration: none; }
 .news-list .title a:hover { color: var(--purple); }
 .news-list .excerpt { color: var(--muted); font-size: var(--fs-md); margin-top: 0.3rem; }
@@ -257,7 +258,7 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 .recent-pubs { list-style: none; border-top: 1px solid var(--line); }
 .recent-pubs li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.25rem 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); align-items: start; }
 .recent-pubs .year { font-size: var(--fs-sm); color: var(--muted); padding-top: 0.2rem; }
-.recent-pubs .title { font-weight: 600; color: var(--ink); text-decoration: none; line-height: 1.4; }
+.recent-pubs .title { font-weight: 600; font-size: var(--fs-title); color: var(--ink); text-decoration: none; line-height: 1.4; }
 .recent-pubs a.title:hover { color: var(--purple); }
 .recent-pubs .venue { font-size: var(--fs-md); color: var(--muted); margin-top: 0.15rem; }
 @media (max-width: 600px) { .recent-pubs li { grid-template-columns: 1fr; gap: 0.1rem; } }
@@ -297,7 +298,7 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 .pi h3 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); }
 .pi .role { color: var(--muted); margin-top: 0.15rem; }
 .pi .links { margin-top: 0.4rem; font-size: var(--fs-md); }
-.pi .prose { margin-top: 1rem; font-size: 0.98rem; }
+.pi .prose { margin-top: 1rem; font-size: var(--fs-md); }
 @media (max-width: 700px) { .pi { grid-template-columns: 1fr; padding: 1.25rem; } .pi img { width: 140px; } }
 
 .people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(162px, 1fr)); gap: 2.5rem 2rem; }  /* min matches the headshot; the wide column gap keeps a long name clear of its neighbour */
@@ -305,7 +306,7 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 .person summary { list-style: none; cursor: pointer; display: block; }
 .person summary::-webkit-details-marker { display: none; }
 .person img { width: 162px; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); background: var(--paper); }  /* fixed, so every section matches */
-.person .name { display: block; font-family: var(--sans); font-weight: 600; font-size: 1.06rem; line-height: 1.25; margin-top: 0.8rem; margin-right: -1.5rem; }  /* the chevron hangs into the gutter, so names wrap on their own width */
+.person .name { display: block; font-family: var(--sans); font-weight: 600; font-size: var(--fs-title); line-height: 1.25; margin-top: 0.8rem; margin-right: -1.5rem; }  /* the chevron hangs into the gutter, so names wrap on their own width */
 .person .tail { white-space: nowrap; }
 .person .name { text-wrap: balance; }   /* if a name must wrap, split it evenly rather than leaving one word alone */
 .person .role { display: block; color: var(--muted); font-size: var(--fs-sm); margin-top: 0.15rem; }
@@ -360,7 +361,7 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
 .pub-list { list-style: none; }
 .pub { padding: 1rem 0; border-bottom: 1px solid var(--line); font-size: var(--fs-md); }
 .pub:first-child { padding-top: 0; }
-.pub .title { font-weight: 600; display: block; color: var(--ink); text-decoration: none; font-size: 1.02rem; line-height: 1.4; }
+.pub .title { font-weight: 600; display: block; color: var(--ink); text-decoration: none; font-size: var(--fs-title); line-height: 1.4; }
 a.title:hover { color: var(--purple); }
 .pub .authors { color: var(--muted); margin-top: 0.25rem; }
 .pub .authors strong { color: var(--ink); }
@@ -407,7 +408,7 @@ details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size
 .theme-pubs h3 { font-size: var(--fs-sm); font-weight: 600; color: var(--muted); margin-bottom: 0.9rem; }
 .theme-pubs ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; }
 .theme-pubs li { font-size: var(--fs-md); border-top: 1px solid var(--line); padding-top: 0.7rem; }
-.theme-pubs a { display: block; color: var(--ink); text-decoration: none; font-weight: 600; line-height: 1.4; }
+.theme-pubs a { display: block; color: var(--ink); text-decoration: none; font-weight: 600; font-size: var(--fs-title); line-height: 1.4; }
 .theme-pubs a:hover { color: var(--purple); }
 .theme-pubs .venue { display: block; color: var(--muted); font-size: var(--fs-sm); margin-top: 0.25rem; }
 .theme figure img, .theme figure video { border-radius: var(--radius); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); background: var(--paper); }
@@ -417,20 +418,12 @@ details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size
 /* two figures side by side, so a pair of small images costs a fraction of the column height */
 .figure-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .figure-pair figure img { aspect-ratio: 1; }
-.media-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.media-pair img { aspect-ratio: 1; }
 @media (max-width: 800px) { .theme { grid-template-columns: 1fr; gap: 1.5rem; } }
-/* Each logo gets an equal cell and is fitted inside it, so an ornate round seal and a wide
-   wordmark carry similar weight instead of one being seven times the width of the other.
-   The two widest lockups take a double cell so their type stays readable. */
-/* Each mark sits in a fixed-height band above its name, so the row of names lines up however
-   uneven the logos are. Heights come from support.yml and equalise visual area, not height:
-   a round seal has to be taller than a wordmark to read as the same size. */
 /* Equal cells, every mark flush to the same left edge, each in a fixed-height band so rows line up.
    Mark heights come from support.yml and equalise visual area, not height: a round seal must be
    taller than a wordmark to read as the same size. */
 h3:has(+ .logo-row) { margin-top: 2.5rem; }   /* Funding and Facilities sit the same distance from what precedes them */
-.logo-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.75rem 1.5rem; margin-top: 1.5rem; }
+.logo-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 1.75rem 1.5rem; margin-top: 1.5rem; }
 .logo-row a { display: grid; align-items: center; justify-items: start; height: 108px; min-width: 0; }
 .logo-row img { max-height: var(--h, 68px); max-width: 100%; width: auto; height: auto; }
 @media (max-width: 560px) {
@@ -448,7 +441,7 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .post-head h1 { margin-top: 0.5rem; font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
 .post-figure { margin: 1rem 0 2rem; }
 .post-figure figcaption { margin-top: 0.6rem; }
-.post-figure img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; height: auto; }
+.post-figure img { border-radius: var(--radius); border: 1px solid var(--line); width: auto; max-width: 100%; height: auto; margin-inline: auto; }
 .post-body img { border-radius: var(--radius); margin: 1.75rem 0; border: 1px solid var(--line); width: 100%; height: auto; }
 .post-body figure { margin: 1.75rem 0; }
 .post-body figure img, .post-body .pair img { margin: 0; }
@@ -474,5 +467,5 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .site-footer .nu { display: block; line-height: 0; padding-top: 0.15rem; }
 .site-footer .nu img { height: 24px; width: auto; }
 .site-footer .fine { grid-column: 1 / -1; border-top: 1px solid #D4D4D4; padding-top: 1.1rem; font-size: var(--fs-xs); color: #555; }
-@media (max-width: 860px) { .site-footer .wrap { grid-template-columns: 1fr 1fr; } .site-footer .nu { grid-column: 1 / -1; } }
+@media (max-width: 860px) { .site-footer .wrap { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .site-footer .wrap { grid-template-columns: 1fr; gap: 1.75rem; } }
