@@ -387,7 +387,6 @@ details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line
   details.collapsed .pub-list { margin-left: 0; }
 }
 
-.pub-key { margin-top: 0.6rem; font-size: var(--fs-sm); color: var(--muted); }
 .pub-filter { margin-top: 1.2rem; }
 html:not(.js) .pub-filter { display: none; }   /* nothing drives it without script, so do not offer it */
 .pub-filter input { width: 100%; max-width: 28rem; font: inherit; font-size: var(--fs-md); color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 0.55rem 0.8rem; }

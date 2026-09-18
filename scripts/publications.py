@@ -24,9 +24,8 @@ Filter rules (spec: docs/superpowers/specs/2026-09-06-rivnay-lab-site-design.md,
   7. pre_northwestern = year < 2017, or the manual entry says so
   8. sort by year desc, then publication_date desc
 Authors are "initials + surname" (J. Rivnay, J.-P. Dupont, E. van Doremaele), all
-authors listed; a corresponding author carries a trailing "*". Titles lose
-trailing periods and HTML entities. "oa" is a link to a free copy when OpenAlex
-knows of one.
+authors listed. Titles lose trailing periods and HTML entities. "oa" is a link to
+a free copy when OpenAlex knows of one.
 """
 import argparse
 import difflib
@@ -137,7 +136,6 @@ def to_entry(w):
     return {
         "year": w.get("publication_year"),
         "authors": ", ".join(fmt_author(a.get("raw_author_name") or (a.get("author") or {}).get("display_name"))
-                             + ("*" if a.get("is_corresponding") else "")
                              for a in w.get("authorships") or []),
         "title": clean_title(w.get("title") or w.get("display_name")),
         "journal": src.get("display_name") or loc.get("raw_source_name") or None,

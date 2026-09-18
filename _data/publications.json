@@ -1,7 +1,7 @@
 [
  {
   "year": 2026,
-  "authors": "D. Gunturkun, D. Meli, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen*",
+  "authors": "D. Gunturkun, D. Meli, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen",
   "title": "Backbone Engineering of Benzodifurandione-Based n-Type OMIECs With Antiambipolar Behavior",
   "journal": "Advanced Electronic Materials",
   "volume": null,
@@ -14,7 +14,7 @@
  },
  {
   "year": 2026,
-  "authors": "S. T. Fleury, X. Lin, P. D. Rios, C. Olker, E. J. Song, A. C. Perez, C. Fell, D. Lopez, I. Joshi, H. Nasir, C. Curtis, D. Muringi, K. Wang, J. Oberholzer, F. W. Turek, I. B. Hilton, J. Rivnay*, M. H. Vitaterna*, O. Veiseh*",
+  "authors": "S. T. Fleury, X. Lin, P. D. Rios, C. Olker, E. J. Song, A. C. Perez, C. Fell, D. Lopez, I. Joshi, H. Nasir, C. Curtis, D. Muringi, K. Wang, J. Oberholzer, F. W. Turek, I. B. Hilton, J. Rivnay, M. H. Vitaterna, O. Veiseh",
   "title": "Encapsulated Leptin-Producing Cells Facilitate Entrainment of Circadian Rhythms in Rodents and Nonhuman Primates",
   "journal": "Advanced Science",
   "volume": null,
@@ -27,7 +27,7 @@
  },
  {
   "year": 2026,
-  "authors": "D. Altamura, M. Pugliese, G. M. Matrone*, Z. Laswick, C. Simari*, I. Farella, A. Mezzi, D. Caschera, D. Caprini, G. Parisi, M. Esposito, C. Giannini, G. Gigli, V. Maiorano, I. Nicotera, A. Cola, J. Rivnay, P. Cossari*",
+  "authors": "D. Altamura, M. Pugliese, G. M. Matrone, Z. Laswick, C. Simari, I. Farella, A. Mezzi, D. Caschera, D. Caprini, G. Parisi, M. Esposito, C. Giannini, G. Gigli, V. Maiorano, I. Nicotera, A. Cola, J. Rivnay, P. Cossari",
   "title": "Tuning ionic and electronic conduction of PEDOT:PSS:Nafion complexes towards artificial synapses with tailored memory retention",
   "journal": "Communications Materials",
   "volume": null,
@@ -40,7 +40,7 @@
  },
  {
   "year": 2026,
-  "authors": "S. Jo, H. Jia, X. Wang, R. E. Wu, L. Wang, S. A. Gershanok, J. Rivnay, M. K. Y. Chan*, R. Kurchin*, T. Cohen-Karni*",
+  "authors": "S. Jo, H. Jia, X. Wang, R. E. Wu, L. Wang, S. A. Gershanok, J. Rivnay, M. K. Y. Chan, R. Kurchin, T. Cohen-Karni",
   "title": "4-Electron Oxygen Reduction Reaction (ORR) with Iron Phthalocyanine (FePc) Functionalized Nanowire Templated-3D Fuzzy Graphene (NT-3DFG)",
   "journal": "ACS Catalysis",
   "volume": null,
@@ -66,7 +66,7 @@
  },
  {
   "year": 2026,
-  "authors": "C. Wright, A. Surendran, I. Lee, J. E. Villacres, A. Ezerins, A. Curtiss, N. Brown, J. Liu, B. Rothrock, P. Rios, D. Lopez, I. Joshi, H. Nasir, H. Wang, C. Fell, A. Davis, J. Oberholzer, J. Hester, T. Cohen-Karni*, J. Rivnay*, O. Veiseh*",
+  "authors": "C. Wright, A. Surendran, I. Lee, J. E. Villacres, A. Ezerins, A. Curtiss, N. Brown, J. Liu, B. Rothrock, P. Rios, D. Lopez, I. Joshi, H. Nasir, H. Wang, C. Fell, A. Davis, J. Oberholzer, J. Hester, T. Cohen-Karni, J. Rivnay, O. Veiseh",
   "title": "Design of a wireless, fully implantable platform for in-situ oxygenation of encapsulated cell therapies",
   "journal": "Device",
   "volume": "4",
@@ -79,7 +79,7 @@
  },
  {
   "year": 2026,
-  "authors": "L. Gao*, Y. Cho*, R. Wang*, Y. Yao, D. Zhang, Y. Wang, Y. Cheng, Y. Wang, Q. Ma, I. Duplessis, S. Chung, E. Wilson, K. Cho, B. Wang, L. Li, J. Rivnay*, H. Wang*, J. Yu*, T. J. Marks*, A. Facchetti*",
+  "authors": "L. Gao, Y. Cho, R. Wang, Y. Yao, D. Zhang, Y. Wang, Y. Cheng, Y. Wang, Q. Ma, I. Duplessis, S. Chung, E. Wilson, K. Cho, B. Wang, L. Li, J. Rivnay, H. Wang, J. Yu, T. J. Marks, A. Facchetti",
   "title": "Broadly applicable hydrophilic additive enhances electrochemical transistor function",
   "journal": "Proceedings of the National Academy of Sciences",
   "volume": "123",
@@ -92,7 +92,7 @@
  },
  {
   "year": 2026,
-  "authors": "J. D. George*, W. Brenneis, V. K. Sangwan, D. Meli, H. Kurtz, J. Richards, L. J. Lauhon, J. Rivnay, M. C. Hersam, J. Lopez, M. K. Y. Chan*, V. Taylor*",
+  "authors": "J. D. George, W. Brenneis, V. K. Sangwan, D. Meli, H. Kurtz, J. Richards, L. J. Lauhon, J. Rivnay, M. C. Hersam, J. Lopez, M. K. Y. Chan, V. Taylor",
   "title": "Robust Interpretation of Electrochemical Impedance Spectra Using Numerical Complex Analysis",
   "journal": "ACS Measurement Science Au",
   "volume": "6",
@@ -118,7 +118,7 @@
  },
  {
   "year": 2025,
-  "authors": "V. S. Damani, X. Xie, R. E. Daso, K. Suman, M. Ghasemi, W. Xie, R. Wu, Y. Wu, C. L. Chao, J. E. Alberto, C. M. Lorch, A.-N. Yang, D. M. Nguyen, T. Shrestha, K. Otero, C.-Y. Lo, D. J. Pochan, E. D. Gomez, J. Rivnay, L. V. Kayser*",
+  "authors": "V. S. Damani, X. Xie, R. E. Daso, K. Suman, M. Ghasemi, W. Xie, R. Wu, Y. Wu, C. L. Chao, J. E. Alberto, C. M. Lorch, A.-N. Yang, D. M. Nguyen, T. Shrestha, K. Otero, C.-Y. Lo, D. J. Pochan, E. D. Gomez, J. Rivnay, L. V. Kayser",
   "title": "Thermo-reversible gelation of self-assembled conducting polymer colloids",
   "journal": "Nature Communications",
   "volume": "16",
@@ -131,7 +131,7 @@
  },
  {
   "year": 2025,
-  "authors": "T. K. Brown, R. Daso, C. Petersen, C. Beaumont, J. Tropp, A. del Carmen, C. L. Chao, C. Dang, J. Rivnay*, B. Jiang*",
+  "authors": "T. K. Brown, R. Daso, C. Petersen, C. Beaumont, J. Tropp, A. del Carmen, C. L. Chao, C. Dang, J. Rivnay, B. Jiang",
   "title": "Sulfonated PEDOT-Modified Decellularized Arteries as Electroactive Scaffolds for Vascular Tissue Engineering",
   "journal": "Journal of Biomedical Materials Research Part A",
   "volume": "113",
@@ -157,7 +157,7 @@
  },
  {
   "year": 2025,
-  "authors": "J. P. I. Tarrés, D. Zhu, C. Musumeci, Y. Kim, D. Meli, H. Yu, M. Jha, B. D. Paulsen, R. Wu, J. Kimpel, Z. Laswick, S. H. K. Paleti, Y. Zhang, S. Barlow, S. R. Marder, J. Nelson, J. Rivnay, C. Müller*",
+  "authors": "J. P. I. Tarrés, D. Zhu, C. Musumeci, Y. Kim, D. Meli, H. Yu, M. Jha, B. D. Paulsen, R. Wu, J. Kimpel, Z. Laswick, S. H. K. Paleti, Y. Zhang, S. Barlow, S. R. Marder, J. Nelson, J. Rivnay, C. Müller",
   "title": "Anomalous Stiffening of a Conjugated Polymer During Electrochemical Oxidation",
   "journal": "Advanced Functional Materials",
   "volume": "36",
@@ -170,7 +170,7 @@
  },
  {
   "year": 2025,
-  "authors": "C. D. Flynn, D. Chang, Y. Lee, S. E. Isaacson, Z. Wu, J. Rivnay, S. O. Kelley*",
+  "authors": "C. D. Flynn, D. Chang, Y. Lee, S. E. Isaacson, Z. Wu, J. Rivnay, S. O. Kelley",
   "title": "Programming Aptamer–Protein Complexation Kinetics via Modulation of G-Quadruplex Secondary Structure",
   "journal": "Journal of the American Chemical Society",
   "volume": "147",
@@ -183,7 +183,7 @@
  },
  {
   "year": 2025,
-  "authors": "R. E. Daso, R. Posey, H. Garza, A. Perry, C. Petersen, A. C. Fritz, J. Rivnay*, J. Tropp*",
+  "authors": "R. E. Daso, R. Posey, H. Garza, A. Perry, C. Petersen, A. C. Fritz, J. Rivnay, J. Tropp",
   "title": "Standardized Electrochemical Characterization of Conductive Hydrogels",
   "journal": "Advanced Functional Materials",
   "volume": "35",
@@ -196,7 +196,7 @@
  },
  {
   "year": 2025,
-  "authors": "A. R. Brotherton, N. DomNwachukwu, M. D. Bailey, J. Rivnay, T. J. Meade*",
+  "authors": "A. R. Brotherton, N. DomNwachukwu, M. D. Bailey, J. Rivnay, T. J. Meade",
   "title": "Disulfide Incorporated Pyridine and Pyridinium Push–Pull Dyes for Optical Sensing and Antifouling Electrodes",
   "journal": "Langmuir",
   "volume": "41",
@@ -222,7 +222,7 @@
  },
  {
   "year": 2025,
-  "authors": "J. Rivnay*, R. Raman, J. T. Robinson, C. Schreib, T. Cohen-Karni, K. E. Galloway, O. Veiseh",
+  "authors": "J. Rivnay, R. Raman, J. T. Robinson, C. Schreib, T. Cohen-Karni, K. E. Galloway, O. Veiseh",
   "title": "Integrating bioelectronics with cell-based synthetic biology",
   "journal": "Nature Reviews Bioengineering",
   "volume": "3",
@@ -235,7 +235,7 @@
  },
  {
   "year": 2025,
-  "authors": "R. L. Keate, M. I. Bury, M. Mendez-Santos, A. Gerena, M. Goedegebuure, J. Rivnay, A. K. Sharma, G. A. Ameer*",
+  "authors": "R. L. Keate, M. I. Bury, M. Mendez-Santos, A. Gerena, M. Goedegebuure, J. Rivnay, A. K. Sharma, G. A. Ameer",
   "title": "Cell-free biodegradable electroactive scaffold for urinary bladder tissue regeneration",
   "journal": "Nature Communications",
   "volume": "16",
@@ -261,7 +261,7 @@
  },
  {
   "year": 2024,
-  "authors": "H. Yu, A. Marks, S. M. Tuladhar, N. Siemons, I. Anderson, S. Bidinger, S. T. Keene, T. J. Quill, R. Wu, O. Gough, G. Wu, F. Eisner, A. Salleo, J. Rivnay, G. G. Malliaras, P. R. F. Barnes, I. McCulloch, J. Nelson*",
+  "authors": "H. Yu, A. Marks, S. M. Tuladhar, N. Siemons, I. Anderson, S. Bidinger, S. T. Keene, T. J. Quill, R. Wu, O. Gough, G. Wu, F. Eisner, A. Salleo, J. Rivnay, G. G. Malliaras, P. R. F. Barnes, I. McCulloch, J. Nelson",
   "title": "The Influence of Alkyl Spacers and Molecular Weight on the Charge Transport and Storage Properties of Oxy-Bithiophene-Based Conjugated Polymers",
   "journal": "Angewandte Chemie International Edition",
   "volume": "64",
@@ -274,7 +274,7 @@
  },
  {
   "year": 2024,
-  "authors": "H. Wang, C. Duan, R. Luo, Y. Liu, O. Tong, J. Demski, J. Rivnay, G. A. Ameer*",
+  "authors": "H. Wang, C. Duan, R. Luo, Y. Liu, O. Tong, J. Demski, J. Rivnay, G. A. Ameer",
   "title": "A Pro-Angiogenic Immunoprotective Membrane for Cell Therapies",
   "journal": "Advanced Healthcare Materials",
   "volume": "14",
@@ -287,7 +287,7 @@
  },
  {
   "year": 2024,
-  "authors": "J. J. Maraj, E. A. Schafer, M. M. Mansour, E. A. Hussein, J. Berryman, E. Klavon, J. Rivnay*, S. A. Sarles*",
+  "authors": "J. J. Maraj, E. A. Schafer, M. M. Mansour, E. A. Hussein, J. Berryman, E. Klavon, J. Rivnay, S. A. Sarles",
   "title": "Highly Resistive Biomembranes Coupled to Organic Transistors enable Ion-Channel Mediated Neuromorphic Synapses",
   "journal": "Advanced Electronic Materials",
   "volume": "11",
@@ -313,7 +313,7 @@
  },
  {
   "year": 2024,
-  "authors": "A. R. Brotherton, G. P. Neupane, X. Ji, K. Sullivan, M. D. Bailey, E. J. Berns, J. Rivnay, M. Mrksich, T. J. Meade*",
+  "authors": "A. R. Brotherton, G. P. Neupane, X. Ji, K. Sullivan, M. D. Bailey, E. J. Berns, J. Rivnay, M. Mrksich, T. J. Meade",
   "title": "HaloTag-Modified, Ferrocene Labeled Self-Assembled Monolayers for Protein Sensing",
   "journal": "Langmuir",
   "volume": "40",
@@ -326,7 +326,7 @@
  },
  {
   "year": 2024,
-  "authors": "Y. Cho, L. Gao, Y. Yao, J. Kim, D. Zhang, G. Forti, I. Duplessis, Y. Wang, R. M. Pankow, X. Ji, J. Rivnay, T. J. Marks*, A. Facchetti*",
+  "authors": "Y. Cho, L. Gao, Y. Yao, J. Kim, D. Zhang, G. Forti, I. Duplessis, Y. Wang, R. M. Pankow, X. Ji, J. Rivnay, T. J. Marks, A. Facchetti",
   "title": "Small-Molecule Mixed Ionic-Electronic Conductors for Efficient N-Type Electrochemical Transistors: Structure-Function Correlations",
   "journal": "Angewandte Chemie International Edition",
   "volume": "64",
@@ -339,7 +339,7 @@
  },
  {
   "year": 2024,
-  "authors": "M. Alsufyani, B. Moss, C. E. Tait, W. K. Myers, M. Shahi, K. Stewart, X. Zhao, R. B. Rashid, D. Meli, R. Wu, B. D. Paulsen, K. Thorley, Y. Lin, C. Combe, C. Kniebe-Evans, S. Inal, S. Y. Jeong, H. Y. Woo, G. Ritchie, J.-S. Kim, J. Rivnay, A. Paterson, J. R. Durrant, I. McCulloch*",
+  "authors": "M. Alsufyani, B. Moss, C. E. Tait, W. K. Myers, M. Shahi, K. Stewart, X. Zhao, R. B. Rashid, D. Meli, R. Wu, B. D. Paulsen, K. Thorley, Y. Lin, C. Combe, C. Kniebe-Evans, S. Inal, S. Y. Jeong, H. Y. Woo, G. Ritchie, J.-S. Kim, J. Rivnay, A. Paterson, J. R. Durrant, I. McCulloch",
   "title": "The Effect of Organic Semiconductor Electron Affinity on Preventing Parasitic Oxidation Reactions Limiting Performance of n-Type Organic Electrochemical Transistors",
   "journal": "Advanced Materials",
   "volume": "36",
@@ -352,7 +352,7 @@
  },
  {
   "year": 2024,
-  "authors": "A. S. Mehta, S. L. Zhang, X. Xie, S. Khanna, J. Tropp, X. Ji, R. E. Daso, C. K. Franz, S. W. Jordan, J. Rivnay*",
+  "authors": "A. S. Mehta, S. L. Zhang, X. Xie, S. Khanna, J. Tropp, X. Ji, R. E. Daso, C. K. Franz, S. W. Jordan, J. Rivnay",
   "title": "Decellularized Biohybrid Nerve Promotes Motor Axon Projections",
   "journal": "Advanced Healthcare Materials",
   "volume": "13",
@@ -365,7 +365,7 @@
  },
  {
   "year": 2024,
-  "authors": "Z. Laswick, X. Wu, A. Surendran, Z. Zhou, X. Ji, G. M. Matrone, W. L. Leong, J. Rivnay*",
+  "authors": "Z. Laswick, X. Wu, A. Surendran, Z. Zhou, X. Ji, G. M. Matrone, W. L. Leong, J. Rivnay",
   "title": "Tunable anti-ambipolar vertical bilayer organic electrochemical transistor enable neuromorphic retinal pathway",
   "journal": "Nature Communications",
   "volume": "15",
@@ -378,7 +378,7 @@
  },
  {
   "year": 2024,
-  "authors": "E. A. Schafer, J. J. Maraj, C. Kenney, S. A. Sarles, J. Rivnay*",
+  "authors": "E. A. Schafer, J. J. Maraj, C. Kenney, S. A. Sarles, J. Rivnay",
   "title": "Droplet Polymer Bilayers for Bioelectronic Membrane Interfacing",
   "journal": "Journal of the American Chemical Society",
   "volume": "146",
@@ -391,7 +391,7 @@
  },
  {
   "year": 2024,
-  "authors": "R. Wu, X. Ji*, Q. Ma, B. D. Paulsen, J. Tropp, J. Rivnay*",
+  "authors": "R. Wu, X. Ji, Q. Ma, B. D. Paulsen, J. Tropp, J. Rivnay",
   "title": "Direct quantification of ion composition and mobility in organic mixed ionic-electronic conductors",
   "journal": "Science Advances",
   "volume": "10",
@@ -404,7 +404,7 @@
  },
  {
   "year": 2024,
-  "authors": "G. M. Matrone*, E. R. W. van Doremaele, A. Surendran, Z. Laswick, S. Griggs, G. Ye, I. McCulloch, F. Santoro, J. Rivnay, Y. van de Burgt*",
+  "authors": "G. M. Matrone, E. R. W. van Doremaele, A. Surendran, Z. Laswick, S. Griggs, G. Ye, I. McCulloch, F. Santoro, J. Rivnay, Y. van de Burgt",
   "title": "A modular organic neuromorphic spiking circuit for retina-inspired sensory coding and neurotransmitter-mediated neural pathways",
   "journal": "Nature Communications",
   "volume": "15",
@@ -417,7 +417,7 @@
  },
  {
   "year": 2024,
-  "authors": "R. Wu, D. Meli, J. Strzalka, S. Narayanan, Q. Zhang, B. D. Paulsen, J. Rivnay*, C. J. Takacs*",
+  "authors": "R. Wu, D. Meli, J. Strzalka, S. Narayanan, Q. Zhang, B. D. Paulsen, J. Rivnay, C. J. Takacs",
   "title": "Bridging length scales in organic mixed ionic–electronic conductors through internal strain and mesoscale dynamics",
   "journal": "Nature Materials",
   "volume": "23",
@@ -430,7 +430,7 @@
  },
  {
   "year": 2024,
-  "authors": "J. Kim, R. M. Pankow, Y. Cho, I. D. Duplessis, F. Qin, D. Meli, R. Daso, D. Zheng, W. Huang, J. Rivnay*, T. J. Marks*, A. Facchetti*",
+  "authors": "J. Kim, R. M. Pankow, Y. Cho, I. D. Duplessis, F. Qin, D. Meli, R. Daso, D. Zheng, W. Huang, J. Rivnay, T. J. Marks, A. Facchetti",
   "title": "Monolithically integrated high-density vertical organic electrochemical transistor arrays and complementary circuits",
   "journal": "Nature Electronics",
   "volume": "7",
@@ -443,7 +443,7 @@
  },
  {
   "year": 2024,
-  "authors": "Y. Gao, Y. Zhou, X. Ji, A. J. Graham, C. M. Dundas, I. E. M. Mahfoud, B. M. Tibbett, B. Tan, G. Partipilo, A. Dodabalapur, J. Rivnay, B. K. Keitz*",
+  "authors": "Y. Gao, Y. Zhou, X. Ji, A. J. Graham, C. M. Dundas, I. E. M. Mahfoud, B. M. Tibbett, B. Tan, G. Partipilo, A. Dodabalapur, J. Rivnay, B. K. Keitz",
   "title": "A hybrid transistor with transcriptionally controlled computation and plasticity",
   "journal": "Nature Communications",
   "volume": "15",
@@ -456,7 +456,7 @@
  },
  {
   "year": 2024,
-  "authors": "R. L. Keate, J. Tropp, R. Wu, A. J. Petty, G. A. Ameer, J. Rivnay*",
+  "authors": "R. L. Keate, J. Tropp, R. Wu, A. J. Petty, G. A. Ameer, J. Rivnay",
   "title": "Decoupling the Influence of Poly(3,4-Ethylenedioxythiophene)-Collagen Composite Characteristics on Cell Stemness",
   "journal": "Advanced Science",
   "volume": "11",
@@ -469,7 +469,7 @@
  },
  {
   "year": 2024,
-  "authors": "B. D. Paulsen, D. Meli, M. Moser, A. Marks, J. F. Ponder, R. Wu, E. A. Schafer, J. Strzalka, Q. Zhang, I. McCulloch*, J. Rivnay*",
+  "authors": "B. D. Paulsen, D. Meli, M. Moser, A. Marks, J. F. Ponder, R. Wu, E. A. Schafer, J. Strzalka, Q. Zhang, I. McCulloch, J. Rivnay",
   "title": "Enhancement of Conjugated Polymer Microstructure and Mixed-Conducting Properties via Chalcogenophene Heteroatom Substitution",
   "journal": "Chemistry of Materials",
   "volume": "36",
@@ -482,7 +482,7 @@
  },
  {
   "year": 2024,
-  "authors": "R. P. Trueman, O. Guillemot-Legris, H. T. Lancashire, A. S. Mehta, J. Tropp, R. E. Daso, J. Rivnay, A. B. Tabor, J. B. Phillips*, B. C. Schroeder*",
+  "authors": "R. P. Trueman, O. Guillemot-Legris, H. T. Lancashire, A. S. Mehta, J. Tropp, R. E. Daso, J. Rivnay, A. B. Tabor, J. B. Phillips, B. C. Schroeder",
   "title": "Aligned Bioelectronic Polypyrrole/Collagen Constructs for Peripheral Nerve Interfacing",
   "journal": "Advanced Engineering Materials",
   "volume": "26",
@@ -508,7 +508,7 @@
  },
  {
   "year": 2023,
-  "authors": "I. Lee, A. Surendran, S. Fleury, I. Gimino, A. Curtiss, C. Fell, D. J. Shiwarski, O. Refy, B. Rothrock, S. Jo, T. Schwartzkopff, A. S. Mehta, Y. Wang, A. Sipe, S. John, X. Ji, G. Nikiforidis, A. W. Feinberg, J. Hester, D. J. Weber, O. Veiseh, J. Rivnay*, T. Cohen-Karni*",
+  "authors": "I. Lee, A. Surendran, S. Fleury, I. Gimino, A. Curtiss, C. Fell, D. J. Shiwarski, O. Refy, B. Rothrock, S. Jo, T. Schwartzkopff, A. S. Mehta, Y. Wang, A. Sipe, S. John, X. Ji, G. Nikiforidis, A. W. Feinberg, J. Hester, D. J. Weber, O. Veiseh, J. Rivnay, T. Cohen-Karni",
   "title": "Electrocatalytic on-site oxygenation for transplanted cell-based-therapies",
   "journal": "Nature Communications",
   "volume": "14",
@@ -521,7 +521,7 @@
  },
  {
   "year": 2023,
-  "authors": "P. Alarcon-Espejo, R. Sarabia-Riquelme, G. M. Matrone, M. Shahi, S. Mahmoudi, G. S. Rupasinghe, V. N. Le, A. M. Mantica, D. Qian, T. J. Balk, J. Rivnay, M. Weisenberger, A. F. Paterson*",
+  "authors": "P. Alarcon-Espejo, R. Sarabia-Riquelme, G. M. Matrone, M. Shahi, S. Mahmoudi, G. S. Rupasinghe, V. N. Le, A. M. Mantica, D. Qian, T. J. Balk, J. Rivnay, M. Weisenberger, A. F. Paterson",
   "title": "High-Hole-Mobility Fiber Organic Electrochemical Transistors for Next-Generation Adaptive Neuromorphic Bio-Hybrid Technologies",
   "journal": "Advanced Materials",
   "volume": "36",
@@ -534,7 +534,7 @@
  },
  {
   "year": 2023,
-  "authors": "E. R. W. van Doremaele, X. Ji, J. Rivnay*, Y. van de Burgt*",
+  "authors": "E. R. W. van Doremaele, X. Ji, J. Rivnay, Y. van de Burgt",
   "title": "A retrainable neuromorphic biosensor for on-chip learning and classification",
   "journal": "Nature Electronics",
   "volume": "6",
@@ -547,7 +547,7 @@
  },
  {
   "year": 2023,
-  "authors": "J. Tropp, C. P. Collins, X. Xie, R. E. Daso, A. S. Mehta, S. P. Patel, M. M. Reddy, S. E. Levin, C. Sun, J. Rivnay*",
+  "authors": "J. Tropp, C. P. Collins, X. Xie, R. E. Daso, A. S. Mehta, S. P. Patel, M. M. Reddy, S. E. Levin, C. Sun, J. Rivnay",
   "title": "Conducting Polymer Nanoparticles with Intrinsic Aqueous Dispersibility for Conductive Hydrogels",
   "journal": "Advanced Materials",
   "volume": "36",
@@ -560,7 +560,7 @@
  },
  {
   "year": 2023,
-  "authors": "R. Wu, D. Meli, J. Rivnay*",
+  "authors": "R. Wu, D. Meli, J. Rivnay",
   "title": "The hole truth",
   "journal": "Nature Materials",
   "volume": "22",
@@ -573,7 +573,7 @@
  },
  {
   "year": 2023,
-  "authors": "R. Wu, B. D. Paulsen, Q. Ma, I. McCulloch, J. Rivnay*",
+  "authors": "R. Wu, B. D. Paulsen, Q. Ma, I. McCulloch, J. Rivnay",
   "title": "Quantitative Composition and Mesoscale Ion Distribution in p-Type Organic Mixed Ionic-Electronic Conductors",
   "journal": "ACS Applied Materials & Interfaces",
   "volume": "15",
@@ -586,7 +586,7 @@
  },
  {
   "year": 2023,
-  "authors": "S. Zhang, P. Ding, T.-P. Ruoko, R. Wu, M.-A. Stoeckel, M. Massetti, T. Liu, M. Vagin, D. Meli, R. Kroon, J. Rivnay, S. Fabiano*",
+  "authors": "S. Zhang, P. Ding, T.-P. Ruoko, R. Wu, M.-A. Stoeckel, M. Massetti, T. Liu, M. Vagin, D. Meli, R. Kroon, J. Rivnay, S. Fabiano",
   "title": "Toward Stable p-Type Thiophene-Based Organic Electrochemical Transistors",
   "journal": "Advanced Functional Materials",
   "volume": "33",
@@ -599,7 +599,7 @@
  },
  {
   "year": 2023,
-  "authors": "J. Tropp, D. Meli, J. Rivnay*",
+  "authors": "J. Tropp, D. Meli, J. Rivnay",
   "title": "Organic mixed conductors for electrochemical transistors",
   "journal": "Matter",
   "volume": "6",
@@ -612,7 +612,7 @@
  },
  {
   "year": 2023,
-  "authors": "R. Garg*, G. Balakrishnan, R. B. Rashid, S. A. Gershanok, D. S. Roman, Y. Wang, P. C. Kouassi, J. Rivnay, T. Cohen-Karni*",
+  "authors": "R. Garg, G. Balakrishnan, R. B. Rashid, S. A. Gershanok, D. S. Roman, Y. Wang, P. C. Kouassi, J. Rivnay, T. Cohen-Karni",
   "title": "Graphene and Poly(3,4-ethylenedioxythiophene)–Polystyrene Sulfonate Hybrid Nanostructures for Input/Output Bioelectronics",
   "journal": "ACS Applied Nano Materials",
   "volume": "6",
@@ -625,7 +625,7 @@
  },
  {
   "year": 2023,
-  "authors": "E. A. Schafer, E. Davis, Z. Manzer, S. Daniel, J. Rivnay*",
+  "authors": "E. A. Schafer, E. Davis, Z. Manzer, S. Daniel, J. Rivnay",
   "title": "Hybrid Supported Lipid Bilayers for Bioinspired Bioelectronics with Enhanced Stability",
   "journal": "ACS Applied Materials & Interfaces",
   "volume": "15",
@@ -638,7 +638,7 @@
  },
  {
   "year": 2023,
-  "authors": "J. Tropp, D. Meli, R. Wu, B. Xu, S. B. Hunt, J. D. Azoulay, B. D. Paulsen*, J. Rivnay*",
+  "authors": "J. Tropp, D. Meli, R. Wu, B. Xu, S. B. Hunt, J. D. Azoulay, B. D. Paulsen, J. Rivnay",
   "title": "Revealing the Impact of Molecular Weight on Mixed Conduction in Glycolated Polythiophenes through Electrolyte Choice",
   "journal": "ACS Materials Letters",
   "volume": "5",
@@ -651,7 +651,7 @@
  },
  {
   "year": 2023,
-  "authors": "X. Ji, X. Lin, J. Rivnay*",
+  "authors": "X. Ji, X. Lin, J. Rivnay",
   "title": "Organic electrochemical transistors as on-site signal amplifiers for electrochemical aptamer-based sensing",
   "journal": "Nature Communications",
   "volume": "14",
@@ -664,7 +664,7 @@
  },
  {
   "year": 2023,
-  "authors": "Y. Zhang, B. D. Paulsen, E. A. Schafer, Q. Zeng, F. Yu, L. Yang, Y. Xue, J. Rivnay*, N. Zhao*",
+  "authors": "Y. Zhang, B. D. Paulsen, E. A. Schafer, Q. Zeng, F. Yu, L. Yang, Y. Xue, J. Rivnay, N. Zhao",
   "title": "Combined Optical, Gravimetric, and Electrical Operando Investigation of Structural Variations in Polymeric Mixed Conductors",
   "journal": "Advanced Functional Materials",
   "volume": "33",
@@ -677,7 +677,7 @@
  },
  {
   "year": 2023,
-  "authors": "W. Huang*, J. Chen, Y. Yao, D. Zheng*, X. Ji, L.-W. Feng, D. Moore, N. R. Glavin, M. Xie, Y. Chen, R. M. Pankow, A. Surendran, Z. Wang, Y. Xia, L. Bai, J. Rivnay, J. Ping, X. Guo, Y. Cheng*, T. J. Marks*, A. Facchetti*",
+  "authors": "W. Huang, J. Chen, Y. Yao, D. Zheng, X. Ji, L.-W. Feng, D. Moore, N. R. Glavin, M. Xie, Y. Chen, R. M. Pankow, A. Surendran, Z. Wang, Y. Xia, L. Bai, J. Rivnay, J. Ping, X. Guo, Y. Cheng, T. J. Marks, A. Facchetti",
   "title": "Vertical organic electrochemical transistors for complementary circuits",
   "journal": "Nature",
   "volume": "613",
@@ -703,7 +703,7 @@
  },
  {
   "year": 2023,
-  "authors": "R. Marcial-Hernandez*, S. Giacalone, W. G. Neal, C.-S. Lee, P. A. Gilhooly-Finn, G. Mastroianni, D. Meli, R. Wu, J. Rivnay, M. Palma, C. B. Nielsen*",
+  "authors": "R. Marcial-Hernandez, S. Giacalone, W. G. Neal, C.-S. Lee, P. A. Gilhooly-Finn, G. Mastroianni, D. Meli, R. Wu, J. Rivnay, M. Palma, C. B. Nielsen",
   "title": "Aqueous processing of organic semiconductors enabled by stable nanoparticles with built-in surfactants",
   "journal": "Nanoscale",
   "volume": "15",
@@ -716,7 +716,7 @@
  },
  {
   "year": 2022,
-  "authors": "S. Griggs, A. Marks, D. Meli, G. Rebetez, O. Bardagot, B. D. Paulsen, H. Chen, K. Weaver, M. I. Nugraha, E. A. Schafer, J. Tropp, C. M. Aitchison, T. D. Anthopoulos, N. Banerji, J. Rivnay, I. McCulloch*",
+  "authors": "S. Griggs, A. Marks, D. Meli, G. Rebetez, O. Bardagot, B. D. Paulsen, H. Chen, K. Weaver, M. I. Nugraha, E. A. Schafer, J. Tropp, C. M. Aitchison, T. D. Anthopoulos, N. Banerji, J. Rivnay, I. McCulloch",
   "title": "The effect of residual palladium on the performance of organic electrochemical transistors",
   "journal": "Nature Communications",
   "volume": "13",
@@ -729,7 +729,7 @@
  },
  {
   "year": 2022,
-  "authors": "J. Tropp, A. S. Mehta, X. Ji, A. Surendran, R. Wu, E. A. Schafer, M. M. Reddy, S. P. Patel, A. J. Petty, J. Rivnay*",
+  "authors": "J. Tropp, A. S. Mehta, X. Ji, A. Surendran, R. Wu, E. A. Schafer, M. M. Reddy, S. P. Patel, A. J. Petty, J. Rivnay",
   "title": "Versatile Poly(3,4-ethylenedioxythiophene) Polyelectrolytes for Bioelectronics by Incorporation of an Activated Ester",
   "journal": "Chemistry of Materials",
   "volume": "35",
@@ -742,7 +742,7 @@
  },
  {
   "year": 2022,
-  "authors": "R. Wu, B. D. Paulsen, Q. Ma, J. Rivnay*",
+  "authors": "R. Wu, B. D. Paulsen, Q. Ma, J. Rivnay",
   "title": "Mass and Charge Transport Kinetics in an Organic Mixed Ionic–Electronic Conductor",
   "journal": "Chemistry of Materials",
   "volume": "34",
@@ -755,7 +755,7 @@
  },
  {
   "year": 2022,
-  "authors": "I. P. Maria*, S. Griggs, R. B. Rashid, B. D. Paulsen, J. Surgailis, K. Thorley, V. N. Le, G. T. Harrison, C. Combe, R. Hallani, A. Giovannitti, A. F. Paterson, S. Inal, J. Rivnay, I. McCulloch*",
+  "authors": "I. P. Maria, S. Griggs, R. B. Rashid, B. D. Paulsen, J. Surgailis, K. Thorley, V. N. Le, G. T. Harrison, C. Combe, R. Hallani, A. Giovannitti, A. F. Paterson, S. Inal, J. Rivnay, I. McCulloch",
   "title": "Enhancing the Backbone Coplanarity of n-Type Copolymers for Higher Electron Mobility and Stability in Organic Electrochemical Transistors",
   "journal": "Chemistry of Materials",
   "volume": "34",
@@ -768,7 +768,7 @@
  },
  {
   "year": 2022,
-  "authors": "R. L. Keate, J. Tropp, C. P. Collins, H. O. T. Ware, A. J. Petty, G. A. Ameer, C. Sun*, J. Rivnay*",
+  "authors": "R. L. Keate, J. Tropp, C. P. Collins, H. O. T. Ware, A. J. Petty, G. A. Ameer, C. Sun, J. Rivnay",
   "title": "3D-Printed Electroactive Hydrogel Architectures with Sub-100 µm Resolution Promote Myoblast Viability",
   "journal": "Macromolecular Bioscience",
   "volume": "22",
@@ -781,7 +781,7 @@
  },
  {
   "year": 2022,
-  "authors": "E. A. Schafer, R. Wu, D. Meli, J. Tropp, M. Moser, I. McCulloch, B. D. Paulsen*, J. Rivnay*",
+  "authors": "E. A. Schafer, R. Wu, D. Meli, J. Tropp, M. Moser, I. McCulloch, B. D. Paulsen, J. Rivnay",
   "title": "Sources and Mechanism of Degradation in p-Type Thiophene-Based Organic Electrochemical Transistors",
   "journal": "ACS Applied Electronic Materials",
   "volume": "4",
@@ -794,7 +794,7 @@
  },
  {
   "year": 2022,
-  "authors": "R. B. Rashid, A. M. Evans, L. A. Hall, R. R. Dasari, E. K. Roesner, S. R. Marder, D. M. D'Allesandro, W. R. Dichtel*, J. Rivnay*",
+  "authors": "R. B. Rashid, A. M. Evans, L. A. Hall, R. R. Dasari, E. K. Roesner, S. R. Marder, D. M. D'Allesandro, W. R. Dichtel, J. Rivnay",
   "title": "A Semiconducting Two-Dimensional Polymer as an Organic Electrochemical Transistor Active Layer",
   "journal": "Advanced Materials",
   "volume": "34",
@@ -807,7 +807,7 @@
  },
  {
   "year": 2022,
-  "authors": "A. Marks*, X. Chen*, R. Wu, R. B. Rashid, W. Jin, B. D. Paulsen, M. Moser, X. Ji, S. Griggs, D. Meli, X. Wu, H. Bristow, J. Strzalka, N. Gasparini, G. Costantini, S. Fabiano, J. Rivnay, I. McCulloch*",
+  "authors": "A. Marks, X. Chen, R. Wu, R. B. Rashid, W. Jin, B. D. Paulsen, M. Moser, X. Ji, S. Griggs, D. Meli, X. Wu, H. Bristow, J. Strzalka, N. Gasparini, G. Costantini, S. Fabiano, J. Rivnay, I. McCulloch",
   "title": "Synthetic Nuances to Maximize n-Type Organic Electrochemical Transistor and Thermoelectric Performance in Fused Lactam Polymers",
   "journal": "Journal of the American Chemical Society",
   "volume": "144",
@@ -820,7 +820,7 @@
  },
  {
   "year": 2022,
-  "authors": "M. Nikkhah*, J. Rivnay*",
+  "authors": "M. Nikkhah, J. Rivnay",
   "title": "Conductive and Electroactive Biomaterials and Bioelectronics",
   "journal": "Acta Biomaterialia",
   "volume": "139",
@@ -833,7 +833,7 @@
  },
  {
   "year": 2022,
-  "authors": "Z. S. Parr, J. Borges-González, R. B. Rashid, K. J. Thorley, D. Meli, B. D. Paulsen, J. Strzalka, J. Rivnay, C. B. Nielsen*",
+  "authors": "Z. S. Parr, J. Borges-González, R. B. Rashid, K. J. Thorley, D. Meli, B. D. Paulsen, J. Strzalka, J. Rivnay, C. B. Nielsen",
   "title": "From p- to n-Type Mixed Conduction in Isoindigo-Based Polymers through Molecular Design",
   "journal": "Advanced Materials",
   "volume": "34",
@@ -846,7 +846,7 @@
  },
  {
   "year": 2022,
-  "authors": "R. Wu, M. Matta, B. D. Paulsen, J. Rivnay*",
+  "authors": "R. Wu, M. Matta, B. D. Paulsen, J. Rivnay",
   "title": "Operando Characterization of Organic Mixed Ionic/Electronic Conducting Materials",
   "journal": "Chemical Reviews",
   "volume": "122",
@@ -872,7 +872,7 @@
  },
  {
   "year": 2022,
-  "authors": "C.-Y. Lo, Y. Wu, E. Awuyah, D. Meli, D. M. Nguyen, R. Wu, B. Xu, J. Strzalka, J. Rivnay, D. C. Martin, L. V. Kayser*",
+  "authors": "C.-Y. Lo, Y. Wu, E. Awuyah, D. Meli, D. M. Nguyen, R. Wu, B. Xu, J. Strzalka, J. Rivnay, D. C. Martin, L. V. Kayser",
   "title": "Influence of the molecular weight and size distribution of PSS on mixed ionic-electronic transport in PEDOT:PSS",
   "journal": "Polymer Chemistry",
   "volume": "13",
@@ -898,7 +898,7 @@
  },
  {
   "year": 2021,
-  "authors": "M. Alsufyani*, M.-A. Stoeckel, X. Chen, K. Thorley, R. K. Hallani, Y. Puttisong, X. Ji, D. Meli, B. D. Paulsen, J. Strzalka, K. Regeta, C. Combe, H. Chen, J. Tian, J. Rivnay, S. Fabiano, I. McCulloch*",
+  "authors": "M. Alsufyani, M.-A. Stoeckel, X. Chen, K. Thorley, R. K. Hallani, Y. Puttisong, X. Ji, D. Meli, B. D. Paulsen, J. Strzalka, K. Regeta, C. Combe, H. Chen, J. Tian, J. Rivnay, S. Fabiano, I. McCulloch",
   "title": "Lactone Backbone Density in Rigid Electron-Deficient Semiconducting Polymers Enabling High n-type Organic Thermoelectric Performance",
   "journal": "Angewandte Chemie International Edition",
   "volume": "61",
@@ -911,7 +911,7 @@
  },
  {
   "year": 2021,
-  "authors": "R. L. Keate, J. Tropp, C. Serna, J. Rivnay*",
+  "authors": "R. L. Keate, J. Tropp, C. Serna, J. Rivnay",
   "title": "A Collagen-Conducting Polymer Composite with Enhanced Chondrogenic Potential",
   "journal": "Cellular and Molecular Bioengineering",
   "volume": "14",
@@ -924,7 +924,7 @@
  },
  {
   "year": 2021,
-  "authors": "B. D. Paulsen, A. Giovannitti, R. Wu, J. Strzalka, Q. Zhang, J. Rivnay*, C. J. Takacs*",
+  "authors": "B. D. Paulsen, A. Giovannitti, R. Wu, J. Strzalka, Q. Zhang, J. Rivnay, C. J. Takacs",
   "title": "Electrochemistry of Thin Films with In Situ/Operando Grazing Incidence X-Ray Scattering: Bypassing Electrolyte Scattering for High Fidelity Time Resolved Studies",
   "journal": "Small",
   "volume": "17",
@@ -937,7 +937,7 @@
  },
  {
   "year": 2021,
-  "authors": "R. B. Rashid, W. Du, S. Griggs, I. P. Maria, I. McCulloch, J. Rivnay*",
+  "authors": "R. B. Rashid, W. Du, S. Griggs, I. P. Maria, I. McCulloch, J. Rivnay",
   "title": "Ambipolar inverters based on cofacial vertical organic electrochemical transistor pairs for biosignal amplification",
   "journal": "Science Advances",
   "volume": "7",
@@ -963,7 +963,7 @@
  },
  {
   "year": 2021,
-  "authors": "R. K. Hallani, B. D. Paulsen, A. J. Petty, R. Sheelamanthula, M. Moser, K. J. Thorley, W. Sohn, R. B. Rashid, A. Savva, S. Moro, J. P. Parker, O. Drury, M. Alsufyani, M. Neophytou, J. Kosco, S. Inal, G. Costantini, J. Rivnay, I. McCulloch*",
+  "authors": "R. K. Hallani, B. D. Paulsen, A. J. Petty, R. Sheelamanthula, M. Moser, K. J. Thorley, W. Sohn, R. B. Rashid, A. Savva, S. Moro, J. P. Parker, O. Drury, M. Alsufyani, M. Neophytou, J. Kosco, S. Inal, G. Costantini, J. Rivnay, I. McCulloch",
   "title": "Regiochemistry-Driven Organic Electrochemical Transistor Performance Enhancement in Ethylene Glycol-Functionalized Polythiophenes",
   "journal": "Journal of the American Chemical Society",
   "volume": "143",
@@ -976,7 +976,7 @@
  },
  {
   "year": 2021,
-  "authors": "R. B. Rashid, X. Ji, J. Rivnay*",
+  "authors": "R. B. Rashid, X. Ji, J. Rivnay",
   "title": "Organic electrochemical transistors in bioelectronic circuits",
   "journal": "Biosensors and Bioelectronics",
   "volume": "190",
@@ -989,7 +989,7 @@
  },
  {
   "year": 2021,
-  "authors": "B. D. Paulsen, S. Fabiano, J. Rivnay*",
+  "authors": "B. D. Paulsen, S. Fabiano, J. Rivnay",
   "title": "Mixed Ionic-Electronic Transport in Polymers",
   "journal": "Annual Review of Materials Research",
   "volume": "51",
@@ -1002,7 +1002,7 @@
  },
  {
   "year": 2021,
-  "authors": "X. Ji, B. D. Paulsen, G. K. K. Chik, R. Wu, Y. Yin, P. K. L. Chan*, J. Rivnay*",
+  "authors": "X. Ji, B. D. Paulsen, G. K. K. Chik, R. Wu, Y. Yin, P. K. L. Chan, J. Rivnay",
   "title": "Mimicking associative learning using an ion-trapping non-volatile synaptic organic electrochemical transistor",
   "journal": "Nature Communications",
   "volume": "12",
@@ -1015,7 +1015,7 @@
  },
  {
   "year": 2021,
-  "authors": "Y. Bonnassieux, C. J. Brabec, Y. Cao, T. B. Carmichael, M. L. Chabinyc, K.-T. Cheng, G. Cho, A. Chung, C. L. Cobb, A. Distler, H.-J. Egelhaaf, G. Grau, X. Guo, G. Haghiashtiani, T.-C. Huang, M. M. Hussain, B. Iniguez, T.-M. Lee, L. Li, Y. Ma, D. Ma, M. C. McAlpine, T. N. Ng, R. Österbacka*, S. N. Patel, J. Peng, H. Peng, J. Rivnay, L. Shao, D. Steingart, R. A. Street, V. Subramanian, L. Torsi, Y. Wu",
+  "authors": "Y. Bonnassieux, C. J. Brabec, Y. Cao, T. B. Carmichael, M. L. Chabinyc, K.-T. Cheng, G. Cho, A. Chung, C. L. Cobb, A. Distler, H.-J. Egelhaaf, G. Grau, X. Guo, G. Haghiashtiani, T.-C. Huang, M. M. Hussain, B. Iniguez, T.-M. Lee, L. Li, Y. Ma, D. Ma, M. C. McAlpine, T. N. Ng, R. Österbacka, S. N. Patel, J. Peng, H. Peng, J. Rivnay, L. Shao, D. Steingart, R. A. Street, V. Subramanian, L. Torsi, Y. Wu",
   "title": "The 2021 flexible and printed electronics roadmap",
   "journal": "Flexible and Printed Electronics",
   "volume": "6",
@@ -1028,7 +1028,7 @@
  },
  {
   "year": 2021,
-  "authors": "J. Surgailis, A. Savva, V. Druet, B. D. Paulsen, R. Wu, A. Hamidi-Sakr, D. Ohayon, G. Nikiforidis, X. Chen, I. McCulloch, J. Rivnay, S. Inal*",
+  "authors": "J. Surgailis, A. Savva, V. Druet, B. D. Paulsen, R. Wu, A. Hamidi-Sakr, D. Ohayon, G. Nikiforidis, X. Chen, I. McCulloch, J. Rivnay, S. Inal",
   "title": "Mixed Conduction in an N-Type Organic Semiconductor in the Absence of Hydrophilic Side-Chains",
   "journal": "Advanced Functional Materials",
   "volume": "31",
@@ -1041,7 +1041,7 @@
  },
  {
   "year": 2021,
-  "authors": "Y. Kim, H. Noh, B. D. Paulsen, J. Kim, I.-Y. Jo, H. Ahn*, J. Rivnay*, M.-H. Yoon*",
+  "authors": "Y. Kim, H. Noh, B. D. Paulsen, J. Kim, I.-Y. Jo, H. Ahn, J. Rivnay, M.-H. Yoon",
   "title": "Strain-Engineering Induced Anisotropic Crystallite Orientation and Maximized Carrier Mobility for High-Performance Microfiber-Based Organic Bioelectronic Devices",
   "journal": "Advanced Materials",
   "volume": "33",
@@ -1054,7 +1054,7 @@
  },
  {
   "year": 2021,
-  "authors": "I. P. Maria*, B. D. Paulsen, A. Savva, D. Ohayon, R. Wu, R. Hallani, A. Basu, W. Du, T. D. Anthopoulos, S. Inal, J. Rivnay, I. McCulloch, A. Giovannitti*",
+  "authors": "I. P. Maria, B. D. Paulsen, A. Savva, D. Ohayon, R. Wu, R. Hallani, A. Basu, W. Du, T. D. Anthopoulos, S. Inal, J. Rivnay, I. McCulloch, A. Giovannitti",
   "title": "The Effect of Alkyl Spacers on the Mixed Ionic-Electronic Conduction Properties of N-Type Polymers",
   "journal": "Advanced Functional Materials",
   "volume": "31",
@@ -1067,7 +1067,7 @@
  },
  {
   "year": 2021,
-  "authors": "D. Ohayon, A. Savva, W. Du, B. D. Paulsen, I. Uguz, R. S. Ashraf, J. Rivnay, I. McCulloch, S. Inal*",
+  "authors": "D. Ohayon, A. Savva, W. Du, B. D. Paulsen, I. Uguz, R. S. Ashraf, J. Rivnay, I. McCulloch, S. Inal",
   "title": "Influence of Side Chains on the n-Type Organic Electrochemical Transistor Performance",
   "journal": "ACS Applied Materials & Interfaces",
   "volume": "13",
@@ -1080,7 +1080,7 @@
  },
  {
   "year": 2021,
-  "authors": "J. Tropp*, J. Rivnay*",
+  "authors": "J. Tropp, J. Rivnay",
   "title": "Design of biodegradable and biocompatible conjugated polymers for bioelectronics",
   "journal": "Journal of Materials Chemistry C",
   "volume": "9",
@@ -1093,7 +1093,7 @@
  },
  {
   "year": 2020,
-  "authors": "X. Chen*, A. Marks*, B. D. Paulsen, R. Wu, R. B. Rashid, H. Chen, M. Alsufyani, J. Rivnay, I. McCulloch*",
+  "authors": "X. Chen, A. Marks, B. D. Paulsen, R. Wu, R. B. Rashid, H. Chen, M. Alsufyani, J. Rivnay, I. McCulloch",
   "title": "n-Type Rigid Semiconducting Polymers Bearing Oligo(Ethylene Glycol) Side Chains for High-Performance Organic Electrochemical Transistors",
   "journal": "Angewandte Chemie International Edition",
   "volume": "60",
@@ -1106,7 +1106,7 @@
  },
  {
   "year": 2020,
-  "authors": "S. Zokaei, R. Kroon, J. Gladisch, B. D. Paulsen, W. Sohn, A. I. Hofmann, G. Persson, A. Stamm, P.-O. Syrén, E. Olsson, J. Rivnay, E. Stavrinidou, A. Lund, C. Müller*",
+  "authors": "S. Zokaei, R. Kroon, J. Gladisch, B. D. Paulsen, W. Sohn, A. I. Hofmann, G. Persson, A. Stamm, P.-O. Syrén, E. Olsson, J. Rivnay, E. Stavrinidou, A. Lund, C. Müller",
   "title": "Toughening of a Soft Polar Polythiophene through Copolymerization with Hard Urethane Segments",
   "journal": "Advanced Science",
   "volume": "8",
@@ -1119,7 +1119,7 @@
  },
  {
   "year": 2020,
-  "authors": "M. Moser*, A. Savva, K. Thorley, B. D. Paulsen, T. C. Hidalgo, D. Ohayon, H. Chen, A. Giovannitti, A. Marks, N. Gasparini, A. Wadsworth, J. Rivnay, S. Inal, I. McCulloch*",
+  "authors": "M. Moser, A. Savva, K. Thorley, B. D. Paulsen, T. C. Hidalgo, D. Ohayon, H. Chen, A. Giovannitti, A. Marks, N. Gasparini, A. Wadsworth, J. Rivnay, S. Inal, I. McCulloch",
   "title": "Polaron Delocalization in Donor–Acceptor Polymers and its Impact on Organic Electrochemical Transistor Performance",
   "journal": "Angewandte Chemie International Edition",
   "volume": "60",
@@ -1132,7 +1132,7 @@
  },
  {
   "year": 2020,
-  "authors": "B. D. Paulsen, R. Wu, C. J. Takacs, H.-G. Steinrück, J. Strzalka, Q. Zhang, M. F. Toney, J. Rivnay*",
+  "authors": "B. D. Paulsen, R. Wu, C. J. Takacs, H.-G. Steinrück, J. Strzalka, Q. Zhang, M. F. Toney, J. Rivnay",
   "title": "Time-Resolved Structural Kinetics of an Organic Mixed Ionic–Electronic Conductor",
   "journal": "Advanced Materials",
   "volume": "32",
@@ -1145,7 +1145,7 @@
  },
  {
   "year": 2020,
-  "authors": "M. Matta*, R. Wu, B. D. Paulsen, A. J. Petty, R. Sheelamanthula, I. McCulloch, G. C. Schatz, J. Rivnay",
+  "authors": "M. Matta, R. Wu, B. D. Paulsen, A. J. Petty, R. Sheelamanthula, I. McCulloch, G. C. Schatz, J. Rivnay",
   "title": "Ion Coordination and Chelation in a Glycolated Polymer Semiconductor: Molecular Dynamics and X-ray Fluorescence Study",
   "journal": "Chemistry of Materials",
   "volume": "32",
@@ -1171,7 +1171,7 @@
  },
  {
   "year": 2020,
-  "authors": "Z. S. Parr, R. B. Rashid, B. D. Paulsen, B. Poggi, E. Tan, M. Freeley, M. Palma, I. Abrahams, J. Rivnay, C. B. Nielsen*",
+  "authors": "Z. S. Parr, R. B. Rashid, B. D. Paulsen, B. Poggi, E. Tan, M. Freeley, M. Palma, I. Abrahams, J. Rivnay, C. B. Nielsen",
   "title": "Semiconducting Small Molecules as Active Materials for p-Type Accumulation Mode Organic Electrochemical Transistors",
   "journal": "Advanced Electronic Materials",
   "volume": "6",
@@ -1184,7 +1184,7 @@
  },
  {
   "year": 2020,
-  "authors": "A. J. Petty, R. L. Keate, B. Jiang, G. A. Ameer, J. Rivnay*",
+  "authors": "A. J. Petty, R. L. Keate, B. Jiang, G. A. Ameer, J. Rivnay",
   "title": "Conducting Polymers for Tissue Regeneration in Vivo",
   "journal": "Chemistry of Materials",
   "volume": "32",
@@ -1197,7 +1197,7 @@
  },
  {
   "year": 2020,
-  "authors": "A. Giovannitti*, R. B. Rashid, Q. Thiburce, B. D. Paulsen, C. Cendra, K. Thorley, D. Moia, J. T. Mefford, D. Hanifi, D. Weiyuan, M. Moser, A. Salleo, J. Nelson, I. McCulloch, J. Rivnay",
+  "authors": "A. Giovannitti, R. B. Rashid, Q. Thiburce, B. D. Paulsen, C. Cendra, K. Thorley, D. Moia, J. T. Mefford, D. Hanifi, D. Weiyuan, M. Moser, A. Salleo, J. Nelson, I. McCulloch, J. Rivnay",
   "title": "Energetic Control of Redox-Active Polymers toward Safe Organic Bioelectronic Materials",
   "journal": "Advanced Materials",
   "volume": "32",
@@ -1223,7 +1223,7 @@
  },
  {
   "year": 2020,
-  "authors": "P. A. Finn, I. E. Jacobs, J. Armitage, R. Wu, B. D. Paulsen, M. Freeley, M. Palma, J. Rivnay, H. Sirringhaus, C. B. Nielsen*",
+  "authors": "P. A. Finn, I. E. Jacobs, J. Armitage, R. Wu, B. D. Paulsen, M. Freeley, M. Palma, J. Rivnay, H. Sirringhaus, C. B. Nielsen",
   "title": "Effect of polar side chains on neutral and p-doped polythiophene",
   "journal": "Journal of Materials Chemistry C",
   "volume": "8",
@@ -1236,7 +1236,7 @@
  },
  {
   "year": 2020,
-  "authors": "M. Alsufyani*, R. K. Hallani*, S. Wang, M. Xiao, X. Ji, B. D. Paulsen, K. Xu, H. Bristow, H. Chen, X. Chen, H. Sirringhaus, J. Rivnay, S. Fabiano, I. McCulloch",
+  "authors": "M. Alsufyani, R. K. Hallani, S. Wang, M. Xiao, X. Ji, B. D. Paulsen, K. Xu, H. Bristow, H. Chen, X. Chen, H. Sirringhaus, J. Rivnay, S. Fabiano, I. McCulloch",
   "title": "The effect of aromatic ring size in electron deficient semiconducting polymers for n-type organic thermoelectrics",
   "journal": "Journal of Materials Chemistry C",
   "volume": "8",
@@ -1249,7 +1249,7 @@
  },
  {
   "year": 2019,
-  "authors": "R. B. Rashid, R. J. Ciechowski, J. Rivnay*",
+  "authors": "R. B. Rashid, R. J. Ciechowski, J. Rivnay",
   "title": "Self-aligned, laser-cut organic electrochemical transistors",
   "journal": "Flexible and Printed Electronics",
   "volume": "5",
@@ -1262,7 +1262,7 @@
  },
  {
   "year": 2019,
-  "authors": "B. D. Paulsen, K. Tybrandt, E. Stavrinidou, J. Rivnay*",
+  "authors": "B. D. Paulsen, K. Tybrandt, E. Stavrinidou, J. Rivnay",
   "title": "Organic mixed ionic–electronic conductors",
   "journal": "Nature Materials",
   "volume": "19",
@@ -1275,7 +1275,7 @@
  },
  {
   "year": 2019,
-  "authors": "A. Savva, D. Ohayon, J. Surgailis, A. F. Paterson, T. C. Hidalgo, X. Chen, I. P. Maria, B. D. Paulsen, A. J. Petty, J. Rivnay, I. McCulloch, S. Inal*",
+  "authors": "A. Savva, D. Ohayon, J. Surgailis, A. F. Paterson, T. C. Hidalgo, X. Chen, I. P. Maria, B. D. Paulsen, A. J. Petty, J. Rivnay, I. McCulloch, S. Inal",
   "title": "Solvent Engineering for High-Performance n-Type Organic Electrochemical Transistors",
   "journal": "Advanced Electronic Materials",
   "volume": "5",
@@ -1288,7 +1288,7 @@
  },
  {
   "year": 2019,
-  "authors": "Z. S. Parr, R. Halaksa, P. A. Finn, R. B. Rashid, A. Kovalenko, M. Weiter, J. Rivnay, J. Krajčovič, C. B. Nielsen*",
+  "authors": "Z. S. Parr, R. Halaksa, P. A. Finn, R. B. Rashid, A. Kovalenko, M. Weiter, J. Rivnay, J. Krajčovič, C. B. Nielsen",
   "title": "Glycolated Thiophene-Tetrafluorophenylene Copolymers for Bioelectronic Applications: Synthesis by Direct Heteroarylation Polymerisation",
   "journal": "ChemPlusChem",
   "volume": "84",
@@ -1301,7 +1301,7 @@
  },
  {
   "year": 2019,
-  "authors": "A. Savva, C. Cendra, A. Giugni, B. Torre, J. Surgailis, D. Ohayon, A. Giovannitti, I. McCulloch, E. Di Fabrizio, A. Salleo, J. Rivnay, S. Inal*",
+  "authors": "A. Savva, C. Cendra, A. Giugni, B. Torre, J. Surgailis, D. Ohayon, A. Giovannitti, I. McCulloch, E. Di Fabrizio, A. Salleo, J. Rivnay, S. Inal",
   "title": "Influence of Water on the Performance of Organic Electrochemical Transistors",
   "journal": "Chemistry of Materials",
   "volume": "31",
@@ -1314,7 +1314,7 @@
  },
  {
   "year": 2018,
-  "authors": "C. Cendra, A. Giovannitti, A. Savva, V. Venkatraman, I. McCulloch, A. Salleo, S. Inal, J. Rivnay*",
+  "authors": "C. Cendra, A. Giovannitti, A. Savva, V. Venkatraman, I. McCulloch, A. Salleo, S. Inal, J. Rivnay",
   "title": "Role of the Anion on the Transport and Structure of Organic Mixed Conductors",
   "journal": "Advanced Functional Materials",
   "volume": "29",
@@ -1327,7 +1327,7 @@
  },
  {
   "year": 2018,
-  "authors": "A. Shirinskaya*, G. Horowitz, J. Rivnay, G. G. Malliaras, Y. Bonnassieux",
+  "authors": "A. Shirinskaya, G. Horowitz, J. Rivnay, G. G. Malliaras, Y. Bonnassieux",
   "title": "Numerical Modeling of an Organic Electrochemical Transistor",
   "journal": "Biosensors",
   "volume": "8",
@@ -1340,7 +1340,7 @@
  },
  {
   "year": 2018,
-  "authors": "L. R. Savagian, A. M. Österholm, J. F. Ponder, K. J. Barth, J. Rivnay, J. R. Reynolds*",
+  "authors": "L. R. Savagian, A. M. Österholm, J. F. Ponder, K. J. Barth, J. Rivnay, J. R. Reynolds",
   "title": "Balancing Charge Storage and Mobility in an Oligo(Ether) Functionalized Dioxythiophene Copolymer for Organic- and Aqueous- Based Electrochemical Devices and Transistors",
   "journal": "Advanced Materials",
   "volume": "30",
@@ -1353,7 +1353,7 @@
  },
  {
   "year": 2018,
-  "authors": "S.-M. Kim, C.-H. Kim, Y. Kim, N. Kim, W.-J. Lee, E.-H. Lee, D. Kim, S. Park, K. Lee, J. Rivnay, M.-H. Yoon*",
+  "authors": "S.-M. Kim, C.-H. Kim, Y. Kim, N. Kim, W.-J. Lee, E.-H. Lee, D. Kim, S. Park, K. Lee, J. Rivnay, M.-H. Yoon",
   "title": "Influence of PEDOT:PSS crystallinity and composition on electrochemical transistor performance and long-term stability",
   "journal": "Nature Communications",
   "volume": "9",
@@ -1366,7 +1366,7 @@
  },
  {
   "year": 2018,
-  "authors": "J. T. Friedlein, R. R. McLeod, J. Rivnay*",
+  "authors": "J. T. Friedlein, R. R. McLeod, J. Rivnay",
   "title": "Device physics of organic electrochemical transistors",
   "journal": "Organic Electronics",
   "volume": "63",
@@ -1379,7 +1379,7 @@
  },
  {
   "year": 2018,
-  "authors": "V. Venkatraman, J. T. Friedlein, A. Giovannitti, I. P. Maria, I. McCulloch, R. R. McLeod, J. Rivnay*",
+  "authors": "V. Venkatraman, J. T. Friedlein, A. Giovannitti, I. P. Maria, I. McCulloch, R. R. McLeod, J. Rivnay",
   "title": "Subthreshold Operation of Organic Electrochemical Transistors for Biosignal Amplification",
   "journal": "Advanced Science",
   "volume": "5",
@@ -1392,7 +1392,7 @@
  },
  {
   "year": 2018,
-  "authors": "A. Sharma*, G. Andersson, J. Rivnay, J. F. Alvino, G. F. Metha, M. R. Andersson, K. Zuber, M. Fabretto*",
+  "authors": "A. Sharma, G. Andersson, J. Rivnay, J. F. Alvino, G. F. Metha, M. R. Andersson, K. Zuber, M. Fabretto",
   "title": "Insights into the Oxidant/Polymer Interfacial Growth of Vapor Phase Polymerized PEDOT Thin Films",
   "journal": "Advanced Materials Interfaces",
   "volume": "5",
@@ -1405,7 +1405,7 @@
  },
  {
   "year": 2018,
-  "authors": "S. Inal*, J. Rivnay, A.-O. Suiu, G. G. Malliaras, I. McCulloch",
+  "authors": "S. Inal, J. Rivnay, A.-O. Suiu, G. G. Malliaras, I. McCulloch",
   "title": "Conjugated Polymers in Bioelectronics",
   "journal": "Accounts of Chemical Research",
   "volume": "51",
@@ -1418,7 +1418,7 @@
  },
  {
   "year": 2018,
-  "authors": "A. M. Pappa*, D. Ohayon*, A. Giovannitti*, I. P. Maria, A. Savva, I. Uguz, J. Rivnay, I. McCulloch, R. M. Owens*, S. Inal*",
+  "authors": "A. M. Pappa, D. Ohayon, A. Giovannitti, I. P. Maria, A. Savva, I. Uguz, J. Rivnay, I. McCulloch, R. M. Owens, S. Inal",
   "title": "Direct metabolite detection with an n-type accumulation mode organic electrochemical transistor",
   "journal": "Science Advances",
   "volume": "4",
@@ -1431,7 +1431,7 @@
  },
  {
   "year": 2018,
-  "authors": "S. M. Won, E. Song, J. Zhao, J. Li, J. Rivnay, J. A. Rogers*",
+  "authors": "S. M. Won, E. Song, J. Zhao, J. Li, J. Rivnay, J. A. Rogers",
   "title": "Recent Advances in Materials, Devices, and Systems for Neural Interfaces",
   "journal": "Advanced Materials",
   "volume": "30",
@@ -1444,7 +1444,7 @@
  },
  {
   "year": 2018,
-  "authors": "A. Giovannitti*, I. P. Maria, D. Hanifi, M. J. Donahue, D. Bryant, K. J. Barth, B. E. Makdah, A. Savva, D. Moia, M. Zetek, P. R. F. Barnes, O. G. Reid, S. Inal, G. Rumbles, G. G. Malliaras, J. Nelson, J. Rivnay*, I. McCulloch",
+  "authors": "A. Giovannitti, I. P. Maria, D. Hanifi, M. J. Donahue, D. Bryant, K. J. Barth, B. E. Makdah, A. Savva, D. Moia, M. Zetek, P. R. F. Barnes, O. G. Reid, S. Inal, G. Rumbles, G. G. Malliaras, J. Nelson, J. Rivnay, I. McCulloch",
   "title": "The Role of the Side Chain on the Performance of N-type Conjugated Polymers in Aqueous Electrolytes",
   "journal": "Chemistry of Materials",
   "volume": "30",
@@ -1457,7 +1457,7 @@
  },
  {
   "year": 2018,
-  "authors": "A. Giovannitti*, K. J. Thorley, C. B. Nielsen, J. Li, M. J. Donahue, G. G. Malliaras, J. Rivnay, I. McCulloch",
+  "authors": "A. Giovannitti, K. J. Thorley, C. B. Nielsen, J. Li, M. J. Donahue, G. G. Malliaras, J. Rivnay, I. McCulloch",
   "title": "Redox-Stability of Alkoxy-BDT Copolymers and their Use for Organic Bioelectronic Devices",
   "journal": "Advanced Functional Materials",
   "volume": "28",
@@ -1470,7 +1470,7 @@
  },
  {
   "year": 2018,
-  "authors": "J. Rivnay*, S. Inal, A. Salleo, R. M. Owens, M. Berggren, G. G. Malliaras*",
+  "authors": "J. Rivnay, S. Inal, A. Salleo, R. M. Owens, M. Berggren, G. G. Malliaras",
   "title": "Organic electrochemical transistors",
   "journal": "Nature Reviews Materials",
   "volume": "3",
@@ -1496,7 +1496,7 @@
  },
  {
   "year": 2017,
-  "authors": "S. Inal, G. G. Malliaras, J. Rivnay*",
+  "authors": "S. Inal, G. G. Malliaras, J. Rivnay",
   "title": "Benchmarking organic mixed conductors for transistors",
   "journal": "Nature Communications",
   "volume": "8",
@@ -1509,7 +1509,7 @@
  },
  {
   "year": 2017,
-  "authors": "V. F. Curto*, B. Marchiori, A. Hama, A.-M. Pappa, M. P. Ferro, M. Braendlein, J. Rivnay, M. Fiocchi, G. G. Malliaras, M. Ramuz, R. M. Owens*",
+  "authors": "V. F. Curto, B. Marchiori, A. Hama, A.-M. Pappa, M. P. Ferro, M. Braendlein, J. Rivnay, M. Fiocchi, G. G. Malliaras, M. Ramuz, R. M. Owens",
   "title": "Organic transistor platform with integrated microfluidics for in-line multi-parametric in vitro cell monitoring",
   "journal": "Microsystems & Nanoengineering",
   "volume": "3",
@@ -1535,7 +1535,7 @@
  },
  {
   "year": 2017,
-  "authors": "J. Rivnay*, H. Wang, L. Fenno, K. Deisseroth, G. G. Malliaras",
+  "authors": "J. Rivnay, H. Wang, L. Fenno, K. Deisseroth, G. G. Malliaras",
   "title": "Next-generation probes, particles, and proteins for neural interfacing",
   "journal": "Science Advances",
   "volume": "3",
@@ -1561,7 +1561,7 @@
  },
  {
   "year": 2016,
-  "authors": "X. Strakosas, M. Huerta, M. J. Donahue, A. Hama, A.-M. Pappa, M. Ferro, M. Ramuz, J. Rivnay, R. M. Owens*",
+  "authors": "X. Strakosas, M. Huerta, M. J. Donahue, A. Hama, A.-M. Pappa, M. Ferro, M. Ramuz, J. Rivnay, R. M. Owens",
   "title": "Catalytically enhanced organic transistors for in vitro toxicology monitoring through hydrogel entrapment of enzymes",
   "journal": "Journal of Applied Polymer Science",
   "volume": "134",
@@ -1574,7 +1574,7 @@
  },
  {
   "year": 2016,
-  "authors": "A. Giovannitti, D.-T. Sbircea, S. Inal, C. B. Nielsen, E. Bandiello, D. A. Hanifi, M. Sessolo, G. G. Malliaras, I. McCulloch, J. Rivnay*",
+  "authors": "A. Giovannitti, D.-T. Sbircea, S. Inal, C. B. Nielsen, E. Bandiello, D. A. Hanifi, M. Sessolo, G. G. Malliaras, I. McCulloch, J. Rivnay",
   "title": "Controlling the mode of operation of organic transistors through side-chain engineering",
   "journal": "Proceedings of the National Academy of Sciences",
   "volume": "113",
@@ -1587,7 +1587,7 @@
  },
  {
   "year": 2016,
-  "authors": "A. Giovannitti*, C. B. Nielsen, D.-T. Sbircea, S. Inal, M. Donahue, M. R. Niazi, D. A. Hanifi, A. Amassian, G. G. Malliaras, J. Rivnay, I. McCulloch",
+  "authors": "A. Giovannitti, C. B. Nielsen, D.-T. Sbircea, S. Inal, M. Donahue, M. R. Niazi, D. A. Hanifi, A. Amassian, G. G. Malliaras, J. Rivnay, I. McCulloch",
   "title": "N-type organic electrochemical transistors with stability in water",
   "journal": "Nature Communications",
   "volume": "7",
@@ -1600,7 +1600,7 @@
  },
  {
   "year": 2016,
-  "authors": "W. Lee, D. Kim, J. Rivnay, N. Matsuhisa, T. Lonjaret, T. Yokota, H. Yawo, M. Sekino, G. G. Malliaras, T. Someya*",
+  "authors": "W. Lee, D. Kim, J. Rivnay, N. Matsuhisa, T. Lonjaret, T. Yokota, H. Yawo, M. Sekino, G. G. Malliaras, T. Someya",
   "title": "Integration of Organic Electrochemical and Field-Effect Transistors for Ultraflexible, High Temporal Resolution Electrophysiology Arrays",
   "journal": "Advanced Materials",
   "volume": "28",
@@ -1626,7 +1626,7 @@
  },
  {
   "year": 2016,
-  "authors": "C. B. Nielsen*, A. Giovannitti, D.-T. Sbircea, E. Bandiello, M. R. Niazi, D. A. Hanifi, M. Sessolo, A. Amassian, G. G. Malliaras, J. Rivnay, I. McCulloch",
+  "authors": "C. B. Nielsen, A. Giovannitti, D.-T. Sbircea, E. Bandiello, M. R. Niazi, D. A. Hanifi, M. Sessolo, A. Amassian, G. G. Malliaras, J. Rivnay, I. McCulloch",
   "title": "Molecular Design of Semiconducting Polymers for High-Performance Organic Electrochemical Transistors",
   "journal": "Journal of the American Chemical Society",
   "volume": "138",
@@ -1639,7 +1639,7 @@
  },
  {
   "year": 2016,
-  "authors": "J. Rivnay*",
+  "authors": "J. Rivnay",
   "title": "Efficiency through dilution",
   "journal": "Nature Materials",
   "volume": "15",
@@ -1652,7 +1652,7 @@
  },
  {
   "year": 2016,
-  "authors": "J. Rivnay*, S. Inal, B. A. Collins, M. Sessolo, E. Stavrinidou, X. Strakosas, C. Tassone, D. M. Delongchamp, G. G. Malliaras",
+  "authors": "J. Rivnay, S. Inal, B. A. Collins, M. Sessolo, E. Stavrinidou, X. Strakosas, C. Tassone, D. M. Delongchamp, G. G. Malliaras",
   "title": "Structural control of mixed ionic and electronic transport in conducting polymers",
   "journal": "Nature Communications",
   "volume": "7",
@@ -1665,7 +1665,7 @@
  },
  {
   "year": 2016,
-  "authors": "C. M. Proctor, J. Rivnay, G. G. Malliaras*",
+  "authors": "C. M. Proctor, J. Rivnay, G. G. Malliaras",
   "title": "Understanding volumetric capacitance in conducting polymers",
   "journal": "Journal of Polymer Science Part B Polymer Physics",
   "volume": "54",
@@ -1691,7 +1691,7 @@
  },
  {
   "year": 2016,
-  "authors": "S. Inal, G. G. Malliaras, J. Rivnay*",
+  "authors": "S. Inal, G. G. Malliaras, J. Rivnay",
   "title": "Optical study of electrochromic moving fronts for the investigation of ion transport in conducting polymers",
   "journal": "Journal of Materials Chemistry C",
   "volume": "4",
@@ -1704,7 +1704,7 @@
  },
  {
   "year": 2015,
-  "authors": "A. Giovannitti*, C. B. Nielsen, J. Rivnay, M. Kirkus, D. J. Harkin, A. J. P. White, H. Sirringhaus, G. G. Malliaras, I. McCulloch",
+  "authors": "A. Giovannitti, C. B. Nielsen, J. Rivnay, M. Kirkus, D. J. Harkin, A. J. P. White, H. Sirringhaus, G. G. Malliaras, I. McCulloch",
   "title": "Sodium and Potassium Ion Selective Conjugated Polymers for Optical Ion Detection in Solution and Solid State",
   "journal": "Advanced Functional Materials",
   "volume": "26",
@@ -1717,7 +1717,7 @@
  },
  {
   "year": 2015,
-  "authors": "S. Inal, J. Rivnay, A. I. Hofmann, I. Uguz, M. Mumtaz, D. Katsigiannopoulos, C. Brochon, E. Cloutet, G. Hadziioannou, G. G. Malliaras*",
+  "authors": "S. Inal, J. Rivnay, A. I. Hofmann, I. Uguz, M. Mumtaz, D. Katsigiannopoulos, C. Brochon, E. Cloutet, G. Hadziioannou, G. G. Malliaras",
   "title": "Organic electrochemical transistors based on PEDOT with different anionic polyelectrolyte dopants",
   "journal": "Journal of Polymer Science Part B Polymer Physics",
   "volume": "54",
@@ -1730,7 +1730,7 @@
  },
  {
   "year": 2015,
-  "authors": "A. Williamson, M. Ferro, P. Leleux, E. Ismailova, A. Kaszas, T. Doublet, P. Quilichini, J. Rivnay, B. Rózsa, G. Katona, C. Bernard*, G. G. Malliaras*",
+  "authors": "A. Williamson, M. Ferro, P. Leleux, E. Ismailova, A. Kaszas, T. Doublet, P. Quilichini, J. Rivnay, B. Rózsa, G. Katona, C. Bernard, G. G. Malliaras",
   "title": "Localized Neuron Stimulation with Organic Electrochemical Transistors on Delaminating Depth Probes",
   "journal": "Advanced Materials",
   "volume": "27",
@@ -1756,7 +1756,7 @@
  },
  {
   "year": 2015,
-  "authors": "J. Rivnay, P. Leleux, M. Ferro, M. Sessolo, A. Williamson, D. A. Koutsouras, D. Khodagholy, M. Ramuz, X. Strakosas, R. M. Owens, C. Benar, J.-M. Badier, C. Bernard, G. G. Malliaras*",
+  "authors": "J. Rivnay, P. Leleux, M. Ferro, M. Sessolo, A. Williamson, D. A. Koutsouras, D. Khodagholy, M. Ramuz, X. Strakosas, R. M. Owens, C. Benar, J.-M. Badier, C. Bernard, G. G. Malliaras",
   "title": "High-performance transistors for bioelectronics through tuning of channel thickness",
   "journal": "Science Advances",
   "volume": "1",
@@ -1769,7 +1769,7 @@
  },
  {
   "year": 2015,
-  "authors": "A. Williamson, J. Rivnay, L. Kergoat, A. Jonsson, S. Inal, I. Uguz, M. Ferro, A. Ivanov, T. A. Sjöström, D. T. Simon, M. Berggren, G. G. Malliaras*, C. Bernard*",
+  "authors": "A. Williamson, J. Rivnay, L. Kergoat, A. Jonsson, S. Inal, I. Uguz, M. Ferro, A. Ivanov, T. A. Sjöström, D. T. Simon, M. Berggren, G. G. Malliaras, C. Bernard",
   "title": "Controlling Epileptiform Activity with Organic Electronic Ion Pumps",
   "journal": "Advanced Materials",
   "volume": "27",
@@ -1782,7 +1782,7 @@
  },
  {
   "year": 2015,
-  "authors": "S. Himmelberger, D. T. Duong, J. E. Northrup, J. Rivnay, F. P. V. Koch, B. S. Beckingham, N. Stingelin, R. A. Segalman, S. C. B. Mannsfeld*, A. Salleo*",
+  "authors": "S. Himmelberger, D. T. Duong, J. E. Northrup, J. Rivnay, F. P. V. Koch, B. S. Beckingham, N. Stingelin, R. A. Segalman, S. C. B. Mannsfeld, A. Salleo",
   "title": "Role of Side-Chain Branching on Thin-Film Structure and Electronic Properties of Polythiophenes",
   "journal": "Advanced Functional Materials",
   "volume": "25",
@@ -1795,7 +1795,7 @@
  },
  {
   "year": 2015,
-  "authors": "M. Ramuz*, K. Margita, A. Hama, P. Leleux, J. Rivnay, I. Bazin, R. M. Owens",
+  "authors": "M. Ramuz, K. Margita, A. Hama, P. Leleux, J. Rivnay, I. Bazin, R. M. Owens",
   "title": "Optimization of a Planar All-Polymer Transistor for Characterization of Barrier Tissue",
   "journal": "ChemPhysChem",
   "volume": "16",
@@ -1847,7 +1847,7 @@
  },
  {
   "year": 2015,
-  "authors": "M. Ramuz, A. Hama, J. Rivnay, P. Leleux, R. M. Owens*",
+  "authors": "M. Ramuz, A. Hama, J. Rivnay, P. Leleux, R. M. Owens",
   "title": "Monitoring of cell layer coverage and differentiation with the organic electrochemical transistor",
   "journal": "Journal of Materials Chemistry B",
   "volume": "3",
@@ -1873,7 +1873,7 @@
  },
  {
   "year": 2014,
-  "authors": "G. C. Fariat, D. T. Duongt, A. Salleo*, C. A. Polyzoidis, S. Logothetidis, J. Rivnay, R. Owens, G. G. Malliaras",
+  "authors": "G. C. Fariat, D. T. Duongt, A. Salleo, C. A. Polyzoidis, S. Logothetidis, J. Rivnay, R. Owens, G. G. Malliaras",
   "title": "Organic electrochemical transistors as impedance biosensors",
   "journal": "MRS Communications",
   "volume": "4",
@@ -1886,7 +1886,7 @@
  },
  {
   "year": 2014,
-  "authors": "S. Inal, J. Rivnay, P. Leleux, M. Ferro, M. Ramuz, J. C. Brendel, M. M. Schmidt, M. Thelakkat, G. G. Malliaras*",
+  "authors": "S. Inal, J. Rivnay, P. Leleux, M. Ferro, M. Ramuz, J. C. Brendel, M. M. Schmidt, M. Thelakkat, G. G. Malliaras",
   "title": "A High Transconductance Accumulation Mode Electrochemical Transistor",
   "journal": "Advanced Materials",
   "volume": "26",
@@ -1899,7 +1899,7 @@
  },
  {
   "year": 2014,
-  "authors": "P. Leleux, J. Rivnay, T. Lonjaret, J.-M. Badier, C. Bénar, T. Hervé, P. Chauvel, G. G. Malliaras*",
+  "authors": "P. Leleux, J. Rivnay, T. Lonjaret, J.-M. Badier, C. Bénar, T. Hervé, P. Chauvel, G. G. Malliaras",
   "title": "Organic Electrochemical Transistors for Clinical Applications",
   "journal": "Advanced Healthcare Materials",
   "volume": "4",
@@ -1912,7 +1912,7 @@
  },
  {
   "year": 2014,
-  "authors": "M. Ramuz, A. Hama, M. Huerta, J. Rivnay, P. Leleux, R. M. Owens*",
+  "authors": "M. Ramuz, A. Hama, M. Huerta, J. Rivnay, P. Leleux, R. M. Owens",
   "title": "Combined Optical and Electronic Sensing of Epithelial Cells Using Planar Organic Transistors",
   "journal": "Advanced Materials",
   "volume": "26",
@@ -1925,7 +1925,7 @@
  },
  {
   "year": 2014,
-  "authors": "M. Sessolo*, J. Rivnay, E. Bandiello, G. G. Malliaras, H. J. Bolink",
+  "authors": "M. Sessolo, J. Rivnay, E. Bandiello, G. G. Malliaras, H. J. Bolink",
   "title": "Ion-Selective Organic Electrochemical Transistors",
   "journal": "Advanced Materials",
   "volume": "26",
@@ -1938,7 +1938,7 @@
  },
  {
   "year": 2014,
-  "authors": "P. Leleux, C. Johnson, X. Strakosas, J. Rivnay, T. Hervé, R. M. Owens, G. G. Malliaras*",
+  "authors": "P. Leleux, C. Johnson, X. Strakosas, J. Rivnay, T. Hervé, R. M. Owens, G. G. Malliaras",
   "title": "Ionic Liquid Gel-Assisted Electrodes for Long-Term Cutaneous Recordings",
   "journal": "Advanced Healthcare Materials",
   "volume": "3",
@@ -1951,7 +1951,7 @@
  },
  {
   "year": 2014,
-  "authors": "S. A. Tria, M. Ramuz, M. Huerta, P. Leleux, J. Rivnay, L. H. Jimison, A. Hama, G. G. Malliaras, R. M. Owens*",
+  "authors": "S. A. Tria, M. Ramuz, M. Huerta, P. Leleux, J. Rivnay, L. H. Jimison, A. Hama, G. G. Malliaras, R. M. Owens",
   "title": "Dynamic Monitoring of Salmonella typhimurium Infection of Polarized Epithelia Using Organic Transistors",
   "journal": "Advanced Healthcare Materials",
   "volume": "3",
@@ -1964,7 +1964,7 @@
  },
  {
   "year": 2013,
-  "authors": "E. Stavrinidou, O. Winther-Jensen, B. S. Shekibi, V. Armel, J. Rivnay, E. Ismailova, S. Sanaur, G. G. Malliaras, B. Winther-Jensen*",
+  "authors": "E. Stavrinidou, O. Winther-Jensen, B. S. Shekibi, V. Armel, J. Rivnay, E. Ismailova, S. Sanaur, G. G. Malliaras, B. Winther-Jensen",
   "title": "Engineering hydrophilic conducting composites with enhanced ion mobility",
   "journal": "Physical Chemistry Chemical Physics",
   "volume": "16",
@@ -1977,7 +1977,7 @@
  },
  {
   "year": 2013,
-  "authors": "X. Strakosas, M. Sessolo, A. Hama, J. Rivnay, E. Stavrinidou, G. G. Malliaras, R. M. Owens*",
+  "authors": "X. Strakosas, M. Sessolo, A. Hama, J. Rivnay, E. Stavrinidou, G. G. Malliaras, R. M. Owens",
   "title": "A facile biofunctionalisation route for solution processable conducting polymer devices",
   "journal": "Journal of Materials Chemistry B",
   "volume": "2",
@@ -1990,7 +1990,7 @@
  },
  {
   "year": 2013,
-  "authors": "J. Rivnay, P. Leleux, M. Sessolo, D. Khodagholy, T. Hervé, M. Fiocchi, G. G. Malliaras*",
+  "authors": "J. Rivnay, P. Leleux, M. Sessolo, D. Khodagholy, T. Hervé, M. Fiocchi, G. G. Malliaras",
   "title": "Organic Electrochemical Transistors with Maximum Transconductance at Zero Gate Bias",
   "journal": "Advanced Materials",
   "volume": "25",
@@ -2003,7 +2003,7 @@
  },
  {
   "year": 2013,
-  "authors": "J. Rivnay, R. M. Owens, G. G. Malliaras*",
+  "authors": "J. Rivnay, R. M. Owens, G. G. Malliaras",
   "title": "The Rise of Organic Bioelectronics",
   "journal": "Chemistry of Materials",
   "volume": "26",
@@ -2016,7 +2016,7 @@
  },
  {
   "year": 2013,
-  "authors": "P. Leleux, J.-M. Badier, J. Rivnay, C. Bénar, T. Hervé, P. Chauvel, G. G. Malliaras*",
+  "authors": "P. Leleux, J.-M. Badier, J. Rivnay, C. Bénar, T. Hervé, P. Chauvel, G. G. Malliaras",
   "title": "Conducting Polymer Electrodes for Electroencephalography",
   "journal": "Advanced Healthcare Materials",
   "volume": "3",
@@ -2029,7 +2029,7 @@
  },
  {
   "year": 2013,
-  "authors": "R. Noriega, J. Rivnay, K. Vandewal, F. P. V. Koch, N. Stingelin, P. Smith, M. F. Toney, A. Salleo*",
+  "authors": "R. Noriega, J. Rivnay, K. Vandewal, F. P. V. Koch, N. Stingelin, P. Smith, M. F. Toney, A. Salleo",
   "title": "A general relationship between disorder, aggregation and charge transport in conjugated polymers",
   "journal": "Nature Materials",
   "volume": "12",
@@ -2042,7 +2042,7 @@
  },
  {
   "year": 2013,
-  "authors": "F. P. V. Koch, J. Rivnay, S. Foster, C. Müller, J. M. Downing, E. Buchaca-Domingo, P. Westacott, L. Yu, M. Yuan, M. Baklar, Z. Fei, C. Luscombe, M. A. McLachlan, M. Heeney, G. Rumbles, C. Silva, A. Salleo, J. Nelson, P. Smith, N. Stingelin*",
+  "authors": "F. P. V. Koch, J. Rivnay, S. Foster, C. Müller, J. M. Downing, E. Buchaca-Domingo, P. Westacott, L. Yu, M. Yuan, M. Baklar, Z. Fei, C. Luscombe, M. A. McLachlan, M. Heeney, G. Rumbles, C. Silva, A. Salleo, J. Nelson, P. Smith, N. Stingelin",
   "title": "The impact of molecular weight on microstructure and charge transport in semicrystalline polymer semiconductors–poly(3-hexylthiophene), a model study",
   "journal": "Progress in Polymer Science",
   "volume": "38",
@@ -2055,7 +2055,7 @@
  },
  {
   "year": 2013,
-  "authors": "D. Khodagholy, J. Rivnay, M. Sessolo, M. Gurfinkel, P. Leleux, L. H. Jimison, E. Stavrinidou, T. Herve, S. Sanaur, R. M. Owens, G. G. Malliaras*",
+  "authors": "D. Khodagholy, J. Rivnay, M. Sessolo, M. Gurfinkel, P. Leleux, L. H. Jimison, E. Stavrinidou, T. Herve, S. Sanaur, R. M. Owens, G. G. Malliaras",
   "title": "High transconductance organic electrochemical transistors",
   "journal": "Nature Communications",
   "volume": "4",
@@ -2068,7 +2068,7 @@
  },
  {
   "year": 2013,
-  "authors": "V. Armel, J. Rivnay, G. Malliaras, B. Winther-Jensen*",
+  "authors": "V. Armel, J. Rivnay, G. Malliaras, B. Winther-Jensen",
   "title": "Unexpected Interaction between PEDOT and Phosphonium Ionic Liquids",
   "journal": "Journal of the American Chemical Society",
   "volume": "135",
@@ -2081,7 +2081,7 @@
  },
  {
   "year": 2013,
-  "authors": "E. Stavrinidou, P. Leleux, H. Rajaona, D. Khodagholy, J. Rivnay, M. Lindau, S. Sanaur, G. G. Malliaras*",
+  "authors": "E. Stavrinidou, P. Leleux, H. Rajaona, D. Khodagholy, J. Rivnay, M. Lindau, S. Sanaur, G. G. Malliaras",
   "title": "Direct Measurement of Ion Mobility in a Conducting Polymer",
   "journal": "Advanced Materials",
   "volume": "25",
@@ -2094,7 +2094,7 @@
  },
  {
   "year": 2013,
-  "authors": "C. Wang, J. Rivnay, S. Himmelberger, K. Vakhshouri, M. F. Toney, E. D. Gomez, A. Salleo*",
+  "authors": "C. Wang, J. Rivnay, S. Himmelberger, K. Vakhshouri, M. F. Toney, E. D. Gomez, A. Salleo",
   "title": "Ultrathin Body Poly(3-hexylthiophene) Transistors with Improved Short-Channel Performance",
   "journal": "ACS Applied Materials & Interfaces",
   "volume": "5",
@@ -2107,7 +2107,7 @@
  },
  {
   "year": 2013,
-  "authors": "M. Sessolo, D. Khodagholy, J. Rivnay, F. Maddalena, M. Gleyzes, E. Steidl, B. Buisson, G. G. Malliaras*",
+  "authors": "M. Sessolo, D. Khodagholy, J. Rivnay, F. Maddalena, M. Gleyzes, E. Steidl, B. Buisson, G. G. Malliaras",
   "title": "Easy-to-Fabricate Conducting Polymer Microelectrode Arrays",
   "journal": "Advanced Materials",
   "volume": "25",
@@ -2120,7 +2120,7 @@
  },
  {
   "year": 2013,
-  "authors": "L. H. Jimison, S. Himmelberger, D. T. Duong, J. Rivnay, M. F. Toney, A. Salleo*",
+  "authors": "L. H. Jimison, S. Himmelberger, D. T. Duong, J. Rivnay, M. F. Toney, A. Salleo",
   "title": "Vertical confinement and interface effects on the microstructure and charge transport of P3HT thin films",
   "journal": "Journal of Polymer Science Part B Polymer Physics",
   "volume": "51",
@@ -2133,7 +2133,7 @@
  },
  {
   "year": 2012,
-  "authors": "S. Himmelberger*, J. Dacuña, J. Rivnay, L. H. Jimison, T. McCarthy-Ward, M. Heeney, I. McCulloch, M. F. Toney, A. Salleo",
+  "authors": "S. Himmelberger, J. Dacuña, J. Rivnay, L. H. Jimison, T. McCarthy-Ward, M. Heeney, I. McCulloch, M. F. Toney, A. Salleo",
   "title": "Effects of Confinement on Microstructure and Charge Transport in High Performance Semicrystalline Polymer Semiconductors",
   "journal": "Advanced Functional Materials",
   "volume": "23",
@@ -2146,7 +2146,7 @@
  },
  {
   "year": 2012,
-  "authors": "J. Rivnay, S. C. B. Mannsfeld, C. E. Miller, A. Salleo*, M. F. Toney*",
+  "authors": "J. Rivnay, S. C. B. Mannsfeld, C. E. Miller, A. Salleo, M. F. Toney",
   "title": "Quantitative Determination of Organic Semiconductor Microstructure from the Molecular to Device Scale",
   "journal": "Chemical Reviews",
   "volume": "112",
@@ -2159,7 +2159,7 @@
  },
  {
   "year": 2012,
-  "authors": "A. J. Kronemeijer*, E. Gili, M. Shahid, J. Rivnay, A. Salleo, M. Heeney*, H. Sirringhaus*",
+  "authors": "A. J. Kronemeijer, E. Gili, M. Shahid, J. Rivnay, A. Salleo, M. Heeney, H. Sirringhaus",
   "title": "A Selenophene-Based Low-Bandgap Donor–Acceptor Polymer Leading to Fast Ambipolar Logic",
   "journal": "Advanced Materials",
   "volume": "24",
@@ -2172,7 +2172,7 @@
  },
  {
   "year": 2011,
-  "authors": "C. H. Peters, I. T. Sachs-Quintana, W. R. Mateker, T. Heumueller, J. Rivnay, R. Noriega, Z. M. Beiley, E. T. Hoke, A. Salleo, M. D. McGehee*",
+  "authors": "C. H. Peters, I. T. Sachs-Quintana, W. R. Mateker, T. Heumueller, J. Rivnay, R. Noriega, Z. M. Beiley, E. T. Hoke, A. Salleo, M. D. McGehee",
   "title": "The Mechanism of Burn-in Loss in a High Efficiency Polymer Solar Cell",
   "journal": "Advanced Materials",
   "volume": "24",
@@ -2198,7 +2198,7 @@
  },
  {
   "year": 2011,
-  "authors": "K. P. Goetz, Z. Li, J. W. Ward, C. Bougher, J. Rivnay, J. Smith, B. R. Conrad, S. R. Parkin, T. D. Anthopoulos, A. Salleo, J. E. Anthony, O. D. Jurchescu*",
+  "authors": "K. P. Goetz, Z. Li, J. W. Ward, C. Bougher, J. Rivnay, J. Smith, B. R. Conrad, S. R. Parkin, T. D. Anthopoulos, A. Salleo, J. E. Anthony, O. D. Jurchescu",
   "title": "Effect of Acene Length on Electronic Properties in 5-, 6-, and 7-Ringed Heteroacenes",
   "journal": "Advanced Materials",
   "volume": "23",
@@ -2211,7 +2211,7 @@
  },
  {
   "year": 2011,
-  "authors": "T. W. Holcombe, J. E. Norton, J. Rivnay, C. H. Woo, L. Goris, C. Piliego, G. Griffini, A. Sellinger, J.-L. Brédas, A. Salleo, J. M. J. Fréchet*",
+  "authors": "T. W. Holcombe, J. E. Norton, J. Rivnay, C. H. Woo, L. Goris, C. Piliego, G. Griffini, A. Sellinger, J.-L. Brédas, A. Salleo, J. M. J. Fréchet",
   "title": "Steric Control of the Donor/Acceptor Interface: Implications in Organic Photovoltaic Charge Generation",
   "journal": "Journal of the American Chemical Society",
   "volume": "133",
@@ -2224,7 +2224,7 @@
  },
  {
   "year": 2011,
-  "authors": "J. Rivnay, R. Steyrleuthner, L. H. Jimison, A. Casadei, Z. Chen, M. F. Toney, A. Facchetti, D. Neher, A. Salleo*",
+  "authors": "J. Rivnay, R. Steyrleuthner, L. H. Jimison, A. Casadei, Z. Chen, M. F. Toney, A. Facchetti, D. Neher, A. Salleo",
   "title": "Drastic Control of Texture in a High Performance n-Type Polymeric Semiconductor and Implications for Charge Transport",
   "journal": "Macromolecules",
   "volume": "44",
@@ -2250,7 +2250,7 @@
  },
  {
   "year": 2010,
-  "authors": "J. Rivnay, M. F. Toney, Y. Zheng, I. V. Kauvar, Z. Chen, V. Wagner, A. Facchetti, A. Salleo*",
+  "authors": "J. Rivnay, M. F. Toney, Y. Zheng, I. V. Kauvar, Z. Chen, V. Wagner, A. Facchetti, A. Salleo",
   "title": "Unconventional Face-On Texture and Exceptional In-Plane Order of a High Mobility n-Type Polymer",
   "journal": "Advanced Materials",
   "volume": "22",
@@ -2276,7 +2276,7 @@
  },
  {
   "year": 2010,
-  "authors": "A. C. Arias*, J. D. MacKenzie, I. McCulloch, J. Rivnay, A. Salleo",
+  "authors": "A. C. Arias, J. D. MacKenzie, I. McCulloch, J. Rivnay, A. Salleo",
   "title": "Materials and Applications for Large Area Electronics: Solution-Based Approaches",
   "journal": "Chemical Reviews",
   "volume": "110",
@@ -2289,7 +2289,7 @@
  },
  {
   "year": 2009,
-  "authors": "J. Rivnay, L. H. Jimison, J. E. Northrup, M. F. Toney, R. Noriega, S. Lu, T. J. Marks, A. Facchetti, A. Salleo*",
+  "authors": "J. Rivnay, L. H. Jimison, J. E. Northrup, M. F. Toney, R. Noriega, S. Lu, T. J. Marks, A. Facchetti, A. Salleo",
   "title": "Large modulation of carrier transport by grain-boundary molecular packing and microstructure in organic thin films",
   "journal": "Nature Materials",
   "volume": "8",
@@ -2302,7 +2302,7 @@
  },
  {
   "year": 2009,
-  "authors": "J. A. Letizia, J. Rivnay, A. Facchetti*, M. A. Ratner*, T. J. Marks*",
+  "authors": "J. A. Letizia, J. Rivnay, A. Facchetti, M. A. Ratner, T. J. Marks",
   "title": "Variable Temperature Mobility Analysis of n-Channel, p-Channel, and Ambipolar Organic Field-Effect Transistors",
   "journal": "Advanced Functional Materials",
   "volume": "20",
@@ -2315,7 +2315,7 @@
  },
  {
   "year": 2009,
-  "authors": "A. C. Mayer, M. F. Toney, S. R. Scully, J. Rivnay, C. J. Brabec, M. Scharber, M. Koppe, M. Heeney, I. McCulloch, M. D. McGehee*",
+  "authors": "A. C. Mayer, M. F. Toney, S. R. Scully, J. Rivnay, C. J. Brabec, M. Scharber, M. Koppe, M. Heeney, I. McCulloch, M. D. McGehee",
   "title": "Bimolecular Crystals of Fullerenes in Conjugated Polymers and the Implications of Molecular Mixing for Solar Cells",
   "journal": "Advanced Functional Materials",
   "volume": "19",
@@ -2354,7 +2354,7 @@
  },
  {
   "year": 2007,
-  "authors": "J. D. Slinker, J. Rivnay, J. S. Moskowitz, J. B. Parker, S. Bernhard, H. D. Abruña, G. G. Malliaras*",
+  "authors": "J. D. Slinker, J. Rivnay, J. S. Moskowitz, J. B. Parker, S. Bernhard, H. D. Abruña, G. G. Malliaras",
   "title": "Electroluminescent devices from ionic transition metal complexes",
   "journal": "Journal of Materials Chemistry",
   "volume": "17",
@@ -2367,7 +2367,7 @@
  },
  {
   "year": 2007,
-  "authors": "D. R. Blasini, J. Rivnay, D.-M. Smilgies*, J. D. Slinker, S. Flores-Torres, H. D. Abruña, G. G. Malliaras",
+  "authors": "D. R. Blasini, J. Rivnay, D.-M. Smilgies, J. D. Slinker, S. Flores-Torres, H. D. Abruña, G. G. Malliaras",
   "title": "Observation of intermediate-range order in a nominally amorphous molecular semiconductor film",
   "journal": "Journal of Materials Chemistry",
   "volume": "17",
