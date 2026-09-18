@@ -3,6 +3,9 @@
 //   node scripts/shot.mjs <url> [--width 1440] [--height 900] [--mobile] [--touch] [--dark] [--reduce]
 //                         [--settle] [--scroll N] [--click "css"] [--wait ms] [--eval "js"]
 //                         [--full] [--shot out.png] [--allow-error] [--nojs] [--timeout 15000]
+//                         [--max-runtime 60000]
+// A whole run is bounded by --max-runtime (plus any --wait): a wedged CDP call once hung this script for
+// five and a half hours holding a browser open, so the watchdog kills the browser and exits 124.
 // --nojs loads the page with JavaScript disabled, to check what a scripts-off visitor really gets.
 // Removing the "js" class by hand is NOT equivalent: it runs after the scripts have already run.
 // --eval runs the body of an async function after load + fonts.ready and prints the return value as JSON.
@@ -31,6 +34,7 @@ const opt = (k, d) => {
 };
 const num = (k, d) => { const v = +opt(k, d); if (Number.isNaN(v)) { console.error(`${k} needs a number`); process.exit(2); } return v; };
 const width = num("--width", 1440), height = num("--height", 900), timeout = num("--timeout", 15000);
+const maxRuntime = num("--max-runtime", 60000) + num("--wait", 0);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const dir = mkdtempSync(join(tmpdir(), "shot-"));
@@ -41,6 +45,14 @@ const chrome = spawn("/Applications/Google Chrome.app/Contents/MacOS/Google Chro
   "about:blank",
 ], { stdio: ["ignore", "ignore", "pipe"] });
 let sock;
+/* hard stop: nothing below may run unbounded, and the browser must never outlive this process */
+const watchdog = setTimeout(function () {
+  console.error(`shot.mjs: exceeded ${maxRuntime} ms, aborting (${url})`);
+  try { if (sock) sock.close(); } catch {}
+  try { chrome.kill("SIGKILL"); } catch {}
+  try { rmSync(dir, { recursive: true, force: true }); } catch {}
+  process.exit(124);
+}, maxRuntime);
 try {
   let ws;
   for (let i = 0; i < 100 && !ws; i++) {
@@ -64,7 +76,11 @@ try {
     else if (msg.method) events.push(msg);
   };
   const send = (method, params = {}) => new Promise((res, rej) => {
-    const n = ++id; waiting.set(n, (m) => (m.error ? rej(new Error(m.error.message)) : res(m.result)));
+    const n = ++id;
+    /* a CDP call that never answers (an awaitPromise on a promise that never settles, say) would
+       otherwise wedge the whole run */
+    const t = setTimeout(() => { waiting.delete(n); rej(new Error(`CDP ${method} timed out after ${timeout} ms`)); }, timeout);
+    waiting.set(n, (m) => { clearTimeout(t); m.error ? rej(new Error(m.error.message)) : res(m.result); });
     sock.send(JSON.stringify({ id: n, method, params }));
   });
   const evaluate = async (expression) => {
@@ -97,7 +113,16 @@ try {
     const href = await evaluate("location.href");
     if (!href || href.startsWith("chrome-error://")) throw new Error(`page did not load (${url})`);
   }
-  await evaluate("document.fonts ? document.fonts.ready.then(() => true) : true");
+  /* document.fonts.ready never settles when page scripts are disabled, and awaiting it there wedged this
+     script for hours, so in that mode poll the status from here instead, where each call is bounded */
+  if (has("--nojs")) {
+    for (let i = 0; i < 40; i++) {
+      if (await evaluate("document.fonts ? document.fonts.status : 'loaded'") === "loaded") break;
+      await sleep(100);
+    }
+  } else {
+    await evaluate("document.fonts ? document.fonts.ready.then(() => true) : true");
+  }
   await sleep(400);
 
   const scroll = has("--scroll") ? num("--scroll", 0) : null;
@@ -127,6 +152,7 @@ try {
     console.error("wrote", shot);
   }
 } finally {
+  clearTimeout(watchdog);
   try { if (sock) sock.close(); } catch {}
   chrome.kill();
   /* wait for it to actually exit: kill() only sends the signal, and a Chrome still shutting down
