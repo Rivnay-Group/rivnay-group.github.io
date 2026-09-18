@@ -8,6 +8,8 @@
 // five and a half hours holding a browser open, so the watchdog kills the browser and exits 124.
 // --nojs loads the page with JavaScript disabled, to check what a scripts-off visitor really gets.
 // Removing the "js" class by hand is NOT equivalent: it runs after the scripts have already run.
+// Under --nojs the page's timers never fire, so an --eval that awaits setTimeout (or any promise that
+// depends on one) never returns. Keep --eval synchronous in that mode.
 // --eval runs the body of an async function after load + fonts.ready and prints the return value as JSON.
 // --full scrolls the whole page first (the scroll reveal is one-shot and would otherwise capture blank),
 // then captures everything; without it the capture is the viewport as a visitor sees it.
@@ -79,7 +81,11 @@ try {
     const n = ++id;
     /* a CDP call that never answers (an awaitPromise on a promise that never settles, say) would
        otherwise wedge the whole run */
-    const t = setTimeout(() => { waiting.delete(n); rej(new Error(`CDP ${method} timed out after ${timeout} ms`)); }, timeout);
+    const t = setTimeout(() => {
+      waiting.delete(n);
+      rej(new Error(`CDP ${method} timed out after ${timeout} ms` +
+        (has("--nojs") ? " — under --nojs the page's timers never fire, so --eval must be synchronous" : "")));
+    }, timeout);
     waiting.set(n, (m) => { clearTimeout(t); m.error ? rej(new Error(m.error.message)) : res(m.result); });
     sock.send(JSON.stringify({ id: n, method, params }));
   });
