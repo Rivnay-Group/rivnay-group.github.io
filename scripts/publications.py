@@ -7,7 +7,10 @@
 # Writes _data/publications.json and prints a diff report to stdout; keep it with
 #   python3 scripts/publications.py > docs/superpowers/specs/publications-report.txt
 # Hand edits go in _data/publications_manual.json ("exclude" DOIs/OpenAlex ids,
-# "add" entries in the same shape as publications.json), never in publications.json.
+# "add" entries in the same shape as publications.json, "oa_via_doi" DOIs whose
+# open-access link should be the DOI), never in publications.json. It refuses to
+# shrink the list by more than 10% (an empty or partial OpenAlex reply); --force
+# overrides.
 """Publication pipeline for the Rivnay Group (OpenAlex author A5066036682).
 
 Filter rules (spec: docs/superpowers/specs/2026-09-06-rivnay-lab-site-design.md,
@@ -20,9 +23,10 @@ Filter rules (spec: docs/superpowers/specs/2026-09-06-rivnay-lab-site-design.md,
   5. dedupe by normalised title (lowercase, alphanumerics only), keeping the copy
      with a journal source, then one with a DOI, then the fullest biblio, then
      the earliest publication date
-  6. append publications_manual.json "add" entries
+  6. append publications_manual.json "add" entries, replacing any with the same DOI
   7. pre_northwestern = year < 2017, or the manual entry says so
-  8. sort by year desc, then publication_date desc
+  8. sort by year desc, then publication_date desc (created_date where OpenAlex
+     pads a year-only date to Jan 1)
 Authors are "initials + surname" (J. Rivnay, J.-P. Dupont, E. van Doremaele), all
 authors listed. Titles lose trailing periods and HTML entities. "oa" is a link to
 a free copy when OpenAlex knows of one.
@@ -44,9 +48,9 @@ OLD_LIST = ROOT / "scripts" / "old-site-publications.txt"
 
 AUTHOR = "A5066036682"
 FIELDS = ("id,doi,title,display_name,publication_year,publication_date,type,"
-          "primary_location,authorships,biblio,ids,open_access,is_retracted")
+          "primary_location,authorships,biblio,ids,open_access,is_retracted,created_date")
 API = ("https://api.openalex.org/works?filter=author.id:%s&per-page=200&cursor=%%s"
-       "&select=%s&mailto=jtwillia01@gmail.com" % (AUTHOR, FIELDS))
+       "&select=%s" % (AUTHOR, FIELDS))
 
 KEEP_TYPES = {"article", "book-chapter", "review"}
 PARTICLES = {"van", "de", "der", "den", "von", "da", "di", "del", "della", "la",
@@ -62,6 +66,15 @@ ALIASES = {
     "Enhanced and tunable ion mobility in hydrophilic and biocompatible conducting polymer composites": "W2110979089",
     "General fabrication of polymer multielectrode arrays": "W2028671743",
 }
+
+JOURNALS = {  # OpenAlex display_name drops the colon (and JVST B's commas)
+    "Journal of Polymer Science Part B Polymer Physics": "Journal of Polymer Science Part B: Polymer Physics",
+    "Journal of Vacuum Science & Technology B Microelectronics and Nanometer Structures Processing Measurement and Phenomena": "Journal of Vacuum Science & Technology B",
+}
+
+# Compound surnames that fmt_author splits (it takes the last word as the surname).
+AUTHOR_FIX = {"J. P. I. Tarrés": "J. Pons i Tarrés", "I. E. M. Mahfoud": "I. E. Miniel Mahfoud",
+              "T. C. H. Castillo": "T. C. Hidalgo Castillo"}
 
 
 def norm(s):
@@ -133,26 +146,34 @@ def to_entry(w):
     loc = w.get("primary_location") or {}
     src = loc.get("source") or {}
     b = w.get("biblio") or {}
+    d = w.get("publication_date") or ""
+    c = (w.get("created_date") or "")[:10]   # OpenAlex pads year-only dates (RSC) to Jan 1
+    if d.endswith("-01-01") and c[:4] == d[:4]:
+        d = c
+    names = (fmt_author(a.get("raw_author_name") or (a.get("author") or {}).get("display_name"))
+             for a in w.get("authorships") or [])
+    j = src.get("display_name") or loc.get("raw_source_name") or None
+    oa = re.sub(r"^http://", "https://", (w.get("open_access") or {}).get("oa_url") or "")
     return {
         "year": w.get("publication_year"),
-        "authors": ", ".join(fmt_author(a.get("raw_author_name") or (a.get("author") or {}).get("display_name"))
-                             for a in w.get("authorships") or []),
+        "authors": ", ".join(AUTHOR_FIX.get(n, n) for n in names),
         "title": clean_title(w.get("title") or w.get("display_name")),
-        "journal": src.get("display_name") or loc.get("raw_source_name") or None,
+        "journal": JOURNALS.get(j, j),
         "volume": b.get("volume") or None,
         "issue": b.get("issue") or None,
         "pages": pages(b),
         "doi": norm_doi(w.get("doi")),
-        "oa": (w.get("open_access") or {}).get("oa_url") or None,   # a free copy, where OpenAlex knows one
+        "oa": oa if oa.startswith("https://") else None,   # a free copy, where OpenAlex knows one; web links only
         "openalex": short_id(w.get("id")),
         "pre_northwestern": (w.get("publication_year") or 0) < 2017,
-        "_date": w.get("publication_date") or "",
+        "_date": d,
         "_journal_src": src.get("type") == "journal",
     }
 
 
 def build(works, manual):
     excluded = {norm_doi(x) for x in manual.get("exclude", [])} | {short_id(x).lower() for x in manual.get("exclude", [])}
+    oa_doi = {norm_doi(x) for x in manual.get("oa_via_doi", [])}
     kept, dropped, excl = [], [], []
     for w in works:
         loc = w.get("primary_location") or {}
@@ -179,12 +200,16 @@ def build(works, manual):
              "pages": None, "doi": None, "oa": None, "openalex": None, "pre_northwestern": False}
         e.update(m)
         e["doi"] = norm_doi(e["doi"])
+        if e["doi"]:  # the hand-made copy wins over an OpenAlex copy with the same DOI
+            entries = [x for x in entries if x["doi"] != e["doi"]]
         e["pre_northwestern"] = bool(e["pre_northwestern"]) or (e["year"] or 0) < 2017
         e["_date"] = ""
         entries.append(e)
 
     entries.sort(key=lambda e: ((e["year"] or 0), e["_date"]), reverse=True)
     for e in entries:
+        if e["doi"] in oa_doi:
+            e["oa"] = "https://doi.org/" + e["doi"]
         e.pop("_date", None)
         e.pop("_journal_src", None)
     return entries, dropped, excl
@@ -275,12 +300,16 @@ def report(entries, dropped, excl, works):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--from-json", metavar="PATH", help="use a saved OpenAlex dump instead of fetching")
+    ap.add_argument("--force", action="store_true", help="write even if the list shrinks by more than 10%%")
     args = ap.parse_args()
     works = json.load(open(args.from_json, encoding="utf-8")) if args.from_json else fetch_live()
     if isinstance(works, dict):
         works = works["results"]
     manual = json.load(open(MANUAL, encoding="utf-8")) if MANUAL.exists() else {}
     entries, dropped, excl = build(works, manual)
+    old = len(json.load(open(OUT, encoding="utf-8"))) if OUT.exists() else 0
+    if len(entries) < 0.9 * old and not args.force:
+        sys.exit("refusing to replace %d entries with %d; check the OpenAlex reply, or rerun with --force" % (old, len(entries)))
     OUT.write_text(json.dumps(entries, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     print("wrote %s (%d entries from %d works)\n" % (OUT.relative_to(ROOT), len(entries), len(works)))
     report(entries, dropped, excl, works)
@@ -300,6 +329,9 @@ def _selfcheck():
     assert pages({"first_page": "1", "last_page": "9"}) == "1-9"
     assert pages({"first_page": "e12", "last_page": "e12"}) == "e12"
     assert pages({"first_page": None, "last_page": None}) is None
+    assert to_entry({"open_access": {"oa_url": "http://hdl.handle.net/1"}})["oa"] == "https://hdl.handle.net/1"
+    assert to_entry({"open_access": {"oa_url": "javascript:alert(1)"}})["oa"] is None
+    assert to_entry({"publication_date": "2026-01-01", "created_date": "2026-09-16T00:00:00"})["_date"] == "2026-09-16"
 
 
 if __name__ == "__main__":

@@ -22,7 +22,10 @@ def main():
         m = re.search(r"^image:\s*(\S+)", post.read_text(encoding="utf-8"), re.M)
         if not m:
             continue
-        src = ROOT / m.group(1).lstrip("/")
+        src = ROOT / m.group(1).strip("'\"").lstrip("/")
+        if src.suffix != ".jpg":  # the news lists only look for a thumbnail beside a lowercase .jpg
+            print("%s: %s is not a .jpg, rename or re-export it" % (post.name, src.name))
+            continue
         dst = src.with_name(src.stem + "-thumb.jpg")
         if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
             skipped += 1

@@ -1,6 +1,19 @@
 [
  {
   "year": 2026,
+  "authors": "E. A. Hussein, B. Utebay, E. A. Schafer, N. P. Kamat, J. Rivnay, N. Lavrik, S. A. Sarles",
+  "title": "Microbarrier-confined droplet bilayers on PEDOT:PSS enable high-resistance, dynamically addressable bioelectronic interfaces",
+  "journal": "The Analyst",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": "10.1039/d6an00737f",
+  "oa": "https://pubs.rsc.org/an/article-pdf/doi/10.1039/D6AN00737F/14703642/d6an00737f.pdf",
+  "openalex": "W7213364271",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2026,
   "authors": "D. Gunturkun, D. Meli, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen",
   "title": "Backbone Engineering of Benzodifurandione-Based n-Type OMIECs With Antiambipolar Behavior",
   "journal": "Advanced Electronic Materials",
@@ -105,15 +118,15 @@
  },
  {
   "year": 2026,
-  "authors": "E. A. Hussein, B. Utebay, E. A. Schafer, N. Kamat, J. Rivnay, N. V. Lavrik, S. A. Sarles",
-  "title": "Microbarrier-confined droplet bilayers on PEDOT:PSS enable high-resistance, dynamically addressable bioelectronic interfaces",
-  "journal": "The Analyst",
-  "volume": null,
+  "authors": "N. I. DomNwachukwu, M. D. Bailey, M. Luo, J. Schiff, A. Brotherton, B. Phillips-Sorich, J. Rivnay, T. J. Meade",
+  "title": "Targeted gadolinium-labeled gold nanoparticles for MR imaging of C-reactive protein",
+  "journal": "Journal of Inorganic Biochemistry",
+  "volume": "276",
   "issue": null,
-  "pages": null,
-  "doi": "10.1039/d6an00737f",
-  "oa": "https://pubs.rsc.org/an/article-pdf/doi/10.1039/D6AN00737F/14703642/d6an00737f.pdf",
-  "openalex": "W7213364271",
+  "pages": "113195",
+  "doi": "10.1016/j.jinorgbio.2025.113195",
+  "oa": null,
+  "openalex": null,
   "pre_northwestern": false
  },
  {
@@ -157,7 +170,7 @@
  },
  {
   "year": 2025,
-  "authors": "J. P. I. Tarrés, D. Zhu, C. Musumeci, Y. Kim, D. Meli, H. Yu, M. Jha, B. D. Paulsen, R. Wu, J. Kimpel, Z. Laswick, S. H. K. Paleti, Y. Zhang, S. Barlow, S. R. Marder, J. Nelson, J. Rivnay, C. Müller",
+  "authors": "J. Pons i Tarrés, D. Zhu, C. Musumeci, Y. Kim, D. Meli, H. Yu, M. Jha, B. D. Paulsen, R. Wu, J. Kimpel, Z. Laswick, S. H. K. Paleti, Y. Zhang, S. Barlow, S. R. Marder, J. Nelson, J. Rivnay, C. Müller",
   "title": "Anomalous Stiffening of a Conjugated Polymer During Electrochemical Oxidation",
   "journal": "Advanced Functional Materials",
   "volume": "36",
@@ -166,6 +179,19 @@
   "doi": "10.1002/adfm.202519980",
   "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adfm.202519980",
   "openalex": "W4415299624",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2025,
+  "authors": "D. Gunturkun, D. Meli, K. J. Thorley, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen",
+  "title": "Impact of donor modification on azaisoindigo-based polymers for n- and p-type organic electrochemical transistors",
+  "journal": "Journal of Materials Chemistry C",
+  "volume": "13",
+  "issue": "44",
+  "pages": "22244-22252",
+  "doi": "10.1039/d5tc02636a",
+  "oa": "https://pubs.rsc.org/en/content/articlepdf/2025/tc/d5tc02636a",
+  "openalex": "W4414997831",
   "pre_northwestern": false
  },
  {
@@ -209,7 +235,7 @@
  },
  {
   "year": 2025,
-  "authors": "Y. Gao, Y. Zhou, X. Ji, A. J. Graham, C. M. Dundas, I. E. M. Mahfoud, B. M. Tibbett, B. Tan, G. Partipilo, A. Dodabalapur, J. Rivnay, B. K. Keitz",
+  "authors": "Y. Gao, Y. Zhou, X. Ji, A. J. Graham, C. M. Dundas, I. E. Miniel Mahfoud, B. M. Tibbett, B. Tan, G. Partipilo, A. Dodabalapur, J. Rivnay, B. K. Keitz",
   "title": "Translating Extracellular Electron Transfer Activities with Organic Electrochemical Transistors",
   "journal": "Journal of Visualized Experiments",
   "volume": null,
@@ -244,19 +270,6 @@
   "doi": "10.1038/s41467-024-55401-9",
   "oa": "https://www.nature.com/articles/s41467-024-55401-9.pdf",
   "openalex": "W4405986587",
-  "pre_northwestern": false
- },
- {
-  "year": 2025,
-  "authors": "D. Gunturkun, D. Meli, K. J. Thorley, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen",
-  "title": "Impact of donor modification on azaisoindigo-based polymers for n- and p-type organic electrochemical transistors",
-  "journal": "Journal of Materials Chemistry C",
-  "volume": "13",
-  "issue": "44",
-  "pages": "22244-22252",
-  "doi": "10.1039/d5tc02636a",
-  "oa": "https://pubs.rsc.org/en/content/articlepdf/2025/tc/d5tc02636a",
-  "openalex": "W4414997831",
   "pre_northwestern": false
  },
  {
@@ -443,7 +456,7 @@
  },
  {
   "year": 2024,
-  "authors": "Y. Gao, Y. Zhou, X. Ji, A. J. Graham, C. M. Dundas, I. E. M. Mahfoud, B. M. Tibbett, B. Tan, G. Partipilo, A. Dodabalapur, J. Rivnay, B. K. Keitz",
+  "authors": "Y. Gao, Y. Zhou, X. Ji, A. J. Graham, C. M. Dundas, I. E. Miniel Mahfoud, B. M. Tibbett, B. Tan, G. Partipilo, A. Dodabalapur, J. Rivnay, B. K. Keitz",
   "title": "A hybrid transistor with transcriptionally controlled computation and plasticity",
   "journal": "Nature Communications",
   "volume": "15",
@@ -452,6 +465,19 @@
   "doi": "10.1038/s41467-024-45759-1",
   "oa": "https://www.nature.com/articles/s41467-024-45759-1.pdf",
   "openalex": "W4391993154",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2024,
+  "authors": "I. Holzer, V. Lemaur, M. Wang, H.-Y. Wu, L. Zhang, R. Marcial-Hernandez, P. Gilhooly-Finn, P. Cavassin, S. Hoyas, D. Meli, R. Wu, B. D. Paulsen, J. Strzalka, A. Liscio, J. Rivnay, H. Sirringhaus, N. Banerji, D. Beljonne, S. Fabiano, C. B. Nielsen",
+  "title": "Side chain engineering in indacenodithiophene-co-benzothiadiazole and its impact on mixed ionic–electronic transport properties",
+  "journal": "Journal of Materials Chemistry C",
+  "volume": "12",
+  "issue": "10",
+  "pages": "3686-3697",
+  "doi": "10.1039/d3tc04738e",
+  "oa": "https://pubs.rsc.org/en/content/articlepdf/2024/tc/d3tc04738e",
+  "openalex": "W4391759007",
   "pre_northwestern": false
  },
  {
@@ -491,19 +517,6 @@
   "doi": "10.1002/adem.202301488",
   "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adem.202301488",
   "openalex": "W4391187558",
-  "pre_northwestern": false
- },
- {
-  "year": 2024,
-  "authors": "I. Holzer, V. Lemaur, M. Wang, H.-Y. Wu, L. Zhang, R. Marcial-Hernandez, P. Gilhooly-Finn, P. Cavassin, S. Hoyas, D. Meli, R. Wu, B. D. Paulsen, J. Strzalka, A. Liscio, J. Rivnay, H. Sirringhaus, N. Banerji, D. Beljonne, S. Fabiano, C. B. Nielsen",
-  "title": "Side chain engineering in indacenodithiophene-co-benzothiadiazole and its impact on mixed ionic–electronic transport properties",
-  "journal": "Journal of Materials Chemistry C",
-  "volume": "12",
-  "issue": "10",
-  "pages": "3686-3697",
-  "doi": "10.1039/d3tc04738e",
-  "oa": "https://pubs.rsc.org/en/content/articlepdf/2024/tc/d3tc04738e",
-  "openalex": "W4391759007",
   "pre_northwestern": false
  },
  {
@@ -606,7 +619,7 @@
   "issue": "10",
   "pages": "3132-3164",
   "doi": "10.1016/j.matt.2023.05.001",
-  "oa": "http://www.cell.com/article/S2590238523002199/pdf",
+  "oa": "https://www.cell.com/article/S2590238523002199/pdf",
   "openalex": "W4377990492",
   "pre_northwestern": false
  },
@@ -690,7 +703,7 @@
  },
  {
   "year": 2023,
-  "authors": "S. Fabiano, L. Flagg, T. C. H. Castillo, S. Inal, L. G. Kaake, L. V. Kayser, S. T. Keene, S. Ludwigs, C. Muller, B. M. Savoie, B. Lüssem, J. L. Lutkenhaus, M. Matta, D. Meli, S. N. Patel, B. D. Paulsen, J. Rivnay, J. Surgailis",
+  "authors": "S. Fabiano, L. Flagg, T. C. Hidalgo Castillo, S. Inal, L. G. Kaake, L. V. Kayser, S. T. Keene, S. Ludwigs, C. Muller, B. M. Savoie, B. Lüssem, J. L. Lutkenhaus, M. Matta, D. Meli, S. N. Patel, B. D. Paulsen, J. Rivnay, J. Surgailis",
   "title": "On the fundamentals of organic mixed ionic/electronic conductors",
   "journal": "Journal of Materials Chemistry C",
   "volume": "11",
@@ -866,7 +879,7 @@
   "issue": "3",
   "pages": "19-35",
   "doi": "10.36021/jethe.v4i3.249",
-  "oa": "https://jethe.org/index.php/jethe/article/download/249/61",
+  "oa": "https://doi.org/10.36021/jethe.v4i3.249",
   "openalex": "W4205770994",
   "pre_northwestern": false
  },
@@ -983,7 +996,7 @@
   "issue": null,
   "pages": "113461",
   "doi": "10.1016/j.bios.2021.113461",
-  "oa": "http://hdl.handle.net/10754/669847",
+  "oa": "https://hdl.handle.net/10754/669847",
   "openalex": "W3174801504",
   "pre_northwestern": false
  },
@@ -1152,7 +1165,7 @@
   "issue": "17",
   "pages": "7301-7308",
   "doi": "10.1021/acs.chemmater.0c01984",
-  "oa": "http://hdl.handle.net/10754/663432",
+  "oa": "https://hdl.handle.net/10754/663432",
   "openalex": "W3042833387",
   "pre_northwestern": false
  },
@@ -1308,7 +1321,7 @@
   "issue": "3",
   "pages": "927-937",
   "doi": "10.1021/acs.chemmater.8b04335",
-  "oa": "http://hdl.handle.net/2434/825464",
+  "oa": "https://hdl.handle.net/2434/825464",
   "openalex": "W2907259170",
   "pre_northwestern": false
  },
@@ -1667,7 +1680,7 @@
   "year": 2016,
   "authors": "C. M. Proctor, J. Rivnay, G. G. Malliaras",
   "title": "Understanding volumetric capacitance in conducting polymers",
-  "journal": "Journal of Polymer Science Part B Polymer Physics",
+  "journal": "Journal of Polymer Science Part B: Polymer Physics",
   "volume": "54",
   "issue": "15",
   "pages": "1433-1436",
@@ -1719,7 +1732,7 @@
   "year": 2015,
   "authors": "S. Inal, J. Rivnay, A. I. Hofmann, I. Uguz, M. Mumtaz, D. Katsigiannopoulos, C. Brochon, E. Cloutet, G. Hadziioannou, G. G. Malliaras",
   "title": "Organic electrochemical transistors based on PEDOT with different anionic polyelectrolyte dopants",
-  "journal": "Journal of Polymer Science Part B Polymer Physics",
+  "journal": "Journal of Polymer Science Part B: Polymer Physics",
   "volume": "54",
   "issue": "2",
   "pages": "147-151",
@@ -2122,7 +2135,7 @@
   "year": 2013,
   "authors": "L. H. Jimison, S. Himmelberger, D. T. Duong, J. Rivnay, M. F. Toney, A. Salleo",
   "title": "Vertical confinement and interface effects on the microstructure and charge transport of P3HT thin films",
-  "journal": "Journal of Polymer Science Part B Polymer Physics",
+  "journal": "Journal of Polymer Science Part B: Polymer Physics",
   "volume": "51",
   "issue": "7",
   "pages": "611-620",
@@ -2270,7 +2283,7 @@
   "issue": "7",
   "pages": "074312",
   "doi": "10.1063/1.3360930",
-  "oa": "http://infoscience.epfl.ch/record/172710",
+  "oa": "https://infoscience.epfl.ch/record/172710",
   "openalex": "W2071772389",
   "pre_northwestern": true
  },
@@ -2343,7 +2356,7 @@
   "year": 2008,
   "authors": "J. Rivnay, L. H. Jimison, M. F. Toney, M. Preiner, N. A. Melosh, A. Salleo",
   "title": "Interfacial effects in thin films of polymeric semiconductors",
-  "journal": "Journal of Vacuum Science & Technology B Microelectronics and Nanometer Structures Processing Measurement and Phenomena",
+  "journal": "Journal of Vacuum Science & Technology B",
   "volume": "26",
   "issue": "4",
   "pages": "1454-1460",

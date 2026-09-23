@@ -12,17 +12,12 @@
 
 ## Status
 
-All 22 tasks are implemented. Tasks 0, 1, 2 and 11 are merged and live; the rest are on
-`tasks-8-onward` awaiting review and merge.
+All 22 tasks are merged and live (2026-09-17).
 
-Task 11 was pulled forward out of order because the file it removes was exposed on the live site.
+Still open, none of them blocking:
 
-Still needing a decision from John, none of them blocking:
-
+- An email address for Rhea William, whose opened card shows no contact.
 - Alumni `now:` for Lucia Galindo (2026) and Boyuan Sun (2022), which render as blank cells.
-- Whether Gianmaria Matrone should read "Giovanni Maria" (his LinkedIn handle and the publication
-  record say "G. M.").
-- Email addresses for eight current members, whose opened cards show no contact.
 - The MRSEC cell: the file is an unlabelled icon and the MRSEC site publishes no lockup, so it needs
   a file from their office or a decision to drop the cell.
 - DARPA and AFOSR logos, both outside their agencies' published usage policies.

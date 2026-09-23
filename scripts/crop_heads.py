@@ -3,10 +3,9 @@
 
 Matches what the existing 29 headshots were cropped to on 2026-09-11: the face box is ~0.40 of the
 square and sits centred at (0.5, 0.44), so every head lands at the same size and height in the grid.
-Haar detection is restricted to the middle of the frame and must contain an eye, because on a previous
-run a ceiling light was detected as a face.
+Haar searches 10-90% of the width; each candidate must pass looks_like_a_face().
 
-    /opt/anaconda3/bin/python3 crop_heads.py            # writes crops + a contact sheet
+    python3 crop_heads.py "<photos dir>" <out dir>      # writes crops + a contact sheet
 """
 import sys
 from pathlib import Path
@@ -14,9 +13,8 @@ from pathlib import Path
 import cv2
 from PIL import Image, ImageDraw, ImageOps
 
-SRC = Path("/Users/Owner/School/website/photos sep 2026")
-OUT = Path("/private/tmp/claude-501/-Users-Owner-School-asilomar-site/1c81051b-e210-4bed-bcb5-fad753ab682a/scratchpad/heads")
-SIZE = 600            # matches the 13 existing 600x600 files
+SRC, OUT = map(Path, sys.argv[1:3])
+SIZE = 324            # 2x the 162px headshot; the PI photo is 400 (2x its 200px)
 FACE_FRAC = 0.40      # face height as a fraction of the square
 FACE_CY = 0.44        # where the face centre sits vertically
 
@@ -45,25 +43,20 @@ FALLBACK = {
 
 CASCADES = [cv2.CascadeClassifier(cv2.data.haarcascades + n) for n in
             ("haarcascade_frontalface_default.xml", "haarcascade_frontalface_alt2.xml")]
-eye_cc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_eye.xml")
 
 
 def looks_like_a_face(bgr):
     """Tell a face from the lab's ceiling lamp, which Haar keeps picking and whose louvres even pass an
     eye check. Measured over all nine portraits: the lamp scores 26-54 saturation and 14-18 on R-B,
-    every real face 63-102 and 29-43. Saturation and warmth are used rather than a skin-colour range
-    because the range I tried first rejected the darkest-skinned person in the set."""
+    every real face 63-102 and 29-43. Do not use a skin-colour range instead: it rejected a real face
+    in this set."""
     b, g, r = bgr.reshape(-1, 3).mean(0)
     sat = float(cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)[:, :, 1].mean())
     return sat >= 60 and (r - b) >= 25, sat
 
 
 def detect(path, loose=False):
-    """Return the face box (x, y, w, h) in full-image coordinates, or None.
-
-    Measured on these photos: a real face scores 0.97 on the skin test, while the ceiling lamp that
-    Haar keeps mistaking for one scores 0.53-0.64 and is near-neutral grey. 0.85 separates them
-    cleanly; a lower bar let the lamp win because it is also the biggest candidate."""
+    """Return the face box (x, y, w, h) in full-image coordinates, or None."""
     im = cv2.imread(str(path))
     if im is None:
         return None, None
