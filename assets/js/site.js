@@ -24,6 +24,9 @@
       if (e.key === "Escape" && header.classList.contains("nav-open")) { setMenu(false); toggle.focus(); }
     });
     d.addEventListener("click", function (e) { if (!header.contains(e.target)) setMenu(false); });
+    /* tabbing out of the menu closes it, or the next stops sit hidden under the panel; a click on the
+       header's blank space moves focus to nothing and leaves it open */
+    header.addEventListener("focusout", function (e) { if (e.relatedTarget && !header.contains(e.relatedTarget)) setMenu(false); });
     /* coming back through the back-forward cache restores the page with the menu still open */
     addEventListener("pageshow", function (e) { if (e.persisted) setMenu(false); });
   }
