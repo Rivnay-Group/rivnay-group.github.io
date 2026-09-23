@@ -358,7 +358,6 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
 /* the glyphs sit inside a 34px square, so pull the row left when it starts with one and the
    icon lines up with the text above it rather than sitting 8px inside */
 .person .links:has(> .ico:first-child) { margin-left: -0.5rem; }
-.person.no-bio .links { margin-top: 0.4rem; }
 @media (pointer: coarse) {
   .ico { width: 44px; height: 44px; }                       /* the glyph stays 17px; only the hit box grows */
   .person .links { gap: 0.6rem; }
@@ -368,12 +367,11 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
 @media (max-width: 600px) {
   .people-grid { grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
   .person { border-bottom: 1px solid var(--line); padding: 0.85rem 0; }
-  .person summary, .person.no-bio { display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: center; }
+  .person summary { display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: center; }
   .person img { width: 64px; }
   .person .name { margin-top: 0; font-size: 1rem; }
   .person[open] { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.85rem 0; background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
   .person[open] summary { grid-template-columns: 64px 1fr; }
-  .person.no-bio .links { grid-column: 2; margin-top: 0; }
 }
 .alumni table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: var(--fs-md); margin-top: 0.6rem; }
 .alumni col.name { width: 38%; }

@@ -8,7 +8,7 @@ permalink: /alumni/
     <h1>Alumni</h1>
   </header>
 
-  {% assign agroups = "postdoc|Postdoctoral researchers,phd|PhD students,masters|Master's students,undergrad|Undergraduate students" | split: "," %}
+  {% assign agroups = "faculty|Research faculty,staff|Research staff,postdoc|Postdoctoral researchers,phd|PhD students,masters|Master's students,undergrad|Undergraduate students" | split: "," %}
   {% for g in agroups %}
     {% assign parts = g | split: "|" %}
     {% assign list = site.data.alumni | where: "group", parts[0] %}
