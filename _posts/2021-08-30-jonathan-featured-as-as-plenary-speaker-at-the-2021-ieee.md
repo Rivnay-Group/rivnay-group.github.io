@@ -10,6 +10,6 @@ Jonathan Rivnay gave a presentation entitled “Organic Electrochemical Transist
 
 IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity.
 
-[Read the details and learn more about the conference here.](https://ifetc.org/web/program-plenary.php)
+[Read the details and learn more about the conference here.](https://web.archive.org/web/20211214165834/https://ifetc.org/web/program-plenary.php)
 
 Congratulations, Jonathan!

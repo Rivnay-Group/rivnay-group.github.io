@@ -6,6 +6,7 @@ image: /assets/img/news/2024-08-19-droplet-polymer-bilayers-for-bioelectronic-me
 link: https://pubs.acs.org/doi/10.1021/jacs.4c01591
 image_width: 525
 image_height: 248
+image_caption: "Reprinted with permission from E. A. Schafer et al., J. Am. Chem. Soc. 2024, 146 (21), 14391-14396. Copyright 2024 American Chemical Society."
 redirect_from:
   - /new-blog/2024/8/19/droplet-polymer-bilayers-for-bioelectronic-membrane-interfacing/
   - /new-blog/2024/8/19/droplet-polymer-bilayers-for-bioelectronic-membrane-interfacing

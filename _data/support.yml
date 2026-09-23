@@ -4,15 +4,15 @@
 # Recompute as 68 * (3 / aspect_ratio) ** 0.35; a mark wider than its cell is capped by max-width.
 # Order follows the old Research page; Sloan (old Funding page) and MRSEC appended.
 funders:
-  - name: National Science Foundation
+  - name: NSF, National Science Foundation
     logo: nsf.svg
     h: 100
     url: https://www.nsf.gov
-  - name: National Institutes of Health
+  - name: NIH, National Institutes of Health
     logo: nih.png
     h: 95
     url: https://www.nih.gov
-  - name: Defense Advanced Research Projects Agency
+  - name: DARPA, Defense Advanced Research Projects Agency
     logo: darpa.png
     h: 81
     url: https://www.darpa.mil
@@ -20,7 +20,7 @@ funders:
     logo: biohub.svg
     h: 67
     url: https://biohub.org
-  - name: Advanced Research Projects Agency for Health
+  - name: ARPA-H, Advanced Research Projects Agency for Health
     logo: arpa-h.png
     h: 64
     url: https://arpa-h.gov
@@ -48,7 +48,7 @@ facilities:
   - name: NUFAB
     logo: nufab.png
     h: 76
-    url: https://nuance.northwestern.edu/facilities/nufab/
+    url: https://nufab.northwestern.edu
   - name: Argonne National Laboratory, Advanced Photon Source
     logo: argonne-aps.png
     h: 63
