@@ -386,7 +386,8 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
 .alumni th, .alumni td { text-align: left; padding: 0.5rem 0.8rem 0.5rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 .alumni th { font-size: var(--fs-sm); font-weight: 600; color: var(--muted); }
 .alumni td.year { color: var(--muted); }
-@media (max-width: 600px) { .alumni col.name { width: 36%; } .alumni col.year { width: 3.6rem; } }
+/* phones: the longest name and the longest "Now" word each fit whole from 352px up; the last column needs no gutter */
+@media (max-width: 600px) { .alumni col.name { width: 43%; } .alumni col.year { width: 3.6rem; } .alumni tr > :last-child { padding-right: 0; } }
 
 /* ---------- publications ---------- */
 .pub-year { display: grid; grid-template-columns: 6rem 1fr; gap: 1.5rem; padding-top: 2.5rem; }
