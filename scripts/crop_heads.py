@@ -30,6 +30,7 @@ PEOPLE = [
     ("abhijith-surendran", "Abhi_sept_2026/5-IMG_6886.jpg"),
     ("rachel-daso",        "Rachel_sept_2026/4-IMG_6861.jpg"),
     ("catherine-beaumont", "Catherine_sept_2026/3-IMG_6880.jpg"),
+    ("john-williams",      "John_sept_2026/1 (7).png"),
 ]
 # Haar finds only the glasses on this one frame, and John picked this frame, so the box is read off
 # the image by hand (hairline y=480 to chin y=1520, face centred on x=2590) rather than substituting a
