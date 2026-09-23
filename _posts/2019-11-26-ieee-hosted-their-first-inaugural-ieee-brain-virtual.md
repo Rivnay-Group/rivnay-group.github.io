@@ -1,7 +1,8 @@
 ---
-title: "IEEE hosted first inaugural IEEE Brain Virtual Conference with Professor Rivnay as one of its speakers!"
+title: "IEEE hosted the inaugural IEEE Brain Virtual Conference with Professor Rivnay as one of its speakers!"
 date: 2019-11-26
 kind: award
+excerpt: "Professor Rivnay was one of the speakers at the inaugural IEEE Brain Virtual Conference on bioelectronics, held 26 November 2019."
 redirect_from:
   - /new-blog/2019/11/26/ieee-hosted-their-first-inaugural-ieee-brain-virtual-conference-with-professor-rivnay-as-one-of-their-speakers/
   - /new-blog/2019/11/26/ieee-hosted-their-first-inaugural-ieee-brain-virtual-conference-with-professor-rivnay-as-one-of-their-speakers

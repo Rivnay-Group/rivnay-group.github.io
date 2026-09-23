@@ -12,4 +12,4 @@ redirect_from:
 ---
 *Also out in 2017:* Our new work on proper comparison and benchmarking of active materials for bioelectronic applications (in this case: electrochemical transistors) was published in [***Nature Communications***](https://www.nature.com/articles/s41467-017-01812-w): “Benchmarking organic mixed conductors for transistors.”
 
-Check out also the [press release](http://www.mccormick.northwestern.edu/news/articles/2017/11/new-method-benchmarks-organic-mixed-conductors.html?utm_source=twitter-post&utm_medium=social-media&utm_campaign=twitter-post&utm_content=new-method-benchmarks-organic-mixed-conductors&linkId=45225935) from Northwestern.
+Check out also the [press release](https://www.mccormick.northwestern.edu/news/articles/2017/11/new-method-benchmarks-organic-mixed-conductors.html) from Northwestern.

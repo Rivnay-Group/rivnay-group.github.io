@@ -5,6 +5,7 @@ kind: award
 image: /assets/img/news/2022-09-06-josh-tropp-receives-multiple-honors.jpg
 image_width: 960
 image_height: 540
+excerpt: "Postdoc Josh Tropp was named an ACS PMSE Future Faculty Fellow and the NU Postdoctoral Association’s Postdoc of the Month for August 2022."
 redirect_from:
   - /new-blog/2022/9/6/josh-tropp-receives-multiple-honors/
   - /new-blog/2022/9/6/josh-tropp-receives-multiple-honors

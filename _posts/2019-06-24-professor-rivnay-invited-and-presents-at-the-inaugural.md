@@ -1,5 +1,5 @@
 ---
-title: "Prof. Rivnay invited to and presented at the inaugural Bioelectronics Research Conference (GRC)"
+title: "Prof. Rivnay invited to and presented at the inaugural Bioelectronics Gordon Research Conference (GRC)"
 date: 2019-06-24
 kind: award
 redirect_from:

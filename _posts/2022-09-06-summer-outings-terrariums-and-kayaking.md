@@ -5,6 +5,7 @@ kind: group
 image: /assets/img/news/2022-09-06-summer-outings-terrariums-and-kayaking.jpg
 image_width: 1400
 image_height: 934
+excerpt: "This summer the group built terrariums at a workshop in Chicago and went kayaking near Starved Rock, followed by a cookout by the Illinois River."
 redirect_from:
   - /new-blog/2022/9/6/summer-outings-terrariums-and-kayaking/
   - /new-blog/2022/9/6/summer-outings-terrariums-and-kayaking
@@ -19,7 +20,7 @@ In June the group went to Hearthstone and Terrace in Chicago for a terrarium-bui
 A last hurrah to summer: group kayaking near Starved Rock, followed by a cookout by the Illinois River.
 
 ![](/assets/img/news/2022-09-06-summer-outings-terrariums-and-kayaking-5.jpg){: width="1400" height="1050" loading="lazy"}
-![](/assets/img/news/2022-09-06-summer-outings-terrariums-and-kayaking-6.jpg){: width="1400" height="1866" loading="lazy"}
+![](/assets/img/news/2022-09-06-summer-outings-terrariums-and-kayaking-6.jpg){: width="1400" height="1866" loading="lazy" style="width:420px;margin-inline:auto"}
 ![](/assets/img/news/2022-09-06-summer-outings-terrariums-and-kayaking-7.jpg){: width="1400" height="1050" loading="lazy"}
 ![](/assets/img/news/2022-09-06-summer-outings-terrariums-and-kayaking-8.jpg){: width="1400" height="1050" loading="lazy"}
 ![](/assets/img/news/2022-09-06-summer-outings-terrariums-and-kayaking-9.jpg){: width="1400" height="1050" loading="lazy"}

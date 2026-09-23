@@ -1,5 +1,5 @@
 ---
-title: "Paper on the effects of the electrolyte (anions) on structure and transport in organic mixed conductors published in Adv. Func. Mater."
+title: "Paper on the effects of the electrolyte (anions) on structure and transport in organic mixed conductors published in Adv. Funct. Mater."
 date: 2019-02-04
 kind: paper
 image: /assets/img/news/2019-02-04-effects-of-the-electrolyte-anions-on-structure-and-transport.jpg

@@ -3,6 +3,7 @@ title: "3D Printed conducting hydrogels published in Macromolecular Bioscience"
 date: 2022-09-06
 kind: paper
 link: https://onlinelibrary.wiley.com/doi/full/10.1002/mabi.202200103
+excerpt: "Our work with Cheng Sun’s lab on 3D-printed electroactive hydrogels, led by Rebecca Keate, is out now in Macromolecular Bioscience."
 redirect_from:
   - /new-blog/2022/9/6/3d-printed-conducting-hydrogels-published-in-macromolecular-bioscience/
   - /new-blog/2022/9/6/3d-printed-conducting-hydrogels-published-in-macromolecular-bioscience
