@@ -1,0 +1,9 @@
+{%- comment -%} One Publications entry, for the `p` of the caller's loop. Everything printed comes from OpenAlex, so it is escaped. {%- endcomment -%}
+<li class="pub">
+  {% if p.doi %}<a class="title" href="https://doi.org/{{ p.doi | escape }}">{{ p.title | escape }}</a>{% else %}<span class="title">{{ p.title | escape }}</span>{% endif %}
+  <p class="authors">{{ p.authors | escape | replace: "J. Rivnay", rivnay }}</p>
+  <p class="venue"><em>{{ p.journal | escape }}</em>{% if p.volume %} <strong>{{ p.volume | escape }}</strong>{% endif %}{% if p.pages %}, {{ p.pages | escape }}{% endif %}{% if p.pre_northwestern %} ({{ p.year }}){% endif %}</p>
+  {%- capture doiurl %}https://doi.org/{{ p.doi | downcase }}{% endcapture -%}
+  {%- assign oaurl = p.oa | downcase -%}
+  <p class="doi">{% if p.doi %}doi:{{ p.doi | escape }}{% endif %}{% if p.oa %}{% if p.doi %} · {% endif %}{% if oaurl == doiurl %}<span class="oa">Open access</span>{% else %}<a class="oa" href="{{ p.oa | escape }}">Open access</a>{% endif %}{% endif %}</p>
+</li>

@@ -5,12 +5,12 @@ permalink: /team/
 image: /assets/img/team-2026.jpg
 snap: true
 redirect_from:
+  - /people
+  - /people/
   - /people-1
   - /people-1/
   - /people-1-1
   - /people-1-1/
-  - /jonathan-rivnay
-  - /jonathan-rivnay/
 ---
 <section class="team-stage">
   <div class="wrap">
@@ -30,8 +30,8 @@ redirect_from:
   {% if pi %}
   <section class="group">
     <h2>Principal investigator</h2>
-    <div class="pi reveal">
-      <img src="{{ '/assets/img/people/' | append: pi.photo | relative_url }}" alt="{{ pi.name }}" width="200" height="200">
+    <div class="pi reveal" id="{{ pi.name | slugify }}">
+      <img src="{% if pi.photo %}{{ '/assets/img/people/' | append: pi.photo | relative_url }}{% else %}data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E{% endif %}" alt="" width="200" height="200">
       <div>
         <h3>{{ pi.name }}</h3>
         <p class="role">{{ pi.role }}</p>
@@ -57,10 +57,9 @@ redirect_from:
       {% assign m = members[i] %}
       {% assign r = m.role | downcase %}
       {% capture links %}{% if m.email %}<a class="ico" href="mailto:{{ m.email }}" aria-label="Email {{ m.name }}" title="Email">{% include icon-mail.svg %}</a>{% endif %}{% if m.website %}{% if m.website contains "linkedin." %}<a class="ico" href="{{ m.website | escape }}" rel="noopener" aria-label="{{ m.name }} on LinkedIn" title="LinkedIn">{% include icon-linkedin.svg %}</a>{% else %}<a href="{{ m.website | escape }}" rel="noopener">Portfolio</a>{% endif %}{% endif %}{% if m.scholar %}<a class="ico" href="{{ m.scholar | escape }}" rel="noopener" aria-label="{{ m.name }} on Google Scholar" title="Google Scholar">{% include icon-scholar.svg %}</a>{% endif %}{% endcapture %}
-      {% if m.bio %}
       <details class="person reveal" id="{{ m.name | slugify }}">
         <summary>
-          <img src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="" loading="lazy" width="150" height="150">
+          <img src="{% if m.photo %}{{ '/assets/img/people/' | append: m.photo | relative_url }}{% else %}data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E{% endif %}" alt="" loading="lazy" width="150" height="150">
           {% assign nparts = m.name | split: " " %}{% assign nlast = nparts.size | minus: 1 %}<span class="who"><span class="name">{% if nlast > 0 %}{{ nparts | slice: 0, nlast | join: " " }} {% endif %}<span class="tail">{{ nparts[nlast] }}<span class="chev" aria-hidden="true"></span></span></span></span>
         </summary>
         <div class="bio">
@@ -69,13 +68,6 @@ redirect_from:
           {% if links != "" %}<p class="links">{{ links }}</p>{% endif %}
         </div>
       </details>
-      {% else %}
-      <div class="person no-bio reveal">
-        <img src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="" loading="lazy" width="150" height="150">
-        <span class="who"><span class="name">{{ m.name }}</span>{% if r != generic %}<span class="role">{{ m.role }}</span>{% endif %}</span>
-        {% if links != "" %}<p class="links">{{ links }}</p>{% endif %}
-      </div>
-      {% endif %}
       {% endfor %}
     </div>
   </section>

@@ -9,7 +9,7 @@ redirect_from:
 <div class="wrap">
   <header class="page-head">
     <h1>Publications</h1>
-    <p class="lead">For citation metrics see <a href="https://scholar.google.com/citations?user=sngchgsAAAAJ&amp;hl=en">Google Scholar</a> or <a href="https://orcid.org/0000-0002-0602-6485">ORCID</a>.</p>
+    <p class="lead">Citation metrics are on <a href="https://scholar.google.com/citations?user=sngchgsAAAAJ&amp;hl=en">Google Scholar</a>; see also <a href="https://orcid.org/0000-0002-0602-6485">ORCID</a>.</p>
     <p class="pub-filter"><input type="search" id="pub-filter" placeholder="Filter by title, author or journal" aria-label="Filter publications" autocomplete="off"></p>
     <p class="pub-none" role="status" hidden></p>
   </header>
@@ -29,14 +29,7 @@ redirect_from:
     <h2>{{ y }}</h2>
     <ol class="pub-list">
       {% for p in items %}
-      <li class="pub">
-        {% if p.doi %}<a class="title" href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}<span class="title">{{ p.title }}</span>{% endif %}
-        <p class="authors">{{ p.authors | replace: "J. Rivnay", rivnay }}</p>
-        <p class="venue"><em>{{ p.journal }}</em>{% if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %}</p>
-        {%- capture doiurl %}https://doi.org/{{ p.doi | downcase }}{% endcapture -%}
-        {%- assign oaurl = p.oa | downcase -%}
-        <p class="doi">{% if p.doi %}doi:{{ p.doi }}{% endif %}{% if p.oa %}{% if p.doi %} · {% endif %}{% if oaurl == doiurl %}<span class="oa">Open access</span>{% else %}<a class="oa" href="{{ p.oa }}">Open access</a>{% endif %}{% endif %}</p>
-      </li>
+      {% include pub.html %}
       {% endfor %}
     </ol>
   </section>
@@ -49,14 +42,7 @@ redirect_from:
     <summary>Pre-Northwestern publications ({{ old.size }})</summary>
     <ol class="pub-list">
       {% for p in old %}
-      <li class="pub">
-        {% if p.doi %}<a class="title" href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}<span class="title">{{ p.title }}</span>{% endif %}
-        <p class="authors">{{ p.authors | replace: "J. Rivnay", rivnay }}</p>
-        <p class="venue"><em>{{ p.journal }}</em>{% if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %} ({{ p.year }})</p>
-        {%- capture doiurl %}https://doi.org/{{ p.doi | downcase }}{% endcapture -%}
-        {%- assign oaurl = p.oa | downcase -%}
-        <p class="doi">{% if p.doi %}doi:{{ p.doi }}{% endif %}{% if p.oa %}{% if p.doi %} · {% endif %}{% if oaurl == doiurl %}<span class="oa">Open access</span>{% else %}<a class="oa" href="{{ p.oa }}">Open access</a>{% endif %}{% endif %}</p>
-      </li>
+      {% include pub.html %}
       {% endfor %}
     </ol>
   </details>

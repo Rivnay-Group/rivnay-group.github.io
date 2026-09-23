@@ -44,6 +44,10 @@ html { -webkit-text-size-adjust: 100%; }
 .skip:focus { transform: none; }
 main:focus { outline: none; }   /* the skip target is focused programmatically, not by tabbing */
 [id] { scroll-margin-top: 5.5rem; }
+/* Shift+Tab scrolls a stop only to the top edge, under the sticky header and year strip; the chips live
+   in the strip, so scrolling to them would only move the page */
+main a, main button, main summary, main input { scroll-margin-top: 7rem; }
+.years a { scroll-margin-top: 0; }
 /* smooth anchor scrolling is switched on by site.js after load, so a #hash on arrival jumps instead of animating */
 @media (prefers-reduced-motion: no-preference) { html.smooth { scroll-behavior: smooth; } }
 /* A page turn between pages, where the browser supports it and nothing anywhere else. The default
@@ -80,7 +84,7 @@ a.go::after, .back::before {
   border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
   transform: rotate(-45deg); transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-a.go::after { margin-left: 0.15em; }
+a.go::after { margin: 0 0.1em 0 0.05em; }
 /* only the standalone links slide; a chevron that moves mid-sentence is a distraction */
 .more a.go:hover::after { transform: translateX(2px) rotate(-45deg); }
 /* the back link is the same mark, mirrored */
@@ -89,7 +93,7 @@ a.go::after { margin-left: 0.15em; }
 @media (prefers-reduced-motion: reduce) { a.go::after, .back::before { transition: none; } }
 /* a link that closes a section: one distance and one size, wherever it appears */
 .more { margin-top: 2rem; font-size: var(--fs-sm); }
-h1, h2, h3, h4 { font-family: var(--sans); font-weight: 700; line-height: 1.15; color: var(--ink); letter-spacing: -0.015em; }
+h1, h2, h3, h4 { font-family: var(--sans); font-weight: 700; line-height: 1.15; color: var(--ink); letter-spacing: -0.015em; text-wrap: balance; }
 h1 { font-size: clamp(2.2rem, 4.5vw, 3.3rem); }
 :root { --hero-h1: clamp(2.2rem, 4.5vw, 3.3rem); }
 h2 { font-size: clamp(1.6rem, 3vw, 2.15rem); }
@@ -101,6 +105,7 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: 1.5rem; }
 .prose { max-width: none; }   /* body copy fills its column; only a layout narrows it */
 .prose p + p, .prose p + ul, .prose p + ol, .prose ul + p, .prose ol + p { margin-top: 1rem; }
+.prose blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 2px solid var(--line); color: var(--muted); }
 .prose h2 { margin: 2.5rem 0 0.8rem; }
 /* the postdoc posting is a separate document, not another section: same hairline the research themes use */
 .prose h2#postdoc { margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
@@ -146,6 +151,16 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 }
 .nav-toggle span::before { position: absolute; top: -7px; }
 .nav-toggle span::after { position: absolute; top: 7px; }
+/* open, the three bars fold into an X: the same button closes the menu */
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+/* High Contrast repaints every author background as Canvas, which would erase the bars; the marks are
+   images the palette cannot recolour, several in dark ink, so each keeps a white ground */
+@media (forced-colors: active) {
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { background: CanvasText; }
+  .brand img, .logo-row img, .site-footer .nu img { forced-color-adjust: none; background: #fff; }
+}
 .site-nav ul { list-style: none; display: flex; gap: 1.6rem; align-items: center; }
 .site-nav a {
   text-decoration: none; color: var(--ink); font-weight: 500; font-size: var(--fs-md);
@@ -159,13 +174,16 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
   /* The drop-down panel belongs to the scripted path ONLY: it is positioned over the page, so if the
      button that dismisses it cannot run, it would sit on top of the page heading for ever (the header is
      sticky, so scrolling does not escape it). */
-  .js .site-nav { position: absolute; top: 100%; left: 0; right: 0; display: none; }
+  .js .site-nav { position: absolute; top: 100%; left: 0; right: 0; display: none; max-height: calc(100dvh - var(--header-h, 61px)); overflow-y: auto; }
   .js .site-header.nav-open .site-nav { display: block; }
   /* No script: the nav wraps onto its own full-width line inside the bar, in the document flow, covering
      nothing, and the button that would have driven it is hidden rather than left as a dead control. */
   html:not(.js) .site-header .bar { flex-wrap: wrap; }
   html:not(.js) .site-nav { flex-basis: 100%; }
   html:not(.js) .nav-toggle { display: none; }
+  /* a header that tall must not stay stuck over the page, or over the year strip */
+  html:not(.js) .site-header { position: static; }
+  html:not(.js) .years { top: 0; }
   .site-nav ul { flex-direction: column; align-items: stretch; gap: 0; padding: 0.4rem 0; }
   .site-nav a { display: block; padding: 0.75rem 1.5rem; border-bottom: none; }
   .site-nav a[aria-current="page"] { background: var(--purple-tint); }
@@ -340,7 +358,6 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
 /* the glyphs sit inside a 34px square, so pull the row left when it starts with one and the
    icon lines up with the text above it rather than sitting 8px inside */
 .person .links:has(> .ico:first-child) { margin-left: -0.5rem; }
-.person.no-bio .links { margin-top: 0.4rem; }
 @media (pointer: coarse) {
   .ico { width: 44px; height: 44px; }                       /* the glyph stays 17px; only the hit box grows */
   .person .links { gap: 0.6rem; }
@@ -350,12 +367,11 @@ details.person[open] .chev { transform: translateY(0.06rem) rotate(-135deg); }
 @media (max-width: 600px) {
   .people-grid { grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
   .person { border-bottom: 1px solid var(--line); padding: 0.85rem 0; }
-  .person summary, .person.no-bio { display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: center; }
+  .person summary { display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: center; }
   .person img { width: 64px; }
   .person .name { margin-top: 0; font-size: 1rem; }
   .person[open] { grid-template-columns: 1fr; gap: 0.75rem; padding: 0.85rem 0; background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
   .person[open] summary { grid-template-columns: 64px 1fr; }
-  .person.no-bio .links { grid-column: 2; margin-top: 0; }
 }
 .alumni table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: var(--fs-md); margin-top: 0.6rem; }
 .alumni col.name { width: 38%; }
@@ -416,6 +432,14 @@ html:not(.js) .pub-filter { display: none; }   /* nothing drives it without scri
 @media (pointer: coarse) and (max-width: 1259px) {
   .years { padding-block: 0; }
   .years a { padding: 0.75rem 0.2rem 0.85rem; }
+  .years a:focus-visible { outline-offset: -2px; }   /* the chip fills the strip, which would clip a ring drawn outside it */
+}
+/* a landscape phone: header and strip together would take over a quarter of the screen, so only the strip stays */
+@media (max-height: 500px) and (max-width: 1259px) {
+  .site-header { position: relative; }
+  .years { top: 0; }
+  .pub-year[id] { scroll-margin-top: 3.4rem; }
+  .roster { scroll-margin-top: 0; }   /* no header left above it to clear */
 }
 details.collapsed { margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
 details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size: 1.4rem; font-weight: 700; color: var(--purple); }
@@ -466,7 +490,7 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .post-head h1 { margin-top: 0.5rem; font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
 .post-figure { margin: 1rem 0 2rem; }
 .post-figure figcaption { margin-top: 0.6rem; }
-.post-figure img { border-radius: var(--radius); border: 1px solid var(--line); width: auto; max-width: 100%; height: auto; margin-inline: auto; }
+.post-figure img { border-radius: var(--radius); border: 1px solid var(--line); max-width: 100%; height: auto; margin-inline: auto; }
 .post-body img { border-radius: var(--radius); margin: 1.75rem 0; border: 1px solid var(--line); width: 100%; height: auto; }
 .post-body figure { margin: 1.75rem 0; }
 .post-body figure img, .post-body .pair img { margin: 0; }
@@ -478,6 +502,7 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .share { display: flex; align-items: center; gap: 0.35rem; margin-top: 2rem; }
 .share-label { font-size: var(--fs-sm); color: var(--muted); margin-right: 0.4rem; }
 .share .copy-link.is-copied { color: var(--purple); }
+html:not(.js) .copy-link { display: none; }   /* only site.js can copy */
 /* older and newer post, reusing the chevrons the rest of the site uses */
 .post-nav { display: flex; justify-content: space-between; gap: 1rem 1.5rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: var(--fs-sm); }
 .post-nav .back { margin-top: 0; }
