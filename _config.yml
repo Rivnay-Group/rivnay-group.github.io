@@ -4,9 +4,14 @@ description: The Rivnay Group at Northwestern University engineers organic bioel
 url: https://rivnay.northwestern.edu
 baseurl: ""   # the repo is the org site, so it serves from the root here and at the custom domain
 lang: en
-author: Rivnay Group
-logo: /assets/img/og-image.jpg
+author:
+  name: Rivnay Group
+  type: Organization
+  url: https://rivnay.northwestern.edu/
+logo: /assets/icon-r-192.png
 timezone: America/Chicago
+future: true               # GitHub Pages default; set here so a local preview shows what a push will publish
+strict_front_matter: true  # a post whose front matter does not parse fails the build instead of publishing a blank row
 
 permalink: /news/:year/:month/:day/:title/
 markdown: kramdown

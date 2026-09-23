@@ -1,5 +1,6 @@
-# One entry per person. Fields: name, role, group (pi/faculty/staff/postdoc/phd/masters/undergrad),
-# photo (600x600 in assets/img/people), bio, and any of these optional links, each an icon on the
+# One entry per person. Fields: name, role, group (pi/faculty/staff/postdoc/phd/masters/undergrad,
+# lowercase, exactly as written; any other value hides the person), photo (the file name of a
+# 324x324 JPEG in assets/img/people), bio, and any of these optional links, each an icon on the
 # open card: email, website (a LinkedIn URL gets the LinkedIn mark, anything else reads "Portfolio"),
 # scholar (a Google Scholar profile).
 # Order in this file does NOT matter: the Team page sorts each group by surname at build time.
