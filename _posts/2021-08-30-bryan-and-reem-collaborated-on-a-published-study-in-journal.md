@@ -4,8 +4,8 @@ date: 2021-08-30
 kind: paper
 image: /assets/img/news/2021-08-30-bryan-and-reem-collaborated-on-a-published-study-in-journal.jpg
 link: https://pubs.acs.org/doi/abs/10.1021/jacs.1c03516
-image_width: 1130
-image_height: 1388
+image_width: 1116
+image_height: 1374
 redirect_from:
   - /new-blog/2021/8/30/bryan-and-reem-collaborated-on-a-published-study-in-journal-of-the-american-chemical-society/
   - /new-blog/2021/8/30/bryan-and-reem-collaborated-on-a-published-study-in-journal-of-the-american-chemical-society

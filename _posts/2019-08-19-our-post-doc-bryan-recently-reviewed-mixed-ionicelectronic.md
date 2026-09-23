@@ -4,8 +4,8 @@ date: 2019-08-19
 kind: paper
 image: /assets/img/news/2019-08-19-our-post-doc-bryan-recently-reviewed-mixed-ionicelectronic.jpg
 link: https://www.nature.com/articles/s41563-019-0435-z
-image_width: 1079
-image_height: 1361
+image_width: 1065
+image_height: 1347
 redirect_from:
   - /new-blog/2019/8/19/our-post-doc-bryan-recently-reviewed-mixed-ionicelectronic-conductors-for-naturematerials/
   - /new-blog/2019/8/19/our-post-doc-bryan-recently-reviewed-mixed-ionicelectronic-conductors-for-naturematerials
