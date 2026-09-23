@@ -73,6 +73,8 @@ main a, main button, main summary, main input { scroll-margin-top: 7rem; }
 .reveal-ready .reveal.no-anim { transition: none; }
 @media print, (prefers-reduced-motion: reduce) { .reveal-ready .reveal { opacity: 1; transform: none; transition: none; } }
 body { font-family: var(--sans); font-size: 1.05rem; line-height: 1.6; color: var(--ink); background: var(--ground); }
+/* phone widths: a long address or compound word wraps rather than pushing the page sideways at large text sizes */
+@media (max-width: 560px) { body { overflow-wrap: anywhere; } }
 img, video { max-width: 100%; display: block; height: auto; }
 a { color: var(--purple); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 a:hover { color: var(--purple-dark); }
@@ -244,6 +246,8 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
   display: flex; flex-direction: column; gap: 0.5rem; text-decoration: none; color: inherit;
   transition: border-color 0.15s; overflow: hidden;
 }
+/* the cards in a row share their row tracks, so a title that wraps does not push its text below the others */
+.card-grid > .card { display: grid; grid-template-rows: subgrid; grid-row: span 3; }
 a.card:hover { border-color: var(--purple); color: inherit; }
 .card:has(img) { padding: 0 0 1.5rem; }
 .card img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: 0.75rem; }
@@ -254,6 +258,9 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 /* ---------- news list ---------- */
 .news-list { list-style: none; border-top: 1px solid var(--line); }
 .news-list li { display: grid; grid-template-columns: 7.5rem 1fr 104px; gap: 1rem 1.25rem; padding: 1rem 0; border-bottom: 1px solid var(--line); align-items: start; }
+/* News in year sections: one continuous list, as on Publications, with each heading level with its first row */
+.pub-year .news-list { border-top: 0; }
+.pub-year .news-list li:first-child { padding-top: 0; }
 .news-list .when { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; padding-top: 0.2rem; }
 .news-list time { font-size: var(--fs-sm); color: var(--muted); }
 .news-list .when .kind { margin-left: 0; }
@@ -279,7 +286,7 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 
 /* ---------- recent publications (home) ---------- */
 .recent-pubs { list-style: none; border-top: 1px solid var(--line); }
-.recent-pubs li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.25rem 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); align-items: start; }
+.recent-pubs li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0.25rem 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); align-items: start; }
 .recent-pubs .year { font-size: var(--fs-sm); color: var(--muted); padding-top: 0.2rem; }
 .recent-pubs .title { font-weight: 600; font-size: var(--fs-title); color: var(--ink); text-decoration: none; line-height: 1.4; }
 .recent-pubs a.title:hover { color: var(--purple); }
@@ -402,12 +409,15 @@ details.collapsed .pub-list { margin-top: 1rem; margin-left: 7.5rem; }   /* line
   .pub-year { grid-template-columns: 1fr; gap: 0.5rem; }
   details.collapsed .pub-list { margin-left: 0; }
 }
+/* News rows carry their own date column, so a year column beside them squeezes the headlines on tablets */
+@media (max-width: 900px) { .pub-year:has(.news-list) { grid-template-columns: 1fr; gap: 0.5rem; } }
 
 .pub-filter { margin-top: 1.2rem; }
 html:not(.js) .pub-filter { display: none; }   /* nothing drives it without script, so do not offer it */
-.pub-filter input { width: 100%; max-width: 28rem; font: inherit; font-size: var(--fs-md); color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 0.55rem 0.8rem; }
+.pub-filter input { width: 100%; max-width: 28rem; font: inherit; font-size: var(--fs-md); color: var(--ink); background: var(--paper); border: 1px solid var(--muted); border-radius: 8px; padding: 0.55rem 0.8rem; }
 .pub-filter input:focus { border-color: var(--purple); }
 .pub-none { margin-top: 1rem; color: var(--muted); font-size: var(--fs-md); }
+.pub-none:empty { margin-top: 0; }   /* the live region stays in the page from the start, but takes no room until it has a count */
 
 /* year timeline: a fixed rail in the right gutter on wide screens, a sticky strip under the header elsewhere */
 .years { position: sticky; top: var(--header-h, 61px); z-index: 40; display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; background: var(--ground); border-bottom: 1px solid var(--line); padding: 0.6rem 1.5rem; margin: 0 -1.5rem 1.25rem; scroll-padding-inline: 1.5rem; }
@@ -457,8 +467,8 @@ details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size
 .theme-pubs h3 { font-size: var(--fs-sm); font-weight: 600; color: var(--muted); margin-bottom: 0.9rem; }
 .theme-pubs ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; }
 .theme-pubs li { font-size: var(--fs-md); border-top: 1px solid var(--line); padding-top: 0.7rem; }
-.theme-pubs a { display: block; color: var(--ink); text-decoration: none; font-weight: 600; font-size: var(--fs-title); line-height: 1.4; }
-.theme-pubs a:hover { color: var(--purple); }
+.theme-pubs li a { display: block; color: var(--ink); text-decoration: none; font-weight: 600; font-size: var(--fs-title); line-height: 1.4; }
+.theme-pubs li a:hover { color: var(--purple); }
 .theme-pubs .venue { display: block; color: var(--muted); font-size: var(--fs-sm); margin-top: 0.25rem; }
 .theme figure img, .theme figure video { border-radius: var(--radius); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); background: var(--paper); }
 .theme figure.square img, .theme figure.square video { aspect-ratio: 1; }
@@ -467,7 +477,7 @@ details.collapsed summary { cursor: pointer; font-family: var(--sans); font-size
 /* two figures side by side, so a pair of small images costs a fraction of the column height */
 .figure-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .figure-pair figure img { aspect-ratio: 1; }
-@media (max-width: 800px) { .theme { grid-template-columns: 1fr; gap: 1.5rem; } }
+@media (max-width: 800px) { .theme { grid-template-columns: 1fr; gap: 1.5rem; } .theme-pubs ul { grid-template-columns: 1fr; } }
 /* Equal cells, every mark flush to the same left edge, each in a fixed-height band so rows line up.
    Mark heights come from support.yml and equalise visual area, not height: a round seal must be
    taller than a wordmark to read as the same size. */

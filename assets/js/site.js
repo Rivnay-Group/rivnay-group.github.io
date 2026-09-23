@@ -3,9 +3,12 @@
   var motionQuery = matchMedia("(prefers-reduced-motion: reduce)");
   var reduce = motionQuery.matches;
 
-  if (reduce) {
-    d.querySelectorAll("video[autoplay]").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); });
-  }
+  /* a data-autoplay clip is fetched and started only as it nears the screen, and never under reduced motion */
+  if (!reduce && "IntersectionObserver" in window) d.querySelectorAll("video[data-autoplay]").forEach(function (v) {
+    new IntersectionObserver(function (es, o) {
+      if (es[0].isIntersecting) { o.disconnect(); v.preload = "auto"; v.autoplay = true; }
+    }, { rootMargin: "400px" }).observe(v);
+  });
 
   var header = d.querySelector(".site-header");
   function setHeaderH() { if (header) root.style.setProperty("--header-h", header.offsetHeight + "px"); }
@@ -63,6 +66,8 @@
       if (d.hidden) { addEventListener("visibilitychange", start, { once: true }); return; }
       /* fetch the remaining stills now, and start the clock only once they are ready to paint */
       Promise.all(slides.map(function (s) {
+        /* the portrait <source> first: set after src, the browser would fetch both files */
+        var so = s.previousElementSibling; if (so && so.hasAttribute("data-srcset")) so.srcset = so.getAttribute("data-srcset");
         s.src = s.getAttribute("data-src") || s.src;
         return (s.decode ? s.decode() : Promise.resolve()).then(function () { return s; }, function () { s.remove(); return null; });
       })).then(function (ok) {
@@ -71,7 +76,8 @@
         if (slides.length) timer = setTimeout(turn, cur === -1 ? 9000 : 6500);
       });
     }
-    start();
+    /* after load, so the later stills do not compete with the first one, the largest paint */
+    addEventListener("load", start);
     motionQuery.addEventListener("change", function (e) {
       if (!e.matches) return;
       clearTimeout(timer); timer = 0; cur = 0;
@@ -201,11 +207,15 @@
     var older = d.querySelector("details.collapsed");
     var none = d.querySelector(".pub-none");
     var rail = d.querySelector(".years");
-    var haystack = pubs.map(function (p) { return p.textContent.toLowerCase(); });
+    /* accents and case are ignored, and each entry also answers to its year */
+    function fold(s) { return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
+    var haystack = pubs.map(function (p) { return fold(p.textContent + " " + ((p.closest(".pub-year") || {}).id || "")); });
     filter.addEventListener("input", function () {
-      var q = filter.value.trim().toLowerCase();
+      var q = filter.value.trim();
+      /* every word must appear, in any order; a pasted doi.org link is matched on the DOI alone */
+      var terms = fold(q).replace(/(https?:\/\/)?(dx\.)?doi\.org\//g, "").split(/\s+/).filter(Boolean);
       var shown = 0;
-      pubs.forEach(function (p, i) { p.hidden = !!q && haystack[i].indexOf(q) < 0; if (!p.hidden) shown++; });
+      pubs.forEach(function (p, i) { p.hidden = !!q && !terms.every(function (t) { return haystack[i].indexOf(t) >= 0; }); if (!p.hidden) shown++; });
       pubYears.forEach(function (s) {
         var empty = !!q && !s.querySelector(".pub:not([hidden])");
         s.hidden = empty;
@@ -217,7 +227,6 @@
       if (older) older.open = !!q && !!older.querySelector(".pub:not([hidden])");
       if (none) {
         none.textContent = !q ? "" : (shown ? shown + (shown === 1 ? " paper" : " papers") : "No papers match.");
-        none.hidden = !q;
       }
       /* the rail's active year is computed from what is on screen, which just changed */
       dispatchEvent(new Event("scroll"));

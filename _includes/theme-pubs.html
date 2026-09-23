@@ -6,5 +6,8 @@
     {% for w in papers %}<li><a href="https://doi.org/{{ w.doi }}">{{ w.title }}</a><span class="venue"><em>{{ w.journal }}</em>, {{ w.year }}</span></li>
     {% endfor %}
   </ul>
+  {%- if include.join %}
+  <p class="more"><a class="go" href="{{ '/join/' | relative_url }}">Join the group</a></p>
+  {%- endif %}
 </div>
 {%- endif -%}
