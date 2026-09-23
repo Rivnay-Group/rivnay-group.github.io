@@ -30,7 +30,7 @@ PEOPLE = [
     ("abhijith-surendran", "Abhi_sept_2026/5-IMG_6886.jpg"),
     ("rachel-daso",        "Rachel_sept_2026/4-IMG_6861.jpg"),
     ("catherine-beaumont", "Catherine_sept_2026/3-IMG_6880.jpg"),
-    ("john-williams",      "John_sept_2026/1 (7).png"),
+    ("john-williams",      "John_sept_2026/1.png"),
 ]
 # Haar finds only the glasses on this one frame, and John picked this frame, so the box is read off
 # the image by hand (hairline y=480 to chin y=1520, face centred on x=2590) rather than substituting a
@@ -96,14 +96,14 @@ def detect(path, loose=False):
 
 def crop(path, out, box):
     x, y, w, h = box
-    side = h / FACE_FRAC                              # the square the face should occupy 40% of
-    cx, cy = x + w / 2, y + h / 2
-    left, top = cx - side / 2, cy - side * FACE_CY
     im = ImageOps.exif_transpose(Image.open(path)).convert("RGB")
     W, H = im.size
-    left = max(0, min(left, W - side))                # keep the square inside the photo
-    top = max(0, min(top, H - side))
-    side = min(side, W, H)
+    cx, cy = x + w / 2, y + h / 2
+    # the square the face should occupy 40% of, shrunk when the photo can't hold it centred on the
+    # face: near a side edge that means a tighter crop, not a face pushed off-centre
+    side = min(h / FACE_FRAC, H, 2 * cx, 2 * (W - cx))
+    left = cx - side / 2
+    top = max(0, min(cy - side * FACE_CY, H - side))  # keep the square inside the photo
     im.crop((int(left), int(top), int(left + side), int(top + side))) \
       .resize((SIZE, SIZE), Image.LANCZOS) \
       .save(out, quality=86, optimize=True, progressive=True)
