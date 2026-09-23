@@ -198,11 +198,15 @@
     var older = d.querySelector("details.collapsed");
     var none = d.querySelector(".pub-none");
     var rail = d.querySelector(".years");
-    var haystack = pubs.map(function (p) { return p.textContent.toLowerCase(); });
+    /* accents and case are ignored, and each entry also answers to its year */
+    function fold(s) { return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
+    var haystack = pubs.map(function (p) { return fold(p.textContent + " " + ((p.closest(".pub-year") || {}).id || "")); });
     filter.addEventListener("input", function () {
-      var q = filter.value.trim().toLowerCase();
+      var q = filter.value.trim();
+      /* every word must appear, in any order; a pasted doi.org link is matched on the DOI alone */
+      var terms = fold(q).replace(/(https?:\/\/)?(dx\.)?doi\.org\//g, "").split(/\s+/).filter(Boolean);
       var shown = 0;
-      pubs.forEach(function (p, i) { p.hidden = !!q && haystack[i].indexOf(q) < 0; if (!p.hidden) shown++; });
+      pubs.forEach(function (p, i) { p.hidden = !!q && !terms.every(function (t) { return haystack[i].indexOf(t) >= 0; }); if (!p.hidden) shown++; });
       pubYears.forEach(function (s) {
         var empty = !!q && !s.querySelector(".pub:not([hidden])");
         s.hidden = empty;
@@ -214,7 +218,6 @@
       if (older) older.open = !!q && !!older.querySelector(".pub:not([hidden])");
       if (none) {
         none.textContent = !q ? "" : (shown ? shown + (shown === 1 ? " paper" : " papers") : "No papers match.");
-        none.hidden = !q;
       }
       /* the rail's active year is computed from what is on screen, which just changed */
       dispatchEvent(new Event("scroll"));
