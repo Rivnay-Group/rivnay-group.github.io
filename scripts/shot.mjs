@@ -18,7 +18,7 @@
 // A failed navigation, an HTTP status >= 400 or a load that never fires is an error, not a silent
 // measurement of an error page (--allow-error measures it anyway). Chrome and its profile dir are always
 // cleaned up, including on failure. Chrome's plain --screenshot ignores widths under ~500px, hence this.
-import { spawn } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 import { mkdtempSync, readFileSync, writeFileSync, existsSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -45,13 +45,13 @@ const chrome = spawn("/Applications/Google Chrome.app/Contents/MacOS/Google Chro
   `--user-data-dir=${dir}`, "--remote-debugging-port=0", `--window-size=${width},${height}`,
   ...(has("--nojs") ? ["--blink-settings=scriptEnabled=false"] : []),
   "about:blank",
-], { stdio: ["ignore", "ignore", "pipe"] });
+], { stdio: "ignore" });   // an unread pipe kept node alive behind helpers that inherit it
 let sock;
 /* hard stop: nothing below may run unbounded, and the browser must never outlive this process */
 const watchdog = setTimeout(function () {
   console.error(`shot.mjs: exceeded ${maxRuntime} ms, aborting (${url})`);
   try { if (sock) sock.close(); } catch {}
-  try { chrome.kill("SIGKILL"); } catch {}
+  try { spawnSync("pkill", ["-9", "-f", dir]); } catch {}   // the browser and every helper
   try { rmSync(dir, { recursive: true, force: true }); } catch {}
   process.exit(124);
 }, maxRuntime);
@@ -158,11 +158,13 @@ try {
     console.error("wrote", shot);
   }
 } finally {
-  clearTimeout(watchdog);
   try { if (sock) sock.close(); } catch {}
-  chrome.kill();
+  /* the whole tree, not just the main process: SIGTERM alone left Chrome alive under load and its
+     helpers (which carry the profile path in their argv) orphaned */
+  spawnSync("pkill", ["-9", "-f", dir]);
   /* wait for it to actually exit: kill() only sends the signal, and a Chrome still shutting down
      writes its profile back over a directory we have already deleted */
-  await new Promise((r) => { chrome.once("exit", r); setTimeout(r, 3000); });
+  await new Promise((r) => { chrome.once("exit", r); setTimeout(r, 3000).unref(); });
   try { rmSync(dir, { recursive: true, force: true }); } catch {}
+  clearTimeout(watchdog);   // only now: a cleanup that stalls is still bounded by the runtime budget
 }
