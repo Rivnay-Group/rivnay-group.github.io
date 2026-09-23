@@ -3,9 +3,12 @@
   var motionQuery = matchMedia("(prefers-reduced-motion: reduce)");
   var reduce = motionQuery.matches;
 
-  if (reduce) {
-    d.querySelectorAll("video[autoplay]").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); });
-  }
+  /* a data-autoplay clip is fetched and started only as it nears the screen, and never under reduced motion */
+  if (!reduce && "IntersectionObserver" in window) d.querySelectorAll("video[data-autoplay]").forEach(function (v) {
+    new IntersectionObserver(function (es, o) {
+      if (es[0].isIntersecting) { o.disconnect(); v.preload = "auto"; v.autoplay = true; }
+    }, { rootMargin: "400px" }).observe(v);
+  });
 
   var header = d.querySelector(".site-header");
   function setHeaderH() { if (header) root.style.setProperty("--header-h", header.offsetHeight + "px"); }
@@ -60,6 +63,8 @@
       if (d.hidden) { addEventListener("visibilitychange", start, { once: true }); return; }
       /* fetch the remaining stills now, and start the clock only once they are ready to paint */
       Promise.all(slides.map(function (s) {
+        /* the portrait <source> first: set after src, the browser would fetch both files */
+        var so = s.previousElementSibling; if (so && so.hasAttribute("data-srcset")) so.srcset = so.getAttribute("data-srcset");
         s.src = s.getAttribute("data-src") || s.src;
         return (s.decode ? s.decode() : Promise.resolve()).then(function () { return s; }, function () { s.remove(); return null; });
       })).then(function (ok) {
@@ -68,7 +73,8 @@
         if (slides.length) timer = setTimeout(turn, cur === -1 ? 9000 : 6500);
       });
     }
-    start();
+    /* after load, so the later stills do not compete with the first one, the largest paint */
+    addEventListener("load", start);
     motionQuery.addEventListener("change", function (e) {
       if (!e.matches) return;
       clearTimeout(timer); timer = 0; cur = 0;
