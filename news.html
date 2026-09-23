@@ -49,7 +49,7 @@ redirect_from:
       <li class="reveal">
         <p class="when"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>{% if post.kind %}<span class="kind">{{ post.kind }}</span>{% endif %}</p>
         <div>
-          <p class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
+          <p class="title"><a href="{{ post.url | relative_url }}">{{ post.title | smartify }}</a></p>
           {% assign ex = post.excerpt | strip_html | strip | truncatewords: 32 %}
           {% if ex != "" %}<p class="excerpt">{{ ex }}</p>{% endif %}
         </div>

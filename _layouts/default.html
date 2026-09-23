@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}{% feed_meta %}
+  {% seo %}{% feed_meta %}{% if page.collection == "posts" and page.image == nil %}<meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}">{% endif %}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" sizes="16x16 32x32 48x48">
   <link rel="icon" href="{{ '/assets/icon-r.svg' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" type="image/svg+xml">
   <link rel="icon" href="{{ '/assets/icon-r-32.png' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" type="image/png" sizes="32x32">
@@ -63,8 +63,8 @@
       <h2>Location</h2>
       <address>Silverman Hall, Room 4710<br>2170 Campus Drive<br>Evanston, IL 60208</address>
     </div>
-    <a class="nu" href="https://www.northwestern.edu"><img src="{{ '/assets/img/northwestern.svg' | relative_url }}" alt="Northwestern University" width="196" height="24"></a>
-    <p class="fine">&copy; {{ site.time | date: "%Y" }} Rivnay Group</p>
+    <a class="nu" href="https://www.northwestern.edu"><img src="{{ '/assets/img/northwestern.svg' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" alt="Northwestern University" width="196" height="24"></a>
+    <p class="fine">&copy; {{ site.time | date: "%Y" }} Rivnay Group &middot; <a href="https://www.northwestern.edu/accessibility/report/">Accessibility</a></p>
   </div>
 </footer>
 <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>

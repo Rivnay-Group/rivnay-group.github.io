@@ -4,9 +4,9 @@ layout: default
 <article class="wrap">
   <header class="post-head">
     <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.kind %} <span class="kind">{{ page.kind }}</span>{% endif %}</p>
-    <h1>{{ page.title }}</h1>
+    <h1>{{ page.title | smartify }}</h1>
   </header>
-  {% if page.image %}<figure class="post-figure"><img src="{{ page.image | relative_url }}" alt=""{% if page.image_width %} width="{{ page.image_width }}" height="{{ page.image_height }}"{% endif %}>{% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}</figure>{% endif %}
+  {% if page.image %}<figure class="post-figure"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"{% if page.image_width %} width="{{ page.image_width }}" height="{{ page.image_height }}" style="max-width: min(100%, {{ page.image_width | times: 560 | divided_by: page.image_height }}px)"{% endif %}>{% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}</figure>{% endif %}
   <div class="prose post-body">
     {{ content }}
     {%- if page.link %}{% unless content contains page.link %}
@@ -27,8 +27,8 @@ layout: default
   </div>
   {% if page.previous or page.next %}
   <nav class="post-nav" aria-label="More news">
-    {% if page.previous %}<a class="back" rel="prev" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
-    {% if page.next %}<a class="go" rel="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>{% endif %}
+    {% if page.previous %}<a class="back" rel="prev" href="{{ page.previous.url | relative_url }}">{{ page.previous.title | smartify }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a class="go" rel="next" href="{{ page.next.url | relative_url }}">{{ page.next.title | smartify }}</a>{% endif %}
   </nav>
   {% endif %}
 </article>

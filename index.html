@@ -12,7 +12,7 @@ redirect_from:
   <img class="hero-slide" data-src="{{ '/assets/img/hero/fibers.jpg' | relative_url }}" alt="" width="2800" height="1000" decoding="async" style="object-position: 68% 50%">
   <img class="hero-slide" data-src="{{ '/assets/img/hero/d7-die.jpg' | relative_url }}" alt="" width="2800" height="1000" decoding="async">
   <div class="wrap">
-    <img class="mark" src="{{ '/assets/img/monogram-white.svg' | relative_url }}" alt="" width="150" height="182">
+    <img class="mark" src="{{ '/assets/img/monogram-white.svg' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" alt="" width="150" height="182">
     <div class="text">
       <h1>Laboratory for<br>Organic &amp; Hybrid<br>Bioelectronics</h1>
     </div>
@@ -60,7 +60,7 @@ redirect_from:
       <li class="reveal">
         <p class="when"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.kind %}<span class="kind">{{ post.kind }}</span>{% endif %}</p>
         <div>
-          <p class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
+          <p class="title"><a href="{{ post.url | relative_url }}">{{ post.title | smartify }}</a></p>
           {% assign ex = post.excerpt | strip_html | strip | truncatewords: 24 %}
           {% if ex != "" %}<p class="excerpt">{{ ex }}</p>{% endif %}
         </div>
