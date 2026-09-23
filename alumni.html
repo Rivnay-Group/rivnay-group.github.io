@@ -20,7 +20,7 @@ permalink: /alumni/
       <thead><tr><th>Name</th><th>Year</th><th>Now</th></tr></thead>
       <tbody>
         {% include sorted.html list=list %}
-        {% for row in order %}{% assign i = row | split: "~" | last | minus: 100 %}{% assign a = list[i] %}<tr><td>{% if a.linkedin %}<a href="{{ a.linkedin }}" rel="noopener">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</td><td class="year">{{ a.year }}</td><td>{% if a.now %}{{ a.now }}{% if a.role %} ({{ a.role }}){% endif %}{% else %}<span class="muted" aria-label="not known">&ndash;</span>{% endif %}</td></tr>
+        {% for row in order %}{% assign i = row | split: "~" | last | minus: 100 %}{% assign a = list[i] %}<tr><td>{% if a.linkedin %}<a href="{{ a.linkedin }}" rel="noopener">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</td><td class="year">{{ a.year }}</td><td>{% if a.now %}{{ a.now }}{% if a.role %} ({{ a.role }}){% endif %}{% else %}<span class="muted" role="img" aria-label="not known">&ndash;</span>{% endif %}</td></tr>
         {% endfor %}
       </tbody>
     </table>

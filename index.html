@@ -81,8 +81,8 @@ redirect_from:
       <li class="reveal">
         <span class="year">{{ p.year }}</span>
         <div>
-          {% if p.doi %}<a class="title" href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}<span class="title">{{ p.title }}</span>{% endif %}
-          <p class="venue"><em>{{ p.journal }}</em></p>
+          {% if p.doi %}<a class="title" href="https://doi.org/{{ p.doi | escape }}">{{ p.title | escape }}</a>{% else %}<span class="title">{{ p.title | escape }}</span>{% endif %}
+          <p class="venue"><em>{{ p.journal | escape }}</em></p>
         </div>
       </li>
       {% endfor %}

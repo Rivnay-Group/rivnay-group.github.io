@@ -5,12 +5,12 @@ permalink: /team/
 image: /assets/img/team-2026.jpg
 snap: true
 redirect_from:
+  - /people
+  - /people/
   - /people-1
   - /people-1/
   - /people-1-1
   - /people-1-1/
-  - /jonathan-rivnay
-  - /jonathan-rivnay/
 ---
 <section class="team-stage">
   <div class="wrap">
@@ -30,8 +30,8 @@ redirect_from:
   {% if pi %}
   <section class="group">
     <h2>Principal investigator</h2>
-    <div class="pi reveal">
-      <img src="{{ '/assets/img/people/' | append: pi.photo | relative_url }}" alt="{{ pi.name }}" width="200" height="200">
+    <div class="pi reveal" id="{{ pi.name | slugify }}">
+      <img src="{{ '/assets/img/people/' | append: pi.photo | relative_url }}" alt="" width="200" height="200">
       <div>
         <h3>{{ pi.name }}</h3>
         <p class="role">{{ pi.role }}</p>

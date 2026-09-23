@@ -1,0 +1,10 @@
+{%- assign papers = site.data.theme_papers[include.key] -%}
+{%- if papers -%}
+<div class="theme-pubs">
+  <h3>Selected papers</h3>
+  <ul>
+    {% for w in papers %}<li><a href="https://doi.org/{{ w.doi }}">{{ w.title }}</a><span class="venue"><em>{{ w.journal }}</em>, {{ w.year }}</span></li>
+    {% endfor %}
+  </ul>
+</div>
+{%- endif -%}

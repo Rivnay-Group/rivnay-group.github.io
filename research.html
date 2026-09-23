@@ -37,16 +37,7 @@ redirect_from:
         <figcaption>Fluorescence image of encapsulated cell clusters, the “cell factories” of a biohybrid implant.</figcaption>
       </figure>
     </div>
-  {%- assign papers = site.data.theme_papers["living-electronics"] -%}
-  {%- if papers -%}
-  <div class="theme-pubs">
-    <h3>Selected papers</h3>
-    <ul>
-      {% for w in papers %}<li><a href="https://doi.org/{{ w.doi }}">{{ w.title }}</a><span class="venue"><em>{{ w.journal }}</em>, {{ w.year }}</span></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {%- endif -%}
+  {%- include theme-pubs.html key="living-electronics" -%}
 </section>
 
   <section class="theme reveal" id="materials">
@@ -77,16 +68,7 @@ redirect_from:
         <figcaption>Operando GIWAXS of a glycolated polythiophene (P3MEEET) in NaCl electrolyte.</figcaption>
       </figure>
     </div>
-  {%- assign papers = site.data.theme_papers["materials"] -%}
-  {%- if papers -%}
-  <div class="theme-pubs">
-    <h3>Selected papers</h3>
-    <ul>
-      {% for w in papers %}<li><a href="https://doi.org/{{ w.doi }}">{{ w.title }}</a><span class="venue"><em>{{ w.journal }}</em>, {{ w.year }}</span></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {%- endif -%}
+  {%- include theme-pubs.html key="materials" -%}
 </section>
 
   <section class="theme reveal" id="sensors">
@@ -111,16 +93,7 @@ redirect_from:
         <figcaption>Devices for on-site oxygen generation.</figcaption>
       </figure>
     </div>
-  {%- assign papers = site.data.theme_papers["sensors"] -%}
-  {%- if papers -%}
-  <div class="theme-pubs">
-    <h3>Selected papers</h3>
-    <ul>
-      {% for w in papers %}<li><a href="https://doi.org/{{ w.doi }}">{{ w.title }}</a><span class="venue"><em>{{ w.journal }}</em>, {{ w.year }}</span></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {%- endif -%}
+  {%- include theme-pubs.html key="sensors" -%}
 </section>
 
   <section class="theme reveal" id="applications">
@@ -147,16 +120,7 @@ redirect_from:
         <figcaption>PEDOT fiber in engineered skeletal muscle, Masson's trichrome stain.</figcaption>
       </figure>
     </div>
-  {%- assign papers = site.data.theme_papers["applications"] -%}
-  {%- if papers -%}
-  <div class="theme-pubs">
-    <h3>Selected papers</h3>
-    <ul>
-      {% for w in papers %}<li><a href="https://doi.org/{{ w.doi }}">{{ w.title }}</a><span class="venue"><em>{{ w.journal }}</em>, {{ w.year }}</span></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {%- endif -%}
+  {%- include theme-pubs.html key="applications" -%}
   <p class="more"><a class="go" href="{{ '/join/' | relative_url }}">Join the group</a></p>
 </section>
 
