@@ -5,8 +5,8 @@ Generated from lab originals; sources are not modified. Unless its Notes say oth
 | File | Source | Dimensions | Bytes | Notes |
 |---|---|---|---|---|
 | `img/og-image.jpg` | `img/research/giwaxs-poster.jpg` (frame 0 of the P3MEEET GIWAXS clip) | 1200x630 | 33261 | bottom-weighted crop for social previews |
-| `img/research/giwaxs-poster.jpg` | `website/science photos/GIWAXS_P3MEEET_HighMw_NaCl.mp4` | 1029x1064 | 60,386 | frame 0 (t=0) decoded with cv2, cropped to the 1029 px display width; q82 |
-| `video/giwaxs-p3meeet.mp4` | `website/science photos/GIWAXS_P3MEEET_HighMw_NaCl.mp4` | 1029x1064 (5 s) | 1,884,203 | byte-identical copy, 5 s |
+| `img/research/giwaxs-poster.jpg` | `website/science photos/GIWAXS_P3MEEET_HighMw_NaCl.mp4` | 1029x368 | 21,128 | frame 0 (t=0) decoded with cv2, cropped to the 1029 px display width, then to the hero band (0,556)-(1029,924); q82 |
+| `video/giwaxs-p3meeet.mp4` | `website/science photos/GIWAXS_P3MEEET_HighMw_NaCl.mp4` | 1030x368 (5 s) | 241,928 | the hero band only: `ffmpeg -vf crop=1030:368:0:556 -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -an -movflags +faststart`; 72 fps, 5 s, as the 1030x1064 source |
 | `img/research/pedot-fiber-histology.jpg` | `website/science photos/PEDOT fiber in ESKM_Masson_s trichrome staining.tif` | 1600x1200 | 297,132 | full frame; q71 |
 | `img/research/organoid-die.jpg` | `website/organoid sensor/on wafer/full die.png` | 1600x1067 | 161,420 | full frame; q82 |
 | `img/research/organoid-assembly.jpg` | `website/organoid sensor/full assembly/1.png` | 1600x1067 | 225,496 | 3:2 crop (1489,876)-(6745,4380) centred on holder and gloved hand; q82 |
