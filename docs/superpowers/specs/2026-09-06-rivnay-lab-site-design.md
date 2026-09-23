@@ -1,3 +1,5 @@
+> Superseded historical record of the first build (2026-09-06). The live site, README and later owner decisions win where they differ; docs/copy was removed and is in git history.
+
 # Rivnay Group website — design spec
 
 Date: 2026-09-06. Replaces the Squarespace site at rivnay.northwestern.edu.
