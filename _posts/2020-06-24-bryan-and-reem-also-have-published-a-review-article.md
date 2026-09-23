@@ -4,8 +4,8 @@ date: 2020-06-24
 kind: paper
 image: /assets/img/news/2020-06-24-bryan-and-reem-also-have-published-a-review-article.jpg
 link: https://onlinelibrary.wiley.com/doi/full/10.1002/adma.201908047
-image_width: 928
-image_height: 1226
+image_width: 914
+image_height: 1212
 redirect_from:
   - /new-blog/2020/6/24/bryan-and-reem-also-have-published-a-review-article-in-advanced-materials/
   - /new-blog/2020/6/24/bryan-and-reem-also-have-published-a-review-article-in-advanced-materials

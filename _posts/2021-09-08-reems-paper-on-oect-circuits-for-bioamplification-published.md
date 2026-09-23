@@ -10,7 +10,7 @@ redirect_from:
   - /new-blog/2021/9/8/reems-paper-on-oect-circuits-for-bioamplification-published-in-science-advances/
   - /new-blog/2021/9/8/reems-paper-on-oect-circuits-for-bioamplification-published-in-science-advances
 ---
-Reem has published a new paper which focuses on means to make “back end” electronics more usable in more compact means, which could revolutionize how medicine utilizes bioelectronics in the body.
+Reem has published a new paper which focuses on means to make “back end” electronics more usable in more compact form, which could revolutionize how medicine utilizes bioelectronics in the body.
 
 Congratulations, Reem!
 

@@ -7,7 +7,7 @@ redirect_from:
   - /new-blog/2021/8/30/darpa-project-for-implantable-living-pharmacy-that-would-help-regulate-bodys-sleepwake-cycles-kicks-off/
   - /new-blog/2021/8/30/darpa-project-for-implantable-living-pharmacy-that-would-help-regulate-bodys-sleepwake-cycles-kicks-off
 ---
-Our lab has received a cooperative agreement with DARPA to develop a wireless, fully implantable ‘living pharmacy’ device that could help regulate human sleep patterns. The project is through the DARPA BTO (Biotechnology Office) [Advanced Acclimation and Protection Tool for Environmental Readiness (ADAPTER) program](https://www.darpa.mil/news-events/2020-04-06), meant to address physical challenges of travel, such as jet lag and fatigue.
+Our lab has received a cooperative agreement with DARPA to develop a wireless, fully implantable ‘living pharmacy’ device that could help regulate human sleep patterns. The project is through the DARPA BTO (Biological Technologies Office) [Advanced Acclimation and Protection Tool for Environmental Readiness (ADAPTER) program](https://www.darpa.mil/news-events/2020-04-06), meant to address physical challenges of travel, such as jet lag and fatigue.
 
 The device, called NTRAIN (Normalizing Timing of Rhythms Across Internal Networks of Circadian Clocks), would control the body’s circadian clock, reducing the time it takes for a person to recover from disrupted sleep/wake cycles by as much as half the usual time.
 

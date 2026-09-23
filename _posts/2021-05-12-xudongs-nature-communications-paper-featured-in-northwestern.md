@@ -4,8 +4,8 @@ date: 2021-05-12
 kind: paper
 image: /assets/img/news/2021-05-12-xudongs-nature-communications-paper-featured-in-northwestern.jpg
 link: https://www.nature.com/articles/s41467-021-22680-5
-image_width: 1312
-image_height: 1440
+image_width: 1298
+image_height: 1426
 redirect_from:
   - /new-blog/2021/5/12/xudongs-nature-communications-paper-featured-in-northwestern-now/
   - /new-blog/2021/5/12/xudongs-nature-communications-paper-featured-in-northwestern-now

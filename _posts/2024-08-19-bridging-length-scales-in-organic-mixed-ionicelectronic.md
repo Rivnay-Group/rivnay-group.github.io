@@ -11,7 +11,7 @@ Disordered systems, especially polymers, play an important role in shaping our m
 
 [Read the paper](https://www.nature.com/articles/s41563-024-01813-3)
 
-In this work, we revealed the tiny deformations and complex structural changes in water-swelled polymers in response to external voltages, uncovering the evolution of disordered polymer systems. Using a novel technique, X-ray photon correlation spectroscopy (XPCS), to monitor deformation with sub-second time resolution, we found that the voltage application pathway significantly affects the polymer's stability and structural changes.
+In this work, we revealed the tiny deformations and complex structural changes in water-swollen polymers in response to external voltages, uncovering the evolution of disordered polymer systems. Using a novel technique, X-ray photon correlation spectroscopy (XPCS), to monitor deformation with sub-second time resolution, we found that the voltage application pathway significantly affects the polymer's stability and structural changes.
 
 Unusual long-term asymmetry was observed between de-doping and re-doping. De-doping quickly reaches mesoscale equilibration due to moving structural distortions from coupled electronic/ionic motion (polarons). In contrast, re-doping shows a persistent non-equilibrium process with evolving mesoscale structures, driven by complex interactions among solvent, ions, electrons, and polymer networks, and significantly modified by the rapid generation of multi-charged species (e.g., bipolarons).
 

@@ -3,6 +3,7 @@
 # than one word, set `sort:` (see Malva De Boor).
 # `now` is the institution or company only, written out in full; `role` adds an academic position
 # in brackets (faculty, postdoc, PhD student, MD student, MD/PhD student, resident, undergraduate).
+# group: faculty | staff | postdoc | phd | masters | undergrad (lowercase; any other value is not shown)
 - name: Giovanni Maria Matrone
   sort: Matrone
   group: postdoc
@@ -54,7 +55,7 @@
   now: Stanford University
   role: postdoc
   linkedin: https://www.linkedin.com/in/xinran-xie-b3656a1ab/
-- name: Naedum Domnwachukwu
+- name: Naedum DomNwachukwu
   group: phd
   year: 2026
   now: Northwestern University Feinberg School of Medicine

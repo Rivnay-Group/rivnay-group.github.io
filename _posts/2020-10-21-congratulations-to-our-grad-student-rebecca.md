@@ -10,4 +10,4 @@ The Northwestern Predoctoral Biotechnology Training Program is an interdisciplin
 
 Congrats, Rebecca!
 
-[Read more about the program here](http://www.biotechtraining.northwestern.edu/index.html)
+[Read more about the program here](https://www.biotechtraining.northwestern.edu/index.html)
