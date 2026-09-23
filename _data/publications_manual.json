@@ -18,7 +18,8 @@
   "W2625962827",
   "10.3389/conf.fbioe.2016.01.00748",
   "W2508044097",
-  "W2761775791"
+  "W2761775791",
+  "W7115575146"
  ],
  "add": [
   {
@@ -32,6 +33,18 @@
    "doi": "10.1039/C5TC02043C",
    "openalex": null,
    "pre_northwestern": true
+  },
+  {
+   "year": 2026,
+   "authors": "N. I. DomNwachukwu, M. D. Bailey, M. Luo, J. Schiff, A. Brotherton, B. Phillips-Sorich, J. Rivnay, T. J. Meade",
+   "title": "Targeted gadolinium-labeled gold nanoparticles for MR imaging of C-reactive protein",
+   "journal": "Journal of Inorganic Biochemistry",
+   "volume": "276",
+   "pages": "113195",
+   "doi": "10.1016/j.jinorgbio.2025.113195"
   }
+ ],
+ "oa_via_doi": [
+  "10.36021/jethe.v4i3.249"
  ]
 }
