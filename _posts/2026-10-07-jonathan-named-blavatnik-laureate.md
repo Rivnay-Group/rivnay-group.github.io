@@ -20,6 +20,8 @@ A living pharmacy is a tool expected to promote tailored dosing of therapeutics.
 
 The Laureates were announced on October 6 at New York's American Museum of Natural History.
 
+"I'm humbled to be recognized alongside so many outstanding finalists doing such impactful work," Jonathan said in [Northwestern Engineering's story](https://www.mccormick.northwestern.edu/news/articles/2026/10/jonathan-rivnay-receives-blavatnik-award-for-young-scientists/).
+
 Congratulations, Jonathan!
 
 You can read the [full press release](https://blavatnikawards.org/news/items/three-scientists-honored-250000-blavatnik-awards-breakthroughs-organic-chemistry-gene-editing-and-bioelectronics/) from the Blavatnik Awards and Jonathan's [honoree profile](https://blavatnikawards.org/honorees/profile/jonathan-rivnay/).
