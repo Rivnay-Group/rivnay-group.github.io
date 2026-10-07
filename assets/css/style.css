@@ -497,6 +497,7 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .post-body img { border-radius: var(--radius); margin: 1.75rem 0; border: 1px solid var(--line); width: 100%; height: auto; }
 .post-body figure { margin: 1.75rem 0; }
 .post-body figure img, .post-body .pair img { margin: 0; }
+.post-body iframe { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }   /* an embedded video (YouTube) in a <figure>, framed like an image */
 .post-body .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.75rem 0 0; }
 .post-body .figcap { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; line-height: 1.45; }
 .back { display: inline-block; margin-top: 2rem; font-size: var(--fs-sm); text-decoration: none; font-weight: 500; }
