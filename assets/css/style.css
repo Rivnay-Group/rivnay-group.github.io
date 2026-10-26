@@ -496,9 +496,11 @@ article.wrap { max-width: calc(42rem + 3rem); }
 .post-figure img { border-radius: var(--radius); border: 1px solid var(--line); max-width: 100%; height: auto; margin-inline: auto; }
 .post-body img { border-radius: var(--radius); margin: 1.75rem 0; border: 1px solid var(--line); width: 100%; height: auto; }
 .post-body figure { margin: 1.75rem 0; }
-.post-body figure img, .post-body .pair img { margin: 0; }
+.post-body figure img, .post-body .pair img, .post-body .mosaic img { margin: 0; }
 .post-body iframe { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }   /* an embedded video (YouTube) in a <figure>, framed like an image */
 .post-body .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.75rem 0 0; }
+.post-body .mosaic { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.75rem 0 0; }   /* two landscape photos stacked beside a .tall portrait */
+.post-body .mosaic .tall { grid-row: span 2; height: 0; min-height: 100%; object-fit: cover; }   /* fills the height the landscapes set instead of setting it */
 .post-body .figcap { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; line-height: 1.45; }
 .back { display: inline-block; margin-top: 2rem; font-size: var(--fs-sm); text-decoration: none; font-weight: 500; }
 .post-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem 1.5rem; flex-wrap: wrap; }
