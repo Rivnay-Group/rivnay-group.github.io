@@ -9,6 +9,8 @@ image_caption: "From left, 2026 Laureates David Nagib, Jonathan Rivnay, and Patr
 ---
 Jonathan Rivnay has been named the 2026 Blavatnik National Awards Laureate in Physical Sciences & Engineering, one of three Laureates chosen from 372 nominees nationwide. Each Laureate receives $250,000, the largest unrestricted prize for early-career scientists in the country.
 
+![](/assets/img/news/2026-10-07-blavatnik-medal.jpg){: width="933" height="1400" loading="lazy" style="width:420px;margin-inline:auto"}
+
 Jonathan, who was [named one of 18 Finalists]({{ '/news/2026/09/16/jonathan-named-blavatnik-finalist/' | relative_url }}){:.go} in September, was recognized for “pioneering bioelectronic materials and implantable ‘living pharmacies’ that combine engineered cells with electronics, advancing personalized therapies for cancer, diabetes, and sleep disorders.”
 
 A living pharmacy is a tool expected to promote tailored dosing of therapeutics. It consists of a small implant that holds engineered cells, which, when stimulated, produce and release medicines inside the body.
@@ -20,8 +22,12 @@ A living pharmacy is a tool expected to promote tailored dosing of therapeutics.
 
 The Laureates were announced on October 6 at New York's American Museum of Natural History.
 
+![](/assets/img/news/2026-10-07-blavatnik-honorees.jpg){: width="1400" height="931" loading="lazy"}
+
 "I'm humbled to be recognized alongside so many outstanding finalists doing such impactful work," Jonathan said in [Northwestern Engineering's story](https://www.mccormick.northwestern.edu/news/articles/2026/10/jonathan-rivnay-receives-blavatnik-award-for-young-scientists/).
 
 Congratulations, Jonathan!
+
+![](/assets/img/news/2026-10-07-blavatnik-toast.jpg){: width="1400" height="933" loading="lazy"}
 
 You can read the [full press release](https://blavatnikawards.org/news/items/three-scientists-honored-250000-blavatnik-awards-breakthroughs-organic-chemistry-gene-editing-and-bioelectronics/) from the Blavatnik Awards and Jonathan's [honoree profile](https://blavatnikawards.org/honorees/profile/jonathan-rivnay/).
