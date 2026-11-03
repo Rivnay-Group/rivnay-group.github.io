@@ -37,7 +37,6 @@ import html
 import json
 import re
 import sys
-import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -49,7 +48,8 @@ OLD_LIST = ROOT / "scripts" / "old-site-publications.txt"
 AUTHOR = "A5066036682"
 FIELDS = ("id,doi,title,display_name,publication_year,publication_date,type,"
           "primary_location,authorships,biblio,ids,open_access,is_retracted,created_date")
-API = ("https://api.openalex.org/works?filter=author.id:%s&per-page=200&cursor=%%s"
+# page= rather than cursor=: OpenAlex wants an API key to cursor past page 1 (as of Nov 2026)
+API = ("https://api.openalex.org/works?filter=author.id:%s&per-page=200&page=%%d"
        "&select=%s" % (AUTHOR, FIELDS))
 
 KEEP_TYPES = {"article", "book-chapter", "review"}
@@ -90,15 +90,20 @@ def norm_doi(s):
 
 
 def fetch_live():
-    works, cursor = [], "*"
-    while cursor:
-        req = urllib.request.Request(API % urllib.parse.quote(cursor),
-                                     headers={"User-Agent": "rivnay-lab-site/1.0"})
+    works, n = [], 0
+    while True:
+        n += 1
+        req = urllib.request.Request(API % n, headers={"User-Agent": "rivnay-lab-site/1.0"})
         with urllib.request.urlopen(req, timeout=60) as r:
             page = json.load(r)
         works += page["results"]
-        cursor = page["meta"].get("next_cursor")
-        print("fetched %d works" % len(works), file=sys.stderr)
+        total = page["meta"]["count"]
+        print("fetched %d of %d works" % (len(works), total), file=sys.stderr)
+        if not page["results"] or len(works) >= total:
+            break
+    got = len({w["id"] for w in works})
+    if got < total:  # page= is not a snapshot: a work can shift across a page boundary
+        sys.exit("OpenAlex returned %d distinct works of %d; rerun" % (got, total))
     return works
 
 
