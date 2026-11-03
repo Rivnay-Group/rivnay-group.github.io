@@ -1,12 +1,38 @@
 [
  {
   "year": 2026,
-  "authors": "E. A. Hussein, B. Utebay, E. A. Schafer, N. P. Kamat, J. Rivnay, N. Lavrik, S. A. Sarles",
-  "title": "Microbarrier-confined droplet bilayers on PEDOT:PSS enable high-resistance, dynamically addressable bioelectronic interfaces",
-  "journal": "The Analyst",
+  "authors": "Z. Laswick, A. Lifer, C. Beaumont, L. Hayoun, P. Cavassin, Z. Hamid, D. Meli, W. Dupont, L. J. Lauhon, I. McCulloch, G. L. Frey, G. M. Matrone, J. Rivnay",
+  "title": "Blending With Insulating Polymers Enables Stable Anti-Ambipolar Characteristics in n-Type Organic Mixed-Conductors for Heterogeneous Spiking Neurons",
+  "journal": "Advanced Materials",
   "volume": null,
   "issue": null,
   "pages": null,
+  "doi": "10.1002/adma.75538",
+  "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.75538",
+  "openalex": "W7225001068",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2026,
+  "authors": "Y. Wang, R. M. Pankow, Y. Yao, M. Wu, Y. Cho, V. K. Sangwan, G. Forti, I. Duplessis, L. Gao, Q. Ma, D. Zhang, S. Chung, K. Cho, Q. Lai, D. Zheng, J. Rivnay, M. C. Hersam, A. Facchetti, T. J. Marks",
+  "title": "Impact of the Conjugated Polymer Sidechain Composition on the Performance Metrics of Organic Electrochemical Transistors With Vertical vs. Conventional Architectures",
+  "journal": "Advanced Functional Materials",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": "10.1002/adfm.78570",
+  "oa": null,
+  "openalex": "W7214323737",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2026,
+  "authors": "E. A. Hussein, B. Utebay, E. A. Schafer, N. P. Kamat, J. Rivnay, N. Lavrik, S. A. Sarles",
+  "title": "Microbarrier-confined droplet bilayers on PEDOT:PSS enable high-resistance, dynamically addressable bioelectronic interfaces",
+  "journal": "The Analyst",
+  "volume": "151",
+  "issue": "19",
+  "pages": "5634-5641",
   "doi": "10.1039/d6an00737f",
   "oa": "https://pubs.rsc.org/an/article-pdf/doi/10.1039/D6AN00737F/14703642/d6an00737f.pdf",
   "openalex": "W7213364271",
@@ -17,8 +43,8 @@
   "authors": "D. Gunturkun, D. Meli, M. Kuhn, E. M. Herzig, J. Rivnay, C. B. Nielsen",
   "title": "Backbone Engineering of Benzodifurandione-Based n-Type OMIECs With Antiambipolar Behavior",
   "journal": "Advanced Electronic Materials",
-  "volume": null,
-  "issue": null,
+  "volume": "12",
+  "issue": "18",
   "pages": null,
   "doi": "10.1002/aelm.70567",
   "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aelm.70567",
@@ -86,7 +112,7 @@
   "issue": "5",
   "pages": "101106",
   "doi": "10.1016/j.device.2026.101106",
-  "oa": null,
+  "oa": "https://doi.org/10.2139/ssrn.5871049",
   "openalex": "W7141260435",
   "pre_northwestern": false
  },
@@ -216,7 +242,7 @@
   "issue": "42",
   "pages": null,
   "doi": "10.1002/adfm.202508859",
-  "oa": null,
+  "oa": "https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2025-6n1bn",
   "openalex": "W4413308096",
   "pre_northwestern": false
  },
@@ -309,19 +335,6 @@
   "doi": "10.1002/aelm.202400526",
   "oa": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aelm.202400526",
   "openalex": "W4404053499",
-  "pre_northwestern": false
- },
- {
-  "year": 2024,
-  "authors": "J. Rivnay, P. E. Sheehan, O. Veiseh",
-  "title": "Are implantable, living pharmacies within reach?",
-  "journal": "Science",
-  "volume": "386",
-  "issue": "6719",
-  "pages": "271-273",
-  "doi": "10.1126/science.adq5182",
-  "oa": null,
-  "openalex": "W4403510344",
   "pre_northwestern": false
  },
  {
@@ -520,6 +533,19 @@
   "pre_northwestern": false
  },
  {
+  "year": 2024,
+  "authors": "J. Rivnay, P. E. Sheehan, O. Veiseh",
+  "title": "Are implantable, living pharmacies within reach?",
+  "journal": "Science",
+  "volume": "386",
+  "issue": "6719",
+  "pages": "271-273",
+  "doi": "10.1126/science.adq5182",
+  "oa": null,
+  "openalex": "W4403510344",
+  "pre_northwestern": false
+ },
+ {
   "year": 2023,
   "authors": "I. Lee, A. Surendran, S. Fleury, I. Gimino, A. Curtiss, C. Fell, D. J. Shiwarski, O. Refy, B. Rothrock, S. Jo, T. Schwartzkopff, A. S. Mehta, Y. Wang, A. Sipe, S. John, X. Ji, G. Nikiforidis, A. W. Feinberg, J. Hester, D. J. Weber, O. Veiseh, J. Rivnay, T. Cohen-Karni",
   "title": "Electrocatalytic on-site oxygenation for transplanted cell-based-therapies",
@@ -530,6 +556,19 @@
   "doi": "10.1038/s41467-023-42697-2",
   "oa": "https://www.nature.com/articles/s41467-023-42697-2.pdf",
   "openalex": "W4388530041",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2023,
+  "authors": "S. Fabiano, L. Flagg, T. C. Hidalgo Castillo, S. Inal, L. G. Kaake, L. V. Kayser, S. T. Keene, S. Ludwigs, C. Muller, B. M. Savoie, B. Lüssem, J. L. Lutkenhaus, M. Matta, D. Meli, S. N. Patel, B. D. Paulsen, J. Rivnay, J. Surgailis",
+  "title": "On the fundamentals of organic mixed ionic/electronic conductors",
+  "journal": "Journal of Materials Chemistry C",
+  "volume": "11",
+  "issue": "42",
+  "pages": "14527-14539",
+  "doi": "10.1039/d3tc03058j",
+  "oa": "https://pubs.rsc.org/en/content/articlepdf/2023/tc/d3tc03058j",
+  "openalex": "W4387587293",
   "pre_northwestern": false
  },
  {
@@ -573,19 +612,6 @@
  },
  {
   "year": 2023,
-  "authors": "R. Wu, D. Meli, J. Rivnay",
-  "title": "The hole truth",
-  "journal": "Nature Materials",
-  "volume": "22",
-  "issue": "9",
-  "pages": "1055-1056",
-  "doi": "10.1038/s41563-023-01643-9",
-  "oa": null,
-  "openalex": "W4386256662",
-  "pre_northwestern": false
- },
- {
-  "year": 2023,
   "authors": "R. Wu, B. D. Paulsen, Q. Ma, I. McCulloch, J. Rivnay",
   "title": "Quantitative Composition and Mesoscale Ion Distribution in p-Type Organic Mixed Ionic-Electronic Conductors",
   "journal": "ACS Applied Materials & Interfaces",
@@ -593,7 +619,7 @@
   "issue": "25",
   "pages": "30553-30566",
   "doi": "10.1021/acsami.3c04449",
-  "oa": null,
+  "oa": "https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/63e5b7d6fcfb27a31f815e66/original/quantitative-composition-and-mesoscale-ion-distribution-in-p-type-organic-mixed-ionic-electronic-conductors.pdf",
   "openalex": "W4380872269",
   "pre_northwestern": false
  },
@@ -658,7 +684,7 @@
   "issue": "5",
   "pages": "1367-1375",
   "doi": "10.1021/acsmaterialslett.2c01114",
-  "oa": null,
+  "oa": "https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/6377d3eabe365e64f6248f53/original/revealing-the-impact-of-molecular-weight-on-mixed-conduction-in-glycolated-polythiophenes-through-electrolyte-choice.pdf",
   "openalex": "W4362677523",
   "pre_northwestern": false
  },
@@ -673,6 +699,19 @@
   "doi": "10.1038/s41467-023-37402-2",
   "oa": "https://www.nature.com/articles/s41467-023-37402-2.pdf",
   "openalex": "W4360948859",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2023,
+  "authors": "R. Marcial-Hernandez, S. Giacalone, W. G. Neal, C.-S. Lee, P. A. Gilhooly-Finn, G. Mastroianni, D. Meli, R. Wu, J. Rivnay, M. Palma, C. B. Nielsen",
+  "title": "Aqueous processing of organic semiconductors enabled by stable nanoparticles with built-in surfactants",
+  "journal": "Nanoscale",
+  "volume": "15",
+  "issue": "14",
+  "pages": "6793-6801",
+  "doi": "10.1039/d2nr06024h",
+  "oa": "https://pubs.rsc.org/en/content/articlepdf/2023/nr/d2nr06024h",
+  "openalex": "W4327794550",
   "pre_northwestern": false
  },
  {
@@ -703,28 +742,15 @@
  },
  {
   "year": 2023,
-  "authors": "S. Fabiano, L. Flagg, T. C. Hidalgo Castillo, S. Inal, L. G. Kaake, L. V. Kayser, S. T. Keene, S. Ludwigs, C. Muller, B. M. Savoie, B. Lüssem, J. L. Lutkenhaus, M. Matta, D. Meli, S. N. Patel, B. D. Paulsen, J. Rivnay, J. Surgailis",
-  "title": "On the fundamentals of organic mixed ionic/electronic conductors",
-  "journal": "Journal of Materials Chemistry C",
-  "volume": "11",
-  "issue": "42",
-  "pages": "14527-14539",
-  "doi": "10.1039/d3tc03058j",
-  "oa": "https://pubs.rsc.org/en/content/articlepdf/2023/tc/d3tc03058j",
-  "openalex": "W4387587293",
-  "pre_northwestern": false
- },
- {
-  "year": 2023,
-  "authors": "R. Marcial-Hernandez, S. Giacalone, W. G. Neal, C.-S. Lee, P. A. Gilhooly-Finn, G. Mastroianni, D. Meli, R. Wu, J. Rivnay, M. Palma, C. B. Nielsen",
-  "title": "Aqueous processing of organic semiconductors enabled by stable nanoparticles with built-in surfactants",
-  "journal": "Nanoscale",
-  "volume": "15",
-  "issue": "14",
-  "pages": "6793-6801",
-  "doi": "10.1039/d2nr06024h",
-  "oa": "https://pubs.rsc.org/en/content/articlepdf/2023/nr/d2nr06024h",
-  "openalex": "W4327794550",
+  "authors": "R. Wu, D. Meli, J. Rivnay",
+  "title": "The hole truth",
+  "journal": "Nature Materials",
+  "volume": "22",
+  "issue": "9",
+  "pages": "1055-1056",
+  "doi": "10.1038/s41563-023-01643-9",
+  "oa": null,
+  "openalex": "W4386256662",
   "pre_northwestern": false
  },
  {
@@ -807,6 +833,19 @@
  },
  {
   "year": 2022,
+  "authors": "C.-Y. Lo, Y. Wu, E. Awuyah, D. Meli, D. M. Nguyen, R. Wu, B. Xu, J. Strzalka, J. Rivnay, D. C. Martin, L. V. Kayser",
+  "title": "Influence of the molecular weight and size distribution of PSS on mixed ionic-electronic transport in PEDOT:PSS",
+  "journal": "Polymer Chemistry",
+  "volume": "13",
+  "issue": "19",
+  "pages": "2764-2775",
+  "doi": "10.1039/d2py00271j",
+  "oa": "https://www.ncbi.nlm.nih.gov/pmc/articles/9523623",
+  "openalex": "W4220774618",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2022,
   "authors": "R. B. Rashid, A. M. Evans, L. A. Hall, R. R. Dasari, E. K. Roesner, S. R. Marder, D. M. D'Allesandro, W. R. Dichtel, J. Rivnay",
   "title": "A Semiconducting Two-Dimensional Polymer as an Organic Electrochemical Transistor Active Layer",
   "journal": "Advanced Materials",
@@ -829,19 +868,6 @@
   "doi": "10.1021/jacs.2c00735",
   "oa": "https://doi.org/10.1021/jacs.2c00735",
   "openalex": "W4220909246",
-  "pre_northwestern": false
- },
- {
-  "year": 2022,
-  "authors": "M. Nikkhah, J. Rivnay",
-  "title": "Conductive and Electroactive Biomaterials and Bioelectronics",
-  "journal": "Acta Biomaterialia",
-  "volume": "139",
-  "issue": null,
-  "pages": "1-3",
-  "doi": "10.1016/j.actbio.2022.01.018",
-  "oa": null,
-  "openalex": "W4210466220",
   "pre_northwestern": false
  },
  {
@@ -885,19 +911,6 @@
  },
  {
   "year": 2022,
-  "authors": "C.-Y. Lo, Y. Wu, E. Awuyah, D. Meli, D. M. Nguyen, R. Wu, B. Xu, J. Strzalka, J. Rivnay, D. C. Martin, L. V. Kayser",
-  "title": "Influence of the molecular weight and size distribution of PSS on mixed ionic-electronic transport in PEDOT:PSS",
-  "journal": "Polymer Chemistry",
-  "volume": "13",
-  "issue": "19",
-  "pages": "2764-2775",
-  "doi": "10.1039/d2py00271j",
-  "oa": "https://www.ncbi.nlm.nih.gov/pmc/articles/9523623",
-  "openalex": "W4220774618",
-  "pre_northwestern": false
- },
- {
-  "year": 2022,
   "authors": "X. Ji, J. Rivnay",
   "title": "Transistors in Bioelectronics",
   "journal": "Introduction to Bioelectronics",
@@ -907,6 +920,19 @@
   "doi": "10.1063/9780735424470_004",
   "oa": null,
   "openalex": "W4312946866",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2022,
+  "authors": "M. Nikkhah, J. Rivnay",
+  "title": "Conductive and Electroactive Biomaterials and Bioelectronics",
+  "journal": "Acta Biomaterialia",
+  "volume": "139",
+  "issue": null,
+  "pages": "1-3",
+  "doi": "10.1016/j.actbio.2022.01.018",
+  "oa": null,
+  "openalex": "W4210466220",
   "pre_northwestern": false
  },
  {
@@ -937,6 +963,19 @@
  },
  {
   "year": 2021,
+  "authors": "J. Tropp, J. Rivnay",
+  "title": "Design of biodegradable and biocompatible conjugated polymers for bioelectronics",
+  "journal": "Journal of Materials Chemistry C",
+  "volume": "9",
+  "issue": "39",
+  "pages": "13543-13556",
+  "doi": "10.1039/d1tc03600a",
+  "oa": null,
+  "openalex": "W3200823695",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2021,
   "authors": "B. D. Paulsen, A. Giovannitti, R. Wu, J. Strzalka, Q. Zhang, J. Rivnay, C. J. Takacs",
   "title": "Electrochemistry of Thin Films with In Situ/Operando Grazing Incidence X-Ray Scattering: Bypassing Electrolyte Scattering for High Fidelity Time Resolved Studies",
   "journal": "Small",
@@ -959,19 +998,6 @@
   "doi": "10.1126/sciadv.abh1055",
   "oa": "https://doi.org/10.1126/sciadv.abh1055",
   "openalex": "W3198251921",
-  "pre_northwestern": false
- },
- {
-  "year": 2021,
-  "authors": "M. Rolandi, A. Noy, S. Inal, J. Rivnay",
-  "title": "Advances in bioelectronics: Materials, devices, and translational applications",
-  "journal": "APL Materials",
-  "volume": "9",
-  "issue": "7",
-  "pages": null,
-  "doi": "10.1063/5.0060323",
-  "oa": "https://doi.org/10.1063/5.0060323",
-  "openalex": "W3186176595",
   "pre_northwestern": false
  },
  {
@@ -1093,15 +1119,15 @@
  },
  {
   "year": 2021,
-  "authors": "J. Tropp, J. Rivnay",
-  "title": "Design of biodegradable and biocompatible conjugated polymers for bioelectronics",
-  "journal": "Journal of Materials Chemistry C",
+  "authors": "M. Rolandi, A. Noy, S. Inal, J. Rivnay",
+  "title": "Advances in bioelectronics: Materials, devices, and translational applications",
+  "journal": "APL Materials",
   "volume": "9",
-  "issue": "39",
-  "pages": "13543-13556",
-  "doi": "10.1039/d1tc03600a",
-  "oa": null,
-  "openalex": "W3200823695",
+  "issue": "7",
+  "pages": null,
+  "doi": "10.1063/5.0060323",
+  "oa": "https://doi.org/10.1063/5.0060323",
+  "openalex": "W3186176595",
   "pre_northwestern": false
  },
  {
@@ -1145,6 +1171,19 @@
  },
  {
   "year": 2020,
+  "authors": "P. A. Finn, I. E. Jacobs, J. Armitage, R. Wu, B. D. Paulsen, M. Freeley, M. Palma, J. Rivnay, H. Sirringhaus, C. B. Nielsen",
+  "title": "Effect of polar side chains on neutral and p-doped polythiophene",
+  "journal": "Journal of Materials Chemistry C",
+  "volume": "8",
+  "issue": "45",
+  "pages": "16216-16223",
+  "doi": "10.1039/d0tc04290k",
+  "oa": "https://pubs.rsc.org/en/content/articlepdf/2020/tc/d0tc04290k",
+  "openalex": "W3097820104",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2020,
   "authors": "B. D. Paulsen, R. Wu, C. J. Takacs, H.-G. Steinrück, J. Strzalka, Q. Zhang, M. F. Toney, J. Rivnay",
   "title": "Time-Resolved Structural Kinetics of an Organic Mixed Ionic–Electronic Conductor",
   "journal": "Advanced Materials",
@@ -1152,8 +1191,21 @@
   "issue": "40",
   "pages": "e2003404",
   "doi": "10.1002/adma.202003404",
-  "oa": "https://www.osti.gov/servlets/purl/1659750",
+  "oa": "https://doi.org/10.26434/chemrxiv.12312299.v1",
   "openalex": "W3081559473",
+  "pre_northwestern": false
+ },
+ {
+  "year": 2020,
+  "authors": "M. Alsufyani, R. K. Hallani, S. Wang, M. Xiao, X. Ji, B. D. Paulsen, K. Xu, H. Bristow, H. Chen, X. Chen, H. Sirringhaus, J. Rivnay, S. Fabiano, I. McCulloch",
+  "title": "The effect of aromatic ring size in electron deficient semiconducting polymers for n-type organic thermoelectrics",
+  "journal": "Journal of Materials Chemistry C",
+  "volume": "8",
+  "issue": "43",
+  "pages": "15150-15157",
+  "doi": "10.1039/d0tc03347b",
+  "oa": "https://pubs.rsc.org/en/content/articlepdf/2020/tc/d0tc03347b",
+  "openalex": "W3047842748",
   "pre_northwestern": false
  },
  {
@@ -1165,7 +1217,7 @@
   "issue": "17",
   "pages": "7301-7308",
   "doi": "10.1021/acs.chemmater.0c01984",
-  "oa": "https://hdl.handle.net/10754/663432",
+  "oa": "https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/60c74b31bb8c1a022a3db162/original/ion-coordination-and-chelation-in-a-glycolated-polymer-semiconductor-molecular-dynamics-and-x-ray-fluorescence-study.pdf",
   "openalex": "W3042833387",
   "pre_northwestern": false
  },
@@ -1217,7 +1269,7 @@
   "issue": "16",
   "pages": "e1908047",
   "doi": "10.1002/adma.201908047",
-  "oa": null,
+  "oa": "https://doi.org/10.26434/chemrxiv.11366186.v1",
   "openalex": "W3009085038",
   "pre_northwestern": false
  },
@@ -1232,32 +1284,6 @@
   "doi": "10.3791/60584",
   "oa": null,
   "openalex": "W3001956626",
-  "pre_northwestern": false
- },
- {
-  "year": 2020,
-  "authors": "P. A. Finn, I. E. Jacobs, J. Armitage, R. Wu, B. D. Paulsen, M. Freeley, M. Palma, J. Rivnay, H. Sirringhaus, C. B. Nielsen",
-  "title": "Effect of polar side chains on neutral and p-doped polythiophene",
-  "journal": "Journal of Materials Chemistry C",
-  "volume": "8",
-  "issue": "45",
-  "pages": "16216-16223",
-  "doi": "10.1039/d0tc04290k",
-  "oa": "https://pubs.rsc.org/en/content/articlepdf/2020/tc/d0tc04290k",
-  "openalex": "W3097820104",
-  "pre_northwestern": false
- },
- {
-  "year": 2020,
-  "authors": "M. Alsufyani, R. K. Hallani, S. Wang, M. Xiao, X. Ji, B. D. Paulsen, K. Xu, H. Bristow, H. Chen, X. Chen, H. Sirringhaus, J. Rivnay, S. Fabiano, I. McCulloch",
-  "title": "The effect of aromatic ring size in electron deficient semiconducting polymers for n-type organic thermoelectrics",
-  "journal": "Journal of Materials Chemistry C",
-  "volume": "8",
-  "issue": "43",
-  "pages": "15150-15157",
-  "doi": "10.1039/d0tc03347b",
-  "oa": "https://pubs.rsc.org/en/content/articlepdf/2020/tc/d0tc03347b",
-  "openalex": "W3047842748",
   "pre_northwestern": false
  },
  {
@@ -1652,6 +1678,19 @@
  },
  {
   "year": 2016,
+  "authors": "S. Inal, G. G. Malliaras, J. Rivnay",
+  "title": "Optical study of electrochromic moving fronts for the investigation of ion transport in conducting polymers",
+  "journal": "Journal of Materials Chemistry C",
+  "volume": "4",
+  "issue": "18",
+  "pages": "3942-3947",
+  "doi": "10.1039/c5tc04354a",
+  "oa": null,
+  "openalex": "W2296574981",
+  "pre_northwestern": true
+ },
+ {
+  "year": 2016,
   "authors": "J. Rivnay",
   "title": "Efficiency through dilution",
   "journal": "Nature Materials",
@@ -1700,19 +1739,6 @@
   "doi": "10.1089/aivt.2015.0028",
   "oa": null,
   "openalex": "W2346950651",
-  "pre_northwestern": true
- },
- {
-  "year": 2016,
-  "authors": "S. Inal, G. G. Malliaras, J. Rivnay",
-  "title": "Optical study of electrochromic moving fronts for the investigation of ion transport in conducting polymers",
-  "journal": "Journal of Materials Chemistry C",
-  "volume": "4",
-  "issue": "18",
-  "pages": "3942-3947",
-  "doi": "10.1039/c5tc04354a",
-  "oa": null,
-  "openalex": "W2296574981",
   "pre_northwestern": true
  },
  {
@@ -1815,7 +1841,7 @@
   "issue": "6",
   "pages": "1210-1216",
   "doi": "10.1002/cphc.201402878",
-  "oa": null,
+  "oa": "https://hal.science/hal-02914248",
   "openalex": "W2106789334",
   "pre_northwestern": true
  },

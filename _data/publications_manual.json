@@ -42,6 +42,58 @@
    "volume": "276",
    "pages": "113195",
    "doi": "10.1016/j.jinorgbio.2025.113195"
+  },
+  {
+   "year": 2024,
+   "authors": "J. Rivnay, P. E. Sheehan, O. Veiseh",
+   "title": "Are implantable, living pharmacies within reach?",
+   "journal": "Science",
+   "volume": "386",
+   "issue": "6719",
+   "pages": "271-273",
+   "doi": "10.1126/science.adq5182",
+   "oa": null,
+   "openalex": "W4403510344",
+   "pre_northwestern": false
+  },
+  {
+   "year": 2021,
+   "authors": "M. Rolandi, A. Noy, S. Inal, J. Rivnay",
+   "title": "Advances in bioelectronics: Materials, devices, and translational applications",
+   "journal": "APL Materials",
+   "volume": "9",
+   "issue": "7",
+   "pages": null,
+   "doi": "10.1063/5.0060323",
+   "oa": "https://doi.org/10.1063/5.0060323",
+   "openalex": "W3186176595",
+   "pre_northwestern": false
+  },
+  {
+   "year": 2022,
+   "authors": "M. Nikkhah, J. Rivnay",
+   "title": "Conductive and Electroactive Biomaterials and Bioelectronics",
+   "journal": "Acta Biomaterialia",
+   "volume": "139",
+   "issue": null,
+   "pages": "1-3",
+   "doi": "10.1016/j.actbio.2022.01.018",
+   "oa": null,
+   "openalex": "W4210466220",
+   "pre_northwestern": false
+  },
+  {
+   "year": 2023,
+   "authors": "R. Wu, D. Meli, J. Rivnay",
+   "title": "The hole truth",
+   "journal": "Nature Materials",
+   "volume": "22",
+   "issue": "9",
+   "pages": "1055-1056",
+   "doi": "10.1038/s41563-023-01643-9",
+   "oa": null,
+   "openalex": "W4386256662",
+   "pre_northwestern": false
   }
  ],
  "oa_via_doi": [
