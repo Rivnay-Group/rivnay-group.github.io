@@ -6,7 +6,8 @@ layout: default
     <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.kind %} <span class="kind">{{ page.kind }}</span>{% endif %}</p>
     <h1>{{ page.title | smartify }}</h1>
   </header>
-  {% if page.image %}<figure class="post-figure"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"{% if page.image_width %} width="{{ page.image_width }}" height="{{ page.image_height }}" style="max-width: min(100%, {{ page.image_width | times: 560 | divided_by: page.image_height }}px)"{% endif %}>{% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}</figure>{% endif %}
+  {%- comment -%} The figure, not the image, takes the width cap (560px tall at most, never wider than the file), so a caption under a narrow portrait photo lines up with the photo's left edge. {%- endcomment -%}
+  {% if page.image %}{% if page.image_width %}{% assign capw = page.image_width | times: 560 | divided_by: page.image_height %}{% if capw > page.image_width %}{% assign capw = page.image_width %}{% endif %}{% endif %}<figure class="post-figure"{% if page.image_width %} style="max-width: min(100%, {{ capw }}px); margin-inline: auto"{% endif %}><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"{% if page.image_width %} width="{{ page.image_width }}" height="{{ page.image_height }}"{% endif %}>{% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}</figure>{% endif %}
   <div class="prose post-body">
     {{ content }}
     {%- if page.link %}{% unless content contains page.link %}
