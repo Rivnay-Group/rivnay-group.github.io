@@ -5,6 +5,7 @@ kind: people
 image: /assets/img/news/2026-11-12-quinn-nyt.jpg
 image_width: 1000
 image_height: 1249
+share_image: /assets/img/news/2026-11-12-quinn-nyt-share.jpg
 image_caption: "Jamie Kelter Davis for The New York Times"
 link: https://www.nytimes.com/interactive/2026/11/09/science/trump-funding-cuts-young-scientists-phd-research.html
 ---

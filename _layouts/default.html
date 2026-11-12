@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}{% feed_meta %}{% if page.collection == "posts" and page.image == nil %}<meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}">{% endif %}
+  {%- comment -%} share_image: a post can give link previews (Slack, iMessage, social) its own crop, e.g. a landscape crop of a portrait lead photo so faces are not cut off. {%- endcomment -%}{% capture seo_tags %}{% seo %}{% endcapture %}{% if page.share_image and page.image %}{% assign seo_tags = seo_tags | replace: page.image, page.share_image %}{% endif %}{{ seo_tags }}{% feed_meta %}{% if page.collection == "posts" and page.image == nil %}<meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}">{% endif %}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" sizes="16x16 32x32 48x48">
   <link rel="icon" href="{{ '/assets/icon-r.svg' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" type="image/svg+xml">
   <link rel="icon" href="{{ '/assets/icon-r-32.png' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" type="image/png" sizes="32x32">

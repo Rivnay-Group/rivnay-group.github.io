@@ -37,6 +37,7 @@ image_caption: "Optional caption under the lead photo"
 image_alt: "Describe the image when it is the news itself (a journal cover, a contest image); leave out for decorative photos or when the caption already says what it is"
 excerpt: "Optional one-sentence teaser for the news list; otherwise the first paragraph is cut at 32 words"
 link: https://doi.org/...                         # optional; adds a "Read the paper" link (kind: paper) or "Read more", unless the body already links it
+share_image: /assets/img/news/2026-09-01-example-share.jpg   # optional; a 1200x630 crop for link previews (Slack, social) when the lead image is tall and previews would cut it off
 ---
 Body text in markdown.
 ```
