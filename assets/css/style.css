@@ -109,8 +109,9 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
 .prose p + p, .prose p + ul, .prose p + ol, .prose ul + p, .prose ol + p { margin-top: 1rem; }
 .prose blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 2px solid var(--line); color: var(--muted); }
 .prose h2 { margin: 2.5rem 0 0.8rem; }
-/* each postdoc posting (id starts "postdoc") is a separate document, not another section: same hairline the research themes use */
-.prose h2[id^="postdoc"] {margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
+.prose h2:has(+ .card-grid) { margin-bottom: 1.5rem; }   /* a block under a heading, not a line of text: the Join cards */
+/* a job posting is a separate document, not another section: same hairline the research themes use */
+.prose h2.posting { margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
 .prose h3 { margin: 1.8rem 0 0.5rem; }
 .prose > :first-child { margin-top: 0; }
 .prose ul, .prose ol { padding-left: 1.3rem; }
@@ -237,6 +238,7 @@ figcaption { font-size: var(--fs-xs); color: var(--muted); margin-top: 0.6rem; l
   background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem;
   display: flex; flex-direction: column; gap: 0.5rem; text-decoration: none; color: inherit;
   transition: border-color 0.15s; overflow: hidden;
+  overflow-wrap: anywhere;   /* enlarged text breaks a long word rather than running under the clipped edge */
 }
 /* the cards in a row share their row tracks, so a title that wraps does not push its text below the others */
 .card-grid > .card { display: grid; grid-template-rows: subgrid; grid-row: span 3; }
@@ -244,8 +246,9 @@ a.card:hover { border-color: var(--purple); color: inherit; }
 .card:has(img) { padding: 0 0 1.5rem; }
 .card img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: 0.75rem; }
 .card:has(img) h3, .card:has(img) p { margin-inline: 1.25rem; }
-.card h3 { font-size: 1.2rem; }
+.card h3 { font-size: 1.2rem; margin: 0; }   /* margin: a card inside .prose (Join) keeps the card's own spacing */
 .card p { color: var(--muted); font-size: var(--fs-md); }
+.card .kind { justify-self: start; margin-left: 0; }   /* a tag in a card's top row (Join), not stretched to the card width */
 
 /* ---------- news list ---------- */
 .news-list { list-style: none; border-top: 1px solid var(--line); }

@@ -19,7 +19,7 @@ Before uploading any photo, remove its location: on a Mac open it in Preview, ch
 | Fix or exclude a publication | `_data/publications_manual.json` (`exclude` a DOI, or `add` an entry) then rerun the script |
 | Add a news post | create `_posts/YYYY-MM-DD-short-title.md` with the front matter shown below. If it has an image (a JPEG whose name ends in lowercase `.jpg`; on an iPhone, export or share it as JPEG, not HEIC), run `python3 scripts/thumbs.py` afterwards and commit the `-thumb.jpg` it writes. That needs Pillow; a browser edit can skip it, and the news lists then show the full image until someone runs it |
 | Research text, selected papers, funding logos | `research.html`, `_data/theme_papers.yml`, `_data/support.yml`, `assets/img/logos/` |
-| Openings | `join.html` |
+| Openings | `join.html`: each posting starts at an `<h2 class="posting">` with its own `id`, and has a card under Open positions linking to that `id`; add or remove the two together. When the last posting closes, delete the Open positions heading and its card grid too (the file's History on GitHub has them for next time) |
 | Nav, footer, addresses | `_layouts/default.html` |
 | Colours, type, spacing | `assets/css/style.css` (tokens at the top) |
 
