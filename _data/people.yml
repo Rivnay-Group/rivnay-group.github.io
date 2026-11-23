@@ -211,6 +211,12 @@
   photo: beliz-utebay.jpg
   bio: >
     Beliz earned her B.S. in Chemical and Biomolecular Engineering with a minor in Biomedical Engineering from Georgia Institute of Technology in 2023. During the first two years of her undergrad, she worked in Coskun Lab at Georgia Tech on spatial organizations of cells. Later, she joined Stingelin Lab at Georgia Tech, where she worked with hybrid hydrogels to study their structure–property relationship and mechanical properties until she graduated. She joined Northwestern as a master's student in Materials Science and Engineering in 2023. Her research in the lab focuses on lipid-bilayer sensing. In her free time, she enjoys playing instruments, singing, and photography.
+- name: Trevor Busch
+  role: Master's student
+  group: masters
+  photo: trevor-busch.jpg
+  bio: >
+    Trevor earned a B.S. in Biomechanical Engineering and Computer Science from Lehigh University in 2026. During his undergraduate studies, he played Division I lacrosse and joined the Tomas Gonzalez-Fernandez lab, working on 3D bioprinting novel biomaterials for eventual use in cell encapsulation. Additionally, he worked to design a cell culture dish capable of delivering equal voltage to multiple wells in an attempt to replicate conditions seen by cells in the nervous system. He joined Northwestern University as a master’s student in Biomedical Engineering in 2026. His research in the Rivnay Group focuses on neural conduits and conductive biomaterials. In his free time, he enjoys rock climbing, reading, and playing sports.
 - name: Ella Spena
   email: ellaspena2028.1@u.northwestern.edu
   role: Undergraduate student
@@ -225,3 +231,15 @@
   photo: shwe-yee-phu.jpg
   bio: >
     Shwe Yee is an undergraduate student at Northwestern University pursuing a B.S. in Biomedical Engineering with a minor in Business Institutions. She has a strong interest in biosensors and is currently conducting research in the Rivnay Group, where she works on biosensors and investigates antifouling surface strategies to improve device performance. Outside the lab, Shwe Yee enjoys crocheting, learning new musical instruments, and experimenting with new recipes.
+- name: Paula Hurtarte
+  role: Undergraduate student
+  group: undergrad
+  photo: paula-hurtarte.jpg
+  bio: >
+    Paula is an undergraduate student at Northwestern University pursuing a B.S. in Computer Engineering and Applied Mathematics. She is particularly interested in information systems and how data can be transformed into useful information and visualizations. She is currently working on developing a simulation of ATP diffusion through 3D tissue. Outside of academics, Paula loves playing tennis and ping pong, hiking volcanoes, and making really good coffee.
+- name: Saida Bidiwala
+  role: Undergraduate student
+  group: undergrad
+  photo: saida-bidiwala.jpg
+  bio: >
+    Saida Bidiwala is an undergraduate student at Northwestern University pursuing a B.S. in Mechanical Engineering with a concentration in robotics. She joined the Rivnay Group in 2026 with an interest in implantable medical devices and biosensors. Saida is currently investigating the longevity of biosensors by incorporating different anti-fouling surface strategies. Outside of the lab, she enjoys reading, drawing and playing board games.
