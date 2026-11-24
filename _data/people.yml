@@ -2,7 +2,7 @@
 # lowercase, exactly as written; any other value hides the person), photo (the file name of a
 # 324x324 JPEG in assets/img/people), bio, and any of these optional links, each an icon on the
 # open card: email, website (a LinkedIn URL gets the LinkedIn mark, anything else reads "Portfolio"),
-# scholar (a Google Scholar profile).
+# linkedin (for someone who also has a separate personal website), scholar (a Google Scholar profile).
 # Order in this file does NOT matter: the Team page sorts each group by surname at build time.
 # Surname is taken as the last word of `name`; if it is more than one word, set `sort:` (see
 # Royall McMahon Ward). Add new people anywhere.
@@ -243,3 +243,12 @@
   photo: saida-bidiwala.jpg
   bio: >
     Saida Bidiwala is an undergraduate student at Northwestern University pursuing a B.S. in Mechanical Engineering with a concentration in robotics. She joined the Rivnay Group in 2026 with an interest in implantable medical devices and biosensors. Saida is currently investigating the longevity of biosensors by incorporating different anti-fouling surface strategies. Outside of the lab, she enjoys reading, drawing and playing board games.
+- name: Hayeon (Hazel) Yun
+  role: Undergraduate student
+  group: undergrad
+  email: hayeonyun2026@u.northwestern.edu
+  photo: hayeon-yun.jpg
+  linkedin: https://www.linkedin.com/in/yun-hayeon/
+  website: https://www.hayeonyun.com/
+  bio: >
+    Hayeon is an undergraduate student at Northwestern University pursuing a B.S. in Biomedical Engineering. She is interested in the therapeutic applications of bioelectronic technologies. She is currently conducting research in the Rivnay Group, where she works on electrochemical aptamer-based sensors and investigates hydrogel interfaces to improve sensor stability. Outside the lab, Hayeon enjoys running and reading.
